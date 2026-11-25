@@ -25,7 +25,8 @@ namespace ShadowRPG.Runtime.Presentation
                 case DamageType.Cold: return new Color(0.5f, 0.85f, 1f);
                 case DamageType.Lightning: return new Color(1f, 0.9f, 0.36f);
                 case DamageType.Shadow: return new Color(0.48f, 0.36f, 1f);
-                case DamageType.Arcane: return new Color(0.3f, 0.66f, 1f);
+                case DamageType.Light: return new Color(1f, 0.97f, 0.7f);
+                case DamageType.Earth: return new Color(0.72f, 0.55f, 0.32f);
                 default: return new Color(0.86f, 0.86f, 0.9f);
             }
         }

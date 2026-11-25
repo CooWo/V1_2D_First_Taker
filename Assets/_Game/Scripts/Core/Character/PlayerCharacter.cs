@@ -16,9 +16,9 @@ namespace ShadowRPG.Core.Character
     /// </summary>
     public sealed class PlayerCharacter
     {
-        public PlayerCharacter(ICombatWorld world, ISkillCatalog skills, ISupportCatalog supports, ISetCatalog sets)
+        public PlayerCharacter(ICombatWorld world, ISkillCatalog skills, ISupportCatalog supports, ISetCatalog sets, Inventory bag = null, string name = "그림자")
         {
-            Combatant = new Combatant("그림자", Team.Player, new IStatDerivationRule[] { new CoreStatDerivationRule() })
+            Combatant = new Combatant(name, Team.Player, new IStatDerivationRule[] { new CoreStatDerivationRule() })
             {
                 VisualKey = "shadow_hero",
                 BaseMoveSpeed = 3.4f,
@@ -28,7 +28,7 @@ namespace ShadowRPG.Core.Character
             Combatant.Loadout = new SkillLoadout();
 
             Equipment = new Equipment(new IEquipValidator[] { new SlotCompatibilityValidator(), new StatRequirementValidator() });
-            Inventory = new Inventory(40);
+            Inventory = bag ?? new Inventory(Meta.GameProfile.DefaultBagCapacity);
             StatApplier = new EquipmentStatApplier(Equipment, Combatant);
             Sets = new SetBonusTracker(Equipment, Combatant, sets);
             LoadoutBuilder = new LoadoutBuilder(Equipment, Combatant, world, skills, supports);

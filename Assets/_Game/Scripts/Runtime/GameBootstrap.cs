@@ -1,8 +1,10 @@
 using ShadowRPG.Core;
 using ShadowRPG.Core.Combat;
 using ShadowRPG.Core.Game;
+using ShadowRPG.Core.Meta;
+using ShadowRPG.Core.Raid;
 using ShadowRPG.Runtime.Presentation;
-using ShadowRPG.Runtime.UI;
+using ShadowRPG.Runtime.UI.Menus;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
@@ -11,23 +13,37 @@ using UnityEngine.Rendering.Universal;
 namespace ShadowRPG.Runtime
 {
     /// <summary>
-    /// Unity 쪽 조립 지점 (Composition Root). Core 세션을 만들고, 표현·입력·UI를 연결한 뒤
-    /// 매 프레임 세션을 진행시킵니다. 게임 규칙은 하나도 들고 있지 않습니다.
+    /// Unity 쪽 조립 지점 (Composition Root). 프로필을 불러와 성장 계층(GameMeta)을 만들고,
+    /// 던전/레이드 세션을 전환하며, 저장 시점을 관리합니다. 게임 규칙은 들고 있지 않습니다.
     /// </summary>
-    public sealed class GameBootstrap : MonoBehaviour
+    public sealed class GameBootstrap : MonoBehaviour, IModeSwitcher
     {
+        const float SaveDebounceSeconds = 2f;
+
         [SerializeField] SpriteLibrary spriteLibrary;
         [SerializeField] BalanceSettings balance = new BalanceSettings();
-        [Tooltip("knight / mage / archer / monk")]
+        [SerializeField] DungeonRules dungeonRules = new DungeonRules();
+        [Tooltip("새 저장일 때 시작 직업: knight / mage / archer / monk")]
         [SerializeField] string startingClass = "knight";
         [Tooltip("0이면 매번 다른 시드")]
         [SerializeField] int seed;
-        [Tooltip("세로형 모바일 화면 기준 전투 구역 (가로 x 세로, 유닛)")]
+        [Tooltip("세로형 모바일 화면 기준 던전 층 크기 (가로 x 세로, 유닛)")]
         [SerializeField] Vector2 arenaSize = new Vector2(24f, 34f);
+        [SerializeField] Vector2 raidArenaSize = new Vector2(22f, 26f);
+        [Tooltip("켜면 시작할 때 저장을 지우고 새로 시작 (테스트용)")]
+        [SerializeField] bool resetSaveOnStart;
 
-        GameSession _session;
+        FileProfileStore _store;
+        GameMeta _meta;
+        IRandom _random;
+        ICombatSession _session;
+        SessionView _view;
+        Camera _camera;
+        bool _saveDirty;
+        float _saveTimer;
 
-        public GameSession Session => _session;
+        public GameMeta Meta => _meta;
+        public ICombatSession Session => _session;
 
 #if UNITY_EDITOR
         public void EditorSetSpriteLibrary(SpriteLibrary library) => spriteLibrary = library;
@@ -38,30 +54,90 @@ namespace ShadowRPG.Runtime
             Application.targetFrameRate = 60;
             if (spriteLibrary == null) spriteLibrary = Resources.Load<SpriteLibrary>("SpriteLibrary");
 
-            var random = new SystemRandom(seed != 0 ? seed : (int?)null);
-            var arena = new Rect(-arenaSize * 0.5f, arenaSize);
-            _session = new GameSession(GameContent.CreateDefault(), balance, random, arena);
+            _random = new SystemRandom(seed != 0 ? seed : (int?)null);
+            _store = new FileProfileStore();
+            if (resetSaveOnStart) _store.Delete();
 
-            var camera = EnsureCamera();
+            var profile = _store.Load();
+            if (!profile.HasStarted) profile.ClassId = startingClass;
+            _meta = new GameMeta(profile, GameContent.CreateDefault(), new SystemClock(), _random);
+            _meta.EnsureStarted();
+            _meta.SaveRequested += () => _saveDirty = true;
+
+            _camera = EnsureCamera();
             EnsureGlobalLight();
             EnsureEventSystem();
-
-            new GameObject("Arena").AddComponent<ArenaView>().Build(arena, spriteLibrary, seed);
-
-            var hud = new GameObject("Hud").AddComponent<HudView>();
-            hud.Initialize(_session, camera);
-
-            var presenter = new GameObject("World").AddComponent<WorldPresenter>();
-            presenter.Initialize(_session.World, _session.Player.Combatant, spriteLibrary, hud.FloatingText);
-
-            _session.Player.MoveInput = new CompositeMoveInput(hud.Joystick, new KeyboardMoveInput());
-            _session.GiveStarterKit(startingClass);
-
-            if (!camera.TryGetComponent<CameraFollow>(out var follow)) follow = camera.gameObject.AddComponent<CameraFollow>();
-            follow.SetTarget(presenter.PlayerTransform);
+            EnterDungeon();
         }
 
-        void Update() => _session?.Tick(Time.deltaTime);
+        void Update()
+        {
+            _session?.Tick(Time.deltaTime);
+
+            if (!_saveDirty) return;
+            _saveTimer += Time.unscaledDeltaTime;
+            if (_saveTimer < SaveDebounceSeconds) return;
+            SaveNow();
+        }
+
+        // ---------- IModeSwitcher ----------
+
+        public void EnterDungeon()
+        {
+            var arena = new Rect(-arenaSize * 0.5f, arenaSize);
+            Switch(new DungeonSession(_meta, balance, dungeonRules, _random, arena));
+        }
+
+        public bool TryEnterRaid(out string reason)
+        {
+            reason = null;
+            if (_session is RaidSession)
+            {
+                reason = "이미 레이드 중입니다.";
+                return false;
+            }
+            if (!_meta.RaidEntries.TryConsume())
+            {
+                reason = "오늘 레이드 입장 횟수를 모두 사용했습니다.";
+                return false;
+            }
+            var arena = new Rect(-raidArenaSize * 0.5f, raidArenaSize);
+            Switch(new RaidSession(_meta, balance, _random, arena, new BotPartySource()));
+            return true;
+        }
+
+        void Switch(ICombatSession next)
+        {
+            _session?.Dispose();
+            if (_view != null) Destroy(_view.gameObject);
+
+            _session = next;
+            _view = new GameObject("Session").AddComponent<SessionView>();
+            _view.Build(next, _meta, spriteLibrary, _camera, this, seed);
+            SaveNow();
+        }
+
+        // ---------- 저장 ----------
+
+        void SaveNow()
+        {
+            if (_session != null) _meta.Capture(_session.Player);
+            _store.Save(_meta.Profile);
+            _saveDirty = false;
+            _saveTimer = 0f;
+        }
+
+        void OnApplicationPause(bool paused)
+        {
+            if (paused && _meta != null) SaveNow();
+        }
+
+        void OnApplicationQuit()
+        {
+            if (_meta != null) SaveNow();
+        }
+
+        // ---------- 장면 기본 요소 ----------
 
         static Camera EnsureCamera()
         {
@@ -80,7 +156,7 @@ namespace ShadowRPG.Runtime
 
         static void EnsureGlobalLight()
         {
-            foreach (var light in FindObjectsByType<Light2D>(FindObjectsSortMode.None))
+            foreach (var light in FindObjectsByType<Light2D>())
             {
                 if (light.lightType != Light2D.LightType.Global) continue;
                 light.intensity = 0.8f;
@@ -97,7 +173,7 @@ namespace ShadowRPG.Runtime
 
         static void EnsureEventSystem()
         {
-            if (FindFirstObjectByType<EventSystem>() != null) return;
+            if (FindAnyObjectByType<EventSystem>() != null) return;
             var go = new GameObject("EventSystem");
             go.AddComponent<EventSystem>();
             go.AddComponent<InputSystemUIInputModule>();

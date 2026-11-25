@@ -10,7 +10,7 @@ namespace ShadowRPG.Runtime.UI
     public static class ItemFormatter
     {
         public static string ColoredName(Item item)
-            => item == null ? "<color=#5A6070>(비어 있음)</color>" : $"<color=#{Palette.Hex(Palette.For(item.Rarity))}>{item.Name}</color>";
+            => item == null ? "<color=#5A6070>(비어 있음)</color>" : $"<color=#{Palette.Hex(Palette.For(item.Rarity))}>{item.DisplayName}</color>";
 
         public static string ShortGrant(Item item, GameContent content)
         {
@@ -93,6 +93,22 @@ namespace ShadowRPG.Runtime.UI
                 case StatType.ExtraChains: return "연쇄";
                 case StatType.ExtraPierce: return "관통";
                 case StatType.MoveSpeedPct: return "이동 속도";
+                case StatType.FireDamagePct: return "불 피해";
+                case StatType.ColdDamagePct: return "얼음 피해";
+                case StatType.LightningDamagePct: return "번개 피해";
+                case StatType.EarthDamagePct: return "대지 피해";
+                case StatType.LightDamagePct: return "빛 피해";
+                case StatType.DarkDamagePct: return "어둠 피해";
+                case StatType.FireResistPct: return "불 저항";
+                case StatType.ColdResistPct: return "얼음 저항";
+                case StatType.LightningResistPct: return "번개 저항";
+                case StatType.EarthResistPct: return "대지 저항";
+                case StatType.LightResistPct: return "빛 저항";
+                case StatType.DarkResistPct: return "어둠 저항";
+                case StatType.GoldFindPct: return "골드 획득";
+                case StatType.ExperiencePct: return "경험치";
+                case StatType.PetPowerPct: return "펫 능력";
+                case StatType.PetCooldownPct: return "펫 쿨타임 감소";
                 default: return stat.ToString();
             }
         }

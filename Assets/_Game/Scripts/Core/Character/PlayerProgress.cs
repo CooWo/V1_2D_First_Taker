@@ -25,9 +25,18 @@ namespace ShadowRPG.Core.Character
 
         public event Action<int> LeveledUp;
 
+        /// <summary>저장된 레벨/경험치 복원.</summary>
+        public void Restore(int level, float experience)
+        {
+            Level = Mathf.Max(1, level);
+            Experience = Mathf.Max(0f, experience);
+            ApplyLevelBonus();
+        }
+
+        /// <summary>경험치 획득 (트리의 경험치 보너스 % 적용).</summary>
         public void Gain(float amount)
         {
-            Experience += amount;
+            Experience += amount * (1f + _owner.Stats.Get(StatType.ExperiencePct) / 100f);
             bool leveled = false;
             while (Experience >= ExperienceToNext)
             {

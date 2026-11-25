@@ -46,8 +46,11 @@ namespace ShadowRPG.EditorTools
                 AssetDatabase.CreateAsset(library, LibraryPath);
             }
 
+            // 몬스터 + 레이드 동료(knight_m 등) + 펫(angel 등)
             var keys = EnemyRoster.CreateDefault().Concat(EnemyRoster.CreateElites()).Append(EnemyRoster.CreateBoss())
-                .Select(a => a.VisualKey).Distinct();
+                .Select(a => a.VisualKey)
+                .Concat(new[] { "knight_m", "wizzard_f", "elf_m", "lizard_m", "angel", "pumpkin_dude", "tiny_slug" })
+                .Distinct();
 
             var entries = new List<SpriteLibrary.Entry>();
             foreach (var key in keys)
@@ -64,6 +67,9 @@ namespace ShadowRPG.EditorTools
                 entries.Add(new SpriteLibrary.Entry { key = key, frames = idle, framesPerSecond = 8f });
                 if (run.Length > 0) entries.Add(new SpriteLibrary.Entry { key = key + "_run", frames = run, framesPerSecond = 10f });
             }
+
+            var stairs = Load("floor_stairs");
+            if (stairs != null) entries.Add(new SpriteLibrary.Entry { key = "portal", frames = new[] { stairs }, framesPerSecond = 1f });
 
             var floors = Enumerable.Range(1, 8).Select(i => Load("floor_" + i)).Where(s => s != null).ToArray();
             library.EditorSet(entries, floors, Load("wall_mid"));

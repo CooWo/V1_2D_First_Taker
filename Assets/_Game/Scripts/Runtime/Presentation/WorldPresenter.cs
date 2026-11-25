@@ -17,6 +17,7 @@ namespace ShadowRPG.Runtime.Presentation
         readonly Dictionary<Projectile, ProjectileView> _projectiles = new Dictionary<Projectile, ProjectileView>();
         readonly Stack<ProjectileView> _projectilePool = new Stack<ProjectileView>();
         readonly Dictionary<Zone, ZoneView> _zones = new Dictionary<Zone, ZoneView>();
+        readonly Dictionary<Hazard, HazardView> _hazards = new Dictionary<Hazard, HazardView>();
 
         CombatWorld _world;
         SpriteLibrary _library;
@@ -45,8 +46,41 @@ namespace ShadowRPG.Runtime.Presentation
             world.ZoneRemoved += OnZoneRemoved;
             world.VfxEmitted += _vfx.Play;
             world.Damage.Resolved += OnDamageResolved;
+            world.HazardSpawned += OnHazardSpawned;
+            world.HazardRemoved += OnHazardRemoved;
 
             foreach (var c in world.Combatants) OnCombatantAdded(c);
+        }
+
+        /// <summary>펫·포탈 같은 비전투 표식을 붙입니다.</summary>
+        public void AddFollower(string name, string visualKey, Sprite[] fallback, System.Func<Vector2> position, System.Func<bool> visible, Color tint, float scale, float bob)
+        {
+            var frames = fallback;
+            float fps = 6f;
+            if (_library != null && _library.TryGet(visualKey, out var entry))
+            {
+                frames = entry.frames;
+                fps = entry.framesPerSecond;
+            }
+            var view = new GameObject(name).AddComponent<FollowerView>();
+            view.transform.SetParent(transform, false);
+            view.Bind(frames, fps, position, visible, tint, scale, bob);
+        }
+
+        void OnHazardSpawned(Hazard hazard)
+        {
+            var view = new GameObject("Hazard_" + hazard.Label).AddComponent<HazardView>();
+            view.transform.SetParent(transform, false);
+            view.Bind(hazard);
+            _hazards[hazard] = view;
+        }
+
+        void OnHazardRemoved(Hazard hazard)
+        {
+            if (!_hazards.TryGetValue(hazard, out var view)) return;
+            _hazards.Remove(hazard);
+            Destroy(view.gameObject);
+            if (hazard.IsResolved) _vfx.Play(VfxEvent.At(VfxKind.Explosion, hazard.Center, hazard.Shape == HazardShape.Line ? 1.2f : hazard.Radius * 0.6f, hazard.Element, 0.3f));
         }
 
         void OnDestroy()
@@ -60,6 +94,8 @@ namespace ShadowRPG.Runtime.Presentation
             _world.ZoneRemoved -= OnZoneRemoved;
             _world.VfxEmitted -= _vfx.Play;
             _world.Damage.Resolved -= OnDamageResolved;
+            _world.HazardSpawned -= OnHazardSpawned;
+            _world.HazardRemoved -= OnHazardRemoved;
         }
 
         void LateUpdate()
@@ -77,6 +113,7 @@ namespace ShadowRPG.Runtime.Presentation
 
             foreach (var view in _projectiles.Values) view.Sync();
             foreach (var view in _zones.Values) view.Sync(dt);
+            foreach (var view in _hazards.Values) view.Sync();
         }
 
         void OnCombatantAdded(Combatant combatant)

@@ -21,7 +21,7 @@ namespace ShadowRPG.Core.Combat
             if (tags.HasAny(SkillTag.Projectile)) pct += stats.Get(StatType.ProjectileDamagePct);
             if (tags.HasAny(SkillTag.Spell)) pct += stats.Get(StatType.SpellDamagePct);
             if (type.IsElemental()) pct += stats.Get(StatType.ElementalDamagePct);
-            if (type == DamageType.Physical) pct += stats.Get(StatType.PhysicalDamagePct);
+            pct += stats.Get(type.DamageStat());
 
             damage.IncreasedPct += pct;
         }

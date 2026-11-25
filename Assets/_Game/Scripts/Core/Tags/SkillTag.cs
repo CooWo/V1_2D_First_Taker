@@ -21,7 +21,7 @@ namespace ShadowRPG.Core
         Cold = 1L << 11,
         Lightning = 1L << 12,
         Shadow = 1L << 13,
-        Arcane = 1L << 14,
+        Light = 1L << 14,
         Channelling = 1L << 15,
         Movement = 1L << 16,
         Slam = 1L << 17,
@@ -40,8 +40,9 @@ namespace ShadowRPG.Core
         Poison = 1L << 30,
         Evasion = 1L << 31,
         Defense = 1L << 32,
+        Earth = 1L << 33,
 
-        Elemental = Fire | Cold | Lightning
+        Elemental = Fire | Cold | Lightning | Earth | Light | Shadow
     }
 
     public static class SkillTagExtensions

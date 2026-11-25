@@ -172,15 +172,28 @@ namespace ShadowRPG.Core.Items
         public bool ReducesSetRequirement { get; set; }
         public string PowerDescription { get; set; }
 
+        /// <summary>강화 단계 (+0 ~ +15). 단계마다 모든 수치가 8%씩 오릅니다.</summary>
+        public int EnhanceLevel { get; set; }
+        public const int MaxEnhanceLevel = 15;
+        public const float EnhanceBonusPerLevel = 0.08f;
+
+        public float EnhanceMultiplier => 1f + EnhanceBonusPerLevel * EnhanceLevel;
+
+        /// <summary>강화가 반영된 최종 수치.</summary>
         public IEnumerable<StatModifier> AllModifiers
         {
             get
             {
-                foreach (var m in BaseStats) yield return m;
-                foreach (var m in Affixes) yield return m;
+                foreach (var m in BaseStats) yield return Scale(m);
+                foreach (var m in Affixes) yield return Scale(m);
             }
         }
 
-        public override string ToString() => $"{Name} ({Rarity}, {SlotRules.DisplayName(Slot)})";
+        StatModifier Scale(StatModifier m)
+            => m.Stat == StatType.AttacksPerSecond ? m : new StatModifier(m.Stat, m.Value * EnhanceMultiplier, m.Source);
+
+        public string DisplayName => EnhanceLevel > 0 ? $"+{EnhanceLevel} {Name}" : Name;
+
+        public override string ToString() => $"{DisplayName} ({Rarity}, {SlotRules.DisplayName(Slot)})";
     }
 }

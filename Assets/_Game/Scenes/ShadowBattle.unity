@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1139321181
+--- !u!1 &334172950
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,78 +127,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1139321183}
-  - component: {fileID: 1139321182}
-  m_Layer: 0
-  m_Name: GameBootstrap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1139321182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139321181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb120ea64a3035429bea64b7608566c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.GameBootstrap
-  spriteLibrary: {fileID: 11400000, guid: c1c64875fc5fca24e8947896628338c0, type: 2}
-  balance:
-    MeleeDamageMultiplier: 1.4
-    RangedDamageMultiplier: 1
-    MeleeLifeOnHitEfficiency: 1
-    RangedLifeOnHitEfficiency: 0.45
-    FortifyDuration: 4
-    FortifyDamageReduction: 0.3
-    ShadowStepRadius: 3.5
-    ShadowStepDuration: 0.15
-    ShadowStepCooldown: 0.5
-    AutoCastInterval: 0.1
-    RangedThreatRadius: 1.5
-    RangedThreatCount: 2
-    MeleeEngageDistance: 4
-    SurvivalLifeThreshold: 0.5
-    EnemySearchRadius: 14
-    BaseCritMultiplier: 1.5
-    MaxResistPct: 75
-    MaxBlockPct: 75
-    MaxEvasionPct: 60
-    MaxCritChancePct: 95
-  startingClass: knight
-  seed: 0
-  arenaSize: {x: 24, y: 34}
---- !u!4 &1139321183
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139321181}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1225510047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1225510050}
-  - component: {fileID: 1225510049}
-  - component: {fileID: 1225510048}
+  - component: {fileID: 334172953}
+  - component: {fileID: 334172952}
+  - component: {fileID: 334172951}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,13 +137,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1225510048
+--- !u!114 &334172951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225510047}
+  m_GameObject: {fileID: 334172950}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f7629f280580cc4e917ced173e618df, type: 3}
@@ -221,13 +152,13 @@ MonoBehaviour:
   smoothTime: 0.15
   minHalfHeight: 7
   minHalfWidth: 5.5
---- !u!20 &1225510049
+--- !u!20 &334172952
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225510047}
+  m_GameObject: {fileID: 334172950}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -272,16 +203,94 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1225510050
+--- !u!4 &334172953
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225510047}
+  m_GameObject: {fileID: 334172950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &400880205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400880207}
+  - component: {fileID: 400880206}
+  m_Layer: 0
+  m_Name: GameBootstrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &400880206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400880205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb120ea64a3035429bea64b7608566c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.GameBootstrap
+  spriteLibrary: {fileID: 11400000, guid: c1c64875fc5fca24e8947896628338c0, type: 2}
+  balance:
+    MeleeDamageMultiplier: 1.4
+    RangedDamageMultiplier: 1
+    MeleeLifeOnHitEfficiency: 1
+    RangedLifeOnHitEfficiency: 0.45
+    FortifyDuration: 4
+    FortifyDamageReduction: 0.3
+    ShadowStepRadius: 3.5
+    ShadowStepDuration: 0.15
+    ShadowStepCooldown: 0.5
+    AutoCastInterval: 0.1
+    RangedThreatRadius: 1.5
+    RangedThreatCount: 2
+    MeleeEngageDistance: 4
+    SurvivalLifeThreshold: 0.5
+    EnemySearchRadius: 14
+    BaseCritMultiplier: 1.5
+    MaxResistPct: 75
+    MaxBlockPct: 75
+    MaxEvasionPct: 60
+    MaxCritChancePct: 95
+  dungeonRules:
+    KeepLimitPerFloor: 3
+    BossFloorBonusKeep: 1
+    LootAutoConfirmSeconds: 10
+    NormalDropChance: 12
+    FloorClearGoldPerLevel: 12
+    RespawnDelay: 3
+  startingClass: knight
+  seed: 0
+  arenaSize: {x: 24, y: 34}
+  raidArenaSize: {x: 22, y: 26}
+  resetSaveOnStart: 0
+--- !u!4 &400880207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400880205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,5 +300,5 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1225510050}
-  - {fileID: 1139321183}
+  - {fileID: 334172953}
+  - {fileID: 400880207}

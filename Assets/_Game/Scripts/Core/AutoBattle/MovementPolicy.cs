@@ -35,8 +35,25 @@ namespace ShadowRPG.Core.AutoBattle
             _shadowStepCooldown -= dt;
 
             var self = context.Self;
+            if (!self.CanAct && !self.IsDashing) return Vector2.zero;
+
+            // 1) 예고 장판 회피가 최우선
+            var hazards = context.World.Hazards;
+            for (int i = 0; i < hazards.Count; i++)
+            {
+                var hazard = hazards[i];
+                if (hazard.Team != self.Team && hazard.Contains(self.Position, self.Radius + 0.35f))
+                    return hazard.EscapeDirection(self.Position);
+            }
+
+            // 2) 적이 없으면 목적지(다음 층 포탈 등)로
             var enemy = context.NearestEnemy;
-            if (enemy == null || !self.CanAct && !self.IsDashing) return Vector2.zero;
+            if (enemy == null)
+            {
+                if (!context.Destination.HasValue) return Vector2.zero;
+                var toGoal = context.Destination.Value - self.Position;
+                return toGoal.sqrMagnitude > 0.04f ? toGoal.normalized : Vector2.zero;
+            }
 
             float range = EngageRange(context);
             float gap = context.NearestDistance - enemy.Radius;

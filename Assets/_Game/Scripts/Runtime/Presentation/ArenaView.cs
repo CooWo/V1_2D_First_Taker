@@ -6,13 +6,13 @@ namespace ShadowRPG.Runtime.Presentation
     /// <summary>전투 구역 바닥/벽 타일맵을 만듭니다.</summary>
     public sealed class ArenaView : MonoBehaviour
     {
-        public void Build(Rect bounds, SpriteLibrary library, int seed)
+        public void Build(Rect bounds, SpriteLibrary library, int seed, Color tint)
         {
             var grid = gameObject.AddComponent<Grid>();
             grid.cellSize = Vector3.one;
 
-            var floorMap = CreateLayer("Floor", SortingOrders.Floor);
-            var wallMap = CreateLayer("Walls", SortingOrders.Wall);
+            var floorMap = CreateLayer("Floor", SortingOrders.Floor, tint);
+            var wallMap = CreateLayer("Walls", SortingOrders.Wall, tint * 0.9f);
 
             var random = new System.Random(seed);
             var floorTiles = CreateFloorTiles(library);
@@ -40,14 +40,14 @@ namespace ShadowRPG.Runtime.Presentation
             }
         }
 
-        Tilemap CreateLayer(string name, int order)
+        Tilemap CreateLayer(string name, int order, Color tint)
         {
             var go = new GameObject(name);
             go.transform.SetParent(transform, false);
             var map = go.AddComponent<Tilemap>();
             var renderer = go.AddComponent<TilemapRenderer>();
             renderer.sortingOrder = order;
-            map.color = new Color(0.55f, 0.58f, 0.7f);
+            map.color = tint;
             return map;
         }
 

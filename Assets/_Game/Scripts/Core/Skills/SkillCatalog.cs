@@ -50,7 +50,7 @@ namespace ShadowRPG.Core.Skills
                 new SkillDefinition
                 {
                     Code = "STR-01", Name = "대지 분쇄", EnglishName = "Earthshatter", Attribute = CoreStat.Strength,
-                    Tags = S | Atk | Mel | SkillTag.Slam | Aoe | Phy, Category = AutoCastCategory.Primary, DamageType = DamageType.Physical,
+                    Tags = S | Atk | Mel | SkillTag.Slam | Aoe | SkillTag.Earth, Category = AutoCastCategory.Primary, DamageType = DamageType.Earth,
                     Coefficient = 1.1f, ResourceCost = 6f, Range = 2.2f, CastTime = 0.75f, Behavior = new EarthshatterBehavior(),
                     Summary = "전방 부채꼴 충격파로 적을 둔화", RareGimmick = "범위 +20%", LegendaryAwakening = "그림자 바위 기둥 3개 연쇄 폭발"
                 },
@@ -206,8 +206,8 @@ namespace ShadowRPG.Core.Skills
                 },
                 new SkillDefinition
                 {
-                    Code = "INT-06", Name = "비전 마검격", EnglishName = "Arcane Spellblade", Attribute = CoreStat.Intelligence,
-                    Tags = I | Atk | Spl | Mel | Aoe | SkillTag.Arcane, Category = AutoCastCategory.Primary, DamageType = DamageType.Arcane,
+                    Code = "INT-06", Name = "빛의 마검격", EnglishName = "Radiant Spellblade", Attribute = CoreStat.Intelligence,
+                    Tags = I | Atk | Spl | Mel | Aoe | SkillTag.Light, Category = AutoCastCategory.Primary, DamageType = DamageType.Light,
                     Coefficient = 1f, ResourceCost = 5f, Range = 2.1f, CastTime = 0.6f, Behavior = new ArcaneSpellbladeBehavior(),
                     Summary = "주문 피해 증가가 100% 적용되는 근접 베기", RareGimmick = "범위 +20%", LegendaryAwakening = "3타마다 다른 주문 무료 발사"
                 },

@@ -11,25 +11,20 @@ namespace ShadowRPG.Core.Items
 
         public Inventory(int capacity) => Capacity = capacity;
 
+        /// <summary>가방 크기 (한정). 가득 차면 더 들고 갈 수 없습니다.</summary>
         public int Capacity { get; }
         public IReadOnlyList<Item> Items => _items;
         public bool IsFull => _items.Count >= Capacity;
+        public int FreeSlots => Capacity - _items.Count;
 
         public event Action Changed;
 
-        /// <summary>가득 차면 가장 가치 낮은 장비를 버리고 넣습니다.</summary>
-        public void Add(Item item, IItemScorer scorer)
+        public bool TryAdd(Item item)
         {
-            if (IsFull)
-            {
-                int worst = 0;
-                for (int i = 1; i < _items.Count; i++)
-                    if (scorer.Score(_items[i]) < scorer.Score(_items[worst])) worst = i;
-                if (scorer.Score(_items[worst]) >= scorer.Score(item)) return;
-                _items.RemoveAt(worst);
-            }
+            if (item == null || IsFull) return false;
             _items.Add(item);
             Changed?.Invoke();
+            return true;
         }
 
         public bool Remove(Item item)

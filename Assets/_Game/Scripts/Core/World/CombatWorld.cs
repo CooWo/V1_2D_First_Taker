@@ -25,6 +25,7 @@ namespace ShadowRPG.Core.World
         readonly List<Scheduled> _scheduled = new List<Scheduled>();
         readonly List<Scheduled> _dueBuffer = new List<Scheduled>();
         readonly HashSet<int> _reportedDead = new HashSet<int>();
+        readonly List<Hazard> _hazards = new List<Hazard>();
 
         public CombatWorld(BalanceSettings balance, IRandom random, DamageService damage, Rect bounds)
         {
@@ -53,6 +54,36 @@ namespace ShadowRPG.Core.World
         public event Action<Zone> ZoneSpawned;
         public event Action<Zone> ZoneRemoved;
         public event Action<VfxEvent> VfxEmitted;
+        public event Action<Hazard> HazardSpawned;
+        public event Action<Hazard> HazardRemoved;
+
+        public IReadOnlyList<Hazard> Hazards => _hazards;
+
+        public void SpawnHazard(Hazard hazard)
+        {
+            _hazards.Add(hazard);
+            HazardSpawned?.Invoke(hazard);
+        }
+
+        void TickHazards(float dt)
+        {
+            for (int i = _hazards.Count - 1; i >= 0; i--)
+            {
+                var hazard = _hazards[i];
+                hazard.Elapsed += dt;
+                if (hazard.Elapsed < hazard.Delay) continue;
+
+                hazard.MarkResolved();
+                for (int c = 0; c < _combatants.Count; c++)
+                {
+                    var target = _combatants[c];
+                    if (target.Team == hazard.Team || !target.IsAlive) continue;
+                    if (hazard.Contains(target.Position, target.Radius * 0.5f)) hazard.OnHit?.Invoke(hazard, target);
+                }
+                _hazards.RemoveAt(i);
+                HazardRemoved?.Invoke(hazard);
+            }
+        }
 
         public void Add(Combatant combatant)
         {
@@ -143,6 +174,7 @@ namespace ShadowRPG.Core.World
 
             TickProjectiles(dt);
             TickZones(dt);
+            TickHazards(dt);
             CollectDead();
         }
 
@@ -150,8 +182,10 @@ namespace ShadowRPG.Core.World
         {
             foreach (var p in _projectiles) ProjectileRemoved?.Invoke(p);
             foreach (var z in _zones) ZoneRemoved?.Invoke(z);
+            foreach (var h in _hazards) HazardRemoved?.Invoke(h);
             _projectiles.Clear();
             _zones.Clear();
+            _hazards.Clear();
             _scheduled.Clear();
         }
 

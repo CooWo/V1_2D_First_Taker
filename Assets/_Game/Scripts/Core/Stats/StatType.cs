@@ -63,6 +63,26 @@ namespace ShadowRPG.Core.Stats
         ExtraPierce,
 
         // 이동
-        MoveSpeedPct
+        MoveSpeedPct,
+
+        // 6속성 피해 / 저항 (저장 호환을 위해 항상 끝에 추가합니다)
+        FireDamagePct,
+        ColdDamagePct,
+        LightningDamagePct,
+        EarthDamagePct,
+        LightDamagePct,
+        DarkDamagePct,
+        FireResistPct,
+        ColdResistPct,
+        LightningResistPct,
+        EarthResistPct,
+        LightResistPct,
+        DarkResistPct,
+
+        // 메타 성장 (트리·펫)
+        GoldFindPct,
+        ExperiencePct,
+        PetPowerPct,
+        PetCooldownPct
     }
 }

@@ -14,7 +14,7 @@ namespace ShadowRPG.Runtime.UI
 
         static readonly EquipSlot?[] Order = { null, EquipSlot.RightHand, EquipSlot.LeftHand, EquipSlot.Head, EquipSlot.Body, EquipSlot.Boots };
 
-        readonly GameSession _session;
+        readonly ICombatSession _session;
         readonly Slot[] _slots;
 
         sealed class Slot
@@ -25,7 +25,7 @@ namespace ShadowRPG.Runtime.UI
             public UnityEngine.UI.Image Cooldown;
         }
 
-        public SkillBar(Transform root, GameSession session)
+        public SkillBar(Transform root, ICombatSession session)
         {
             _session = session;
             var bar = UiFactory.Anchored(root, "SkillBar", new Vector2(0.5f, 0f), new Vector2(0f, 24f), new Vector2(Spacing * Order.Length, SlotSize + 30f));

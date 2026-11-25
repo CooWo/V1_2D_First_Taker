@@ -30,6 +30,23 @@ Assets/_Game/
 | 5.4 보조 권능 6종 | `Supports/Supports.cs` |
 | 6.1 장비 JSON 스키마 | `Items/Item` (+ `LootGenerator`) |
 
+## 추가 사항 01 (던전·경제·트리·펫·레이드) → 코드
+
+| 내용 | 코드 |
+| --- | --- |
+| ACT → 던전 → 층, 층당 10~100 | `Dungeon/ActCatalog`, `FloorPlan`, `FloorSpawner`, `Game/DungeonSession` |
+| 층 반출 제한·가방 한정·자동 판매 | `Economy/FloorLoot`, `Items/Inventory`, `Economy/ItemPricing` |
+| 골드·강화 | `Economy/Wallet`, `EnhancementService` |
+| 성장 트리 (수천~1만 노드) | `Tree/PassiveTreeGenerator`, `PassiveTreeService` |
+| 6속성 | `Combat/DamageType` + `StatType.*DamagePct/*ResistPct` |
+| 펫 | `Pets/PetCatalog`, `PetService`, `PetCompanion` |
+| 레이드 | `Raid/RaidSession`, `RaidBossBrain`, `IBossPattern`, `World/Hazard`, `IRaidPartySource` |
+| 저장 | `Meta/GameProfile`, `ProfileSerializer`, `IProfileStore` (Runtime: `FileProfileStore`) |
+| 세션 구조 | `Game/GameMeta`(세션 밖 성장) + `ICombatSession`(던전/레이드) + `CombatSetup` |
+
+UI는 `ListPanel` 하나를 재사용하는 메뉴들(`UI/Menus/*`)과 모드별 HUD(`UI/Modes/DungeonHud`, `RaidHud`)로 나뉩니다.
+자세한 기획 수치는 `Docs/GDD_Addendum_01.md`.
+
 ## SOLID 적용
 
 - **S (단일 책임)**: `Equipment`는 슬롯 보관만, 능력치 반영은 `EquipmentStatApplier`, 세트는 `SetBonusTracker`, 스킬 묶음은 `LoadoutBuilder`. `SkillExecutor`는 시전 순서만, 무엇을 하는지는 `ISkillBehavior`.

@@ -90,6 +90,24 @@ namespace ShadowRPG.Core.Items
             Changed?.Invoke(slot, previous, item);
         }
 
+        /// <summary>장착 중인 장비의 수치가 바뀌었을 때 (강화 등) 관찰자에게 다시 알립니다.</summary>
+        public void NotifyItemChanged(Item item)
+        {
+            foreach (var pair in _slots)
+            {
+                if (pair.Value != item) continue;
+                Changed?.Invoke(pair.Key, item, item);
+                return;
+            }
+        }
+
+        public EquipSlot? SlotOf(Item item)
+        {
+            foreach (var pair in _slots)
+                if (pair.Value == item) return pair.Key;
+            return null;
+        }
+
         public Item Unequip(EquipSlot slot)
         {
             var previous = Get(slot);

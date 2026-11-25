@@ -24,10 +24,17 @@ namespace ShadowRPG.Core.World
         void Emit(VfxEvent vfx);
     }
 
+    /// <summary>예고 장판 생성·조회 (보스 패턴과 회피 AI가 사용).</summary>
+    public interface IHazardField
+    {
+        IReadOnlyList<Hazard> Hazards { get; }
+        void SpawnHazard(Hazard hazard);
+    }
+
     /// <summary>
     /// 스킬·AI가 의존하는 전투 월드 추상화 (DIP). 역할별로 작은 인터페이스를 합친 형태입니다 (ISP).
     /// </summary>
-    public interface ICombatWorld : ITargetQuery, IEffectSpawner
+    public interface ICombatWorld : ITargetQuery, IEffectSpawner, IHazardField
     {
         float Time { get; }
         IRandom Random { get; }

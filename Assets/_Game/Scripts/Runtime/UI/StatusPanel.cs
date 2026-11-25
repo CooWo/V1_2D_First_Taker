@@ -9,7 +9,7 @@ namespace ShadowRPG.Runtime.UI
     /// <summary>좌상단: 이름·직업·레벨, 생명력/보호막/방벽, 자원, 경험치, 상태.</summary>
     public sealed class StatusPanel
     {
-        readonly GameSession _session;
+        readonly ICombatSession _session;
         readonly UnityEngine.UI.Text _title;
         readonly UnityEngine.UI.Image _life;
         readonly UnityEngine.UI.Image _shield;
@@ -20,7 +20,7 @@ namespace ShadowRPG.Runtime.UI
         readonly UnityEngine.UI.Image _xp;
         readonly UnityEngine.UI.Text _statusLine;
 
-        public StatusPanel(Transform root, GameSession session)
+        public StatusPanel(Transform root, ICombatSession session)
         {
             _session = session;
             var panel = UiFactory.Anchored(root, "StatusPanel", new Vector2(0f, 1f), new Vector2(20f, -20f), new Vector2(560f, 190f));

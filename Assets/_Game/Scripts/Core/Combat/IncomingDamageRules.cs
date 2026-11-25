@@ -67,7 +67,8 @@ namespace ShadowRPG.Core.Combat
         public void Apply(ref IncomingDamage damage)
         {
             if (damage.Type == DamageType.Physical) return;
-            float resist = Mathf.Min(damage.Target.Stats.Get(StatType.AllResistPct), _balance.MaxResistPct);
+            var stats = damage.Target.Stats;
+            float resist = Mathf.Min(stats.Get(StatType.AllResistPct) + stats.Get(damage.Type.ResistStat()), _balance.MaxResistPct);
             damage.Amount *= 1f - resist / 100f;
         }
     }

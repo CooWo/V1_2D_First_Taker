@@ -56,19 +56,51 @@ namespace ShadowRPG.Core.Items
             { StatType.SpellDamagePct, new AffixRange(8, 15, 0.8f) },
             { StatType.ElementalDamagePct, new AffixRange(8, 15, 0.8f) },
             { StatType.MoveSpeedPct, new AffixRange(4, 8, 0.2f) },
-            { StatType.BossDamagePct, new AffixRange(10, 20, 1f) }
+            { StatType.BossDamagePct, new AffixRange(10, 20, 1f) },
+            { StatType.FireDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.ColdDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.LightningDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.EarthDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.LightDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.DarkDamagePct, new AffixRange(8, 16, 0.8f) },
+            { StatType.FireResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.ColdResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.LightningResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.EarthResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.LightResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.DarkResistPct, new AffixRange(6, 12, 0.4f) },
+            { StatType.GoldFindPct, new AffixRange(5, 10, 0.3f) }
         };
+
+        static readonly StatType[] ElementDamage =
+        {
+            StatType.FireDamagePct, StatType.ColdDamagePct, StatType.LightningDamagePct,
+            StatType.EarthDamagePct, StatType.LightDamagePct, StatType.DarkDamagePct
+        };
+
+        static readonly StatType[] ElementResist =
+        {
+            StatType.FireResistPct, StatType.ColdResistPct, StatType.LightningResistPct,
+            StatType.EarthResistPct, StatType.LightResistPct, StatType.DarkResistPct
+        };
+
+        static StatType[] With(StatType[] pool, params StatType[][] extra)
+        {
+            var list = new List<StatType>(pool);
+            foreach (var e in extra) list.AddRange(e);
+            return list.ToArray();
+        }
 
         static readonly Dictionary<EquipSlot, StatType[]> AffixPools = new Dictionary<EquipSlot, StatType[]>
         {
-            { EquipSlot.RightHand, new[] { StatType.AllDamagePct, StatType.FlatDamage, StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.AttackSpeedPct, StatType.LifeOnHit } },
+            { EquipSlot.RightHand, With(new[] { StatType.AllDamagePct, StatType.FlatDamage, StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.AttackSpeedPct, StatType.LifeOnHit }, ElementDamage) },
             { EquipSlot.LeftHand, new[] { StatType.CritChancePct, StatType.CooldownReductionPct, StatType.ResourceCostReductionPct, StatType.MeleeDamagePct, StatType.ProjectileDamagePct, StatType.SpellDamagePct } },
-            { EquipSlot.Head, new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.CritChancePct, StatType.CooldownReductionPct, StatType.MaxResource } },
-            { EquipSlot.Body, new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.LifePct, StatType.AllResistPct, StatType.EliteDamageReductionPct } },
-            { EquipSlot.Boots, new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.MoveSpeedPct, StatType.AllResistPct, StatType.CooldownReductionPct } },
-            { EquipSlot.Amulet, new[] { StatType.ElementalDamagePct, StatType.CritDamagePct, StatType.CritChancePct, StatType.Strength, StatType.Dexterity, StatType.Intelligence } },
-            { EquipSlot.Ring1, new[] { StatType.CritChancePct, StatType.CritDamagePct, StatType.AttackSpeedPct, StatType.CooldownReductionPct, StatType.ResourceCostReductionPct } },
-            { EquipSlot.Relic, new[] { StatType.BossDamagePct, StatType.ResourceCostReductionPct } }
+            { EquipSlot.Head, With(new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.CritChancePct, StatType.CooldownReductionPct, StatType.MaxResource }, ElementResist) },
+            { EquipSlot.Body, With(new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.LifePct, StatType.AllResistPct, StatType.EliteDamageReductionPct }, ElementResist) },
+            { EquipSlot.Boots, With(new[] { StatType.Strength, StatType.Dexterity, StatType.Intelligence, StatType.MaxLife, StatType.MoveSpeedPct, StatType.AllResistPct, StatType.CooldownReductionPct }, ElementResist) },
+            { EquipSlot.Amulet, With(new[] { StatType.ElementalDamagePct, StatType.CritDamagePct, StatType.CritChancePct, StatType.Strength, StatType.Dexterity, StatType.Intelligence }, ElementDamage) },
+            { EquipSlot.Ring1, With(new[] { StatType.CritChancePct, StatType.CritDamagePct, StatType.AttackSpeedPct, StatType.CooldownReductionPct, StatType.ResourceCostReductionPct, StatType.GoldFindPct }, ElementDamage) },
+            { EquipSlot.Relic, new[] { StatType.BossDamagePct, StatType.ResourceCostReductionPct, StatType.GoldFindPct } }
         };
 
         static readonly Dictionary<EquipSlot, string[]> SupportPools = new Dictionary<EquipSlot, string[]>

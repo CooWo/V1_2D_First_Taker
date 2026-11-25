@@ -22,6 +22,9 @@ namespace ShadowRPG.Core.AutoBattle
         public SkillExecutor Executor => World.Executor;
         public BalanceSettings Balance => World.Balance;
 
+        /// <summary>싸울 적이 없을 때 걸어갈 목적지 (다음 층 포탈 등).</summary>
+        public Vector2? Destination { get; set; }
+
         public Combatant NearestEnemy { get; private set; }
         public float NearestDistance { get; private set; } = float.MaxValue;
         public bool PrimaryIsMelee => Loadout == null || Loadout.PrimaryIsMelee;

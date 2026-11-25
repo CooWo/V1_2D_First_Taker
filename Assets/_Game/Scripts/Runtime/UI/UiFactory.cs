@@ -9,6 +9,9 @@ namespace ShadowRPG.Runtime.UI
     {
         static Font _font;
 
+        /// <summary>세로 화면 여부 (HUD 배치 기준).</summary>
+        public static bool IsPortrait => Screen.height > Screen.width;
+
         /// <summary>
         /// 기본 동적 폰트. 한글 글리프는 OS 폰트 폴백(Windows 맑은 고딕, Android Noto CJK)으로 그려집니다.
         /// </summary>

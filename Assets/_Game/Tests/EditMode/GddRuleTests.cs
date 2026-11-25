@@ -75,7 +75,7 @@ namespace ShadowRPG.Tests
             Assert.AreEqual(4f, fortify.Remaining, 0.001f);
             Assert.AreEqual(70f, fortify.ModifyIncoming(100f), 0.001f, "받는 피해 30% 감소");
 
-            var bolt = new SkillInstance(session.Content.Skills.Get("STR-06"), SkillRarity.Normal);
+            var bolt = new SkillInstance(session.Meta.Content.Skills.Get("STR-06"), SkillRarity.Normal);
             player.Resource.Fill();
             Assert.IsTrue(session.World.Executor.TryCast(player, bolt, target, target.Position));
             Assert.AreEqual(2f, fortify.Remaining, 0.001f, "[원거리] 시전 시 남은 시간 절반");
@@ -116,8 +116,8 @@ namespace ShadowRPG.Tests
         {
             var session = TestFactory.Session();
             var player = session.Player.Combatant;
-            TestFactory.Dummy(session, new Vector2(2f, 0f));
-            TestFactory.Dummy(session, new Vector2(3f, 0f));
+            TestFactory.Dummy(session, player.Position + new Vector2(2f, 0f));
+            TestFactory.Dummy(session, player.Position + new Vector2(3f, 0f));
 
             var projectile = new Projectile { Owner = player, Team = Team.Player, Position = player.Position, Direction = Vector2.right, Speed = 10f, MaxDistance = 10f };
             int hits = 0;
@@ -139,15 +139,15 @@ namespace ShadowRPG.Tests
         {
             var session = TestFactory.Session();
             var player = session.Player;
-            player.ChangeClass(session.Content.Classes.Get("knight"));
+            player.ChangeClass(session.Meta.Content.Classes.Get("knight"));
 
-            var staff = session.Loot.Create(EquipSlot.RightHand, ItemRarity.Rare, 1, "INT-03");
+            var staff = session.Meta.Loot.Create(EquipSlot.RightHand, ItemRarity.Rare, 1, "INT-03");
             staff.Requirements = new Requirements(0, 0, 20);
-            Assert.IsTrue(session.Equip(staff, EquipSlot.RightHand).Success, "기사도 지능 요구치만 맞으면 운석 지팡이 장착");
+            Assert.IsTrue(session.Meta.Equip(session.Player, staff, EquipSlot.RightHand).Success, "기사도 지능 요구치만 맞으면 운석 지팡이 장착");
 
-            var heavy = session.Loot.Create(EquipSlot.RightHand, ItemRarity.Rare, 1, "STR-01");
+            var heavy = session.Meta.Loot.Create(EquipSlot.RightHand, ItemRarity.Rare, 1, "STR-01");
             heavy.Requirements = new Requirements(999, 0, 0);
-            var result = session.Equip(heavy, EquipSlot.RightHand);
+            var result = session.Meta.Equip(session.Player, heavy, EquipSlot.RightHand);
             Assert.IsFalse(result.Success);
             StringAssert.Contains("요구 능력치", result.Reason);
         }
@@ -161,14 +161,14 @@ namespace ShadowRPG.Tests
 
             foreach (var slot in new[] { EquipSlot.Head, EquipSlot.Body })
             {
-                var piece = session.Loot.Create(slot, ItemRarity.Set, 1);
+                var piece = session.Meta.Loot.Create(slot, ItemRarity.Set, 1);
                 piece.SetId = setId;
                 piece.Requirements = default;
                 player.Equipment.ForceEquip(piece, slot);
             }
             Assert.AreEqual(1, player.Sets.ActiveBonuses.Count, "2세트만 활성");
 
-            var relic = session.Loot.Create(EquipSlot.Relic, ItemRarity.Legendary, 1);
+            var relic = session.Meta.Loot.Create(EquipSlot.Relic, ItemRarity.Legendary, 1);
             relic.ReducesSetRequirement = true;
             player.Equipment.ForceEquip(relic, EquipSlot.Relic);
             Assert.AreEqual(3, player.Sets.EffectiveCount(setId));
@@ -178,13 +178,12 @@ namespace ShadowRPG.Tests
         [Test]
         public void Equipment_GrantsSkills_AndAccessoriesGrantSupports()
         {
-            var session = TestFactory.Session();
-            session.GiveStarterKit("archer");
+            var session = TestFactory.Session(classId: "archer");
             var loadout = session.Player.Combatant.Loadout;
             Assert.AreEqual(5, loadout.Skills.Count, "무기·방어구 5칸에서 스킬 5개");
             Assert.IsFalse(loadout.PrimaryIsMelee);
 
-            var amulet = session.Loot.Create(EquipSlot.Amulet, ItemRarity.Rare, 1);
+            var amulet = session.Meta.Loot.Create(EquipSlot.Amulet, ItemRarity.Rare, 1);
             amulet.SupportCode = "SUP-03";
             amulet.Requirements = default;
             session.Player.Equipment.ForceEquip(amulet, EquipSlot.Amulet);
@@ -199,8 +198,7 @@ namespace ShadowRPG.Tests
         [Test]
         public void AutoBattle_SurvivalBeatsPrimary_WhenLifeAtOrBelowHalf()
         {
-            var session = TestFactory.Session();
-            session.GiveStarterKit("mage");
+            var session = TestFactory.Session(classId: "mage");
             var player = session.Player;
             TestFactory.Dummy(session, player.Combatant.Position + new Vector2(2f, 0f));
 
@@ -224,7 +222,7 @@ namespace ShadowRPG.Tests
             {
                 lone.Statuses.Clear();
                 float before = lone.Health.Life;
-                var skill = new SkillInstance(session.Content.Skills.Get("INT-01"), rarity);
+                var skill = new SkillInstance(session.Meta.Content.Skills.Get("INT-01"), rarity);
                 session.World.Executor.TriggerCast(player, skill, lone, lone.Position, 1f);
                 return before - lone.Health.Life;
             }
