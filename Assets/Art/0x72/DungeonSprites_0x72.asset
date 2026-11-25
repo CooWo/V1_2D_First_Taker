@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf984ae7af865a14bbc4f67e1624588d, type: 3}
+  m_Name: DungeonSprites_0x72
+  m_EditorClassIdentifier: Assembly-CSharp::LootHunters.DungeonSprites
+  floor:
+  - {fileID: 21300000, guid: 3398b0914ffdfae4a888757d409b3431, type: 3}
+  - {fileID: 21300000, guid: 3398b0914ffdfae4a888757d409b3431, type: 3}
+  - {fileID: 21300000, guid: 3398b0914ffdfae4a888757d409b3431, type: 3}
+  - {fileID: 21300000, guid: 3398b0914ffdfae4a888757d409b3431, type: 3}
+  floorRare:
+  - {fileID: 21300000, guid: ce163e857df8aa24da5e90f782058a73, type: 3}
+  - {fileID: 21300000, guid: af164d3ea56fc604ea2a37bdf3c44d91, type: 3}
+  - {fileID: 21300000, guid: 466d3b3456cc5404d8d509e9d7fe78a6, type: 3}
+  - {fileID: 21300000, guid: bb659ee8e8591474d9925869837b1ad0, type: 3}
+  - {fileID: 21300000, guid: c9d9400a724cfca4e95d0271ed848181, type: 3}
+  - {fileID: 21300000, guid: d0e53e4381ebedd459a7935463d21d19, type: 3}
+  - {fileID: 21300000, guid: bbb31173e21af54448851d6be12d0f86, type: 3}
+  wall:
+  - {fileID: 21300000, guid: 54faef5359b5af34c95d37c10e385b8c, type: 3}
+  wallFront: {fileID: 21300000, guid: 54faef5359b5af34c95d37c10e385b8c, type: 3}
+  wallFrontVariants:
+  - {fileID: 21300000, guid: 189d25e401b65d8409e93c48734d220b, type: 3}
+  - {fileID: 21300000, guid: 049a5deb6e14865458ba2aa5b0a3b41d, type: 3}
+  - {fileID: 21300000, guid: 8f06771c553edff438f1698b2ab1051a, type: 3}
+  - {fileID: 21300000, guid: aba34184339166347b261e1a0a1b9be1, type: 3}
+  - {fileID: 21300000, guid: b523d4bd0dba2784a89c12d705c2f0ea, type: 3}
+  - {fileID: 21300000, guid: 45a311353a0d1624bafc0e50ca4c3f24, type: 3}
+  - {fileID: 21300000, guid: a2c594ee8ba93f543869e4a52d9004f8, type: 3}
+  wallTop: {fileID: 21300000, guid: 3843e8c2c9de9794ca7589b17c01c566, type: 3}
+  stairs: {fileID: 21300000, guid: c62454906d5f467458219662acef0f25, type: 3}
+  hero: {fileID: 21300000, guid: 52258b7081712644faa594c44ee960b9, type: 3}
+  defaultMonster: {fileID: 21300000, guid: baceedc66f42a724586156a777ab75b1, type: 3}
+  monsters: []
+  heroAnim:
+    idle:
+    - {fileID: 21300000, guid: 52258b7081712644faa594c44ee960b9, type: 3}
+    - {fileID: 21300000, guid: e0379f5a30ac68a4e8e15e969d0a0a2f, type: 3}
+    - {fileID: 21300000, guid: 11e0c7f315ecdda40a97080e2c5d4ed4, type: 3}
+    - {fileID: 21300000, guid: 70601506a241dd343a86b78b9aba0569, type: 3}
+    run:
+    - {fileID: 21300000, guid: 4c341020458b9cf41b3a0024410dda91, type: 3}
+    - {fileID: 21300000, guid: 508c73c6a1023f649891b1fd3b489fd2, type: 3}
+    - {fileID: 21300000, guid: e5b9a245ac7bc0d4394e70fd8c37001d, type: 3}
+    - {fileID: 21300000, guid: d0545776baf6acc4d84a0e5f96e5aecb, type: 3}
+    scale: 1
+  monsterAnims:
+  - monsterName: "\uC2AC\uB77C\uC784"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 5f41292492649f0459ed7c08405df055, type: 3}
+      - {fileID: 21300000, guid: 096bcd2134f5a604eb807c3b06e5d851, type: 3}
+      - {fileID: 21300000, guid: c829b8f10571f2648a9d94b0482812eb, type: 3}
+      - {fileID: 21300000, guid: 9f0563902db73444b88909d55598f110, type: 3}
+      run: []
+      scale: 1
+  - monsterName: "\uACE0\uBE14\uB9B0"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 8823a05937773614288ff19f1a630340, type: 3}
+      - {fileID: 21300000, guid: ed785a8959ce00b489e7a8db5b368db8, type: 3}
+      - {fileID: 21300000, guid: b433dc1accc11394d970cae912452a61, type: 3}
+      - {fileID: 21300000, guid: e9b1e3fe6fa5def48b6958d604a4aa71, type: 3}
+      run:
+      - {fileID: 21300000, guid: 90f4c9887bd4ea64c80ff3c96f57cf74, type: 3}
+      - {fileID: 21300000, guid: 6eb90c13ef83b7542b0ae66e3d9c57ef, type: 3}
+      - {fileID: 21300000, guid: d4aaa7ffe64cb304584f754ffac007e5, type: 3}
+      - {fileID: 21300000, guid: 3df1444e4a63c20458b09930624c7606, type: 3}
+      scale: 1
+  - monsterName: "\uC2A4\uCF08\uB808\uD1A4"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 5356f0bdac97bb84fbe6941efcff3f28, type: 3}
+      - {fileID: 21300000, guid: 383da90c78cba154ca982db234f05ab8, type: 3}
+      - {fileID: 21300000, guid: 55d5a73d658d76b41a2f58d457f5c5d3, type: 3}
+      - {fileID: 21300000, guid: 7d4394ad85125064cbc2276f13e167c6, type: 3}
+      run:
+      - {fileID: 21300000, guid: 0243115ea52f5e04ebdf8082c5205735, type: 3}
+      - {fileID: 21300000, guid: 6b192be4b8d42774d9d9cbf89ce4fe06, type: 3}
+      - {fileID: 21300000, guid: 3835ff0a014bbb04caa09d8611865ca1, type: 3}
+      - {fileID: 21300000, guid: 00621c4307fedb248af51d2d5e87130a, type: 3}
+      scale: 1
+  - monsterName: "\uC624\uD06C"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 29230ff21ea5a0e4fafe2dedfefc51ae, type: 3}
+      - {fileID: 21300000, guid: 88b231f689c9e7041bfae7c8ba7d68ea, type: 3}
+      - {fileID: 21300000, guid: 400c274a70704d74fac7e4d5b5e403b9, type: 3}
+      - {fileID: 21300000, guid: 17ef18c6d5be1064cbfb86d18abdc76f, type: 3}
+      run:
+      - {fileID: 21300000, guid: a99595f28c46215489194d5e5267cc4c, type: 3}
+      - {fileID: 21300000, guid: c44450aed2a4b42428fa9f56f8218fa7, type: 3}
+      - {fileID: 21300000, guid: 1fa39f3118911c74c9a534270220c3fe, type: 3}
+      - {fileID: 21300000, guid: 203ded677273b7045be5fe97a61ff41f, type: 3}
+      scale: 1
+  - monsterName: "\uB9DD\uB839 \uAE30\uC0AC"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 9f3b9ca5f6460e94395d068452e913f7, type: 3}
+      - {fileID: 21300000, guid: ef691750cf78cea47a2b87e99afaf8a5, type: 3}
+      - {fileID: 21300000, guid: 7981b05d5ccd72a47a79df582462b5ca, type: 3}
+      - {fileID: 21300000, guid: bbc9e379b767c9345b1926b722ad0791, type: 3}
+      run:
+      - {fileID: 21300000, guid: 14fcc5bf91cdbd94b8b019e51e665e74, type: 3}
+      - {fileID: 21300000, guid: aca441af18e1b4340a62886ee35ce2f0, type: 3}
+      - {fileID: 21300000, guid: b8e3414437462ff429cfb25e70890c82, type: 3}
+      - {fileID: 21300000, guid: c6a0ff40718a7fe4eb66aa068eeb0ab8, type: 3}
+      scale: 1
+  - monsterName: "\uD654\uC5FC \uC784\uD504"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 2413c717111a03b41aa0749c2ce7ff85, type: 3}
+      - {fileID: 21300000, guid: 94ea79aac718be84e994763ff4d4722e, type: 3}
+      - {fileID: 21300000, guid: d4c7b0930ab736e40bd5bf66da02c707, type: 3}
+      - {fileID: 21300000, guid: b9e61e90e5ce62f45a93491b9cb26e03, type: 3}
+      run:
+      - {fileID: 21300000, guid: 99cf4bd9c529a4644a4f59c8d56aabf4, type: 3}
+      - {fileID: 21300000, guid: 22ac5ec58cacef942a3253a5e9f1227a, type: 3}
+      - {fileID: 21300000, guid: 836e317e56108864e895059cec2a6b06, type: 3}
+      - {fileID: 21300000, guid: 43d32bf639729734d82116377e144323, type: 3}
+      scale: 1
+  - monsterName: "\uC6A9\uC554 \uACE8\uB818"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: dc101284fe8cf624692bdf555dfb883a, type: 3}
+      - {fileID: 21300000, guid: 336ce270cd109ce4c9e2c97736ea61ae, type: 3}
+      - {fileID: 21300000, guid: 136f966f7fba61d48895fb04df67a39a, type: 3}
+      - {fileID: 21300000, guid: 8c124a7551ec3dc4fab0ae7fee57c89d, type: 3}
+      run:
+      - {fileID: 21300000, guid: 1a52f9965877db748a324fa8aa489e35, type: 3}
+      - {fileID: 21300000, guid: 98b17d0f577c75343bf50dd1f27c7d92, type: 3}
+      - {fileID: 21300000, guid: 6bc4ad3b2e22c1a40a38d031fc67e41a, type: 3}
+      - {fileID: 21300000, guid: 56f0e797af2b48e449c2880c45e15ffe, type: 3}
+      scale: 0.8
+  - monsterName: "\uC0D0\uB7EC\uB9E8\uB354"
+    anim:
+      idle:
+      - {fileID: 21300000, guid: 082036e46663cc34b9883205bd2a8fe5, type: 3}
+      - {fileID: 21300000, guid: ed5d39690f35418448ae1a001cd630e5, type: 3}
+      - {fileID: 21300000, guid: 380ecc093f4eb78478d1b03cc46171dd, type: 3}
+      - {fileID: 21300000, guid: 7ae81489256d2684886be30e1883a283, type: 3}
+      run:
+      - {fileID: 21300000, guid: 05afcd386bd2bea4196e31760da85d40, type: 3}
+      - {fileID: 21300000, guid: dc39c8298e8a8b545bba8fdfc9964770, type: 3}
+      - {fileID: 21300000, guid: 6a6dd189296fea64e8690a9546a25d8f, type: 3}
+      - {fileID: 21300000, guid: f4443e3e3fc84da4ea17119f417598c9, type: 3}
+      scale: 0.8
+  defaultMonsterAnim:
+    idle:
+    - {fileID: 21300000, guid: baceedc66f42a724586156a777ab75b1, type: 3}
+    - {fileID: 21300000, guid: d1d120b20c1d92643aa253f66ef03e78, type: 3}
+    - {fileID: 21300000, guid: c1570ed015c15f44a930f055e0e94e6b, type: 3}
+    - {fileID: 21300000, guid: 33cc94b2521b1bf4ba999ebf1d51b0ec, type: 3}
+    run:
+    - {fileID: 21300000, guid: ea45fcecd022cf5498739886f6fe1ae5, type: 3}
+    - {fileID: 21300000, guid: 296381983fa73404f881ac8a3aa65290, type: 3}
+    - {fileID: 21300000, guid: 78578e39103925648ab601c5c20626df, type: 3}
+    - {fileID: 21300000, guid: 371f4e319f6569648b7438ef0c87b63d, type: 3}
+    scale: 1
