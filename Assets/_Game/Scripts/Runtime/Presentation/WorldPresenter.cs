@@ -1,0 +1,172 @@
+using System.Collections.Generic;
+using ShadowRPG.Core.Actors;
+using ShadowRPG.Core.Combat;
+using ShadowRPG.Core.World;
+using UnityEngine;
+
+namespace ShadowRPG.Runtime.Presentation
+{
+    /// <summary>
+    /// CombatWorld 이벤트를 구독해 전투원·투사체·장판·연출 뷰를 만들고 동기화합니다.
+    /// 시뮬레이션 규칙은 전혀 알지 못합니다 (표현 전용).
+    /// </summary>
+    public sealed class WorldPresenter : MonoBehaviour
+    {
+        readonly Dictionary<Combatant, CombatantView> _combatants = new Dictionary<Combatant, CombatantView>();
+        readonly List<CombatantView> _dying = new List<CombatantView>();
+        readonly Dictionary<Projectile, ProjectileView> _projectiles = new Dictionary<Projectile, ProjectileView>();
+        readonly Stack<ProjectileView> _projectilePool = new Stack<ProjectileView>();
+        readonly Dictionary<Zone, ZoneView> _zones = new Dictionary<Zone, ZoneView>();
+
+        CombatWorld _world;
+        SpriteLibrary _library;
+        VfxPlayer _vfx;
+        IFloatingText _text;
+        Combatant _player;
+
+        public Transform PlayerTransform { get; private set; }
+
+        public void Initialize(CombatWorld world, Combatant player, SpriteLibrary library, IFloatingText text)
+        {
+            _world = world;
+            _player = player;
+            _library = library;
+            _text = text;
+
+            _vfx = new GameObject("Vfx").AddComponent<VfxPlayer>();
+            _vfx.transform.SetParent(transform, false);
+            _vfx.Initialize(text);
+
+            world.CombatantAdded += OnCombatantAdded;
+            world.CombatantRemoved += OnCombatantRemoved;
+            world.ProjectileSpawned += OnProjectileSpawned;
+            world.ProjectileRemoved += OnProjectileRemoved;
+            world.ZoneSpawned += OnZoneSpawned;
+            world.ZoneRemoved += OnZoneRemoved;
+            world.VfxEmitted += _vfx.Play;
+            world.Damage.Resolved += OnDamageResolved;
+
+            foreach (var c in world.Combatants) OnCombatantAdded(c);
+        }
+
+        void OnDestroy()
+        {
+            if (_world == null) return;
+            _world.CombatantAdded -= OnCombatantAdded;
+            _world.CombatantRemoved -= OnCombatantRemoved;
+            _world.ProjectileSpawned -= OnProjectileSpawned;
+            _world.ProjectileRemoved -= OnProjectileRemoved;
+            _world.ZoneSpawned -= OnZoneSpawned;
+            _world.ZoneRemoved -= OnZoneRemoved;
+            _world.VfxEmitted -= _vfx.Play;
+            _world.Damage.Resolved -= OnDamageResolved;
+        }
+
+        void LateUpdate()
+        {
+            float dt = Time.deltaTime;
+            foreach (var view in _combatants.Values) view.Sync(dt);
+
+            for (int i = _dying.Count - 1; i >= 0; i--)
+            {
+                _dying[i].Sync(dt);
+                if (!_dying[i].IsFinished) continue;
+                Destroy(_dying[i].gameObject);
+                _dying.RemoveAt(i);
+            }
+
+            foreach (var view in _projectiles.Values) view.Sync();
+            foreach (var view in _zones.Values) view.Sync(dt);
+        }
+
+        void OnCombatantAdded(Combatant combatant)
+        {
+            if (_combatants.ContainsKey(combatant)) return;
+
+            var view = new GameObject(combatant.Name).AddComponent<CombatantView>();
+            view.transform.SetParent(transform, false);
+
+            bool isPlayer = combatant == _player;
+            Sprite[] idle, run;
+            float fps = 8f;
+            if (_library != null && _library.TryGet(combatant.VisualKey, out var entry))
+            {
+                idle = entry.frames;
+                run = _library.TryGet(combatant.VisualKey + "_run", out var runEntry) ? runEntry.frames : entry.frames;
+                fps = entry.framesPerSecond;
+            }
+            else if (isPlayer)
+            {
+                idle = PixelArtFactory.HeroIdle;
+                run = PixelArtFactory.HeroRun;
+            }
+            else
+            {
+                idle = run = new[] { PixelArtFactory.Diamond };
+            }
+
+            float scale = combatant.Rank == EnemyRank.Boss ? 1.6f : combatant.Rank == EnemyRank.Elite ? 1.25f : 1f;
+            view.Bind(combatant, idle, run, fps, scale, !isPlayer, isPlayer);
+            _combatants[combatant] = view;
+            if (isPlayer) PlayerTransform = view.transform;
+        }
+
+        void OnCombatantRemoved(Combatant combatant)
+        {
+            if (!_combatants.TryGetValue(combatant, out var view)) return;
+            _combatants.Remove(combatant);
+            _dying.Add(view);
+        }
+
+        void OnProjectileSpawned(Projectile projectile)
+        {
+            var view = _projectilePool.Count > 0 ? _projectilePool.Pop() : CreateProjectileView();
+            view.gameObject.SetActive(true);
+            view.Bind(projectile);
+            _projectiles[projectile] = view;
+        }
+
+        ProjectileView CreateProjectileView()
+        {
+            var go = new GameObject("Projectile");
+            go.transform.SetParent(transform, false);
+            return go.AddComponent<ProjectileView>();
+        }
+
+        void OnProjectileRemoved(Projectile projectile)
+        {
+            if (!_projectiles.TryGetValue(projectile, out var view)) return;
+            _projectiles.Remove(projectile);
+            view.gameObject.SetActive(false);
+            _projectilePool.Push(view);
+        }
+
+        void OnZoneSpawned(Zone zone)
+        {
+            var view = new GameObject("Zone_" + zone.VisualKey).AddComponent<ZoneView>();
+            view.transform.SetParent(transform, false);
+            view.Bind(zone);
+            _zones[zone] = view;
+        }
+
+        void OnZoneRemoved(Zone zone)
+        {
+            if (!_zones.TryGetValue(zone, out var view)) return;
+            _zones.Remove(zone);
+            Destroy(view.gameObject);
+        }
+
+        void OnDamageResolved(DamageResult result)
+        {
+            if (_text == null || result.Target == null || result.Evaded || result.Blocked || result.Amount < 0.5f) return;
+
+            bool playerHurt = result.Target == _player;
+            var color = playerHurt ? new Color(1f, 0.35f, 0.35f)
+                : result.IsCrit ? new Color(1f, 0.62f, 0.15f)
+                : Color.Lerp(Color.white, Palette.For(result.Type), 0.45f);
+            float size = result.IsCrit ? 34f : playerHurt ? 24f : 22f;
+            var position = (Vector3)result.Target.Position + new Vector3(Random.Range(-0.3f, 0.3f), 1.2f, 0f);
+            _text.Show(position, Mathf.RoundToInt(result.Amount).ToString(), color, size, 0.7f);
+        }
+    }
+}

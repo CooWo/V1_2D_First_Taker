@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45e17855d899714795f3c0b449b8e8f, type: 3}
+  m_Name: SpriteLibrary
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Presentation.SpriteLibrary
+  entries:
+  - key: goblin
+    frames:
+    - {fileID: 21300000, guid: 8823a05937773614288ff19f1a630340, type: 3}
+    - {fileID: 21300000, guid: ed785a8959ce00b489e7a8db5b368db8, type: 3}
+    - {fileID: 21300000, guid: b433dc1accc11394d970cae912452a61, type: 3}
+    - {fileID: 21300000, guid: e9b1e3fe6fa5def48b6958d604a4aa71, type: 3}
+    framesPerSecond: 8
+  - key: goblin_run
+    frames:
+    - {fileID: 21300000, guid: 90f4c9887bd4ea64c80ff3c96f57cf74, type: 3}
+    - {fileID: 21300000, guid: 6eb90c13ef83b7542b0ae66e3d9c57ef, type: 3}
+    - {fileID: 21300000, guid: d4aaa7ffe64cb304584f754ffac007e5, type: 3}
+    - {fileID: 21300000, guid: 3df1444e4a63c20458b09930624c7606, type: 3}
+    framesPerSecond: 10
+  - key: imp
+    frames:
+    - {fileID: 21300000, guid: 2413c717111a03b41aa0749c2ce7ff85, type: 3}
+    - {fileID: 21300000, guid: 94ea79aac718be84e994763ff4d4722e, type: 3}
+    - {fileID: 21300000, guid: d4c7b0930ab736e40bd5bf66da02c707, type: 3}
+    - {fileID: 21300000, guid: b9e61e90e5ce62f45a93491b9cb26e03, type: 3}
+    framesPerSecond: 8
+  - key: imp_run
+    frames:
+    - {fileID: 21300000, guid: 99cf4bd9c529a4644a4f59c8d56aabf4, type: 3}
+    - {fileID: 21300000, guid: 22ac5ec58cacef942a3253a5e9f1227a, type: 3}
+    - {fileID: 21300000, guid: 836e317e56108864e895059cec2a6b06, type: 3}
+    - {fileID: 21300000, guid: 43d32bf639729734d82116377e144323, type: 3}
+    framesPerSecond: 10
+  - key: skelet
+    frames:
+    - {fileID: 21300000, guid: 5356f0bdac97bb84fbe6941efcff3f28, type: 3}
+    - {fileID: 21300000, guid: 383da90c78cba154ca982db234f05ab8, type: 3}
+    - {fileID: 21300000, guid: 55d5a73d658d76b41a2f58d457f5c5d3, type: 3}
+    - {fileID: 21300000, guid: 7d4394ad85125064cbc2276f13e167c6, type: 3}
+    framesPerSecond: 8
+  - key: skelet_run
+    frames:
+    - {fileID: 21300000, guid: 0243115ea52f5e04ebdf8082c5205735, type: 3}
+    - {fileID: 21300000, guid: 6b192be4b8d42774d9d9cbf89ce4fe06, type: 3}
+    - {fileID: 21300000, guid: 3835ff0a014bbb04caa09d8611865ca1, type: 3}
+    - {fileID: 21300000, guid: 00621c4307fedb248af51d2d5e87130a, type: 3}
+    framesPerSecond: 10
+  - key: tiny_zombie
+    frames:
+    - {fileID: 21300000, guid: baceedc66f42a724586156a777ab75b1, type: 3}
+    - {fileID: 21300000, guid: d1d120b20c1d92643aa253f66ef03e78, type: 3}
+    - {fileID: 21300000, guid: c1570ed015c15f44a930f055e0e94e6b, type: 3}
+    - {fileID: 21300000, guid: 33cc94b2521b1bf4ba999ebf1d51b0ec, type: 3}
+    framesPerSecond: 8
+  - key: tiny_zombie_run
+    frames:
+    - {fileID: 21300000, guid: ea45fcecd022cf5498739886f6fe1ae5, type: 3}
+    - {fileID: 21300000, guid: 296381983fa73404f881ac8a3aa65290, type: 3}
+    - {fileID: 21300000, guid: 78578e39103925648ab601c5c20626df, type: 3}
+    - {fileID: 21300000, guid: 371f4e319f6569648b7438ef0c87b63d, type: 3}
+    framesPerSecond: 10
+  - key: orc_warrior
+    frames:
+    - {fileID: 21300000, guid: 29230ff21ea5a0e4fafe2dedfefc51ae, type: 3}
+    - {fileID: 21300000, guid: 88b231f689c9e7041bfae7c8ba7d68ea, type: 3}
+    - {fileID: 21300000, guid: 400c274a70704d74fac7e4d5b5e403b9, type: 3}
+    - {fileID: 21300000, guid: 17ef18c6d5be1064cbfb86d18abdc76f, type: 3}
+    framesPerSecond: 8
+  - key: orc_warrior_run
+    frames:
+    - {fileID: 21300000, guid: a99595f28c46215489194d5e5267cc4c, type: 3}
+    - {fileID: 21300000, guid: c44450aed2a4b42428fa9f56f8218fa7, type: 3}
+    - {fileID: 21300000, guid: 1fa39f3118911c74c9a534270220c3fe, type: 3}
+    - {fileID: 21300000, guid: 203ded677273b7045be5fe97a61ff41f, type: 3}
+    framesPerSecond: 10
+  - key: masked_orc
+    frames:
+    - {fileID: 21300000, guid: 9f3b9ca5f6460e94395d068452e913f7, type: 3}
+    - {fileID: 21300000, guid: ef691750cf78cea47a2b87e99afaf8a5, type: 3}
+    - {fileID: 21300000, guid: 7981b05d5ccd72a47a79df582462b5ca, type: 3}
+    - {fileID: 21300000, guid: bbc9e379b767c9345b1926b722ad0791, type: 3}
+    framesPerSecond: 8
+  - key: masked_orc_run
+    frames:
+    - {fileID: 21300000, guid: 14fcc5bf91cdbd94b8b019e51e665e74, type: 3}
+    - {fileID: 21300000, guid: aca441af18e1b4340a62886ee35ce2f0, type: 3}
+    - {fileID: 21300000, guid: b8e3414437462ff429cfb25e70890c82, type: 3}
+    - {fileID: 21300000, guid: c6a0ff40718a7fe4eb66aa068eeb0ab8, type: 3}
+    framesPerSecond: 10
+  - key: chort
+    frames:
+    - {fileID: 21300000, guid: d87af1bf56db599439817a4d0562024d, type: 3}
+    - {fileID: 21300000, guid: 2d3cdcdbd6165984eb55b0020099c6f8, type: 3}
+    - {fileID: 21300000, guid: e7d234fe7c6bcc0418e1861ebdaaf5cf, type: 3}
+    - {fileID: 21300000, guid: ec1ff96c3b853d54a97074124b74b08a, type: 3}
+    framesPerSecond: 8
+  - key: chort_run
+    frames:
+    - {fileID: 21300000, guid: 7ce62112b6ba831419bc7f7d0a08fc08, type: 3}
+    - {fileID: 21300000, guid: 766fbd50a107bdd4ab9f936759c0ffe1, type: 3}
+    - {fileID: 21300000, guid: a95a528cd39ad6b47b74123ca138405b, type: 3}
+    - {fileID: 21300000, guid: 380fdcc8da1ea5646af6442f68b95139, type: 3}
+    framesPerSecond: 10
+  - key: orc_shaman
+    frames:
+    - {fileID: 21300000, guid: 5ad0d4ede7bc7e247a64d76c0736e8b6, type: 3}
+    - {fileID: 21300000, guid: 435c657b7874d0b41950a5c6b0ee7afd, type: 3}
+    - {fileID: 21300000, guid: 75feb6033c4144c4a85d3c952e35c0f4, type: 3}
+    - {fileID: 21300000, guid: d57f8b9300655df4c80fac9b454f3504, type: 3}
+    framesPerSecond: 8
+  - key: orc_shaman_run
+    frames:
+    - {fileID: 21300000, guid: fa8aef9340bef7a4bb709194a43b897c, type: 3}
+    - {fileID: 21300000, guid: 563d6cd11611611448ce07b1aaa8065f, type: 3}
+    - {fileID: 21300000, guid: c82075508072a2643854974cf333109f, type: 3}
+    - {fileID: 21300000, guid: 7a91e63e98224fc46bde27e9fd18708a, type: 3}
+    framesPerSecond: 10
+  - key: necromancer
+    frames:
+    - {fileID: 21300000, guid: d3c18c34e0edb2a46b160901d0a926f6, type: 3}
+    - {fileID: 21300000, guid: 1be08009f97e3e84e8c250001d4e5596, type: 3}
+    - {fileID: 21300000, guid: 1f397c96b3ad25d4db283e53d43cbada, type: 3}
+    - {fileID: 21300000, guid: 90cc722de957705459e138c7cae333b5, type: 3}
+    framesPerSecond: 8
+  - key: big_zombie
+    frames:
+    - {fileID: 21300000, guid: 66f9237efe3683948a740b346899fc7a, type: 3}
+    - {fileID: 21300000, guid: 6432604cc7add3f4b8ea5fe7f1147178, type: 3}
+    - {fileID: 21300000, guid: 1dd2d4a3a48397944966121dd1d7ee9a, type: 3}
+    - {fileID: 21300000, guid: 97509d62ddb8b534e936812b07fd37d1, type: 3}
+    framesPerSecond: 8
+  - key: big_zombie_run
+    frames:
+    - {fileID: 21300000, guid: 297f5282749c5ad439278cd76c592bb9, type: 3}
+    - {fileID: 21300000, guid: e773092bd9ca19b4880f176ed17fb98c, type: 3}
+    - {fileID: 21300000, guid: 7125e23b5e907a64392b193edb1b2321, type: 3}
+    - {fileID: 21300000, guid: 9dbc3c6e6e871124f98f86c733129e8c, type: 3}
+    framesPerSecond: 10
+  - key: ogre
+    frames:
+    - {fileID: 21300000, guid: dc101284fe8cf624692bdf555dfb883a, type: 3}
+    - {fileID: 21300000, guid: 336ce270cd109ce4c9e2c97736ea61ae, type: 3}
+    - {fileID: 21300000, guid: 136f966f7fba61d48895fb04df67a39a, type: 3}
+    - {fileID: 21300000, guid: 8c124a7551ec3dc4fab0ae7fee57c89d, type: 3}
+    framesPerSecond: 8
+  - key: ogre_run
+    frames:
+    - {fileID: 21300000, guid: 1a52f9965877db748a324fa8aa489e35, type: 3}
+    - {fileID: 21300000, guid: 98b17d0f577c75343bf50dd1f27c7d92, type: 3}
+    - {fileID: 21300000, guid: 6bc4ad3b2e22c1a40a38d031fc67e41a, type: 3}
+    - {fileID: 21300000, guid: 56f0e797af2b48e449c2880c45e15ffe, type: 3}
+    framesPerSecond: 10
+  - key: big_demon
+    frames:
+    - {fileID: 21300000, guid: 082036e46663cc34b9883205bd2a8fe5, type: 3}
+    - {fileID: 21300000, guid: ed5d39690f35418448ae1a001cd630e5, type: 3}
+    - {fileID: 21300000, guid: 380ecc093f4eb78478d1b03cc46171dd, type: 3}
+    - {fileID: 21300000, guid: 7ae81489256d2684886be30e1883a283, type: 3}
+    framesPerSecond: 8
+  - key: big_demon_run
+    frames:
+    - {fileID: 21300000, guid: 05afcd386bd2bea4196e31760da85d40, type: 3}
+    - {fileID: 21300000, guid: dc39c8298e8a8b545bba8fdfc9964770, type: 3}
+    - {fileID: 21300000, guid: 6a6dd189296fea64e8690a9546a25d8f, type: 3}
+    - {fileID: 21300000, guid: f4443e3e3fc84da4ea17119f417598c9, type: 3}
+    framesPerSecond: 10
+  floorTiles:
+  - {fileID: 21300000, guid: 3398b0914ffdfae4a888757d409b3431, type: 3}
+  - {fileID: 21300000, guid: ce163e857df8aa24da5e90f782058a73, type: 3}
+  - {fileID: 21300000, guid: af164d3ea56fc604ea2a37bdf3c44d91, type: 3}
+  - {fileID: 21300000, guid: 466d3b3456cc5404d8d509e9d7fe78a6, type: 3}
+  - {fileID: 21300000, guid: bb659ee8e8591474d9925869837b1ad0, type: 3}
+  - {fileID: 21300000, guid: c9d9400a724cfca4e95d0271ed848181, type: 3}
+  - {fileID: 21300000, guid: d0e53e4381ebedd459a7935463d21d19, type: 3}
+  - {fileID: 21300000, guid: bbb31173e21af54448851d6be12d0f86, type: 3}
+  wallTile: {fileID: 21300000, guid: 54faef5359b5af34c95d37c10e385b8c, type: 3}

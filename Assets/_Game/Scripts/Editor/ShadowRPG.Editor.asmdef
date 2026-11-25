@@ -1,0 +1,19 @@
+{
+    "name": "ShadowRPG.Editor",
+    "rootNamespace": "ShadowRPG.EditorTools",
+    "references": [
+        "ShadowRPG.Core",
+        "ShadowRPG.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
