@@ -1,5 +1,7 @@
 using ShadowRPG.Core;
 using ShadowRPG.Core.Combat;
+using ShadowRPG.Core.Dungeon;
+using ShadowRPG.Core.Town;
 using ShadowRPG.Core.Game;
 using ShadowRPG.Core.Meta;
 using ShadowRPG.Core.Raid;
@@ -27,8 +29,6 @@ namespace ShadowRPG.Runtime
         [SerializeField] string startingClass = "knight";
         [Tooltip("0이면 매번 다른 시드")]
         [SerializeField] int seed;
-        [Tooltip("세로형 모바일 화면 기준 던전 층 크기 (가로 x 세로, 유닛)")]
-        [SerializeField] Vector2 arenaSize = new Vector2(24f, 34f);
         [SerializeField] Vector2 raidArenaSize = new Vector2(22f, 26f);
         [Tooltip("켜면 시작할 때 저장을 지우고 새로 시작 (테스트용)")]
         [SerializeField] bool resetSaveOnStart;
@@ -41,6 +41,8 @@ namespace ShadowRPG.Runtime
         Camera _camera;
         bool _saveDirty;
         float _saveTimer;
+        bool _pendingTown;
+        readonly IFloorLayoutSelector _layouts = FloorLayoutSelector.CreateDefault();
 
         public GameMeta Meta => _meta;
         public ICombatSession Session => _session;
@@ -67,12 +69,20 @@ namespace ShadowRPG.Runtime
             _camera = EnsureCamera();
             EnsureGlobalLight();
             EnsureEventSystem();
-            EnterDungeon();
+            EnterTown();
         }
 
         void Update()
         {
             _session?.Tick(Time.deltaTime);
+            // 층 클리어 슬로우 모션 등 세션이 요구하는 시간 배율
+            Time.timeScale = _session != null ? _session.TimeScale : 1f;
+
+            if (_pendingTown)
+            {
+                _pendingTown = false;
+                EnterTown();
+            }
 
             if (!_saveDirty) return;
             _saveTimer += Time.unscaledDeltaTime;
@@ -82,10 +92,17 @@ namespace ShadowRPG.Runtime
 
         // ---------- IModeSwitcher ----------
 
-        public void EnterDungeon()
+        public void EnterTown()
         {
-            var arena = new Rect(-arenaSize * 0.5f, arenaSize);
-            Switch(new DungeonSession(_meta, balance, dungeonRules, _random, arena));
+            Switch(new TownSession(_meta, balance, _random, new BotTownPresence()));
+        }
+
+        public void EnterDungeon(int globalDungeon)
+        {
+            _meta.StartRun(globalDungeon);
+            var session = new DungeonSession(_meta, balance, dungeonRules, _random, _layouts, seed != 0 ? seed : _random.Range(1, int.MaxValue));
+            session.ReturnToTownRequested += _ => _pendingTown = true;
+            Switch(session);
         }
 
         public bool TryEnterRaid(out string reason)
@@ -126,6 +143,8 @@ namespace ShadowRPG.Runtime
             _saveDirty = false;
             _saveTimer = 0f;
         }
+
+        void OnDestroy() => Time.timeScale = 1f;
 
         void OnApplicationPause(bool paused)
         {

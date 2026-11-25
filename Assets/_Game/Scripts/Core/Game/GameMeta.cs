@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using ShadowRPG.Core.Character;
+using ShadowRPG.Core.Dungeon;
 using ShadowRPG.Core.Economy;
 using ShadowRPG.Core.Items;
 using ShadowRPG.Core.Meta;
@@ -117,6 +118,51 @@ namespace ShadowRPG.Core.Game
             Profile.ClassId = player.Class.Current?.Id ?? Profile.ClassId;
         }
 
+        // ---------- 던전 진행 ----------
+
+        /// <summary>마을에서 던전 입장: 선택한 던전의 1층부터 시작합니다.</summary>
+        public void StartRun(int globalDungeon)
+        {
+            globalDungeon = Math.Min(globalDungeon, Profile.UnlockedDungeons - 1);
+            Profile.Progress = Content.Acts.StartOf(globalDungeon, Profile.Progress.HighestGlobalFloor);
+            RequestSave();
+        }
+
+        /// <summary>던전 보스 층 클리어 → 다음 던전 개방.</summary>
+        public void UnlockNextDungeon(int clearedGlobalDungeon)
+        {
+            int total = Dungeon.ActCatalogExtensions.TotalDungeons(Content.Acts);
+            Profile.UnlockedDungeons = Math.Min(total, Math.Max(Profile.UnlockedDungeons, clearedGlobalDungeon + 2));
+        }
+
+        // ---------- 가방 ↔ 창고 ----------
+
+        public bool MoveToStash(Item item)
+        {
+            if (!Profile.Stash.CanFit(item) || !Profile.Bag.Remove(item)) return false;
+            Profile.Stash.TryAdd(item);
+            RequestSave();
+            return true;
+        }
+
+        public bool MoveToBag(Item item)
+        {
+            if (!Profile.Bag.CanFit(item) || !Profile.Stash.Remove(item)) return false;
+            Profile.Bag.TryAdd(item);
+            RequestSave();
+            return true;
+        }
+
+        /// <summary>창고에서 바로 판매.</summary>
+        public long SellFromStash(Item item, PlayerCharacter seller)
+        {
+            if (!Profile.Stash.Remove(item)) return 0;
+            long gold = Pricing.SellValue(item, seller?.Combatant.Stats);
+            Wallet.Earn(gold);
+            RequestSave();
+            return gold;
+        }
+
         // ---------- 가방 / 골드 소모 ----------
 
         public long Sell(Item item, PlayerCharacter seller)
@@ -131,10 +177,12 @@ namespace ShadowRPG.Core.Game
         /// <summary>가방 장비 장착. 밀려난 장비는 가방으로 돌아갑니다.</summary>
         public EquipResult Equip(PlayerCharacter player, Item item, EquipSlot slot)
         {
+            var source = Profile.Stash.TryGetPlacement(item, out _) ? Profile.Stash : Profile.Bag;
             var result = player.Equipment.TryEquip(item, slot, player.Combatant.Stats);
             if (!result.Success) return result;
-            Profile.Bag.Remove(item);
-            if (result.Replaced != null) Profile.Bag.TryAdd(result.Replaced);
+            source.Remove(item);
+            if (result.Replaced != null && !source.TryAdd(result.Replaced) && !Profile.Bag.TryAdd(result.Replaced) && !Profile.Stash.TryAdd(result.Replaced))
+                Wallet.Earn(Pricing.SellValue(result.Replaced, player.Combatant.Stats));
             Capture(player);
             RequestSave();
             return result;

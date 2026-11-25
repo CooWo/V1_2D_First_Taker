@@ -44,6 +44,9 @@ Assets/_Game/
 | 저장 | `Meta/GameProfile`, `ProfileSerializer`, `IProfileStore` (Runtime: `FileProfileStore`) |
 | 세션 구조 | `Game/GameMeta`(세션 밖 성장) + `ICombatSession`(던전/레이드) + `CombatSetup` |
 
+추가 사항 02: 세션은 `TownSession` / `DungeonSession` / `RaidSession` 3종(`ICombatSession`), 지도는 `IFloorLayoutGenerator` 6종 + `GridNavigator`,
+가방은 격자 `Inventory`. 자세한 내용은 `Docs/GDD_Addendum_02.md`.
+
 UI는 `ListPanel` 하나를 재사용하는 메뉴들(`UI/Menus/*`)과 모드별 HUD(`UI/Modes/DungeonHud`, `RaidHud`)로 나뉩니다.
 자세한 기획 수치는 `Docs/GDD_Addendum_01.md`.
 

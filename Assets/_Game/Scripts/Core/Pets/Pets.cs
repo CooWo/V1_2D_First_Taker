@@ -210,6 +210,9 @@ namespace ShadowRPG.Core.Pets
 
         public event Action<PetSkillDefinition> SkillUsed;
 
+        /// <summary>층 이동 등 순간이동 시 주인 곁으로.</summary>
+        public void SnapTo(Vector2 ownerPosition) => Position = ownerPosition + new Vector2(-0.8f, 0.5f);
+
         public IEnumerable<PetSkillDefinition> UnlockedSkills => Definition.Skills.Where(s => s.UnlockGrade <= State.Grade);
 
         public void Tick(float dt)

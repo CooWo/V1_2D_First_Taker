@@ -188,6 +188,20 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e5b9a245ac7bc0d4394e70fd8c37001d, type: 3}
     - {fileID: 21300000, guid: d0545776baf6acc4d84a0e5f96e5aecb, type: 3}
     framesPerSecond: 10
+  - key: knight_f
+    frames:
+    - {fileID: 21300000, guid: 7f53e7e3b167ec047b3907572247b5a1, type: 3}
+    - {fileID: 21300000, guid: 57b51a6cc07f30d489585a6baba082ac, type: 3}
+    - {fileID: 21300000, guid: 7292b683c56e76b42b3f18528f2cf34a, type: 3}
+    - {fileID: 21300000, guid: 8fe0d38c8bbc081409b3b61c61c96d57, type: 3}
+    framesPerSecond: 8
+  - key: knight_f_run
+    frames:
+    - {fileID: 21300000, guid: 65266e88327ceee408d3d32c50471c62, type: 3}
+    - {fileID: 21300000, guid: 039758998d3646c40bfdc0b2170f9d78, type: 3}
+    - {fileID: 21300000, guid: 824b78cde664fae4d9139e721cb7f3f7, type: 3}
+    - {fileID: 21300000, guid: c9486ba4673ebdf45a321e0d5474e4fa, type: 3}
+    framesPerSecond: 10
   - key: wizzard_f
     frames:
     - {fileID: 21300000, guid: 2325eee2c198dfc4893f0eafa6196afe, type: 3}
@@ -201,6 +215,20 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b38e44ae439f9b84e9b5fdf4858996f1, type: 3}
     - {fileID: 21300000, guid: 4df7600a05fa5a54caecd07705fd7c3c, type: 3}
     - {fileID: 21300000, guid: 1a85187d23a908e4ab1330a4aba23a28, type: 3}
+    framesPerSecond: 10
+  - key: wizzard_m
+    frames:
+    - {fileID: 21300000, guid: b23806be1df23a043a50b01cb8a75692, type: 3}
+    - {fileID: 21300000, guid: 1f230ce6964d07440928c06ea7f3ee45, type: 3}
+    - {fileID: 21300000, guid: 312ea4cc013ba4f4d92f84021e516f05, type: 3}
+    - {fileID: 21300000, guid: 6e9f577e207beca4284fd725ac03921e, type: 3}
+    framesPerSecond: 8
+  - key: wizzard_m_run
+    frames:
+    - {fileID: 21300000, guid: 972a1f05d8438a84f8f6a88b6e2728f1, type: 3}
+    - {fileID: 21300000, guid: 955b1d3c576d34348a665fbec972ca2d, type: 3}
+    - {fileID: 21300000, guid: 58bc622dcc8abbc4bba4056a26af365d, type: 3}
+    - {fileID: 21300000, guid: 41a07543f9187f64cb39a434484c8ed7, type: 3}
     framesPerSecond: 10
   - key: elf_m
     frames:
@@ -216,6 +244,20 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 8dd95d741a714854dbf1b4e3fd4d95e5, type: 3}
     - {fileID: 21300000, guid: 2ea29e3c722ee4a4cb66cd976b75dbc2, type: 3}
     framesPerSecond: 10
+  - key: elf_f
+    frames:
+    - {fileID: 21300000, guid: 0b2aaa41e22f03a43a6367aaccd639ef, type: 3}
+    - {fileID: 21300000, guid: ce861ade524ff4b4c8f4bc68e3da555c, type: 3}
+    - {fileID: 21300000, guid: 292faf426608876408a5182cef680098, type: 3}
+    - {fileID: 21300000, guid: 555e4dc375cb7944ab7913ed50e1d6bb, type: 3}
+    framesPerSecond: 8
+  - key: elf_f_run
+    frames:
+    - {fileID: 21300000, guid: cb48deea75c93ab4796deba3bec40248, type: 3}
+    - {fileID: 21300000, guid: a0da370e049a8d1489dff91a644a3525, type: 3}
+    - {fileID: 21300000, guid: 4d8df76b3ae6a3c4c8b53925c5cf121c, type: 3}
+    - {fileID: 21300000, guid: aeb992f6961f5024782b5e9aa91e4a46, type: 3}
+    framesPerSecond: 10
   - key: lizard_m
     frames:
     - {fileID: 21300000, guid: 6cc254706e184ce40be03b1906140a2f, type: 3}
@@ -229,6 +271,20 @@ MonoBehaviour:
     - {fileID: 21300000, guid: ed54ba7e31df1ea4aa69971ad278067b, type: 3}
     - {fileID: 21300000, guid: d4d04cfaa97055a449aed618bcd6205f, type: 3}
     - {fileID: 21300000, guid: 465d33d3b4620d647aa55e06f0f44558, type: 3}
+    framesPerSecond: 10
+  - key: dwarf_m
+    frames:
+    - {fileID: 21300000, guid: a2e5ba992af1d424fa9bdcce4d5974e7, type: 3}
+    - {fileID: 21300000, guid: 0699d9c03d003284890f26889de16e32, type: 3}
+    - {fileID: 21300000, guid: 833c34cdf5eaa8b418160d38adc35c3b, type: 3}
+    - {fileID: 21300000, guid: 3e936800af1311e4686ef7d6813e440f, type: 3}
+    framesPerSecond: 8
+  - key: dwarf_m_run
+    frames:
+    - {fileID: 21300000, guid: ef2440479ee8f864fb2f83cf35c20b17, type: 3}
+    - {fileID: 21300000, guid: 74fd1c693e9ca8041a92d77717f5162d, type: 3}
+    - {fileID: 21300000, guid: e5d4fa9f9f1f6994094282be7e649adb, type: 3}
+    - {fileID: 21300000, guid: 10a0d79c702d0664b91253d031da6206, type: 3}
     framesPerSecond: 10
   - key: angel
     frames:

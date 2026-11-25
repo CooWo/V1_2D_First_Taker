@@ -161,6 +161,7 @@ namespace ShadowRPG.Core.Raid
         public bool Enraged => _brain.Enraged;
         public bool IsPlayerDead => !Player.Combatant.IsAlive;
         public float RespawnRemaining => 0f;
+        public float TimeScale => 1f;
 
         public event Action<string> Log;
         public event Action<RaidResult> Finished;
@@ -175,6 +176,7 @@ namespace ShadowRPG.Core.Raid
                 DamageType = Definition.Element
             };
             _bossAgent = _factory.Create(archetype, 1, EnemyRank.Boss, World.Bounds.center + new Vector2(0f, 4f));
+            _bossAgent.Aggro = true;
             var boss = _bossAgent.Combatant;
             boss.Name = $"{Definition.Name} Lv.{state.BossLevel}";
             boss.Stats.SetBase(StatType.MaxLife, maxLife);
@@ -191,6 +193,7 @@ namespace ShadowRPG.Core.Raid
         void SpawnAdd(EnemyArchetype archetype, Vector2 position)
         {
             var agent = _factory.Create(archetype, Mathf.Max(1, Player.Progress.Level), EnemyRank.Normal, position);
+            agent.Aggro = true;
             _adds.Add(agent);
             World.Add(agent.Combatant);
         }

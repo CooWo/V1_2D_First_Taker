@@ -55,36 +55,47 @@ namespace ShadowRPG.Tests
         }
 
         [Test]
-        public void FloorLoot_KeepsOnlyLimit_RestIsAutoSold()
+        public void FloorLoot_TakesOnlyWhatFitsInBagCells_RestIsAutoSold()
         {
             var meta = TestFactory.Meta();
-            var loot = new FloorLoot(keepLimit: 2);
-            for (int i = 0; i < 5; i++) loot.Add(meta.Loot.Create(EquipSlot.Head, ItemRarity.Rare, 5));
+            var loot = new FloorLoot();
+            for (int i = 0; i < 3; i++) loot.Add(meta.Loot.Create(EquipSlot.Head, ItemRarity.Rare, 5)); // 2x2 각 4칸
 
-            var bag = new Inventory(12);
-            loot.AutoSelect(meta.Scorer, bag.FreeSlots);
-            Assert.AreEqual(2, loot.Selected.Count);
-            Assert.IsFalse(loot.Toggle(loot.Found.First(i => !loot.IsSelected(i)), bag.FreeSlots), "한도 초과 선택 불가");
+            var bag = new Inventory(2, 3); // 6칸 → 투구 하나만 들어감
+            loot.AutoSelect(meta.Scorer, bag);
+            Assert.AreEqual(1, loot.Selected.Count);
+            Assert.IsFalse(loot.Toggle(loot.Found.First(i => !loot.IsSelected(i)), bag), "칸 부족이면 선택 불가");
 
             long before = meta.Wallet.Gold;
             var (kept, gold) = loot.Resolve(bag, meta.Wallet, meta.Pricing, null);
-            Assert.AreEqual(2, kept);
-            Assert.AreEqual(2, bag.Items.Count);
+            Assert.AreEqual(1, kept);
             Assert.Greater(gold, 0);
-            Assert.AreEqual(before + gold, meta.Wallet.Gold, "나머지 3개는 판매 → 골드");
+            Assert.AreEqual(before + gold, meta.Wallet.Gold, "나머지 2개는 판매 → 골드");
         }
 
         [Test]
-        public void FloorLoot_BagSpaceAlsoLimitsPicks()
+        public void GridBag_ItemsOccupyTheirShape()
         {
             var meta = TestFactory.Meta();
-            var bag = new Inventory(1);
-            var loot = new FloorLoot(keepLimit: 3);
-            for (int i = 0; i < 3; i++) loot.Add(meta.Loot.Create(EquipSlot.Boots, ItemRarity.Magic, 1));
-            loot.AutoSelect(meta.Scorer, bag.FreeSlots);
-            Assert.AreEqual(1, loot.Selected.Count, "가방 여유 1칸이면 1개만");
+            var bag = new Inventory(8, 5);
+            int bodies = 0;
+            for (int i = 0; i < 6; i++)
+                if (bag.TryAdd(meta.Loot.Create(EquipSlot.Body, ItemRarity.Magic, 1))) bodies++;
+            Assert.AreEqual(4, bodies, "2x3 갑주는 8x5 가방에 4개");
+            Assert.IsTrue(bag.TryAdd(meta.Loot.Create(EquipSlot.Ring1, ItemRarity.Magic, 1)), "남은 칸에 반지는 들어감");
+            Assert.AreEqual(25, bag.UsedCells);
         }
 
+        [Test]
+        public void GridBag_LoseHalf_RemovesHalfRoundedUp()
+        {
+            var meta = TestFactory.Meta();
+            var bag = new Inventory(8, 5);
+            for (int i = 0; i < 7; i++) bag.TryAdd(meta.Loot.Create(EquipSlot.Ring1, ItemRarity.Magic, 1));
+            var lost = bag.LoseHalf(meta.Random);
+            Assert.AreEqual(4, lost.Count);
+            Assert.AreEqual(3, bag.Items.Count);
+        }
         [Test]
         public void Enhancement_CostRises_AndStatsScale()
         {

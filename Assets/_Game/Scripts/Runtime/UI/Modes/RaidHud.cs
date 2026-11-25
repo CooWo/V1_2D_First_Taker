@@ -28,7 +28,7 @@ namespace ShadowRPG.Runtime.UI.Modes
             _bossBar = new BossBar(root, portrait ? -490f : -24f);
 
             _result = new ListPanel(root, "RaidResult", 0);
-            _result.SetFooter(0, "던전으로 돌아가기", () => _ctx.Modes.EnterDungeon());
+            _result.SetFooter(0, "마을로 돌아가기", () => _ctx.Modes.EnterTown());
             _result.SetFooter(1, string.Empty, null, false);
             _result.SetFooter(2, string.Empty, null, false);
             session.Finished += ShowResult;

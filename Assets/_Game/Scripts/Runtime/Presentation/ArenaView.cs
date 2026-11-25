@@ -1,43 +1,61 @@
+using ShadowRPG.Core.World;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace ShadowRPG.Runtime.Presentation
 {
-    /// <summary>전투 구역 바닥/벽 타일맵을 만듭니다.</summary>
+    /// <summary>층 지도를 타일맵으로 그립니다: 걸을 수 있는 칸은 바닥, 그 둘레의 막힌 칸은 벽.</summary>
     public sealed class ArenaView : MonoBehaviour
     {
+        /// <summary>벽이 있는 지도.</summary>
+        public void Build(GridMap map, SpriteLibrary library, int seed, Color tint, bool solidWalls = false)
+        {
+            Setup(library, tint, out var floorMap, out var wallMap, out var floorTiles, out var wallTile);
+            var random = new System.Random(seed);
+            var origin = Vector2Int.FloorToInt(map.Origin);
+
+            for (int x = -1; x <= map.Width; x++)
+            for (int y = -1; y <= map.Height; y++)
+            {
+                var cell = new Vector3Int(origin.x + x, origin.y + y, 0);
+                if (map.IsWalkable(x, y))
+                {
+                    floorMap.SetTile(cell, floorTiles[random.NextDouble() < 0.82 ? 0 : random.Next(0, floorTiles.Length)]);
+                    continue;
+                }
+                // 던전은 벽 둘레만(바깥은 어둠), 마을은 건물 블록을 통째로 채움
+                if (TouchesWalkable(map, x, y) || (solidWalls && map.InRange(x, y))) wallMap.SetTile(cell, wallTile);
+            }
+        }
+
+        /// <summary>벽 없는 사각 경기장 (레이드).</summary>
         public void Build(Rect bounds, SpriteLibrary library, int seed, Color tint)
+        {
+            int width = Mathf.CeilToInt(bounds.width) + 2;
+            int height = Mathf.CeilToInt(bounds.height) + 2;
+            var map = new GridMap(width, height, bounds.min - Vector2.one);
+            map.Fill(new RectInt(1, 1, width - 2, height - 2), true);
+            Build(map, library, seed, tint);
+        }
+
+        static bool TouchesWalkable(GridMap map, int x, int y)
+        {
+            for (int dx = -1; dx <= 1; dx++)
+            for (int dy = -1; dy <= 1; dy++)
+                if (map.IsWalkable(x + dx, y + dy)) return true;
+            return false;
+        }
+
+        void Setup(SpriteLibrary library, Color tint, out Tilemap floorMap, out Tilemap wallMap, out Tile[] floorTiles, out Tile wallTile)
         {
             var grid = gameObject.AddComponent<Grid>();
             grid.cellSize = Vector3.one;
-
-            var floorMap = CreateLayer("Floor", SortingOrders.Floor, tint);
-            var wallMap = CreateLayer("Walls", SortingOrders.Wall, tint * 0.9f);
-
-            var random = new System.Random(seed);
-            var floorTiles = CreateFloorTiles(library);
-            var wallTile = ScriptableObject.CreateInstance<Tile>();
+            floorMap = CreateLayer("Floor", SortingOrders.Floor, tint);
+            wallMap = CreateLayer("Walls", SortingOrders.Wall, tint * 0.9f);
+            floorTiles = CreateFloorTiles(library);
+            wallTile = ScriptableObject.CreateInstance<Tile>();
             wallTile.sprite = library != null && library.WallTile != null ? library.WallTile : PixelArtFactory.Square;
             if (library == null || library.WallTile == null) wallTile.color = new Color(0.1f, 0.11f, 0.16f);
-
-            int xMin = Mathf.FloorToInt(bounds.xMin) - 2;
-            int xMax = Mathf.CeilToInt(bounds.xMax) + 2;
-            int yMin = Mathf.FloorToInt(bounds.yMin) - 2;
-            int yMax = Mathf.CeilToInt(bounds.yMax) + 3;
-
-            for (int x = xMin; x < xMax; x++)
-            for (int y = yMin; y < yMax; y++)
-            {
-                var cell = new Vector3Int(x, y, 0);
-                bool border = x < bounds.xMin - 1 || x >= bounds.xMax + 1 || y < bounds.yMin - 1 || y >= bounds.yMax + 1;
-                if (border)
-                {
-                    wallMap.SetTile(cell, wallTile);
-                    continue;
-                }
-                int index = random.NextDouble() < 0.82 ? 0 : random.Next(0, floorTiles.Length);
-                floorMap.SetTile(cell, floorTiles[index]);
-            }
         }
 
         Tilemap CreateLayer(string name, int order, Color tint)

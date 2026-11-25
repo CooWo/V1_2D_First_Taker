@@ -36,16 +36,25 @@ namespace ShadowRPG.Core.Meta
     /// </summary>
     public sealed class GameProfile
     {
-        public const int DefaultBagCapacity = 12;
+        public const int BagWidth = 8;
+        public const int BagHeight = 5;
+        public const int StashWidth = 10;
+        public const int StashHeight = 8;
 
-        public GameProfile(long gold = 0, int bagCapacity = DefaultBagCapacity)
+        public GameProfile(long gold = 0)
         {
             Wallet = new Wallet(gold);
-            Bag = new Inventory(bagCapacity);
+            Bag = new Inventory(BagWidth, BagHeight);
+            Stash = new Inventory(StashWidth, StashHeight);
         }
 
         public Wallet Wallet { get; }
+        /// <summary>던전에 들고 들어가는 가방 (죽으면 절반 손실).</summary>
         public Inventory Bag { get; }
+        /// <summary>마을 창고 (안전).</summary>
+        public Inventory Stash { get; }
+        /// <summary>입장 가능한 던전 수 (ACT 구분 없이 앞에서부터, 보스 층을 깨면 +1).</summary>
+        public int UnlockedDungeons = 1;
         public string ClassId = "knight";
         public int Level = 1;
         public float Experience;

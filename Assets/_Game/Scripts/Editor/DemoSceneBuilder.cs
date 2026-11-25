@@ -49,7 +49,7 @@ namespace ShadowRPG.EditorTools
             // 몬스터 + 레이드 동료(knight_m 등) + 펫(angel 등)
             var keys = EnemyRoster.CreateDefault().Concat(EnemyRoster.CreateElites()).Append(EnemyRoster.CreateBoss())
                 .Select(a => a.VisualKey)
-                .Concat(new[] { "knight_m", "wizzard_f", "elf_m", "lizard_m", "angel", "pumpkin_dude", "tiny_slug" })
+                .Concat(new[] { "knight_m", "knight_f", "wizzard_f", "wizzard_m", "elf_m", "elf_f", "lizard_m", "dwarf_m", "angel", "pumpkin_dude", "tiny_slug" })
                 .Distinct();
 
             var entries = new List<SpriteLibrary.Entry>();

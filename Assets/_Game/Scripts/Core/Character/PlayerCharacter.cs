@@ -28,7 +28,7 @@ namespace ShadowRPG.Core.Character
             Combatant.Loadout = new SkillLoadout();
 
             Equipment = new Equipment(new IEquipValidator[] { new SlotCompatibilityValidator(), new StatRequirementValidator() });
-            Inventory = bag ?? new Inventory(Meta.GameProfile.DefaultBagCapacity);
+            Inventory = bag ?? new Inventory(Meta.GameProfile.BagWidth, Meta.GameProfile.BagHeight);
             StatApplier = new EquipmentStatApplier(Equipment, Combatant);
             Sets = new SetBonusTracker(Equipment, Combatant, sets);
             LoadoutBuilder = new LoadoutBuilder(Equipment, Combatant, world, skills, supports);

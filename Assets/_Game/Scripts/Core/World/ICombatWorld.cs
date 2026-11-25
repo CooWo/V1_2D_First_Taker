@@ -43,5 +43,8 @@ namespace ShadowRPG.Core.World
         SkillExecutor Executor { get; }
         Rect Bounds { get; }
         Vector2 ClampToBounds(Vector2 position);
+        /// <summary>벽·길찾기 (열린 경기장이면 null).</summary>
+        IWalkability Navigation { get; }
+        bool IsWalkable(Vector2 position);
     }
 }

@@ -34,7 +34,8 @@ namespace ShadowRPG.Runtime.UI
         public FloatingTextLayer FloatingText { get; private set; }
         public IMoveInput Joystick { get; private set; }
 
-        public void Initialize(ICombatSession session, MenuContext ctx, Camera worldCamera, Func<Transform, MenuContext, IHudModule> moduleFactory, bool allowRaidEntry)
+        public void Initialize(ICombatSession session, MenuContext ctx, Camera worldCamera,
+            Func<RectTransform, MenuContext, IHudModule> moduleFactory, Func<RectTransform, MenuContext, IEnumerable<IMenu>> menuFactory)
         {
             _session = session;
             _ctx = ctx;
@@ -56,11 +57,7 @@ namespace ShadowRPG.Runtime.UI
 
             _module = moduleFactory(root, ctx);
 
-            _menus.Add(new EquipmentMenu(root, ctx));
-            _menus.Add(new BagMenu(root, ctx));
-            _menus.Add(new TreeMenu(root, ctx));
-            _menus.Add(new PetMenu(root, ctx));
-            if (allowRaidEntry) _menus.Add(new RaidLobbyMenu(root, ctx));
+            _menus.AddRange(menuFactory(root, ctx));
             BuildButtons(root);
 
             _deathText = UiFactory.Label(UiFactory.Anchored(root, "Death", new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(900f, 120f)),
@@ -71,16 +68,27 @@ namespace ShadowRPG.Runtime.UI
 
         void BuildButtons(RectTransform root)
         {
-            var size = new Vector2(170f, 66f);
-            float y = 230f;
-            for (int i = _menus.Count - 1; i >= 0; i--, y += 76f)
+            // 버튼이 많으면 2열로 (가로 화면에서 우상단 정보와 겹치지 않게)
+            int total = _menus.Count + 2;
+            int columns = total > 6 ? 2 : 1;
+            var size = new Vector2(columns == 2 ? 150f : 170f, 62f);
+            int index = 0;
+
+            Vector2 Slot()
+            {
+                int row = index / columns;
+                int column = columns - 1 - index % columns;
+                index++;
+                return new Vector2(-20f - column * (size.x + 10f), 230f + row * 70f);
+            }
+
+            for (int i = _menus.Count - 1; i >= 0; i--)
             {
                 var menu = _menus[i];
-                UiFactory.Button(root, "Menu" + menu.ButtonLabel, new Vector2(1f, 0f), new Vector2(-20f, y), size, menu.ButtonLabel, () => Open(menu));
+                UiFactory.Button(root, "Menu" + menu.ButtonLabel, new Vector2(1f, 0f), Slot(), size, menu.ButtonLabel, () => Open(menu));
             }
-            _classLabel = UiFactory.Button(root, "Class", new Vector2(1f, 0f), new Vector2(-20f, y), size, string.Empty, CycleClass).GetComponentInChildren<UnityEngine.UI.Text>();
-            y += 76f;
-            _autoMoveLabel = UiFactory.Button(root, "AutoMove", new Vector2(1f, 0f), new Vector2(-20f, y), size, string.Empty, ToggleAutoMove).GetComponentInChildren<UnityEngine.UI.Text>();
+            _classLabel = UiFactory.Button(root, "Class", new Vector2(1f, 0f), Slot(), size, string.Empty, CycleClass).GetComponentInChildren<UnityEngine.UI.Text>();
+            _autoMoveLabel = UiFactory.Button(root, "AutoMove", new Vector2(1f, 0f), Slot(), size, string.Empty, ToggleAutoMove).GetComponentInChildren<UnityEngine.UI.Text>();
         }
 
         void Open(IMenu menu)
@@ -134,7 +142,7 @@ namespace ShadowRPG.Runtime.UI
             _autoMoveLabel.text = player.AutoMove ? "자동 이동 ON" : "자동 이동 OFF";
             _classLabel.text = $"직업: {player.Class.Current?.Name}";
             _deathText.text = _session.IsPlayerDead && _session.RespawnRemaining > 0f
-                ? $"그림자가 흩어졌습니다\n<size=30>{Mathf.CeilToInt(_session.RespawnRemaining)}초 뒤 층 재시작</size>"
+                ? $"쓰러졌습니다\n<size=30>{Mathf.CeilToInt(_session.RespawnRemaining)}초 뒤 마을로</size>"
                 : string.Empty;
         }
 

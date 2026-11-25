@@ -45,6 +45,24 @@ namespace ShadowRPG.Core.Enemies
         public IEnemyBrain Brain { get; }
         public float AttackTimer { get; set; }
         public int Level { get; set; }
+
+        /// <summary>플레이어를 알아챘는지. 던전 몬스터는 방에서 대기하다 보이거나 맞으면 추적합니다.</summary>
+        public bool Aggro { get; set; }
+
+        public const float AggroRange = 8f;
+        public const float AlertRadius = 5f;
+
+        /// <summary>대기 중이면 시야 안의 적을 확인해 깨어나고, 주변 동료도 깨웁니다.</summary>
+        public Combatant AcquireTarget(ICombatWorld world)
+        {
+            var self = Combatant;
+            var target = world.FindNearestEnemy(self.Team, self.Position, Aggro ? 60f : AggroRange);
+            if (target == null) return null;
+            if (Aggro) return target;
+            if (!world.CanSee(self.Position, target.Position)) return null;
+            Aggro = true;
+            return target;
+        }
     }
 
     /// <summary>근접 몬스터: 추적 후 근접 공격.</summary>
@@ -55,16 +73,16 @@ namespace ShadowRPG.Core.Enemies
             var self = agent.Combatant;
             if (!self.CanAct) return;
 
-            var target = world.FindNearestEnemy(self.Team, self.Position, 40f);
+            var target = agent.AcquireTarget(world);
             if (target == null) return;
 
             agent.AttackTimer -= dt;
             float reach = agent.Archetype.AttackRange + target.Radius + self.Radius;
             var delta = target.Position - self.Position;
 
-            if (delta.magnitude > reach)
+            if (delta.magnitude > reach || !world.CanSee(self.Position, target.Position))
             {
-                self.Move(delta + EnemyMotion.Separation(self, world), dt);
+                self.Move(world.SteerTowards(self.Position, target.Position) + EnemyMotion.Separation(self, world), dt);
                 return;
             }
 
@@ -91,17 +109,18 @@ namespace ShadowRPG.Core.Enemies
             var self = agent.Combatant;
             if (!self.CanAct) return;
 
-            var target = world.FindNearestEnemy(self.Team, self.Position, 40f);
+            var target = agent.AcquireTarget(world);
             if (target == null) return;
 
             agent.AttackTimer -= dt;
             var delta = target.Position - self.Position;
             float distance = delta.magnitude;
+            bool visible = world.CanSee(self.Position, target.Position);
 
-            if (distance > agent.Archetype.AttackRange) self.Move(delta + EnemyMotion.Separation(self, world), dt);
+            if (distance > agent.Archetype.AttackRange || !visible) self.Move(world.SteerTowards(self.Position, target.Position) + EnemyMotion.Separation(self, world), dt);
             else if (distance < PreferredDistance * 0.6f) self.Move(-delta + EnemyMotion.Separation(self, world), dt);
 
-            if (distance > agent.Archetype.AttackRange || agent.AttackTimer > 0f) return;
+            if (distance > agent.Archetype.AttackRange || !visible || agent.AttackTimer > 0f) return;
             agent.AttackTimer = agent.Archetype.AttackInterval;
             self.LockActions(0.4f);
 
@@ -172,6 +191,7 @@ namespace ShadowRPG.Core.Enemies
             combatant.Health.ResetToFull();
 
             var agent = new EnemyAgent(combatant, archetype, archetype.IsRanged ? _ranged : _melee) { Level = level };
+            combatant.Health.Damaged += _ => agent.Aggro = true;
             agent.AttackTimer = archetype.AttackInterval * 0.5f;
             return agent;
         }

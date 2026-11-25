@@ -46,18 +46,27 @@ namespace ShadowRPG.Core.AutoBattle
                     return hazard.EscapeDirection(self.Position);
             }
 
-            // 2) 적이 없으면 목적지(다음 층 포탈 등)로
+            var world = context.World;
             var enemy = context.NearestEnemy;
             if (enemy == null)
             {
-                if (!context.Destination.HasValue) return Vector2.zero;
-                var toGoal = context.Destination.Value - self.Position;
-                return toGoal.sqrMagnitude > 0.04f ? toGoal.normalized : Vector2.zero;
+                // 2) 주변에 적이 없으면: 목적지 → 없으면 층 어딘가 남은 적을 찾아 탐색 (벽을 돌아감)
+                if (context.Destination.HasValue)
+                {
+                    var goal = context.Destination.Value;
+                    return (goal - self.Position).sqrMagnitude > 0.04f ? world.SteerTowards(self.Position, goal) : Vector2.zero;
+                }
+                var far = world.FindNearestEnemy(self.Team, self.Position, 999f);
+                return far != null ? world.SteerTowards(self.Position, far.Position) : Vector2.zero;
             }
 
             float range = EngageRange(context);
             float gap = context.NearestDistance - enemy.Radius;
-            var toward = (enemy.Position - self.Position).normalized;
+            bool visible = world.CanSee(self.Position, enemy.Position);
+            var toward = world.SteerTowards(self.Position, enemy.Position);
+
+            // 벽 너머의 적은 보일 때까지 길을 따라 접근
+            if (!visible) return toward;
 
             return context.PrimaryIsMelee
                 ? Melee(context, enemy.Position, toward, gap, range)
@@ -70,7 +79,7 @@ namespace ShadowRPG.Core.AutoBattle
 
             var balance = context.Balance;
             var self = context.Self;
-            if (gap <= balance.ShadowStepRadius && _shadowStepCooldown <= 0f && self.CanAct)
+            if (gap <= balance.ShadowStepRadius && _shadowStepCooldown <= 0f && self.CanAct && context.World.IsWalkable(enemyPosition))
             {
                 var destination = enemyPosition - toward * Mathf.Max(0.5f, range * 0.6f);
                 destination = context.World.ClampToBounds(destination);

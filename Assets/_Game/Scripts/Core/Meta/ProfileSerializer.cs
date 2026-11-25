@@ -27,7 +27,7 @@ namespace ShadowRPG.Core.Meta
         class ItemDto
         {
             public string id, name, skillCode, supportCode, setId, power;
-            public int slot, subtype, rarity, itemLevel, str, dex, intel, skillRarity, enhance;
+            public int slot, subtype, rarity, itemLevel, str, dex, intel, skillRarity, enhance, gx = -1, gy = -1;
             public bool reducesSet;
             public StatDto[] baseStats = Array.Empty<StatDto>();
             public StatDto[] affixes = Array.Empty<StatDto>();
@@ -46,6 +46,8 @@ namespace ShadowRPG.Core.Meta
             public float experience;
             public DungeonProgress progress;
             public ItemDto[] bag = Array.Empty<ItemDto>();
+            public ItemDto[] stash = Array.Empty<ItemDto>();
+            public int unlockedDungeons = 1;
             public EquippedDto[] equipped = Array.Empty<EquippedDto>();
             public int[] treeOwned = Array.Empty<int>();
             public int treeSeed;
@@ -64,7 +66,9 @@ namespace ShadowRPG.Core.Meta
                 level = profile.Level,
                 experience = profile.Experience,
                 progress = profile.Progress,
-                bag = profile.Bag.Items.Select(ToDto).ToArray(),
+                bag = GridToDto(profile.Bag),
+                stash = GridToDto(profile.Stash),
+                unlockedDungeons = profile.UnlockedDungeons,
                 equipped = profile.Equipped.Select(p => new EquippedDto { slot = (int)p.Key, item = ToDto(p.Value) }).ToArray(),
                 treeOwned = profile.TreeOwned.ToArray(),
                 treeSeed = profile.TreeSeed,
@@ -90,11 +94,31 @@ namespace ShadowRPG.Core.Meta
                 ActivePetId = dto.activePetId,
                 Raid = dto.raid ?? new RaidState()
             };
-            foreach (var item in dto.bag ?? Array.Empty<ItemDto>()) profile.Bag.TryAdd(FromDto(item));
+            profile.UnlockedDungeons = Math.Max(1, dto.unlockedDungeons);
+            RestoreGrid(profile.Bag, dto.bag);
+            RestoreGrid(profile.Stash, dto.stash);
             foreach (var e in dto.equipped ?? Array.Empty<EquippedDto>()) profile.Equipped[(EquipSlot)e.slot] = FromDto(e.item);
             foreach (var id in dto.treeOwned ?? Array.Empty<int>()) profile.TreeOwned.Add(id);
             profile.Pets.AddRange(dto.pets ?? Array.Empty<PetState>());
             return profile;
+        }
+
+        static ItemDto[] GridToDto(Inventory grid) => grid.Items.Select(item =>
+        {
+            var dto = ToDto(item);
+            if (grid.TryGetPlacement(item, out var rect)) { dto.gx = rect.x; dto.gy = rect.y; }
+            return dto;
+        }).ToArray();
+
+        /// <summary>저장된 칸 위치에 되돌리고, 실패하면 빈 곳에 자동 배치합니다.</summary>
+        static void RestoreGrid(Inventory grid, ItemDto[] items)
+        {
+            foreach (var dto in items ?? Array.Empty<ItemDto>())
+            {
+                var item = FromDto(dto);
+                if (dto.gx >= 0 && grid.TryPlace(item, dto.gx, dto.gy)) continue;
+                grid.TryAdd(item);
+            }
         }
 
         static ItemDto ToDto(Item item) => new ItemDto

@@ -104,17 +104,17 @@ namespace ShadowRPG.Core.Economy
     }
 
     /// <summary>
-    /// 한 층에서 주운 장비. 층을 클리어하면 반출 개수(KeepLimit)와 가방 여유만큼만 가져가고,
-    /// 나머지는 자동 판매되어 골드가 됩니다.
+    /// 한 층에서 주운 장비. 결과창에서 가방 칸(아이템별 크기)에 들어가는 만큼만 골라 가져가고,
+    /// 나머지는 자동 판매되어 골드가 됩니다. MaxPicks(0 = 제한 없음)로 개수 제한도 걸 수 있습니다.
     /// </summary>
     public sealed class FloorLoot
     {
         readonly List<Item> _found = new List<Item>();
         readonly HashSet<Item> _selected = new HashSet<Item>();
 
-        public FloorLoot(int keepLimit) => KeepLimit = keepLimit;
+        public FloorLoot(int maxPicks = 0) => MaxPicks = maxPicks;
 
-        public int KeepLimit { get; }
+        public int MaxPicks { get; }
         public IReadOnlyList<Item> Found => _found;
         public IReadOnlyCollection<Item> Selected => _selected;
 
@@ -135,10 +135,12 @@ namespace ShadowRPG.Core.Economy
 
         public bool IsSelected(Item item) => _selected.Contains(item);
 
-        public int AllowedPicks(int bagFreeSlots) => Mathf.Max(0, Mathf.Min(KeepLimit, bagFreeSlots));
+        /// <summary>현재 선택에 이 아이템을 더해도 가방에 다 들어가는지.</summary>
+        public bool CanAlsoTake(Item item, Inventory bag)
+            => (MaxPicks <= 0 || _selected.Count < MaxPicks) && bag.CanFitAll(_selected.Append(item));
 
-        /// <summary>선택 토글. 반출 한도를 넘으면 false.</summary>
-        public bool Toggle(Item item, int bagFreeSlots)
+        /// <summary>선택 토글. 가방 공간(또는 개수 제한)을 넘으면 false.</summary>
+        public bool Toggle(Item item, Inventory bag)
         {
             if (!_found.Contains(item)) return false;
             if (_selected.Remove(item))
@@ -146,18 +148,18 @@ namespace ShadowRPG.Core.Economy
                 Changed?.Invoke();
                 return true;
             }
-            if (_selected.Count >= AllowedPicks(bagFreeSlots)) return false;
+            if (!CanAlsoTake(item, bag)) return false;
             _selected.Add(item);
             Changed?.Invoke();
             return true;
         }
 
-        /// <summary>자동 선택: 가치가 높은 순서로 한도까지.</summary>
-        public void AutoSelect(IItemScorer scorer, int bagFreeSlots)
+        /// <summary>추천 선택: 칸당 가치가 높은 순서로 가방에 들어가는 만큼.</summary>
+        public void AutoSelect(IItemScorer scorer, Inventory bag)
         {
             _selected.Clear();
-            foreach (var item in _found.OrderByDescending(scorer.Score).Take(AllowedPicks(bagFreeSlots)))
-                _selected.Add(item);
+            foreach (var item in _found.OrderByDescending(i => scorer.Score(i) / ItemShapes.Cells(i)))
+                if (CanAlsoTake(item, bag)) _selected.Add(item);
             Changed?.Invoke();
         }
 
@@ -169,9 +171,12 @@ namespace ShadowRPG.Core.Economy
         {
             int kept = 0;
             long gold = 0;
+            var placed = new HashSet<Item>();
+            foreach (var item in _selected.OrderByDescending(ItemShapes.Cells))
+                if (bag.TryAdd(item)) placed.Add(item);
             foreach (var item in _found)
             {
-                if (_selected.Contains(item) && bag.TryAdd(item))
+                if (placed.Contains(item))
                 {
                     kept++;
                     continue;

@@ -7,9 +7,9 @@ namespace ShadowRPG.Runtime.Presentation
     public sealed class CameraFollow : MonoBehaviour
     {
         [SerializeField] float smoothTime = 0.15f;
-        [SerializeField] float minHalfHeight = 7f;
+        [SerializeField] float minHalfHeight = 10f;
         [Tooltip("세로 화면에서도 좌우로 이만큼(유닛)은 보이도록 시야를 넓힙니다.")]
-        [SerializeField] float minHalfWidth = 5.5f;
+        [SerializeField] float minHalfWidth = 7.5f;
 
         Camera _camera;
         Transform _target;

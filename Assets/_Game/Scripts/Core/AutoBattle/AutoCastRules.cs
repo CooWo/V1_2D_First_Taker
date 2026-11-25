@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ShadowRPG.Core.Actors;
 using ShadowRPG.Core.Skills;
+using ShadowRPG.Core.World;
 using UnityEngine;
 
 namespace ShadowRPG.Core.AutoBattle
@@ -126,7 +127,7 @@ namespace ShadowRPG.Core.AutoBattle
             {
                 if (!skill.IsReady || !context.ConditionMet(skill)) continue;
                 var target = context.ChooseTarget(skill);
-                if (target == null) continue;
+                if (target == null || !context.World.CanSee(context.Self.Position, target.Position)) continue;
 
                 var point = skill.Tags.HasAny(SkillTag.Area)
                     ? context.DensestPoint(skill.Definition.Range, 2.5f)
@@ -171,6 +172,7 @@ namespace ShadowRPG.Core.AutoBattle
             if (target == null) return false;
             float reach = skill.Definition.Range + target.Radius;
             if (context.Self.DistanceTo(target) > reach) return false;
+            if (!context.World.CanSee(context.Self.Position, target.Position)) return false;
             return context.TryCast(skill, target);
         }
     }

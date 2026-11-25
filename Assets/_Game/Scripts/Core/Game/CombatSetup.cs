@@ -47,6 +47,8 @@ namespace ShadowRPG.Core.Game
         PetCompanion Pet { get; }
         bool IsPlayerDead { get; }
         float RespawnRemaining { get; }
+        /// <summary>표현 계층이 적용할 시간 배율 (층 클리어 슬로우 모션 등).</summary>
+        float TimeScale { get; }
         event Action<string> Log;
         void Tick(float dt);
     }

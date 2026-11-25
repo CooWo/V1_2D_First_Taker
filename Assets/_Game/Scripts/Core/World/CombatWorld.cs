@@ -40,7 +40,40 @@ namespace ShadowRPG.Core.World
         public BalanceSettings Balance { get; }
         public DamageService Damage { get; }
         public SkillExecutor Executor { get; set; }
-        public Rect Bounds { get; }
+        public Rect Bounds { get; private set; }
+
+        /// <summary>벽이 있는 층의 지형·길찾기 (열린 경기장이면 null).</summary>
+        public IWalkability Navigation { get; private set; }
+
+        readonly Dictionary<Combatant, Vector2> _lastValid = new Dictionary<Combatant, Vector2>();
+
+        /// <summary>새 층 지도로 교체합니다.</summary>
+        public void SetNavigation(IWalkability navigation)
+        {
+            Navigation = navigation;
+            if (navigation != null) Bounds = navigation.Bounds;
+            _lastValid.Clear();
+            foreach (var c in _combatants) _lastValid[c] = c.Position;
+        }
+
+        public bool IsWalkable(Vector2 position) => Bounds.Contains(position) && (Navigation == null || Navigation.IsWalkable(position));
+
+        /// <summary>벽 속으로 들어간 이동을 벽을 따라 미끄러지게 되돌립니다.</summary>
+        void ResolveWalls(Combatant c)
+        {
+            var position = ClampToBounds(c.Position);
+            if (!_lastValid.TryGetValue(c, out var last)) last = position;
+            if (Navigation == null || Navigation.IsWalkable(position))
+            {
+                c.Position = position;
+                _lastValid[c] = position;
+                return;
+            }
+            var slideX = new Vector2(position.x, last.y);
+            var slideY = new Vector2(last.x, position.y);
+            c.Position = Navigation.IsWalkable(slideX) ? slideX : Navigation.IsWalkable(slideY) ? slideY : last;
+            _lastValid[c] = c.Position;
+        }
 
         public IReadOnlyList<Combatant> Combatants => _combatants;
         public IReadOnlyList<Projectile> Projectiles => _projectiles;
@@ -89,11 +122,13 @@ namespace ShadowRPG.Core.World
         {
             combatant.Position = ClampToBounds(combatant.Position);
             _combatants.Add(combatant);
+            _lastValid[combatant] = combatant.Position;
             CombatantAdded?.Invoke(combatant);
         }
 
         public void Remove(Combatant combatant)
         {
+            _lastValid.Remove(combatant);
             if (_combatants.Remove(combatant)) CombatantRemoved?.Invoke(combatant);
         }
 
@@ -169,7 +204,7 @@ namespace ShadowRPG.Core.World
             {
                 var c = _combatants[i];
                 c.Tick(dt);
-                c.Position = ClampToBounds(c.Position);
+                ResolveWalls(c);
             }
 
             TickProjectiles(dt);
@@ -263,7 +298,7 @@ namespace ShadowRPG.Core.World
                 }
             }
 
-            if (!Bounds.Contains(p.Position) && !p.IsReturning)
+            if (!p.IsReturning && !IsWalkable(p.Position))
             {
                 p.Expire();
                 return;

@@ -79,6 +79,35 @@ namespace ShadowRPG.Core.Dungeon
         FloorPlan Plan(DungeonProgress progress);
     }
 
+    /// <summary>ACT 구분 없이 던전을 0부터 번호로 다루는 도우미 (마을의 던전 선택용).</summary>
+    public static class ActCatalogExtensions
+    {
+        public static int TotalDungeons(this IActCatalog catalog) => catalog.Acts.Count * catalog.DungeonsPerAct;
+
+        public static int GlobalDungeon(this IActCatalog catalog, DungeonProgress progress)
+            => progress.ActIndex * catalog.DungeonsPerAct + progress.DungeonIndex;
+
+        public static DungeonProgress StartOf(this IActCatalog catalog, int globalDungeon, int highestFloor)
+        {
+            globalDungeon = Mathf.Clamp(globalDungeon, 0, catalog.TotalDungeons() - 1);
+            return new DungeonProgress
+            {
+                ActIndex = globalDungeon / catalog.DungeonsPerAct,
+                DungeonIndex = globalDungeon % catalog.DungeonsPerAct,
+                Floor = 1,
+                HighestGlobalFloor = highestFloor
+            };
+        }
+
+        public static string DungeonLabel(this IActCatalog catalog, int globalDungeon)
+        {
+            var act = catalog.Acts[Mathf.Clamp(globalDungeon / catalog.DungeonsPerAct, 0, catalog.Acts.Count - 1)];
+            int d = globalDungeon % catalog.DungeonsPerAct;
+            string name = act.DungeonNames.Length > d ? act.DungeonNames[d] : $"던전 {d + 1}";
+            return $"ACT {act.Index + 1} {act.Name} · {name}";
+        }
+    }
+
     public sealed class ActCatalog : IActCatalog
     {
         public ActCatalog(IEnumerable<ActDefinition> acts, int dungeonsPerAct, int floorsPerDungeon)
@@ -149,26 +178,19 @@ namespace ShadowRPG.Core.Dungeon
     }
 
     /// <summary>
-    /// 한 층의 몬스터 공급. 총 수는 고정이고, 동시에 살아 있는 수만 제한해 무리 단위로 내보냅니다.
+    /// 한 층의 몬스터 배치. 층 시작 시 총 수만큼을 지도의 방들에 무리로 흩어 놓고
+    /// (시작 방 제외), 몬스터는 플레이어를 보거나 맞을 때까지 방에서 대기합니다.
+    /// 정예는 먼 방, 보스는 가장 먼 방에 둡니다.
     /// </summary>
     public sealed class FloorSpawner
     {
-        const int MaxAlive = 16;
-        const int PackSize = 6;
-        const float PackInterval = 1.5f;
+        const float SafeRadiusFromStart = 9f;
 
         readonly World.CombatWorld _world;
         readonly IEnemyFactory _factory;
         readonly IRandom _random;
         readonly List<EnemyAgent> _agents = new List<EnemyAgent>();
-        IReadOnlyList<EnemyArchetype> _pool;
-        IReadOnlyList<EnemyArchetype> _elites;
-        EnemyArchetype _boss;
         FloorPlan _plan;
-        int _spawnedNormal;
-        int _spawnedElite;
-        bool _spawnedBoss;
-        float _cooldown;
 
         public FloorSpawner(World.CombatWorld world, IEnemyFactory factory, IRandom random)
         {
@@ -187,19 +209,34 @@ namespace ShadowRPG.Core.Dungeon
 
         public event Action<EnemyAgent> BossSpawned;
 
-        public void Begin(FloorPlan plan, IReadOnlyList<EnemyArchetype> pool, IReadOnlyList<EnemyArchetype> elites, EnemyArchetype boss)
+        public void Begin(FloorPlan plan, FloorLayout layout, IReadOnlyList<EnemyArchetype> pool, IReadOnlyList<EnemyArchetype> elites, EnemyArchetype boss)
         {
             Clear();
             _plan = plan;
-            _pool = pool;
-            _elites = elites;
-            _boss = boss;
-            _spawnedNormal = 0;
-            _spawnedElite = 0;
-            _spawnedBoss = false;
             Killed = 0;
             Boss = null;
-            _cooldown = 0.4f;
+
+            var start = layout.StartPosition;
+            var rooms = layout.Rooms
+                .Select(r => layout.Map.CenterOf(new Vector2Int(r.x + r.width / 2, r.y + r.height / 2)))
+                .Where(c => Vector2.Distance(c, start) >= SafeRadiusFromStart && layout.Map.IsWalkable(c))
+                .OrderBy(c => Vector2.Distance(c, start))
+                .ToList();
+            if (rooms.Count == 0) rooms.Add(FarthestWalkable(layout, start));
+
+            // 일반 몬스터: 방마다 고르게 무리 배치
+            for (int i = 0; i < plan.EnemyCount; i++)
+                Spawn(pool[_random.Range(0, pool.Count)], Actors.EnemyRank.Normal, rooms[i % rooms.Count], layout);
+
+            // 정예: 뒤쪽 절반의 방
+            for (int i = 0; i < plan.EliteCount; i++)
+                Spawn(elites[_random.Range(0, elites.Count)], Actors.EnemyRank.Elite, rooms[Mathf.Max(0, rooms.Count - 1 - i % Mathf.Max(1, rooms.Count / 2))], layout);
+
+            if (plan.HasBoss)
+            {
+                Boss = Spawn(boss, Actors.EnemyRank.Boss, rooms[rooms.Count - 1], layout);
+                BossSpawned?.Invoke(Boss);
+            }
         }
 
         public void RegisterKill() => Killed++;
@@ -208,47 +245,35 @@ namespace ShadowRPG.Core.Dungeon
         {
             for (int i = 0; i < _agents.Count; i++)
                 if (_agents[i].Combatant.IsAlive) _agents[i].Brain.Tick(_agents[i], _world, dt);
-
-            if (!player.IsAlive) return;
-            _cooldown -= dt;
-            if (_cooldown > 0f || _agents.Count >= MaxAlive) return;
-            _cooldown = PackInterval;
-            SpawnPack(player.Position);
         }
 
-        void SpawnPack(Vector2 around)
+        Vector2 FarthestWalkable(FloorLayout layout, Vector2 from)
         {
-            var anchor = PackAnchor(around);
-            int room = MaxAlive - _agents.Count;
-            for (int i = 0; i < PackSize && room > 0 && _spawnedNormal < _plan.EnemyCount; i++, room--)
+            var best = from;
+            float bestDistance = 0f;
+            for (int x = 0; x < layout.Map.Width; x += 2)
+            for (int y = 0; y < layout.Map.Height; y += 2)
             {
-                Spawn(_pool[_random.Range(0, _pool.Count)], Actors.EnemyRank.Normal, anchor);
-                _spawnedNormal++;
+                if (!layout.Map.IsWalkable(x, y)) continue;
+                var c = layout.Map.CenterOf(new Vector2Int(x, y));
+                float d = Vector2.Distance(c, from);
+                if (d <= bestDistance) continue;
+                bestDistance = d;
+                best = c;
             }
-
-            if (_spawnedElite < _plan.EliteCount && _spawnedNormal >= _plan.EnemyCount / 2 && room > 0)
-            {
-                Spawn(_elites[_random.Range(0, _elites.Count)], Actors.EnemyRank.Elite, anchor);
-                _spawnedElite++;
-            }
-
-            if (_plan.HasBoss && !_spawnedBoss && _spawnedNormal >= _plan.EnemyCount / 2)
-            {
-                _spawnedBoss = true;
-                Boss = Spawn(_boss, Actors.EnemyRank.Boss, anchor);
-                BossSpawned?.Invoke(Boss);
-            }
+            return best;
         }
 
-        Vector2 PackAnchor(Vector2 around)
+        EnemyAgent Spawn(EnemyArchetype archetype, Actors.EnemyRank rank, Vector2 anchor, FloorLayout layout)
         {
-            float angle = _random.Range(0f, 360f);
-            return _world.ClampToBounds(around + World.CombatWorld.Rotate(Vector2.right, angle) * _random.Range(7f, 11f));
-        }
-
-        EnemyAgent Spawn(EnemyArchetype archetype, Actors.EnemyRank rank, Vector2 anchor)
-        {
-            var position = _world.ClampToBounds(anchor + Skills.SkillPrimitives.RandomOffset(_random, 1.8f));
+            var position = anchor;
+            for (int attempt = 0; attempt < 8; attempt++)
+            {
+                var candidate = anchor + Skills.SkillPrimitives.RandomOffset(_random, 2.6f);
+                if (!layout.Map.IsWalkable(candidate)) continue;
+                position = candidate;
+                break;
+            }
             var agent = _factory.Create(archetype, _plan.Level, rank, position);
             _agents.Add(agent);
             _world.Add(agent.Combatant);
