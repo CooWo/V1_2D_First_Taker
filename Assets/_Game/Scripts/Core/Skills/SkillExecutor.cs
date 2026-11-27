@@ -80,6 +80,16 @@ namespace ShadowRPG.Core.Skills
             if (sources != null)
                 for (int i = 0; i < sources.Count; i++) sources[i].Modify(caster, skill, mods);
 
+            if (!triggered)
+            {
+                var tags = skill.Definition.Tags;
+                caster.NotifyAction(tags.HasAny(SkillTag.Movement) ? CombatAction.Movement
+                    : tags.HasAny(SkillTag.Spell) ? CombatAction.Cast
+                    : tags.HasAny(SkillTag.Projectile) ? CombatAction.RangedAttack
+                    : tags.HasAny(SkillTag.Slam) ? CombatAction.Heavy
+                    : CombatAction.Attack);
+            }
+
             var cast = new SkillCast
             {
                 Caster = caster,

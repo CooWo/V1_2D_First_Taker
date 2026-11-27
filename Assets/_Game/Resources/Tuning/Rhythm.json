@@ -1,0 +1,16 @@
+{
+    "DefaultBeatSeconds": 0.9,
+    "RingStartScale": 2.6,
+    "PerfectWindowSeconds": 0.08,
+    "GoodWindowSeconds": 0.17,
+    "PerfectExtraHits": 2,
+    "GoodExtraHits": 1,
+    "ExtraHitDamagePct": 60.0,
+    "AttackSpeedPctPerStack": 6.0,
+    "MaxStacks": 8,
+    "StackDurationSeconds": 3.0,
+    "RingScreenX": 0.8,
+    "RingScreenY": 0.3,
+    "RingSizeDp": 190.0,
+    "VibrateOnPerfect": true
+}

@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 4effee661b4b5754ba8cc684df5c8667
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\_Game\Art\ThirdParty\KayKit\Halloween\Assets\gltf\lantern_hanging.bin
+    assetPath: Assets\_Game\Art\ThirdParty\KayKit\Halloween\Assets\gltf\lantern_hanging.bin
+  - type: 1
+    originalUri: Assets\_Game\Art\ThirdParty\KayKit\Halloween\Assets\gltf\halloweenbits_texture.png
+    assetPath: Assets\_Game\Art\ThirdParty\KayKit\Halloween\Assets\gltf\halloweenbits_texture.png
+  reportItems: []

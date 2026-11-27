@@ -175,7 +175,7 @@ namespace ShadowRPG.Core.Raid
                 Life = 1f, Damage = 1f, MoveSpeed = 1.6f, Radius = 0.7f, AttackRange = 1.3f, AttackInterval = 1.6f,
                 DamageType = Definition.Element
             };
-            _bossAgent = _factory.Create(archetype, 1, EnemyRank.Boss, World.Bounds.center + new Vector2(0f, 4f));
+            _bossAgent = _factory.Create(archetype, new MonsterScaling(1, 1f), EnemyRank.Boss, World.Bounds.center + new Vector2(0f, 4f));
             _bossAgent.Aggro = true;
             var boss = _bossAgent.Combatant;
             boss.Name = $"{Definition.Name} Lv.{state.BossLevel}";
@@ -192,7 +192,7 @@ namespace ShadowRPG.Core.Raid
 
         void SpawnAdd(EnemyArchetype archetype, Vector2 position)
         {
-            var agent = _factory.Create(archetype, Mathf.Max(1, Player.Progress.Level), EnemyRank.Normal, position);
+            var agent = _factory.Create(archetype, new MonsterScaling(Mathf.Max(1, Player.Progress.Level), 1f + 0.4f * (Mathf.Max(1, Player.Progress.Level) - 1)), EnemyRank.Normal, position);
             agent.Aggro = true;
             _adds.Add(agent);
             World.Add(agent.Combatant);

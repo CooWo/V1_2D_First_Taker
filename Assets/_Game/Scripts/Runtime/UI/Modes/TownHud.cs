@@ -16,7 +16,7 @@ namespace ShadowRPG.Runtime.UI.Modes
         {
             _session = session;
             _ctx = ctx;
-            _info = UiFactory.Label(UiFactory.Anchored(root, "TownInfo", new Vector2(1f, 1f), new Vector2(-20f, -20f), new Vector2(470f, 200f)),
+            _info = UiFactory.Label(UiFactory.Anchored(root, "TownInfo", new Vector2(1f, 1f), new Vector2(-24f, -200f), new Vector2(470f, 200f)),
                 string.Empty, 22, TextAnchor.UpperRight, Color.white);
 
             var tags = NameTagLayer.Create(root, Camera.main);
@@ -36,7 +36,7 @@ namespace ShadowRPG.Runtime.UI.Modes
                 $"<size=19>개방 던전 {meta.Profile.UnlockedDungeons}/{meta.Content.Acts.TotalDungeons()} · 레이드 {meta.RaidEntries.Remaining}/{meta.RaidEntries.MaxPerDay}</size>\n" +
                 $"<size=19>가방 {bag.UsedCells}/{bag.Capacity}칸 · 창고 {meta.Profile.Stash.UsedCells}/{meta.Profile.Stash.Capacity}칸</size>\n" +
                 $"<size=19>마을 사람 {_session.Residents.Count}명</size>\n" +
-                $"<color=#FFD84A>{meta.Wallet.Gold:N0} G</color>";
+                string.Empty;
         }
     }
 }

@@ -24,8 +24,7 @@ namespace ShadowRPG.Runtime
 
         [SerializeField] SpriteLibrary spriteLibrary;
         [SerializeField] BalanceSettings balance = new BalanceSettings();
-        [SerializeField] DungeonRules dungeonRules = new DungeonRules();
-        [Tooltip("새 저장일 때 시작 직업: knight / mage / archer / monk")]
+                [Tooltip("새 저장일 때 시작 직업: knight / mage / archer / monk")]
         [SerializeField] string startingClass = "knight";
         [Tooltip("0이면 매번 다른 시드")]
         [SerializeField] int seed;
@@ -42,7 +41,8 @@ namespace ShadowRPG.Runtime
         bool _saveDirty;
         float _saveTimer;
         bool _pendingTown;
-        readonly IFloorLayoutSelector _layouts = FloorLayoutSelector.CreateDefault();
+        bool _returnedFromDungeon;
+        IFloorLayoutSelector _layouts;
 
         public GameMeta Meta => _meta;
         public ICombatSession Session => _session;
@@ -56,18 +56,22 @@ namespace ShadowRPG.Runtime
             Application.targetFrameRate = 60;
             if (spriteLibrary == null) spriteLibrary = Resources.Load<SpriteLibrary>("SpriteLibrary");
 
+            var tuning = ShadowRPG.Runtime.Tuning.TuningLoader.Load();
+            balance = tuning.Combat;
+            _layouts = new ChamberLayoutSelector(tuning.Dungeon);
             _random = new SystemRandom(seed != 0 ? seed : (int?)null);
             _store = new FileProfileStore();
             if (resetSaveOnStart) _store.Delete();
 
             var profile = _store.Load();
             if (!profile.HasStarted) profile.ClassId = startingClass;
-            _meta = new GameMeta(profile, GameContent.CreateDefault(), new SystemClock(), _random);
+            _meta = new GameMeta(profile, GameContent.CreateDefault(), new SystemClock(), _random, tuning);
             _meta.EnsureStarted();
             _meta.SaveRequested += () => _saveDirty = true;
 
             _camera = EnsureCamera();
             EnsureGlobalLight();
+            PostProcessing.Ensure(_camera, tuning.Presentation);
             EnsureEventSystem();
             EnterTown();
         }
@@ -75,8 +79,10 @@ namespace ShadowRPG.Runtime
         void Update()
         {
             _session?.Tick(Time.deltaTime);
-            // 층 클리어 슬로우 모션 등 세션이 요구하는 시간 배율
-            Time.timeScale = _session != null ? _session.TimeScale : 1f;
+            // 시간 배율은 GameClock 한 곳에서: 세션(층 클리어 슬로우) × 배속(던전만) × 히트스톱
+            GameClock.SessionScale = _session != null ? _session.TimeScale : 1f;
+            GameClock.Speed = _session is DungeonSession ? CurrentSpeed : 1f;
+            GameClock.Apply();
 
             if (_pendingTown)
             {
@@ -95,13 +101,19 @@ namespace ShadowRPG.Runtime
         public void EnterTown()
         {
             Switch(new TownSession(_meta, balance, _random, new BotTownPresence()));
+            if (_returnedFromDungeon && _meta.Settings.AutoEquipOnReturn)
+            {
+                int changed = _meta.AutoEquipBetter(_session.Player);
+                if (changed > 0) Debug.Log($"[Town] 더 좋은 장비 {changed}개 자동 장착");
+            }
+            _returnedFromDungeon = false;
         }
 
         public void EnterDungeon(int globalDungeon)
         {
             _meta.StartRun(globalDungeon);
-            var session = new DungeonSession(_meta, balance, dungeonRules, _random, _layouts, seed != 0 ? seed : _random.Range(1, int.MaxValue));
-            session.ReturnToTownRequested += _ => _pendingTown = true;
+            var session = new DungeonSession(_meta, balance, _meta.Tuning.Dungeon, _random, _layouts, seed != 0 ? seed : _random.Range(1, int.MaxValue));
+            session.ReturnToTownRequested += died => { _pendingTown = true; _returnedFromDungeon = true; };
             Switch(session);
         }
 
@@ -144,7 +156,18 @@ namespace ShadowRPG.Runtime
             _saveTimer = 0f;
         }
 
-        void OnDestroy() => Time.timeScale = 1f;
+        void OnDestroy() => GameClock.Reset();
+
+        /// <summary>설정의 배속. 무료 상한(FreeMaxSpeed)을 넘는 배속은 이용권이 있을 때만.</summary>
+        public float CurrentSpeed
+        {
+            get
+            {
+                float speed = Mathf.Max(1f, _meta.Settings.Speed);
+                if (speed > _meta.Tuning.Convenience.FreeMaxSpeed && !_meta.Shop.Speed3Active) speed = _meta.Tuning.Convenience.FreeMaxSpeed;
+                return speed;
+            }
+        }
 
         void OnApplicationPause(bool paused)
         {

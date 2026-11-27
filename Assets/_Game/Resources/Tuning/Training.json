@@ -1,0 +1,9 @@
+{
+    "CostBase": 50.0,
+    "CostGrowth": 1.12,
+    "LevelsPerAct": 20,
+    "AttackPctPerLevel": 1.0,
+    "LifePctPerLevel": 1.0,
+    "ArmorPctPerLevel": 1.0,
+    "ResistPctPerLevel": 0.5
+}

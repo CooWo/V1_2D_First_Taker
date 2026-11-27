@@ -24,8 +24,7 @@ namespace ShadowRPG.Runtime.UI
         {
             _session = session;
             var panel = UiFactory.Anchored(root, "StatusPanel", new Vector2(0f, 1f), new Vector2(20f, -20f), new Vector2(560f, 190f));
-            UiFactory.Panel(panel, Palette.PanelBackground);
-            UiFactory.Border(panel, Palette.PanelBorder);
+            UiFactory.Frame(panel, false, false);
 
             _title = UiFactory.Label(UiFactory.Anchored(panel, "Title", new Vector2(0f, 1f), new Vector2(14f, -8f), new Vector2(530f, 36f)),
                 string.Empty, 26, TextAnchor.MiddleLeft, Color.white);

@@ -39,7 +39,7 @@ namespace ShadowRPG.Tests
 
         /// <summary>치명타·회피·막기가 절대 일어나지 않는 던전 세션 (전리품은 직접 확정).</summary>
         public static DungeonSession Session(float randomValue = 0.999f, string classId = "knight")
-            => new DungeonSession(Meta(randomValue, classId), new BalanceSettings(), new DungeonRules(),
+            => new DungeonSession(Meta(randomValue, classId), new BalanceSettings(), new ShadowRPG.Core.Tuning.DungeonTuning(),
                 new FixedRandom(randomValue), new OpenLayoutSelector(40, 40), 1);
 
         public static Combatant Dummy(DungeonSession session, Vector2 position, float life = 100000f)

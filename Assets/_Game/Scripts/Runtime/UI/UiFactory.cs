@@ -20,6 +20,8 @@ namespace ShadowRPG.Runtime.UI
             get
             {
                 if (_font != null) return _font;
+                _font = UiSkin.Current != null && UiSkin.Current.font != null ? UiSkin.Current.font : Resources.Load<Font>("Fonts/NotoSansKR");
+                if (_font != null) return _font;
                 _font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans CJK KR", "Noto Sans KR", "NanumGothic", "Arial" }, 28);
                 if (_font == null) _font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
                 return _font;
@@ -100,17 +102,44 @@ namespace ShadowRPG.Runtime.UI
         public static UnityEngine.UI.Button Button(Transform parent, string name, Vector2 anchor, Vector2 position, Vector2 size, string text, Action onClick)
         {
             var rect = Anchored(parent, name, anchor, position, size);
+            var skin = UiSkin.Current;
             var background = Panel(rect, new Color(0.1f, 0.13f, 0.2f, 0.92f), true);
             var button = rect.gameObject.AddComponent<UnityEngine.UI.Button>();
             button.targetGraphic = background;
+            if (skin != null && skin.button != null)
+            {
+                background.sprite = skin.button;
+                background.type = UnityEngine.UI.Image.Type.Sliced;
+                background.color = skin.buttonTint;
+                button.transition = UnityEngine.UI.Selectable.Transition.ColorTint;
+            }
             var colors = button.colors;
-            colors.highlightedColor = new Color(0.75f, 0.85f, 1f);
-            colors.pressedColor = new Color(0.5f, 0.65f, 1f);
+            colors.highlightedColor = new Color(1.15f, 1.12f, 1.2f);
+            colors.pressedColor = new Color(0.7f, 0.68f, 0.8f);
+            colors.disabledColor = new Color(0.5f, 0.5f, 0.55f, 0.6f);
+            colors.colorMultiplier = 1.3f;
             button.colors = colors;
             button.onClick.AddListener(() => onClick?.Invoke());
-            Border(rect, Palette.PanelBorder);
+            if (skin == null || skin.button == null) Border(rect, Palette.PanelBorder);
             Label(rect, "Label", text, 26, TextAnchor.MiddleCenter, Color.white, 4f);
             return button;
+        }
+
+        /// <summary>큰 창 배경 (스킨의 9-slice 패널, 없으면 단색 + 테두리).</summary>
+        public static UnityEngine.UI.Image Frame(RectTransform rect, bool inset = false, bool raycast = true)
+        {
+            var skin = UiSkin.Current;
+            var image = Panel(rect, new Color(0.04f, 0.05f, 0.08f, 0.96f), raycast);
+            var sprite = skin == null ? null : inset ? skin.inset : skin.panel;
+            if (sprite == null)
+            {
+                Border(rect, Palette.PanelBorder);
+                return image;
+            }
+            image.sprite = sprite;
+            image.type = UnityEngine.UI.Image.Type.Sliced;
+            image.color = inset ? skin.insetTint : skin.panelTint;
+            return image;
         }
 
         /// <summary>얇은 테두리 (4변).</summary>

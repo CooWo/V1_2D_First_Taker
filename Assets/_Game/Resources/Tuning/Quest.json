@@ -1,0 +1,160 @@
+{
+    "DailyCount": 5,
+    "AllClearGold": 2000,
+    "AllClearTempo": 30,
+    "Pool": [
+        {
+            "Id": "turnin_rare",
+            "Category": "반납",
+            "Text": "희귀 등급 장비 {0}개 반납",
+            "Target": 1,
+            "Param": "Rare",
+            "RewardGold": 800,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "turnin_big",
+            "Category": "반납",
+            "Text": "6칸 이상 장비 {0}개 반납",
+            "Target": 2,
+            "Param": "6",
+            "RewardGold": 600,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "turnin_fire",
+            "Category": "반납",
+            "Text": "불 속성 옵션 장비 {0}개 반납",
+            "Target": 1,
+            "Param": "FireDamagePct",
+            "RewardGold": 700,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "kill",
+            "Category": "처치",
+            "Text": "몬스터 {0}마리 처치",
+            "Target": 300,
+            "Param": "",
+            "RewardGold": 500,
+            "RewardTempo": 3
+        },
+        {
+            "Id": "kill_elite",
+            "Category": "처치",
+            "Text": "정예 {0}마리 처치",
+            "Target": 10,
+            "Param": "",
+            "RewardGold": 600,
+            "RewardTempo": 3
+        },
+        {
+            "Id": "kill_boss",
+            "Category": "처치",
+            "Text": "던전 보스 {0}회 처치",
+            "Target": 1,
+            "Param": "",
+            "RewardGold": 800,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "depth",
+            "Category": "깊이",
+            "Text": "아무 던전 {0}층 이상 도달",
+            "Target": 7,
+            "Param": "",
+            "RewardGold": 700,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "streak",
+            "Category": "깊이",
+            "Text": "귀환 없이 {0}층 연속 클리어",
+            "Target": 5,
+            "Param": "",
+            "RewardGold": 900,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "deathless",
+            "Category": "생존",
+            "Text": "사망 없이 10층 클리어 {0}회",
+            "Target": 1,
+            "Param": "",
+            "RewardGold": 1200,
+            "RewardTempo": 8
+        },
+        {
+            "Id": "rhythm",
+            "Category": "리듬",
+            "Text": "리듬 판정 성공 {0}회",
+            "Target": 200,
+            "Param": "",
+            "RewardGold": 500,
+            "RewardTempo": 3
+        },
+        {
+            "Id": "rhythm_combo",
+            "Category": "리듬",
+            "Text": "리듬 연속 성공 {0}회",
+            "Target": 30,
+            "Param": "",
+            "RewardGold": 700,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "train",
+            "Category": "성장",
+            "Text": "단련 {0}회",
+            "Target": 3,
+            "Param": "",
+            "RewardGold": 400,
+            "RewardTempo": 2
+        },
+        {
+            "Id": "tree",
+            "Category": "성장",
+            "Text": "트리 노드 {0}개 구매",
+            "Target": 2,
+            "Param": "",
+            "RewardGold": 400,
+            "RewardTempo": 2
+        },
+        {
+            "Id": "enhance",
+            "Category": "성장",
+            "Text": "장비 강화 {0}회",
+            "Target": 1,
+            "Param": "",
+            "RewardGold": 400,
+            "RewardTempo": 2
+        },
+        {
+            "Id": "sell_gold",
+            "Category": "경제",
+            "Text": "판매로 골드 {0} 획득",
+            "Target": 3000,
+            "Param": "",
+            "RewardGold": 500,
+            "RewardTempo": 3
+        },
+        {
+            "Id": "pvp",
+            "Category": "콘텐츠",
+            "Text": "PvP {0}회",
+            "Target": 3,
+            "Param": "",
+            "RewardGold": 500,
+            "RewardTempo": 5
+        },
+        {
+            "Id": "raid",
+            "Category": "콘텐츠",
+            "Text": "레이드 {0}회",
+            "Target": 1,
+            "Param": "",
+            "RewardGold": 800,
+            "RewardTempo": 5
+        }
+    ]
+}

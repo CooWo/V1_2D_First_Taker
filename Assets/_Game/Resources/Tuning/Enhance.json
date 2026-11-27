@@ -1,0 +1,12 @@
+{
+    "MaxLevel": 15,
+    "BonusPerLevel": 0.08,
+    "CostBase": 30.0,
+    "CostGrowth": 1.32,
+    "CostPerItemLevel": 0.1,
+    "RarityNormal": 1.0,
+    "RarityMagic": 1.5,
+    "RarityRare": 2.5,
+    "RarityLegendary": 4.0,
+    "RaritySet": 3.5
+}

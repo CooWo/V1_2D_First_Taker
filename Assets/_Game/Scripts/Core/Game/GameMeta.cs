@@ -1,8 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using ShadowRPG.Core.Character;
 using ShadowRPG.Core.Dungeon;
 using ShadowRPG.Core.Economy;
+using ShadowRPG.Core.Growth;
+using ShadowRPG.Core.Rhythm;
+using ShadowRPG.Core.Tuning;
 using ShadowRPG.Core.Items;
 using ShadowRPG.Core.Meta;
 using ShadowRPG.Core.Pets;
@@ -17,23 +21,43 @@ namespace ShadowRPG.Core.Game
     /// </summary>
     public sealed class GameMeta
     {
-        public const int RaidEntriesPerDay = 3;
-
-        public GameMeta(GameProfile profile, GameContent content, IClock clock, IRandom random)
+        public GameMeta(GameProfile profile, GameContent content, IClock clock, IRandom random, GameTuning tuning = null, IStorePurchaser store = null)
         {
+            Tuning = tuning ?? GameTuning.Current;
             Profile = profile;
             Content = content;
             Random = random;
-            Loot = new LootGenerator(content.Skills, content.Supports, content.Sets, random);
+            Clock = clock;
+            Loot = new LootGenerator(content.Skills, content.Supports, content.Sets, random, Tuning.Drop);
+            Power = new PowerCalculator(Tuning.Item);
+            StatPoints = new StatAllocationService(profile.State, profile.Wallet, Tuning.Growth);
+            Training = new TrainingService(profile.State, Tuning.Training);
+            Presets = new PresetService(profile, Tuning.Convenience);
+            Quests = new DailyQuestService(profile.State.Quests, Tuning.Quest, clock);
+            Attendance = new AttendanceService(profile.State.Attendance, Tuning.Attendance, clock);
+            Shop = new ShopService(profile, Tuning, store ?? new UnavailableStorePurchaser(), clock);
             Scorer = new ItemScorer();
             Pricing = new ItemPricing();
             Enhancement = new EnhancementService();
             Pets = new PetService();
-            Tree = PassiveTreeGenerator.Generate(profile.TreeSize, profile.TreeSeed);
+            Tree = PassiveTreeGenerator.Generate(Tuning.Tree.NodeCount > 0 ? Tuning.Tree.NodeCount : profile.TreeSize, profile.TreeSeed);
             TreeService = new PassiveTreeService(Tree, profile.TreeOwned);
-            RaidEntries = new DailyEntryLimit(clock, profile.Raid, RaidEntriesPerDay);
+            RaidEntries = new DailyEntryLimit(clock, profile.Raid, Tuning.Raid.EntriesPerDay);
         }
 
+        public GameTuning Tuning { get; }
+        public IClock Clock { get; }
+        public IPowerCalculator Power { get; }
+        public StatAllocationService StatPoints { get; }
+        public TrainingService Training { get; }
+        public PresetService Presets { get; }
+        public DailyQuestService Quests { get; }
+        public AttendanceService Attendance { get; }
+        public ShopService Shop { get; }
+        public ProgressionState State => Profile.State;
+        public PlayerSettings Settings => Profile.State.Settings;
+        /// <summary>열린 ACT 수 (단련 한도·출석 보상 기준).</summary>
+        public int ActsOpened => Content.Acts.ActsOpened(Profile.UnlockedDungeons);
         public GameProfile Profile { get; }
         public GameContent Content { get; }
         public IRandom Random { get; }
@@ -66,9 +90,30 @@ namespace ShadowRPG.Core.Game
             {
                 var item = Loot.Create(slot, ItemRarity.Normal, 1, skill);
                 item.Requirements = default;
+                // 첫 무기 = 리듬 무기 (방향성 v1 §7): 초반 구간까지 쓸 만하고, 박자는 무기마다 다름
+                if (slot == EquipSlot.RightHand)
+                {
+                    item.BeatSeconds = StarterBeat(Profile.ClassId);
+                    item.Name = "박동하는 " + item.Name;
+                }
                 Profile.Equipped[slot] = item;
             }
-            Wallet.Earn(200);
+            Wallet.Earn(Tuning.Growth.StartingGold);
+            State.UnspentStatPoints += Tuning.Growth.StartingStatPoints;
+            Presets.SaveCurrent(0);
+        }
+
+        /// <summary>직업별 첫 리듬 무기 박자 (초). 기본값은 RhythmTuning.DefaultBeatSeconds 기준으로 조금씩 다르게.</summary>
+        public float StarterBeat(string classId)
+        {
+            float b = Tuning.Rhythm.DefaultBeatSeconds;
+            switch (classId)
+            {
+                case "mage": return b * 1.15f;
+                case "archer": return b * 0.9f;
+                case "monk": return b * 0.75f;
+                default: return b;
+            }
         }
 
         public static IEnumerable<(EquipSlot, string)> StarterKit(string classId)
@@ -93,6 +138,11 @@ namespace ShadowRPG.Core.Game
             var characterClass = Content.Classes.Get(Profile.ClassId) ?? Content.Classes.All[0];
             player.ChangeClass(characterClass);
             player.Progress.Restore(Profile.Level, Profile.Experience);
+            StatPoints.ApplyTo(player.Progress);
+            Training.ApplyTo(player.Combatant);
+            player.Progress.LeveledUpBy += (level, gained) => StatPoints.GrantForLevels(gained);
+            if (world is World.CombatWorld combatWorld)
+                player.Rhythm = new RhythmController(player.Combatant, new EquipmentRhythmSource(player.Equipment), Tuning.Rhythm, combatWorld.Damage, () => { player.Context.Refresh(); return player.Context.NearestDistance < 3.5f ? player.Context.NearestEnemy : null; });
             foreach (var pair in Profile.Equipped) player.Equipment.ForceEquip(pair.Value, pair.Key);
             TreeService.ApplyTo(player.Combatant);
             player.Combatant.Health.ResetToFull();
@@ -117,6 +167,69 @@ namespace ShadowRPG.Core.Game
             Profile.Experience = player.Progress.Experience;
             Profile.ClassId = player.Class.Current?.Id ?? Profile.ClassId;
         }
+
+        // ---------- 성장 (방향성 v1) ----------
+
+        public bool AllocateStat(PlayerCharacter player, Stats.CoreStat stat)
+        {
+            if (!StatPoints.Allocate(stat)) return false;
+            if (player != null) StatPoints.ApplyTo(player.Progress);
+            RequestSave();
+            return true;
+        }
+
+        public bool RespecStats(PlayerCharacter player)
+        {
+            if (!StatPoints.Respec(Profile.Level)) return false;
+            if (player != null) StatPoints.ApplyTo(player.Progress);
+            RequestSave();
+            return true;
+        }
+
+        public string Train(PlayerCharacter player, TrainingTrack track)
+        {
+            var error = Training.TryTrain(track, Wallet, ActsOpened);
+            if (error != null) return error;
+            if (player != null) Training.ApplyTo(player.Combatant);
+            Quests.Report("train");
+            RequestSave();
+            return null;
+        }
+
+        /// <summary>
+        /// 귀환 시 자동 장착 (옵션): 가방·창고에서 슬롯별로 지금보다 전투력이 높은 장비가 있으면 장착.
+        /// 반환: 바꾼 개수.
+        /// </summary>
+        public int AutoEquipBetter(PlayerCharacter player)
+        {
+            int changed = 0;
+            var candidates = Profile.Bag.Items.Concat(Profile.Stash.Items).ToList();
+            foreach (var slot in SlotRules.All)
+            {
+                var current = player.Equipment.Get(slot);
+                int currentPower = Power.ItemPower(current);
+                Item best = null;
+                int bestPower = currentPower;
+                foreach (var item in candidates)
+                {
+                    if (!SlotRules.CanPlace(item.Slot, slot) || !item.Requirements.IsMetBy(player.Combatant.Stats)) continue;
+                    if (current != null && current.IsRhythm && !item.IsRhythm) continue; // 리듬 무기는 자동으로 바꾸지 않음
+                    int p = Power.ItemPower(item);
+                    if (p <= bestPower) continue;
+                    best = item;
+                    bestPower = p;
+                }
+                if (best == null) continue;
+                if (Equip(player, best, slot).Success)
+                {
+                    candidates.Remove(best);
+                    changed++;
+                }
+            }
+            return changed;
+        }
+
+        public int TotalPower(PlayerCharacter player) => Power.TotalPower(player.Combatant.Stats, player.Equipment);
 
         // ---------- 던전 진행 ----------
 
@@ -170,8 +283,15 @@ namespace ShadowRPG.Core.Game
             if (!Profile.Bag.Remove(item)) return 0;
             long gold = Pricing.SellValue(item, seller?.Combatant.Stats);
             Wallet.Earn(gold);
+            NoteSale(gold);
             RequestSave();
             return gold;
+        }
+
+        public void NoteSale(long gold)
+        {
+            State.Lifetime.GoldEarnedBySelling += gold;
+            Quests.Report("sell_gold", (int)Math.Min(int.MaxValue, gold));
         }
 
         /// <summary>가방 장비 장착. 밀려난 장비는 가방으로 돌아갑니다.</summary>
@@ -191,13 +311,14 @@ namespace ShadowRPG.Core.Game
         public EnhanceResult Enhance(PlayerCharacter player, Item item)
         {
             var result = Enhancement.TryEnhance(item, Wallet, player?.Equipment);
-            if (result.Success) RequestSave();
+            if (result.Success) { Quests.Report("enhance"); RequestSave(); }
             return result;
         }
 
         public bool BuyTreeNode(int nodeId, PlayerCharacter player)
         {
             if (!TreeService.TryBuy(nodeId, Wallet)) return false;
+            Quests.Report("tree");
             if (player != null) TreeService.ApplyTo(player.Combatant);
             RequestSave();
             return true;

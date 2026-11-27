@@ -1,0 +1,102 @@
+{
+    "TempoPacks": [
+        {
+            "Id": "tempo_60",
+            "Name": "템포 60",
+            "Currency": "KRW",
+            "Price": 1200,
+            "Tempo": 60,
+            "Gold": 0,
+            "Note": "첫 구매 2배"
+        },
+        {
+            "Id": "tempo_300",
+            "Name": "템포 300",
+            "Currency": "KRW",
+            "Price": 5900,
+            "Tempo": 300,
+            "Gold": 0,
+            "Note": "첫 구매 2배"
+        },
+        {
+            "Id": "tempo_980",
+            "Name": "템포 980",
+            "Currency": "KRW",
+            "Price": 19000,
+            "Tempo": 980,
+            "Gold": 0,
+            "Note": "첫 구매 2배"
+        },
+        {
+            "Id": "tempo_3280",
+            "Name": "템포 3280",
+            "Currency": "KRW",
+            "Price": 59000,
+            "Tempo": 3280,
+            "Gold": 0,
+            "Note": "첫 구매 2배"
+        }
+    ],
+    "Packages": [
+        {
+            "Id": "starter",
+            "Name": "스타터 패키지",
+            "Currency": "KRW",
+            "Price": 4900,
+            "Tempo": 300,
+            "Gold": 30000,
+            "Note": "계정당 1회"
+        },
+        {
+            "Id": "monthly",
+            "Name": "월정액",
+            "Currency": "KRW",
+            "Price": 5900,
+            "Tempo": 30,
+            "Gold": 0,
+            "Note": "30일간 매일 템포 30 + 배속 ×3"
+        },
+        {
+            "Id": "season_pass",
+            "Name": "시즌 패스",
+            "Currency": "KRW",
+            "Price": 12000,
+            "Tempo": 0,
+            "Gold": 0,
+            "Note": "유료 보상 트랙 개방"
+        }
+    ],
+    "Convenience": [
+        {
+            "Id": "preset_slot",
+            "Name": "세팅 슬롯 +1",
+            "Currency": "Tempo",
+            "Price": 300,
+            "Tempo": 0,
+            "Gold": 0,
+            "Note": "최대 6"
+        },
+        {
+            "Id": "stash_rows",
+            "Name": "창고 확장 (2줄)",
+            "Currency": "Tempo",
+            "Price": 200,
+            "Tempo": 0,
+            "Gold": 0,
+            "Note": ""
+        },
+        {
+            "Id": "speed3_day",
+            "Name": "배속 ×3 (1일)",
+            "Currency": "Tempo",
+            "Price": 50,
+            "Tempo": 0,
+            "Gold": 0,
+            "Note": ""
+        }
+    ],
+    "GoldShopItems": 6,
+    "GoldShopPriceMultiplier": 8.0,
+    "GoldShopRefreshHours": 24,
+    "GoldShopRerollGold": 500
+}

@@ -1,0 +1,244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139e16fd94350a444b315024aa2ba4b9, type: 3}
+  m_Name: Town_Theme
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.EnvironmentTheme
+  themeName: Town
+  pixelsPerUnit: 128
+  floorTiles:
+  - sprite: {fileID: 21300000, guid: 4be2400fd301e1a47a358d0e7e3dc9bd, type: 3}
+    weight: 0.75
+  - sprite: {fileID: 21300000, guid: 66a65e1fa1c7a204aa38aa6e9d26a174, type: 3}
+    weight: 0.75
+  - sprite: {fileID: 21300000, guid: 8b32a5f4a9c39dd488ae68cfd702629a, type: 3}
+    weight: 0.75
+  - sprite: {fileID: 21300000, guid: 0f26e4925a7e97d4b94a165921144da1, type: 3}
+    weight: 0.75
+  - sprite: {fileID: 21300000, guid: 4d4c7813dbb452e43bb75c20b5f249c0, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: 2705100edfcdb1c42843a3d9b43b7dd0, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: b9300f03322b92a4b936aaebd759e5dc, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: 692b1c296f0595b4ca103ef74fe955c4, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: 9effebca7d93ee549b7a18ae11c1b17c, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: f0a248f3242664044a00e125e12910b1, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: 59afc018e54763e4aaa3df8c205208e4, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: 44b8da08a4f270941b0cf40b3f862678, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: d4ebc0076db89724c83d834cd56bdf20, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: 71be8b00e6a41cb41972587de1f3355e, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: 86d65d6a10e49b749ad50ccdf9616e9d, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: 7736d37f1ca092f4e97fa5be57fa1f8f, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: b788e088969a70a4f8cacededb004af2, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: 747173f4934a7cc418401ba8676b072a, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: cbd68d9b3fd227e4f8c09db4de0fd533, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: a64fd09357a1e9f49a9d74661ce4c695, type: 3}
+    weight: 0.25
+  - sprite: {fileID: 21300000, guid: ba58f67f22f21ee47b7f9f705fdd5cd9, type: 3}
+    weight: 0.375
+  - sprite: {fileID: 21300000, guid: a579f5515761f9043b3543f019d03174, type: 3}
+    weight: 0.375
+  - sprite: {fileID: 21300000, guid: a547892491178ba4cbb1dc792755f868, type: 3}
+    weight: 0.375
+  - sprite: {fileID: 21300000, guid: 0bf44310169a79d4f91079a2de768354, type: 3}
+    weight: 0.375
+  floorDecals: []
+  decalChance: 0.08
+  floorTint: {r: 0.7, g: 0.68, b: 0.72, a: 1}
+  wallFaces:
+  - sprite: {fileID: 21300000, guid: 43464f63a420cb64d98bafa4630ed7ac, type: 3}
+    weight: 4
+  - sprite: {fileID: 21300000, guid: e030d47a510b9d84fb39f2183846e72d, type: 3}
+    weight: 4
+  - sprite: {fileID: 21300000, guid: e32ee7ac6f2e30f49b46763a20b3bf6e, type: 3}
+    weight: 1
+  - sprite: {fileID: 21300000, guid: 7bc58e835c34dbd40be41ad967450efd, type: 3}
+    weight: 1
+  - sprite: {fileID: 21300000, guid: 6df5bb60e8d48c14db6abbc878fec24f, type: 3}
+    weight: 1
+  - sprite: {fileID: 21300000, guid: 5c5b8e37cb7175f40bd039fc7347ee58, type: 3}
+    weight: 1
+  wallCap: {fileID: 21300000, guid: 4a49e8c1d0250d743980ad669409fe85, type: 3}
+  wallTint: {r: 0.75, g: 0.73, b: 0.8, a: 1}
+  wallFaceHeight: 0.90106726
+  voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
+  props:
+  - name: tree_dead_large
+    sprite: {fileID: 21300000, guid: 146e289b6ec09c14a8ca843fb89f668c, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: tree_dead_medium
+    sprite: {fileID: 21300000, guid: 996902619a6a0744a85f2bb34263fcdc, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: gravestone
+    sprite: {fileID: 21300000, guid: fdbd1469dbef2f1479af04f62a911141, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: grave_A
+    sprite: {fileID: 21300000, guid: ff07031a9ffd8ba4fade2c7aa78b6412, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: fence
+    sprite: {fileID: 21300000, guid: 94445b7b697b3874eb9468bf48373be7, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: bench
+    sprite: {fileID: 21300000, guid: 6800dc83ea39b884cbb76de7f216e2f4, type: 3}
+    placement: 0
+    weight: 0.6
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: barrel_large_decorated
+    sprite: {fileID: 21300000, guid: 4fb4246b756c011498ef398da3911d94, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: keg_decorated
+    sprite: {fileID: 21300000, guid: dc6ec4cc4a9cc844bb799754c66e9dca, type: 3}
+    placement: 0
+    weight: 0.6
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: lantern_standing
+    sprite: {fileID: 21300000, guid: 0635136f5e6800949b598835e34022c9, type: 3}
+    placement: 0
+    weight: 1.2
+    blocks: 1
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 5
+    lightIntensity: 1.1
+    flicker: 0.1
+    lightHeight: 1.1
+  - name: post_lantern
+    sprite: {fileID: 21300000, guid: 78f4068595d5a95459b40821bf775143, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 5.5
+    lightIntensity: 1.1
+    flicker: 0.1
+    lightHeight: 1.4
+  - name: pumpkin_orange_small
+    sprite: {fileID: 21300000, guid: a4db0a1d23783b24db89694402b42b8a, type: 3}
+    placement: 1
+    weight: 0.4
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: skull
+    sprite: {fileID: 21300000, guid: 5b559b9207bb7744eb1d87d7f1868d71, type: 3}
+    placement: 1
+    weight: 0.3
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: torch_mounted
+    sprite: {fileID: 21300000, guid: 6cf7cbf1c59cdc14e82fc2a0dfcea78d, type: 3}
+    placement: 2
+    weight: 2
+    blocks: 0
+    lightColor: {r: 1, g: 0.62, b: 0.32, a: 1}
+    lightRadius: 5.5
+    lightIntensity: 1.1
+    flicker: 0.18
+    lightHeight: 0.55
+  - name: banner_patternB_blue
+    sprite: {fileID: 21300000, guid: 6dc8fd762388fa94890b90b24316ca80, type: 3}
+    placement: 2
+    weight: 1
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: wall_shelves
+    sprite: {fileID: 21300000, guid: 8c4e802aa15a95645b241c85cd92695c, type: 3}
+    placement: 2
+    weight: 0
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  edgePropChance: 0.08
+  wallPropChance: 0.18
+  scatterPropChance: 0.02
+  ambientColor: {r: 0.7, g: 0.68, b: 0.85, a: 1}
+  ambientIntensity: 0.8
+  heroLightColor: {r: 0.55, g: 0.7, b: 1, a: 1}
+  heroLightRadius: 5
+  heroLightIntensity: 0.6

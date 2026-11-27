@@ -147,7 +147,7 @@ namespace ShadowRPG.Core.Items
 
         public Item()
         {
-            Id = "item_" + (++_nextId);
+            Id = "i" + System.Guid.NewGuid().ToString("N").Substring(0, 12);
         }
 
         public string Id { get; set; }
@@ -173,9 +173,13 @@ namespace ShadowRPG.Core.Items
         public string PowerDescription { get; set; }
 
         /// <summary>강화 단계 (+0 ~ +15). 단계마다 모든 수치가 8%씩 오릅니다.</summary>
+        /// <summary>리듬 무기면 박자 간격(초), 아니면 0. 무기마다 박자가 다릅니다.</summary>
+        public float BeatSeconds { get; set; }
+        public bool IsRhythm => BeatSeconds > 0.05f;
+
         public int EnhanceLevel { get; set; }
-        public const int MaxEnhanceLevel = 15;
-        public const float EnhanceBonusPerLevel = 0.08f;
+        public static int MaxEnhanceLevel => Tuning.GameTuning.Current.Enhance.MaxLevel;
+        public static float EnhanceBonusPerLevel => Tuning.GameTuning.Current.Enhance.BonusPerLevel;
 
         public float EnhanceMultiplier => 1f + EnhanceBonusPerLevel * EnhanceLevel;
 

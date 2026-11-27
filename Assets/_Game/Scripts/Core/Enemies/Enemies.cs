@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using ShadowRPG.Core.Actors;
 using ShadowRPG.Core.Combat;
 using ShadowRPG.Core.Stats;
+using ShadowRPG.Core.Tuning;
 using ShadowRPG.Core.World;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace ShadowRPG.Core.Enemies
         public string Id { get; set; }
         public string Name { get; set; }
         public string VisualKey { get; set; }
+        public string BossVisualKey { get; set; }
         public float Life { get; set; } = 40f;
         public float Damage { get; set; } = 6f;
         public float MoveSpeed { get; set; } = 2f;
@@ -49,8 +51,8 @@ namespace ShadowRPG.Core.Enemies
         /// <summary>플레이어를 알아챘는지. 던전 몬스터는 방에서 대기하다 보이거나 맞으면 추적합니다.</summary>
         public bool Aggro { get; set; }
 
-        public const float AggroRange = 8f;
-        public const float AlertRadius = 5f;
+        public static float AggroRange => GameTuning.Current.Monster.AggroRange;
+        public static float AlertRadius => GameTuning.Current.Monster.AlertRadius;
 
         /// <summary>대기 중이면 시야 안의 적을 확인해 깨어나고, 주변 동료도 깨웁니다.</summary>
         public Combatant AcquireTarget(ICombatWorld world)
@@ -90,6 +92,7 @@ namespace ShadowRPG.Core.Enemies
             if (agent.AttackTimer > 0f) return;
             agent.AttackTimer = agent.Archetype.AttackInterval;
             self.LockActions(0.35f);
+            self.NotifyAction(CombatAction.Attack);
             world.Emit(VfxEvent.At(VfxKind.Slash, target.Position, 0.4f, agent.Archetype.DamageType, 0.12f));
             world.Damage.Deal(new DamageRequest
             {
@@ -123,6 +126,7 @@ namespace ShadowRPG.Core.Enemies
             if (distance > agent.Archetype.AttackRange || !visible || agent.AttackTimer > 0f) return;
             agent.AttackTimer = agent.Archetype.AttackInterval;
             self.LockActions(0.4f);
+            self.NotifyAction(agent.Archetype.DamageType == DamageType.Physical ? CombatAction.RangedAttack : CombatAction.Cast);
 
             var attacker = self;
             var archetype = agent.Archetype;
@@ -161,36 +165,54 @@ namespace ShadowRPG.Core.Enemies
         }
     }
 
-    public interface IEnemyFactory
+        /// <summary>층 난이도: 레벨(경험치·드랍용)과 능력치 배율.</summary>
+    public readonly struct MonsterScaling
     {
-        EnemyAgent Create(EnemyArchetype archetype, int level, EnemyRank rank, Vector2 position);
+        public readonly int Level;
+        public readonly float Power;
+
+        public MonsterScaling(int level, float power)
+        {
+            Level = level;
+            Power = power;
+        }
     }
 
+    public interface IEnemyFactory
+    {
+        EnemyAgent Create(EnemyArchetype archetype, MonsterScaling scaling, EnemyRank rank, Vector2 position);
+    }
+
+    /// <summary>원형 × 층 배율 × 등급(정예·보스) 배율. 수치는 MonsterTuning.</summary>
     public sealed class EnemyFactory : IEnemyFactory
     {
         readonly IEnemyBrain _melee = new MeleeEnemyBrain();
         readonly IEnemyBrain _ranged = new RangedEnemyBrain();
+        readonly MonsterTuning _tuning;
 
-        public EnemyAgent Create(EnemyArchetype archetype, int level, EnemyRank rank, Vector2 position)
+        public EnemyFactory(MonsterTuning tuning = null) => _tuning = tuning ?? GameTuning.Current.Monster;
+
+        public EnemyAgent Create(EnemyArchetype archetype, MonsterScaling scaling, EnemyRank rank, Vector2 position)
         {
-            float lifeScale = (1f + 0.4f * (level - 1)) * (rank == EnemyRank.Boss ? 18f : rank == EnemyRank.Elite ? 4f : 1f);
-            float damageScale = (1f + 0.24f * (level - 1)) * (rank == EnemyRank.Boss ? 2.2f : rank == EnemyRank.Elite ? 1.5f : 1f);
+            var t = _tuning;
+            float lifeScale = t.GlobalLife * scaling.Power * (rank == EnemyRank.Boss ? t.BossLife : rank == EnemyRank.Elite ? t.EliteLife : 1f);
+            float damageScale = t.GlobalDamage * scaling.Power * (rank == EnemyRank.Boss ? t.BossDamage : rank == EnemyRank.Elite ? t.EliteDamage : 1f);
 
             var combatant = new Combatant(RankPrefix(rank) + archetype.Name, Team.Enemy)
             {
                 Rank = rank,
-                VisualKey = archetype.VisualKey,
-                Radius = archetype.Radius * (rank == EnemyRank.Boss ? 1.8f : rank == EnemyRank.Elite ? 1.3f : 1f),
-                BaseMoveSpeed = archetype.MoveSpeed * (rank == EnemyRank.Boss ? 0.85f : 1f),
+                VisualKey = rank == EnemyRank.Boss && !string.IsNullOrEmpty(archetype.BossVisualKey) ? archetype.BossVisualKey : archetype.VisualKey,
+                Radius = archetype.Radius * (rank == EnemyRank.Boss ? t.BossSize : rank == EnemyRank.Elite ? t.EliteSize : 1f),
+                BaseMoveSpeed = archetype.MoveSpeed * (rank == EnemyRank.Boss ? t.BossSpeed : 1f),
                 Position = position
             };
             combatant.Stats.SetBase(StatType.MaxLife, archetype.Life * lifeScale);
             combatant.Stats.SetBase(StatType.WeaponDamage, archetype.Damage * damageScale);
-            combatant.Stats.SetBase(StatType.Armor, archetype.Armor * (1f + 0.2f * level));
-            combatant.Stats.SetBase(StatType.AllResistPct, Mathf.Min(40f, level * 1.5f));
+            combatant.Stats.SetBase(StatType.Armor, archetype.Armor * scaling.Power * (1f + t.ArmorPerLevel * scaling.Level * 0.1f));
+            combatant.Stats.SetBase(StatType.AllResistPct, Mathf.Min(t.ResistCap, scaling.Level * t.ResistPerLevel));
             combatant.Health.ResetToFull();
 
-            var agent = new EnemyAgent(combatant, archetype, archetype.IsRanged ? _ranged : _melee) { Level = level };
+            var agent = new EnemyAgent(combatant, archetype, archetype.IsRanged ? _ranged : _melee) { Level = scaling.Level };
             combatant.Health.Damaged += _ => agent.Aggro = true;
             agent.AttackTimer = archetype.AttackInterval * 0.5f;
             return agent;
@@ -201,29 +223,25 @@ namespace ShadowRPG.Core.Enemies
 
     public static class EnemyRoster
     {
+        /// <summary>일반 몬스터 (KayKit 해골 무리, CC0). Id는 DungeonTuning.Acts[].EnemyIds와 맞춥니다.</summary>
         public static List<EnemyArchetype> CreateDefault() => new List<EnemyArchetype>
         {
-            new EnemyArchetype { Id = "goblin", Name = "고블린", VisualKey = "goblin", Life = 30f, Damage = 5f, MoveSpeed = 2.6f },
-            new EnemyArchetype { Id = "imp", Name = "임프", VisualKey = "imp", Life = 24f, Damage = 4f, MoveSpeed = 3.1f, DamageType = DamageType.Fire },
-            new EnemyArchetype { Id = "skelet", Name = "해골", VisualKey = "skelet", Life = 36f, Damage = 6f, MoveSpeed = 2.2f, Armor = 20f },
-            new EnemyArchetype { Id = "tiny_zombie", Name = "꼬마 좀비", VisualKey = "tiny_zombie", Life = 28f, Damage = 5f, MoveSpeed = 2.4f },
-            new EnemyArchetype { Id = "orc_warrior", Name = "오크 전사", VisualKey = "orc_warrior", Life = 55f, Damage = 8f, MoveSpeed = 2.1f, Armor = 40f, Radius = 0.4f },
-            new EnemyArchetype { Id = "masked_orc", Name = "가면 오크", VisualKey = "masked_orc", Life = 50f, Damage = 9f, MoveSpeed = 2.3f, Radius = 0.4f },
-            new EnemyArchetype { Id = "chort", Name = "초르트", VisualKey = "chort", Life = 40f, Damage = 7f, MoveSpeed = 2.8f, DamageType = DamageType.Shadow },
-            new EnemyArchetype { Id = "orc_shaman", Name = "오크 주술사", VisualKey = "orc_shaman", Life = 32f, Damage = 7f, MoveSpeed = 1.9f, AttackRange = 6f, AttackInterval = 1.8f, IsRanged = true, DamageType = DamageType.Fire },
-            new EnemyArchetype { Id = "necromancer", Name = "강령술사", VisualKey = "necromancer", Life = 30f, Damage = 8f, MoveSpeed = 1.8f, AttackRange = 6.5f, AttackInterval = 2f, IsRanged = true, DamageType = DamageType.Shadow }
+            new EnemyArchetype { Id = "skeleton_minion", Name = "해골 졸개", VisualKey = "skeleton_minion", Life = 30f, Damage = 5f, MoveSpeed = 2.5f },
+            new EnemyArchetype { Id = "skeleton_rogue", Name = "해골 석궁병", VisualKey = "skeleton_rogue", Life = 24f, Damage = 6f, MoveSpeed = 2.2f, AttackRange = 6f, AttackInterval = 1.7f, IsRanged = true },
+            new EnemyArchetype { Id = "skeleton_mage", Name = "해골 주술사", VisualKey = "skeleton_mage", Life = 26f, Damage = 7f, MoveSpeed = 1.9f, AttackRange = 6.5f, AttackInterval = 2f, IsRanged = true, DamageType = DamageType.Shadow },
+            new EnemyArchetype { Id = "skeleton_warrior", Name = "해골 전사", VisualKey = "skeleton_warrior", Life = 48f, Damage = 8f, MoveSpeed = 2.1f, Armor = 40f, Radius = 0.4f }
         };
 
         public static List<EnemyArchetype> CreateElites() => new List<EnemyArchetype>
         {
-            new EnemyArchetype { Id = "big_zombie", Name = "거대 좀비", VisualKey = "big_zombie", Life = 60f, Damage = 10f, MoveSpeed = 1.8f, Radius = 0.55f, Armor = 60f },
-            new EnemyArchetype { Id = "ogre", Name = "오우거", VisualKey = "ogre", Life = 70f, Damage = 12f, MoveSpeed = 1.7f, Radius = 0.55f, Armor = 80f }
+            new EnemyArchetype { Id = "elite_warrior", Name = "해골 근위병", VisualKey = "skeleton_warrior", Life = 60f, Damage = 10f, MoveSpeed = 1.9f, Radius = 0.45f, Armor = 60f },
+            new EnemyArchetype { Id = "elite_mage", Name = "해골 대주술사", VisualKey = "skeleton_mage", Life = 50f, Damage = 11f, MoveSpeed = 1.8f, Radius = 0.42f, AttackRange = 7f, AttackInterval = 1.6f, IsRanged = true, DamageType = DamageType.Shadow }
         };
 
         public static EnemyArchetype CreateBoss() => new EnemyArchetype
         {
-            Id = "big_demon", Name = "심연의 대악마", VisualKey = "big_demon", Life = 80f, Damage = 14f, MoveSpeed = 1.7f,
-            Radius = 0.6f, Armor = 100f, AttackRange = 1.2f, AttackInterval = 1.4f, DamageType = DamageType.Fire
+            Id = "skeleton_lord", Name = "무덤의 군주", VisualKey = "skeleton_boss", BossVisualKey = "skeleton_boss", Life = 80f, Damage = 14f, MoveSpeed = 1.7f,
+            Radius = 0.5f, Armor = 100f, AttackRange = 1.3f, AttackInterval = 1.4f, DamageType = DamageType.Physical
         };
     }
 }

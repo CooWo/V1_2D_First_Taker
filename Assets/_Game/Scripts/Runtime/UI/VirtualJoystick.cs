@@ -25,11 +25,13 @@ namespace ShadowRPG.Runtime.UI
 
             joystick._base = UiFactory.Anchored(area, "Base", new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(Radius * 2f, Radius * 2f));
             var baseImage = UiFactory.Panel(joystick._base, new Color(0.3f, 0.5f, 1f, 0.18f));
-            baseImage.sprite = PixelArtFactory.Circle;
+            baseImage.sprite = UiShapes.Ring;
+            baseImage.color = new Color(0.75f, 0.8f, 1f, 0.35f);
 
             joystick._knob = UiFactory.Anchored(joystick._base, "Knob", new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(90f, 90f));
             var knobImage = UiFactory.Panel(joystick._knob, new Color(0.45f, 0.7f, 1f, 0.55f));
-            knobImage.sprite = PixelArtFactory.Circle;
+            knobImage.sprite = UiShapes.Disc;
+            knobImage.color = new Color(0.8f, 0.85f, 1f, 0.45f);
             return joystick;
         }
 

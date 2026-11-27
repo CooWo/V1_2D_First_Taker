@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139e16fd94350a444b315024aa2ba4b9, type: 3}
+  m_Name: Crypt_Theme
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.EnvironmentTheme
+  themeName: Crypt
+  pixelsPerUnit: 128
+  floorTiles:
+  - sprite: {fileID: 21300000, guid: 8fc6ce9de128dc54ea370f31149b66b8, type: 3}
+    weight: 1.5
+  - sprite: {fileID: 21300000, guid: 0906f273d64bd6c41a316a620b3cb797, type: 3}
+    weight: 1.5
+  - sprite: {fileID: 21300000, guid: e1f65dfc8392ef942be96ead54931a41, type: 3}
+    weight: 1.5
+  - sprite: {fileID: 21300000, guid: 10e29f75795cb2343be1f1cb64516bbf, type: 3}
+    weight: 1.5
+  - sprite: {fileID: 21300000, guid: 7c6aa61c562a1534d9f788bd17f7e0e0, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: 068ff9970d50e2d46b7d6428bd73bd1f, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: 2c5426ba977c63547adb69963a9d7956, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: b535cb29f12ed124bb52c8516873f824, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: 67b5ed9640e437e4c8b2f727551f95e2, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: ddeb09b81aeffdf4fb552c79c7e51565, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: 6284bfb87dc8c714599028c53c881f24, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: 835f6b29440728f47a23b770e5016c05, type: 3}
+    weight: 0.3
+  - sprite: {fileID: 21300000, guid: f4d81a111ef7a604588b79b91b5962ed, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 21300000, guid: e6b476ce9c02f1f4da1ae9c9cd7ee59f, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: 1d8816ecf0c45de49b4881547b299410, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: 95bea7a6c38eda440a2593b8da6f778e, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: 24b84df659e68dd4082bfb0eb758290e, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: 1c2ab79bf0497ca4a8c06f35ff4e4363, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: d2f14e140113e394bbc9d479ee6c2474, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: 6ddf8e907aa30d4448caa8e449b5f2ca, type: 3}
+    weight: 0.0875
+  - sprite: {fileID: 21300000, guid: d08b713c445423147bbae8a8bd70c76f, type: 3}
+    weight: 0.0875
+  floorDecals: []
+  decalChance: 0.08
+  floorTint: {r: 0.62, g: 0.62, b: 0.72, a: 1}
+  wallFaces:
+  - sprite: {fileID: 21300000, guid: e7695611b07fea449b1392689b8c622b, type: 3}
+    weight: 5
+  - sprite: {fileID: 21300000, guid: 10817347cafe6bc47b24b5eac9e49e53, type: 3}
+    weight: 5
+  - sprite: {fileID: 21300000, guid: a5ca0f338c82a1d46a89cde62e6a8bd6, type: 3}
+    weight: 2
+  - sprite: {fileID: 21300000, guid: cf2f1b096e9bac54390881be25120713, type: 3}
+    weight: 2
+  - sprite: {fileID: 21300000, guid: 6413cb930b6f5c148860ec9d87c57f18, type: 3}
+    weight: 0.6
+  - sprite: {fileID: 21300000, guid: 94987c6788a7a9c46a49e40b0a1b16e6, type: 3}
+    weight: 0.6
+  wallCap: {fileID: 21300000, guid: 11219529dd55e1a45acd34bace5186e0, type: 3}
+  wallTint: {r: 0.72, g: 0.72, b: 0.82, a: 1}
+  wallFaceHeight: 0.90106726
+  voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
+  props:
+  - name: barrel_large
+    sprite: {fileID: 21300000, guid: 14acc8bd7efac7a42872f50396df1391, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: barrel_small_stack
+    sprite: {fileID: 21300000, guid: 76de7308e47c3ca468664e92072d2a22, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: box_stacked
+    sprite: {fileID: 21300000, guid: b617a3cbe7ea3cc42a0c52f7084a97d5, type: 3}
+    placement: 0
+    weight: 1
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: crates_stacked
+    sprite: {fileID: 21300000, guid: f7425bc08a190a34bb1ae44c5a721e91, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: trunk_large_A
+    sprite: {fileID: 21300000, guid: b3b52e7afdf05024089c8b36b6ef31ad, type: 3}
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: rubble_large
+    sprite: {fileID: 21300000, guid: f396be709bc1a7e42a197d6b74327cf1, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: table_medium_broken
+    sprite: {fileID: 21300000, guid: e936c9c7fba5b134c988a0edccfab012, type: 3}
+    placement: 0
+    weight: 0.4
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: coffin
+    sprite: {fileID: 21300000, guid: 0b47998d687980c42b17af45705ffcff, type: 3}
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: coffin_decorated
+    sprite: {fileID: 21300000, guid: cec87ef8588ee4144b220c419801d193, type: 3}
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: pillar
+    sprite: {fileID: 21300000, guid: 89574af9c91b7524c858a9a009e6c466, type: 3}
+    placement: 0
+    weight: 0.6
+    blocks: 1
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: torch_lit
+    sprite: {fileID: 21300000, guid: a51d183adabe17d4bbc1e80d91f74ddd, type: 3}
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    lightColor: {r: 1, g: 0.62, b: 0.32, a: 1}
+    lightRadius: 5
+    lightIntensity: 1.1
+    flicker: 0.18
+    lightHeight: 0.9
+  - name: skull_candle
+    sprite: {fileID: 21300000, guid: 56f35a51413f695408c21117e14ab1a1, type: 3}
+    placement: 0
+    weight: 0.5
+    blocks: 0
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 2.6
+    lightIntensity: 0.8
+    flicker: 0.18
+    lightHeight: 0.4
+  - name: candle_triple
+    sprite: {fileID: 21300000, guid: b0bc4783ece6b684c85dd067dbc8474a, type: 3}
+    placement: 0
+    weight: 0.5
+    blocks: 0
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 2.8
+    lightIntensity: 0.8
+    flicker: 0.18
+    lightHeight: 0.4
+  - name: shrine_candles
+    sprite: {fileID: 21300000, guid: 3c274edac5975fb4884a1e2cef95d347, type: 3}
+    placement: 0
+    weight: 0.25
+    blocks: 1
+    lightColor: {r: 0.45, g: 0.75, b: 1, a: 1}
+    lightRadius: 3.5
+    lightIntensity: 0.9
+    flicker: 0.18
+    lightHeight: 0.6
+  - name: bone_A
+    sprite: {fileID: 21300000, guid: 16f0047b0a34cb7489f3b73e48457cbc, type: 3}
+    placement: 1
+    weight: 1
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: bone_B
+    sprite: {fileID: 21300000, guid: 50cce97d7facd084b911d14ad1a3bf88, type: 3}
+    placement: 1
+    weight: 1
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: bone_C
+    sprite: {fileID: 21300000, guid: 033ecc4e43e5ee540ac527f1d31d72ae, type: 3}
+    placement: 1
+    weight: 1
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: skull
+    sprite: {fileID: 21300000, guid: 03c5015f9aacb284d8e03c4797786201, type: 3}
+    placement: 1
+    weight: 0.8
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: ribcage
+    sprite: {fileID: 21300000, guid: 34e61df1703f91c42b369de29ca9e27f, type: 3}
+    placement: 1
+    weight: 0.5
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: rubble_half
+    sprite: {fileID: 21300000, guid: ea1da7b24fb76ac45939eff97df83c9d, type: 3}
+    placement: 1
+    weight: 0.8
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: candle_melted
+    sprite: {fileID: 21300000, guid: 47ef5336d720d614cb7b79a9e3fc05ca, type: 3}
+    placement: 1
+    weight: 0.4
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: torch_mounted
+    sprite: {fileID: 21300000, guid: c17c4a9e8f4c5ec4da6e956a48c4b5ec, type: 3}
+    placement: 2
+    weight: 2.5
+    blocks: 0
+    lightColor: {r: 1, g: 0.62, b: 0.32, a: 1}
+    lightRadius: 5.5
+    lightIntensity: 1.15
+    flicker: 0.18
+    lightHeight: 0.55
+  - name: banner_patternA_red
+    sprite: {fileID: 21300000, guid: cc80be8e64f1b6c4c92db3d86c005229, type: 3}
+    placement: 2
+    weight: 0.8
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: banner_thin_red
+    sprite: {fileID: 21300000, guid: db400d66150e2dd42a4d09a9c8750fdb, type: 3}
+    placement: 2
+    weight: 0.6
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: banner_shield_brown
+    sprite: {fileID: 21300000, guid: a3d8a41f23f36e04b8e77845db44190f, type: 3}
+    placement: 2
+    weight: 0.5
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: plaque_candles
+    sprite: {fileID: 21300000, guid: 3af1db339384554438f6789956f81cf5, type: 3}
+    placement: 2
+    weight: 0.6
+    blocks: 0
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 3
+    lightIntensity: 0.8
+    flicker: 0.18
+    lightHeight: 0.5
+  - name: sword_shield_broken
+    sprite: {fileID: 21300000, guid: 5e5da2593a3b79f4498809cc17adca41, type: 3}
+    placement: 2
+    weight: 0.4
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  - name: keyring_hanging
+    sprite: {fileID: 21300000, guid: 0a20cd5dd77a27b4e95b4d76b1fa6955, type: 3}
+    placement: 2
+    weight: 0.3
+    blocks: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    flicker: 0.15
+    lightHeight: 0.6
+  edgePropChance: 0.12
+  wallPropChance: 0.18
+  scatterPropChance: 0.02
+  ambientColor: {r: 0.62, g: 0.66, b: 0.85, a: 1}
+  ambientIntensity: 0.75
+  heroLightColor: {r: 0.55, g: 0.7, b: 1, a: 1}
+  heroLightRadius: 5
+  heroLightIntensity: 0.6

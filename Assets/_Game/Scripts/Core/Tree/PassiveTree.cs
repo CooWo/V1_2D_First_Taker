@@ -218,7 +218,7 @@ namespace ShadowRPG.Core.Tree
         {
             var tier = _tree.Nodes[id].Tier;
             float tierMultiplier = tier == NodeTier.Keystone ? 8f : tier == NodeTier.Notable ? 3f : 1f;
-            return (long)Mathf.Round(25f * Mathf.Pow(_owned.Count + 1, 1.35f) * tierMultiplier);
+            return (long)Mathf.Round(Tuning.GameTuning.Current.Tree.CostBase * Mathf.Pow(_owned.Count + 1, Tuning.GameTuning.Current.Tree.CostExponent) * tierMultiplier);
         }
 
         public List<int> Frontier()

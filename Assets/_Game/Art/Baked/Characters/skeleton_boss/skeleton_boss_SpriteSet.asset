@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5054a4cb7954f24469a2d175118b4647, type: 3}
+  m_Name: skeleton_boss_SpriteSet
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.DirectionalSpriteSet
+  characterName: skeleton_boss
+  cellSize: 224
+  pixelsPerUnit: 128
+  pivot: {x: 0.5, y: 0.22}
+  mirrored: 1
+  heightUnits: 1.365
+  clips:
+  - name: idle
+    texture: {fileID: 2800000, guid: bcb9650a7c790de4cbf07d309e328336, type: 3}
+    frames: 12
+    framesPerSecond: 2.8124998
+    loop: 1
+    impactFrame: -1
+  - name: run
+    texture: {fileID: 2800000, guid: 456754df6f764404e89705ba4949c755, type: 3}
+    frames: 9
+    framesPerSecond: 12.375
+    loop: 1
+    impactFrame: -1
+  - name: attack
+    texture: {fileID: 2800000, guid: 23c214bda4f9e0a4f98cdc4169e35a65, type: 3}
+    frames: 12
+    framesPerSecond: 10.653062
+    loop: 0
+    impactFrame: 6
+  - name: attack2
+    texture: {fileID: 2800000, guid: 8f6738b0fc8e03b4bb06bd582fa50a05, type: 3}
+    frames: 12
+    framesPerSecond: 7.25
+    loop: 0
+    impactFrame: 4
+  - name: cast
+    texture: {fileID: 2800000, guid: ad4d6d3930e7b2d448826be499ad6d4c, type: 3}
+    frames: 9
+    framesPerSecond: 12.535714
+    loop: 0
+    impactFrame: 3
+  - name: dodge
+    texture: {fileID: 2800000, guid: 1d8424687caace546bdbc1ac69cfa2f4, type: 3}
+    frames: 4
+    framesPerSecond: 12.000001
+    loop: 0
+    impactFrame: -1
+  - name: hit
+    texture: {fileID: 2800000, guid: 3745fa03b2bed84428c1cdce9b923c5d, type: 3}
+    frames: 5
+    framesPerSecond: 11.999999
+    loop: 0
+    impactFrame: -1
+  - name: death
+    texture: {fileID: 2800000, guid: 2026e0f06cea421428f98b7536a939f7, type: 3}
+    frames: 12
+    framesPerSecond: 6
+    loop: 0
+    impactFrame: -1
+  - name: spawn
+    texture: {fileID: 2800000, guid: 8362ee44d14ffc543859882d340be3e3, type: 3}
+    frames: 12
+    framesPerSecond: 4.3738317
+    loop: 0
+    impactFrame: -1

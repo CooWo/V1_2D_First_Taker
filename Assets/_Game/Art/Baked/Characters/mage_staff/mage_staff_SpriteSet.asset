@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5054a4cb7954f24469a2d175118b4647, type: 3}
+  m_Name: mage_staff_SpriteSet
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.DirectionalSpriteSet
+  characterName: mage/staff
+  cellSize: 224
+  pixelsPerUnit: 128
+  pivot: {x: 0.5, y: 0.22}
+  mirrored: 1
+  heightUnits: 1.365
+  clips:
+  - name: idle
+    texture: {fileID: 2800000, guid: 9d99e54224185534892c4371bfaee254, type: 3}
+    frames: 12
+    framesPerSecond: 11.249999
+    loop: 1
+    impactFrame: -1
+  - name: run
+    texture: {fileID: 2800000, guid: eb10b71ca5fa0a64f9fe5ac85dec530f, type: 3}
+    frames: 9
+    framesPerSecond: 12.375
+    loop: 1
+    impactFrame: -1
+  - name: attack
+    texture: {fileID: 2800000, guid: a8bdd380258372941ba420cffcbc7103, type: 3}
+    frames: 8
+    framesPerSecond: 12.428572
+    loop: 0
+    impactFrame: 3
+  - name: attack2
+    texture: {fileID: 2800000, guid: 12528d009e72db144bd6733ebc688a10, type: 3}
+    frames: 9
+    framesPerSecond: 12.234375
+    loop: 0
+    impactFrame: 3
+  - name: cast
+    texture: {fileID: 2800000, guid: 9b084d52c9b649e469b505637432e278, type: 3}
+    frames: 9
+    framesPerSecond: 12.535714
+    loop: 0
+    impactFrame: 3
+  - name: dodge
+    texture: {fileID: 2800000, guid: a80124dde0c544f499452c1c092a0e8a, type: 3}
+    frames: 4
+    framesPerSecond: 12.000001
+    loop: 0
+    impactFrame: -1
+  - name: hit
+    texture: {fileID: 2800000, guid: 45c0647d147a3a94ab2f156f65050790, type: 3}
+    frames: 5
+    framesPerSecond: 11.999999
+    loop: 0
+    impactFrame: -1
+  - name: death
+    texture: {fileID: 2800000, guid: f16f2fb8e4925d24094b59bfed1591e5, type: 3}
+    frames: 10
+    framesPerSecond: 12.5
+    loop: 0
+    impactFrame: -1

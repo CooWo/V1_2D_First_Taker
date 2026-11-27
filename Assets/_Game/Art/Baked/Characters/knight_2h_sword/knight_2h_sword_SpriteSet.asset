@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5054a4cb7954f24469a2d175118b4647, type: 3}
+  m_Name: knight_2h_sword_SpriteSet
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.DirectionalSpriteSet
+  characterName: knight/2h_sword
+  cellSize: 224
+  pixelsPerUnit: 128
+  pivot: {x: 0.5, y: 0.22}
+  mirrored: 1
+  heightUnits: 1.365
+  clips:
+  - name: idle
+    texture: {fileID: 2800000, guid: 98e0d0503c036f94e900ffbbd70e60ff, type: 3}
+    frames: 12
+    framesPerSecond: 11.249999
+    loop: 1
+    impactFrame: -1
+  - name: run
+    texture: {fileID: 2800000, guid: 94f545f5d5ed42c4ab7e5cbb213609e9, type: 3}
+    frames: 9
+    framesPerSecond: 12.375
+    loop: 1
+    impactFrame: -1
+  - name: attack
+    texture: {fileID: 2800000, guid: 8a9abc75fb6a99e4a9e1c879d5f54a24, type: 3}
+    frames: 9
+    framesPerSecond: 11.863637
+    loop: 0
+    impactFrame: 3
+  - name: attack2
+    texture: {fileID: 2800000, guid: b3165ff6f7686044ca079ed762b044a6, type: 3}
+    frames: 12
+    framesPerSecond: 10.653062
+    loop: 0
+    impactFrame: 6
+  - name: cast
+    texture: {fileID: 2800000, guid: b8825d1fe7ff47b4abccd29238effba6, type: 3}
+    frames: 9
+    framesPerSecond: 12.535714
+    loop: 0
+    impactFrame: 3
+  - name: dodge
+    texture: {fileID: 2800000, guid: 30336e0fb2808fc438f3ed9010b8b920, type: 3}
+    frames: 4
+    framesPerSecond: 12.000001
+    loop: 0
+    impactFrame: -1
+  - name: hit
+    texture: {fileID: 2800000, guid: 8c1d72dadfa58024c86114d7b7a63387, type: 3}
+    frames: 5
+    framesPerSecond: 11.999999
+    loop: 0
+    impactFrame: -1
+  - name: death
+    texture: {fileID: 2800000, guid: e1009b031c104484f97112d450a1fe58, type: 3}
+    frames: 10
+    framesPerSecond: 12.5
+    loop: 0
+    impactFrame: -1

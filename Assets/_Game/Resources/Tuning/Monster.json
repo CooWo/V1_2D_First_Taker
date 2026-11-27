@@ -1,0 +1,22 @@
+{
+    "GlobalLife": 1.6,
+    "GlobalDamage": 1.7,
+    "FloorStatPct": 4.0,
+    "DungeonMultiplier": 1.15,
+    "ActMultiplier": 1.8,
+    "EliteLife": 4.0,
+    "EliteDamage": 1.5,
+    "EliteSize": 1.3,
+    "BossLife": 18.0,
+    "BossDamage": 2.2,
+    "BossSize": 1.8,
+    "BossSpeed": 0.85,
+    "ArmorPerLevel": 0.2,
+    "ResistPerLevel": 1.5,
+    "ResistCap": 40.0,
+    "XpPerLevel": 4.0,
+    "EliteXp": 6.0,
+    "BossXp": 25.0,
+    "AggroRange": 8.0,
+    "AlertRadius": 5.0
+}

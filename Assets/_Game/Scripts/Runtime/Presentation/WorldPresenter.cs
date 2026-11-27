@@ -27,8 +27,17 @@ namespace ShadowRPG.Runtime.Presentation
 
         public Transform PlayerTransform { get; private set; }
 
-        public void Initialize(CombatWorld world, Combatant player, SpriteLibrary library, IFloatingText text)
+        /// <summary>전투원 → 외형 키 (장비에 따라 바뀜). SessionView가 정해 줍니다.</summary>
+        public System.Func<Combatant, string> AppearanceKey { get; set; }
+
+        FeelDirector _feel;
+
+        public CombatantView ViewOf(Combatant c) => c != null && _combatants.TryGetValue(c, out var v) ? v : null;
+
+        public void Initialize(CombatWorld world, Combatant player, SpriteLibrary library, IFloatingText text, System.Func<Combatant, string> appearanceKey, FeelDirector feel)
         {
+            AppearanceKey = appearanceKey;
+            _feel = feel;
             _world = world;
             _player = player;
             _library = library;
@@ -124,26 +133,7 @@ namespace ShadowRPG.Runtime.Presentation
             view.transform.SetParent(transform, false);
 
             bool isPlayer = combatant == _player;
-            Sprite[] idle, run;
-            float fps = 8f;
-            if (_library != null && _library.TryGet(combatant.VisualKey, out var entry))
-            {
-                idle = entry.frames;
-                run = _library.TryGet(combatant.VisualKey + "_run", out var runEntry) ? runEntry.frames : entry.frames;
-                fps = entry.framesPerSecond;
-            }
-            else if (isPlayer)
-            {
-                idle = PixelArtFactory.HeroIdle;
-                run = PixelArtFactory.HeroRun;
-            }
-            else
-            {
-                idle = run = new[] { PixelArtFactory.Diamond };
-            }
-
-            float scale = combatant.Rank == EnemyRank.Boss ? 1.6f : combatant.Rank == EnemyRank.Elite ? 1.25f : 1f;
-            view.Bind(combatant, idle, run, fps, scale, !isPlayer, isPlayer);
+            view.Bind(combatant, AppearanceKey, !isPlayer, isPlayer);
             _combatants[combatant] = view;
             if (isPlayer) PlayerTransform = view.transform;
         }
@@ -193,17 +183,6 @@ namespace ShadowRPG.Runtime.Presentation
             Destroy(view.gameObject);
         }
 
-        void OnDamageResolved(DamageResult result)
-        {
-            if (_text == null || result.Target == null || result.Evaded || result.Blocked || result.Amount < 0.5f) return;
-
-            bool playerHurt = result.Target == _player;
-            var color = playerHurt ? new Color(1f, 0.35f, 0.35f)
-                : result.IsCrit ? new Color(1f, 0.62f, 0.15f)
-                : Color.Lerp(Color.white, Palette.For(result.Type), 0.45f);
-            float size = result.IsCrit ? 34f : playerHurt ? 24f : 22f;
-            var position = (Vector3)result.Target.Position + new Vector3(Random.Range(-0.3f, 0.3f), 1.2f, 0f);
-            _text.Show(position, Mathf.RoundToInt(result.Amount).ToString(), color, size, 0.7f);
-        }
+        void OnDamageResolved(DamageResult result) => _feel?.OnDamage(result);
     }
 }

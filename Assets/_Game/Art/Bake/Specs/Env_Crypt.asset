@@ -1,0 +1,364 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984c503e19f818749a8e4641d8af6e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowRPG.Editor::ShadowRPG.EditorTools.Art.EnvironmentBakeSpec
+  themeName: Crypt
+  floorTileMeters: 2
+  floors:
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small.gltf.glb
+    weight: 6
+    rotateVariants: 1
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small_broken_A.gltf.glb
+    weight: 1.2
+    rotateVariants: 1
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small_broken_B.gltf.glb
+    weight: 1.2
+    rotateVariants: 1
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small_decorated.gltf.glb
+    weight: 0.5
+    rotateVariants: 0
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small_weeds_A.gltf.glb
+    weight: 0.35
+    rotateVariants: 1
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/floor_tile_small_weeds_B.gltf.glb
+    weight: 0.35
+    rotateVariants: 1
+  wallFaces:
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/wall.gltf.glb
+    weight: 5
+    rotateVariants: 0
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/wall_cracked.gltf.glb
+    weight: 2
+    rotateVariants: 0
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/wall_window_closed.gltf.glb
+    weight: 0.6
+    rotateVariants: 0
+  wallPieceMeters: 4
+  wallCapPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/wall.gltf.glb
+  props:
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/barrel_large.gltf.glb
+    placement: 0
+    weight: 1
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/barrel_small_stack.gltf.glb
+    placement: 0
+    weight: 1
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/box_stacked.gltf.glb
+    placement: 0
+    weight: 1
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/crates_stacked.gltf.glb
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/trunk_large_A.gltf.glb
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/rubble_large.gltf.glb
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/table_medium_broken.gltf.glb
+    placement: 0
+    weight: 0.4
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/coffin.gltf
+    placement: 0
+    weight: 0.8
+    blocks: 1
+    scale: 1
+    yaw: 90
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/coffin_decorated.gltf
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    scale: 1
+    yaw: 90
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/pillar.gltf.glb
+    placement: 0
+    weight: 0.6
+    blocks: 1
+    scale: 0.55
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/torch_lit.gltf.glb
+    placement: 0
+    weight: 0.5
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 1, g: 0.62, b: 0.32, a: 1}
+    lightRadius: 5
+    lightIntensity: 1.1
+    lightHeight: 0.9
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/skull_candle.gltf
+    placement: 0
+    weight: 0.5
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 2.6
+    lightIntensity: 0.8
+    lightHeight: 0.4
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/candle_triple.gltf
+    placement: 0
+    weight: 0.5
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 2.8
+    lightIntensity: 0.8
+    lightHeight: 0.4
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/shrine_candles.gltf
+    placement: 0
+    weight: 0.25
+    blocks: 1
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0.45, g: 0.75, b: 1, a: 1}
+    lightRadius: 3.5
+    lightIntensity: 0.9
+    lightHeight: 0.6
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/bone_A.gltf
+    placement: 1
+    weight: 1
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/bone_B.gltf
+    placement: 1
+    weight: 1
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/bone_C.gltf
+    placement: 1
+    weight: 1
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/skull.gltf
+    placement: 1
+    weight: 0.8
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/ribcage.gltf
+    placement: 1
+    weight: 0.5
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/rubble_half.gltf.glb
+    placement: 1
+    weight: 0.8
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/candle_melted.gltf
+    placement: 1
+    weight: 0.4
+    blocks: 0
+    scale: 1
+    yaw: 0
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/torch_mounted.gltf.glb
+    placement: 2
+    weight: 2.5
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 1, g: 0.62, b: 0.32, a: 1}
+    lightRadius: 5.5
+    lightIntensity: 1.15
+    lightHeight: 0.55
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/banner_patternA_red.gltf.glb
+    placement: 2
+    weight: 0.8
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/banner_thin_red.gltf.glb
+    placement: 2
+    weight: 0.6
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/banner_shield_brown.gltf.glb
+    placement: 2
+    weight: 0.5
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Halloween/Assets/gltf/plaque_candles.gltf
+    placement: 2
+    weight: 0.6
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 1, g: 0.75, b: 0.45, a: 1}
+    lightRadius: 3
+    lightIntensity: 0.8
+    lightHeight: 0.5
+    flicker: 0.18
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/sword_shield_broken.gltf.glb
+    placement: 2
+    weight: 0.4
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  - assetPath: Assets/_Game/Art/ThirdParty/KayKit/Dungeon/gltf/keyring_hanging.gltf.glb
+    placement: 2
+    weight: 0.3
+    blocks: 0
+    scale: 1
+    yaw: 180
+    lightColor: {r: 0, g: 0, b: 0, a: 0}
+    lightRadius: 4
+    lightIntensity: 1
+    lightHeight: 0.6
+    flicker: 0.15
+  floorTint: {r: 0.62, g: 0.62, b: 0.72, a: 1}
+  wallTint: {r: 0.72, g: 0.72, b: 0.82, a: 1}
+  voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
+  ambientColor: {r: 0.62, g: 0.66, b: 0.85, a: 1}
+  ambientIntensity: 0.75
+  edgePropChance: 0.12
+  wallPropChance: 0.18
+  scatterPropChance: 0.02

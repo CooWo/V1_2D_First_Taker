@@ -45,17 +45,18 @@ namespace ShadowRPG.Core.Economy
         public long SellValue(Item item, IStatReader seller)
         {
             if (item == null) return 0;
+            var t = Tuning.GameTuning.Current.Item;
             float baseValue;
             switch (item.Rarity)
             {
-                case ItemRarity.Magic: baseValue = 15f; break;
-                case ItemRarity.Rare: baseValue = 45f; break;
-                case ItemRarity.Legendary: baseValue = 150f; break;
-                case ItemRarity.Set: baseValue = 120f; break;
-                default: baseValue = 5f; break;
+                case ItemRarity.Magic: baseValue = t.SellMagic; break;
+                case ItemRarity.Rare: baseValue = t.SellRare; break;
+                case ItemRarity.Legendary: baseValue = t.SellLegendary; break;
+                case ItemRarity.Set: baseValue = t.SellSet; break;
+                default: baseValue = t.SellNormal; break;
             }
-            float level = 1f + item.ItemLevel * 0.15f;
-            float enhance = 1f + item.EnhanceLevel * 0.25f;
+            float level = 1f + item.ItemLevel * t.SellPerItemLevel;
+            float enhance = 1f + item.EnhanceLevel * t.SellPerEnhance;
             float goldFind = 1f + (seller?.Get(StatType.GoldFindPct) ?? 0f) / 100f;
             return (long)Mathf.Round(baseValue * level * enhance * goldFind);
         }
@@ -78,16 +79,17 @@ namespace ShadowRPG.Core.Economy
     {
         public long Cost(Item item)
         {
+            var t = Tuning.GameTuning.Current.Enhance;
             float rarity;
             switch (item.Rarity)
             {
-                case ItemRarity.Magic: rarity = 1.5f; break;
-                case ItemRarity.Rare: rarity = 2.5f; break;
-                case ItemRarity.Legendary: rarity = 4f; break;
-                case ItemRarity.Set: rarity = 3.5f; break;
-                default: rarity = 1f; break;
+                case ItemRarity.Magic: rarity = t.RarityMagic; break;
+                case ItemRarity.Rare: rarity = t.RarityRare; break;
+                case ItemRarity.Legendary: rarity = t.RarityLegendary; break;
+                case ItemRarity.Set: rarity = t.RaritySet; break;
+                default: rarity = t.RarityNormal; break;
             }
-            return (long)Mathf.Round(30f * Mathf.Pow(1.32f, item.EnhanceLevel) * rarity * (1f + item.ItemLevel * 0.1f));
+            return (long)Mathf.Round(t.CostBase * Mathf.Pow(t.CostGrowth, item.EnhanceLevel) * rarity * (1f + item.ItemLevel * t.CostPerItemLevel));
         }
 
         public EnhanceResult TryEnhance(Item item, Wallet wallet, Equipment equipment)

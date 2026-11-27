@@ -1,0 +1,1796 @@
+fileFormatVersion: 2
+guid: 591d374bdc3be0743808932ccc89a46d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3947846423729576162
+    second: Brute_hit_0
+  - first:
+      213: -3264719534106000212
+    second: Brute_hit_1
+  - first:
+      213: 8958712178834092750
+    second: Brute_hit_2
+  - first:
+      213: 1616139473714572581
+    second: Brute_hit_3
+  - first:
+      213: -4804567800491843472
+    second: Brute_hit_4
+  - first:
+      213: 2139993550338790789
+    second: Brute_hit_5
+  - first:
+      213: -5615804672080331235
+    second: Brute_hit_6
+  - first:
+      213: -4894871717912446822
+    second: Brute_hit_7
+  - first:
+      213: 858231410032036836
+    second: Brute_hit_8
+  - first:
+      213: -6924522438879482832
+    second: Brute_hit_9
+  - first:
+      213: -5519972098978609101
+    second: Brute_hit_10
+  - first:
+      213: 7759162913737395012
+    second: Brute_hit_11
+  - first:
+      213: -5009004369442471714
+    second: Brute_hit_12
+  - first:
+      213: -8348729869895989979
+    second: Brute_hit_13
+  - first:
+      213: 7482661886833570310
+    second: Brute_hit_14
+  - first:
+      213: 3122899974249651930
+    second: Brute_hit_15
+  - first:
+      213: -3976282402330211398
+    second: Brute_hit_16
+  - first:
+      213: 3542229957085111820
+    second: Brute_hit_17
+  - first:
+      213: 9154011911663562628
+    second: Brute_hit_18
+  - first:
+      213: -7253411023869104441
+    second: Brute_hit_19
+  - first:
+      213: 1625664765655622298
+    second: Brute_hit_20
+  - first:
+      213: 8897761674527721851
+    second: Brute_hit_21
+  - first:
+      213: -6597834537605248470
+    second: Brute_hit_22
+  - first:
+      213: -124970867435868784
+    second: Brute_hit_23
+  - first:
+      213: -2510897928209545019
+    second: Brute_hit_24
+  - first:
+      213: -8156615514756576685
+    second: Brute_hit_25
+  - first:
+      213: 4428848310739486844
+    second: Brute_hit_26
+  - first:
+      213: 8483794207473380909
+    second: Brute_hit_27
+  - first:
+      213: -6751512432903494512
+    second: Brute_hit_28
+  - first:
+      213: -8421289197233220603
+    second: Brute_hit_29
+  - first:
+      213: -8668222969269734162
+    second: Brute_hit_30
+  - first:
+      213: -3600808449695918977
+    second: Brute_hit_31
+  - first:
+      213: 5036194515776473574
+    second: Brute_hit_32
+  - first:
+      213: -653151980152319121
+    second: Brute_hit_33
+  - first:
+      213: -4623399680622059932
+    second: Brute_hit_34
+  - first:
+      213: 6064712931564455520
+    second: Brute_hit_35
+  - first:
+      213: -3593747860744947404
+    second: Brute_hit_36
+  - first:
+      213: 8074147279848945539
+    second: Brute_hit_37
+  - first:
+      213: -2325654472092275000
+    second: Brute_hit_38
+  - first:
+      213: 8158244884943713817
+    second: Brute_hit_39
+  - first:
+      213: 625455394226673343
+    second: Brute_hit_40
+  - first:
+      213: -444733286020368673
+    second: Brute_hit_41
+  - first:
+      213: 8917694356639208734
+    second: Brute_hit_42
+  - first:
+      213: 6975481317192829020
+    second: Brute_hit_43
+  - first:
+      213: -7780235165521807479
+    second: Brute_hit_44
+  - first:
+      213: -8554382229792352127
+    second: Brute_hit_45
+  - first:
+      213: 2636901522154332953
+    second: Brute_hit_46
+  - first:
+      213: -8354495417308615938
+    second: Brute_hit_47
+  - first:
+      213: 8000683485844015679
+    second: Brute_hit_48
+  - first:
+      213: 2314266243395497238
+    second: Brute_hit_49
+  - first:
+      213: 9106103692315221793
+    second: Brute_hit_50
+  - first:
+      213: -5805887808027893818
+    second: Brute_hit_51
+  - first:
+      213: 3474613998849025538
+    second: Brute_hit_52
+  - first:
+      213: -2250207604508857640
+    second: Brute_hit_53
+  - first:
+      213: 3106984757804854071
+    second: Brute_hit_54
+  - first:
+      213: 13734762665643141
+    second: Brute_hit_55
+  - first:
+      213: -3139984540463505397
+    second: Brute_hit_56
+  - first:
+      213: -3602562316418523323
+    second: Brute_hit_57
+  - first:
+      213: 2697103402137171062
+    second: Brute_hit_58
+  - first:
+      213: -1469860628154956227
+    second: Brute_hit_59
+  - first:
+      213: 7818010879272896333
+    second: Brute_hit_60
+  - first:
+      213: -4536063608465812805
+    second: Brute_hit_61
+  - first:
+      213: -710641459052859846
+    second: Brute_hit_62
+  - first:
+      213: 5261469941377462730
+    second: Brute_hit_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brute_hit_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1838
+        width: 105
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e89232e76199c630800000000000000
+      internalID: 3947846423729576162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_1
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1838
+        width: 132
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4455681e261b2d0800000000000000
+      internalID: -3264719534106000212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_2
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1838
+        width: 143
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec23f58e24db35c70800000000000000
+      internalID: 8958712178834092750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_3
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1838
+        width: 143
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d6e36e94ead6610800000000000000
+      internalID: 1616139473714572581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_4
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1838
+        width: 134
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07067688a0fb25db0800000000000000
+      internalID: -4804567800491843472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_5
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1838
+        width: 123
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585129dbbc8c2bd10800000000000000
+      internalID: 2139993550338790789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_6
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1838
+        width: 111
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e3ca09767a012b0800000000000000
+      internalID: -5615804672080331235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_7
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1838
+        width: 105
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98f8b05b1ce11cb0800000000000000
+      internalID: -4894871717912446822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1585
+        width: 93
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebca0a9bec09eb00800000000000000
+      internalID: 858231410032036836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_9
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1585
+        width: 109
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ced5f878727ef90800000000000000
+      internalID: -6924522438879482832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1585
+        width: 117
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338005e3f9e1563b0800000000000000
+      internalID: -5519972098978609101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_11
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1585
+        width: 115
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bc3bb6f851eab60800000000000000
+      internalID: 7759162913737395012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_12
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1585
+        width: 108
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0800990117c7ab0800000000000000
+      internalID: -5009004369442471714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_13
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1585
+        width: 101
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5250823ba6a532c80800000000000000
+      internalID: -8348729869895989979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_14
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 1585
+        width: 95
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602b11b5751c7d760800000000000000
+      internalID: 7482661886833570310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_15
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 1585
+        width: 93
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade1a321bf4c65b20800000000000000
+      internalID: 3122899974249651930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1336
+        width: 124
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb887ae83861d8c0800000000000000
+      internalID: -3976282402330211398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_17
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1336
+        width: 123
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c062ec0e067882130800000000000000
+      internalID: 3542229957085111820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_18
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1336
+        width: 117
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fa6686555990f70800000000000000
+      internalID: 9154011911663562628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_19
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1336
+        width: 116
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce2160aa15b65b90800000000000000
+      internalID: -7253411023869104441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_20
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1336
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92a5c0cd758f8610800000000000000
+      internalID: 1625664765655622298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_21
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1336
+        width: 122
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b794f42c9133b7b70800000000000000
+      internalID: 8897761674527721851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_22
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1336
+        width: 123
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a4c33e178cf64a0800000000000000
+      internalID: -6597834537605248470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_23
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 1336
+        width: 124
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d663f78a3044ef0800000000000000
+      internalID: -124970867435868784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1073
+        width: 128
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c84ec933af772dd0800000000000000
+      internalID: -2510897928209545019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_25
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1073
+        width: 147
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a8e79a761edce80800000000000000
+      internalID: -8156615514756576685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_26
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1073
+        width: 145
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7847b5d21e667d30800000000000000
+      internalID: 4428848310739486844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_27
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1073
+        width: 143
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ea7f3f1ed7cb570800000000000000
+      internalID: 8483794207473380909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_28
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1073
+        width: 142
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094672c963fcd42a0800000000000000
+      internalID: -6751512432903494512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_29
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 1073
+        width: 138
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5045410d712912b80800000000000000
+      internalID: -8421289197233220603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_30
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1073
+        width: 132
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4bbcab22944b780800000000000000
+      internalID: -8668222969269734162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_31
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1073
+        width: 128
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7456abfacb570ec0800000000000000
+      internalID: -3600808449695918977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_32
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 813
+        width: 105
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e980acaa3824e540800000000000000
+      internalID: 5036194515776473574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_33
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 813
+        width: 132
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f639dae0cb98fe6f0800000000000000
+      internalID: -653151980152319121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_34
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 813
+        width: 143
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e1edd7c7266dfb0800000000000000
+      internalID: -4623399680622059932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_35
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 813
+        width: 143
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0660e9e67403a2450800000000000000
+      internalID: 6064712931564455520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_36
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 813
+        width: 134
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4393af37c51702ec0800000000000000
+      internalID: -3593747860744947404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_37
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 813
+        width: 123
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387359f1c222d0070800000000000000
+      internalID: 8074147279848945539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_38
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 813
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce24a8549d99bfd0800000000000000
+      internalID: -2325654472092275000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_39
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 813
+        width: 105
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916b7b5af78e73170800000000000000
+      internalID: 8158244884943713817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_40
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 555
+        width: 94
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb69bb30e501ea800800000000000000
+      internalID: 625455394226673343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_41
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 555
+        width: 109
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6b6f2ce6df3d9f0800000000000000
+      internalID: -444733286020368673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_42
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 555
+        width: 117
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e155cf6f4c302cb70800000000000000
+      internalID: 8917694356639208734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_43
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 555
+        width: 115
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5807a0ec43edc060800000000000000
+      internalID: 6975481317192829020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_44
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 555
+        width: 109
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987f112a65d070490800000000000000
+      internalID: -7780235165521807479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_45
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 555
+        width: 101
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18810506faab84980800000000000000
+      internalID: -8554382229792352127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_46
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 555
+        width: 95
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91322b7a6f7289420800000000000000
+      internalID: 2636901522154332953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_47
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 555
+        width: 94
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efae0b59eaede0c80800000000000000
+      internalID: -8354495417308615938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_48
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 302
+        width: 124
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a011ead33280f60800000000000000
+      internalID: 8000683485844015679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_49
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 302
+        width: 123
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d244903eced1020800000000000000
+      internalID: 2314266243395497238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_50
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 302
+        width: 117
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f525cdf016f5e70800000000000000
+      internalID: 9106103692315221793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_51
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 302
+        width: 117
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfd9bcacc75d6fa0800000000000000
+      internalID: -5805887808027893818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_52
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 302
+        width: 119
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206eefcc50f483030800000000000000
+      internalID: 3474613998849025538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_53
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 302
+        width: 122
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daed561b18a5c0e0800000000000000
+      internalID: -2250207604508857640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_54
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 302
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73be28bfc2a3e1b20800000000000000
+      internalID: 3106984757804854071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_55
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 302
+        width: 124
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c82c1a1bbc03000800000000000000
+      internalID: 13734762665643141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_56
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 43
+        width: 130
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00647162b88c64d0800000000000000
+      internalID: -3139984540463505397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_57
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 43
+        width: 148
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f5aa019a0210ec0800000000000000
+      internalID: -3602562316418523323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_58
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 43
+        width: 145
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67432ee11490e6520800000000000000
+      internalID: 2697103402137171062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_59
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 43
+        width: 143
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36cd7ddb810a9be0800000000000000
+      internalID: -1469860628154956227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_60
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 43
+        width: 142
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47433d19772f7c60800000000000000
+      internalID: 7818010879272896333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_61
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 43
+        width: 139
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb291d26e2aac01c0800000000000000
+      internalID: -4536063608465812805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_62
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 43
+        width: 134
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e2d7eab5b4326f0800000000000000
+      internalID: -710641459052859846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_hit_63
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 43
+        width: 130
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1f234090f740940800000000000000
+      internalID: 5261469941377462730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brute_hit_0: 3947846423729576162
+      Brute_hit_1: -3264719534106000212
+      Brute_hit_10: -5519972098978609101
+      Brute_hit_11: 7759162913737395012
+      Brute_hit_12: -5009004369442471714
+      Brute_hit_13: -8348729869895989979
+      Brute_hit_14: 7482661886833570310
+      Brute_hit_15: 3122899974249651930
+      Brute_hit_16: -3976282402330211398
+      Brute_hit_17: 3542229957085111820
+      Brute_hit_18: 9154011911663562628
+      Brute_hit_19: -7253411023869104441
+      Brute_hit_2: 8958712178834092750
+      Brute_hit_20: 1625664765655622298
+      Brute_hit_21: 8897761674527721851
+      Brute_hit_22: -6597834537605248470
+      Brute_hit_23: -124970867435868784
+      Brute_hit_24: -2510897928209545019
+      Brute_hit_25: -8156615514756576685
+      Brute_hit_26: 4428848310739486844
+      Brute_hit_27: 8483794207473380909
+      Brute_hit_28: -6751512432903494512
+      Brute_hit_29: -8421289197233220603
+      Brute_hit_3: 1616139473714572581
+      Brute_hit_30: -8668222969269734162
+      Brute_hit_31: -3600808449695918977
+      Brute_hit_32: 5036194515776473574
+      Brute_hit_33: -653151980152319121
+      Brute_hit_34: -4623399680622059932
+      Brute_hit_35: 6064712931564455520
+      Brute_hit_36: -3593747860744947404
+      Brute_hit_37: 8074147279848945539
+      Brute_hit_38: -2325654472092275000
+      Brute_hit_39: 8158244884943713817
+      Brute_hit_4: -4804567800491843472
+      Brute_hit_40: 625455394226673343
+      Brute_hit_41: -444733286020368673
+      Brute_hit_42: 8917694356639208734
+      Brute_hit_43: 6975481317192829020
+      Brute_hit_44: -7780235165521807479
+      Brute_hit_45: -8554382229792352127
+      Brute_hit_46: 2636901522154332953
+      Brute_hit_47: -8354495417308615938
+      Brute_hit_48: 8000683485844015679
+      Brute_hit_49: 2314266243395497238
+      Brute_hit_5: 2139993550338790789
+      Brute_hit_50: 9106103692315221793
+      Brute_hit_51: -5805887808027893818
+      Brute_hit_52: 3474613998849025538
+      Brute_hit_53: -2250207604508857640
+      Brute_hit_54: 3106984757804854071
+      Brute_hit_55: 13734762665643141
+      Brute_hit_56: -3139984540463505397
+      Brute_hit_57: -3602562316418523323
+      Brute_hit_58: 2697103402137171062
+      Brute_hit_59: -1469860628154956227
+      Brute_hit_6: -5615804672080331235
+      Brute_hit_60: 7818010879272896333
+      Brute_hit_61: -4536063608465812805
+      Brute_hit_62: -710641459052859846
+      Brute_hit_63: 5261469941377462730
+      Brute_hit_7: -4894871717912446822
+      Brute_hit_8: 858231410032036836
+      Brute_hit_9: -6924522438879482832
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

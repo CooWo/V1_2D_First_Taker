@@ -39,7 +39,7 @@ namespace ShadowRPG.Runtime.UI.Menus
 
             var bag = _ctx.Meta.Profile.Bag;
             Panel.SetDetail($"선택: <b>{acts.DungeonLabel(_selected)}</b>\n" +
-                            $"5층 구성, 마지막 층은 보스. 층마다 결과창에서 계속 진행 / 마을 귀환을 고릅니다.\n" +
+                            $"{acts.FloorsPerDungeon}층 구성, 마지막 층은 보스 (처치 시 자동 귀환 + 다음 던전 개방). 층마다 결과창에서 계속 진행 / 마을 귀환을 고릅니다.\n" +
                             $"<color=#FF8A6A>가방 {bag.Items.Count}개 ({bag.UsedCells}/{bag.Capacity}칸) — 쓰러지면 절반 손실</color>\n" +
                             $"<size=18><color=#8090A8>보스 층을 깨면 다음 던전이 열립니다. (개방 {unlocked}/{acts.TotalDungeons()})</color></size>");
             Panel.SetFooter(0, "입장", () => _ctx.Modes.EnterDungeon(_selected));

@@ -1,0 +1,22 @@
+{
+    "MeleeDamageMultiplier": 1.4,
+    "RangedDamageMultiplier": 1.0,
+    "MeleeLifeOnHitEfficiency": 1.0,
+    "RangedLifeOnHitEfficiency": 0.45,
+    "FortifyDuration": 4.0,
+    "FortifyDamageReduction": 0.3,
+    "ShadowStepRadius": 3.5,
+    "ShadowStepDuration": 0.15,
+    "ShadowStepCooldown": 0.5,
+    "AutoCastInterval": 0.1,
+    "RangedThreatRadius": 1.5,
+    "RangedThreatCount": 2,
+    "MeleeEngageDistance": 4.0,
+    "SurvivalLifeThreshold": 0.5,
+    "EnemySearchRadius": 14.0,
+    "BaseCritMultiplier": 1.5,
+    "MaxResistPct": 75.0,
+    "MaxBlockPct": 75.0,
+    "MaxEvasionPct": 60.0,
+    "MaxCritChancePct": 95.0
+}

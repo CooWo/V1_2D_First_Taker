@@ -31,11 +31,15 @@ namespace ShadowRPG.Runtime.UI
             return sb.ToString();
         }
 
+        /// <summary>전투력 계산기 (HUD가 연결). 모든 아이템 표기에 전투력.</summary>
+        public static System.Func<Item, int> Power;
+
         public static string Describe(Item item, GameContent content)
         {
             if (item == null) return string.Empty;
             var sb = new StringBuilder();
             sb.AppendLine($"{ColoredName(item)}  <size=18>Lv.{item.ItemLevel} {item.Rarity.DisplayName()} · {SlotRules.DisplayName(item.Slot)}</size>");
+            if (Power != null) sb.AppendLine($"<size=20><color=#FFD84A>전투력 {Power(item):N0}</color></size>" + (item.IsRhythm ? $"  <size=18><color=#C8A0FF>리듬 무기 · 박자 {item.BeatSeconds:0.00}초</color></size>" : string.Empty));
             sb.AppendLine($"<size=18>요구: {item.Requirements} · 직업 제한 없음</size>");
             foreach (var m in item.AllModifiers) sb.AppendLine($"<size=18>  {StatName(m.Stat)} {FormatValue(m.Stat, m.Value)}</size>");
             string grant = ShortGrant(item, content);

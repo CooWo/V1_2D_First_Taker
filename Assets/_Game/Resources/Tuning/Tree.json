@@ -1,0 +1,7 @@
+{
+    "NodeCount": 3000,
+    "Seed": 20261126,
+    "CostBase": 25.0,
+    "CostExponent": 1.35,
+    "ResetGoldPerNode": 5
+}

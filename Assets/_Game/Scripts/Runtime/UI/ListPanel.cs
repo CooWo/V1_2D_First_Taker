@@ -31,8 +31,7 @@ namespace ShadowRPG.Runtime.UI
         public ListPanel(Transform parent, string name, int rowsPerPage = 9)
         {
             _root = UiFactory.Anchored(parent, name, new Vector2(0.5f, 0.5f), new Vector2(0f, UiFactory.IsPortrait ? 40f : 0f), new Vector2(Width, Height));
-            UiFactory.Panel(_root, new Color(0.04f, 0.05f, 0.08f, 0.96f), true);
-            UiFactory.Border(_root, Palette.PanelBorder);
+            UiFactory.Frame(_root);
 
             _title = UiFactory.Label(UiFactory.Anchored(_root, "Title", new Vector2(0f, 1f), new Vector2(20f, -10f), new Vector2(Width - 300f, 56f)),
                 string.Empty, 28, TextAnchor.MiddleLeft, Color.white);

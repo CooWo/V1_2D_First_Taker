@@ -28,6 +28,7 @@ namespace ShadowRPG.Core.Meta
         {
             public string id, name, skillCode, supportCode, setId, power;
             public int slot, subtype, rarity, itemLevel, str, dex, intel, skillRarity, enhance, gx = -1, gy = -1;
+            public float beat;
             public bool reducesSet;
             public StatDto[] baseStats = Array.Empty<StatDto>();
             public StatDto[] affixes = Array.Empty<StatDto>();
@@ -55,6 +56,7 @@ namespace ShadowRPG.Core.Meta
             public PetState[] pets = Array.Empty<PetState>();
             public string activePetId;
             public RaidState raid;
+            public ProgressionState state;
         }
 
         public static string ToJson(GameProfile profile)
@@ -75,7 +77,8 @@ namespace ShadowRPG.Core.Meta
                 treeSize = profile.TreeSize,
                 pets = profile.Pets.ToArray(),
                 activePetId = profile.ActivePetId,
-                raid = profile.Raid
+                raid = profile.Raid,
+                state = profile.State
             };
             return JsonUtility.ToJson(dto);
         }
@@ -83,8 +86,10 @@ namespace ShadowRPG.Core.Meta
         public static GameProfile FromJson(string json)
         {
             var dto = JsonUtility.FromJson<ProfileDto>(json);
-            var profile = new GameProfile(dto.gold)
+            var state = dto.state ?? new ProgressionState();
+            var profile = new GameProfile(dto.gold, state.StashExtraRows)
             {
+                State = state,
                 ClassId = string.IsNullOrEmpty(dto.classId) ? "knight" : dto.classId,
                 Level = Math.Max(1, dto.level),
                 Experience = dto.experience,
@@ -139,6 +144,7 @@ namespace ShadowRPG.Core.Meta
             reducesSet = item.ReducesSetRequirement,
             power = item.PowerDescription,
             enhance = item.EnhanceLevel,
+            beat = item.BeatSeconds,
             baseStats = item.BaseStats.Select(m => new StatDto { stat = (int)m.Stat, value = m.Value }).ToArray(),
             affixes = item.Affixes.Select(m => new StatDto { stat = (int)m.Stat, value = m.Value }).ToArray(),
             tagMultipliers = item.TagMultipliers.Select(t => new TagDto { tags = (long)t.RequiredTags, multiplier = t.Multiplier }).ToArray()
@@ -160,7 +166,8 @@ namespace ShadowRPG.Core.Meta
                 SetId = string.IsNullOrEmpty(dto.setId) ? null : dto.setId,
                 ReducesSetRequirement = dto.reducesSet,
                 PowerDescription = string.IsNullOrEmpty(dto.power) ? null : dto.power,
-                EnhanceLevel = dto.enhance
+                EnhanceLevel = dto.enhance,
+                BeatSeconds = dto.beat
             };
             item.BaseStats.AddRange((dto.baseStats ?? Array.Empty<StatDto>()).Select(s => new StatModifier((StatType)s.stat, s.value)));
             item.Affixes.AddRange((dto.affixes ?? Array.Empty<StatDto>()).Select(s => new StatModifier((StatType)s.stat, s.value)));

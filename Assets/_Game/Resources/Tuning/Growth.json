@@ -1,0 +1,9 @@
+{
+    "ExpBase": 25.0,
+    "ExpExponent": 1.35,
+    "StatPointsPerLevel": 1,
+    "LifePerLevel": 12.0,
+    "RespecGoldPerLevel": 10,
+    "StartingGold": 200,
+    "StartingStatPoints": 0
+}

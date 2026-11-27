@@ -55,6 +55,11 @@ namespace ShadowRPG.Core.Actors
         public Vector2 Position { get; set; }
         public Vector2 Facing { get; set; } = Vector2.right;
 
+        /// <summary>행동 시작 신호 (표현 계층이 공격·시전 동작을 재생). 규칙에는 영향 없음.</summary>
+        public event System.Action<CombatAction> ActionStarted;
+
+        public void NotifyAction(CombatAction action) => ActionStarted?.Invoke(action);
+
         public StatSheet Stats { get; }
         public Health Health { get; }
         public ResourcePool Resource { get; }
@@ -121,5 +126,17 @@ namespace ShadowRPG.Core.Actors
             Resource.Tick(dt);
             Statuses.Tick(dt);
         }
+    }
+}
+
+namespace ShadowRPG.Core.Actors
+{
+    public enum CombatAction
+    {
+        Attack,
+        RangedAttack,
+        Cast,
+        Movement,
+        Heavy
     }
 }

@@ -1,0 +1,11 @@
+{
+    "EntriesPerDay": 3,
+    "PowerRequirementByTier": [
+        500,
+        1500,
+        4000,
+        10000
+    ],
+    "PartySize": 4,
+    "MatchmakingSeconds": 5.0
+}

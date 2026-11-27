@@ -27,6 +27,7 @@ namespace ShadowRPG.Runtime.UI.Modes
         readonly UnityEngine.UI.Text _summary;
         readonly UnityEngine.UI.Button _sellButton;
         readonly BossBar _bossBar;
+        readonly DeathPanel _death;
         Item _focused;
         Item _bagSelected;
 
@@ -39,6 +40,7 @@ namespace ShadowRPG.Runtime.UI.Modes
             _banner = UiFactory.Label(UiFactory.Anchored(root, "ClearBanner", new Vector2(0.5f, 0.5f), new Vector2(0f, 160f), new Vector2(900f, 120f)),
                 string.Empty, 56, TextAnchor.MiddleCenter, new Color(1f, 0.9f, 0.5f));
             _bossBar = new BossBar(root);
+            _death = new DeathPanel(root, session, ctx);
 
             _result = new ListPanel(root, "FloorResult", 5);
             _result.RowClicked += OnLootRow;
@@ -71,6 +73,7 @@ namespace ShadowRPG.Runtime.UI.Modes
 
             _banner.text = _session.State == FloorState.Clearing ? "층 정복!" : string.Empty;
             _bossBar.Show(spawner.Boss != null ? spawner.Boss.Combatant : null);
+            _death.Refresh();
 
             if (_session.State == FloorState.Result) RefreshResult();
             else if (_result.Visible) _result.SetVisible(false);
@@ -83,7 +86,9 @@ namespace ShadowRPG.Runtime.UI.Modes
             var bag = _session.Bag;
             var summary = _session.Summary;
 
-            _result.SetTitle($"<b>{_session.DungeonName} {summary.Plan.Floor}층 정복</b>");
+            float auto = _session.AutoContinueRemaining;
+            string countdown = auto >= 0f && !float.IsInfinity(auto) ? $"  <size=22><color=#9FD3FF>{(summary.IsBossFloor ? "자동 귀환" : "자동 진행")} {Mathf.CeilToInt(auto)}초</color></size>" : string.Empty;
+            _result.SetTitle($"<b>{_session.DungeonName} {summary.Plan.Floor}/{_session.FloorsPerDungeon}층 정복</b>{(summary.IsBossFloor ? " <color=#FF6A4A>보스 처치!</color>" : string.Empty)}{countdown}");
             _result.SetItems(loot.Found.Count, i =>
             {
                 var item = loot.Found[i];
@@ -108,9 +113,17 @@ namespace ShadowRPG.Runtime.UI.Modes
                 "<size=18><color=#FF8A6A>계속 진행하다 쓰러지면 가방 아이템 절반을 잃습니다.</color></size>\n" + focusText;
             _sellButton.gameObject.SetActive(_bagSelected != null);
 
-            _result.SetFooter(0, "다음 층 ▶ 계속", _session.ContinueToNextFloor);
-            _result.SetFooter(1, "마을로 귀환", _session.ReturnToTown);
-            _result.SetFooter(2, "추천 선택", _session.AutoSelectLoot);
+            if (summary.IsBossFloor)
+            {
+                _result.SetFooter(0, "마을로 귀환 · 다음 던전 개방", _session.ReturnToTown);
+                _result.SetFooter(1, string.Empty, null, false);
+            }
+            else
+            {
+                _result.SetFooter(0, "다음 층 ▶ 계속", _session.ContinueToNextFloor);
+                _result.SetFooter(1, "마을로 귀환", _session.ReturnToTown);
+            }
+            _result.SetFooter(2, "추천 선택", () => { _session.HoldAutoContinue(); _session.AutoSelectLoot(); });
         }
 
         void OnLootRow(int index)
@@ -118,6 +131,7 @@ namespace ShadowRPG.Runtime.UI.Modes
             var found = _session.Loot.Found;
             if (index >= found.Count) return;
             var item = found[index];
+            _session.HoldAutoContinue();
             _focused = item;
             _bagSelected = null;
             if (!_session.ToggleLoot(item) && !_session.Loot.IsSelected(item))

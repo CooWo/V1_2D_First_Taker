@@ -1,0 +1,75 @@
+{
+    "CycleDays": 28,
+    "DailyGold": 1000,
+    "DailyGoldPerAct": 500,
+    "Special": [
+        {
+            "Day": 7,
+            "Gold": 0,
+            "Tempo": 50,
+            "Item": "장비 상자"
+        },
+        {
+            "Day": 14,
+            "Gold": 0,
+            "Tempo": 80,
+            "Item": "꾸미기 상자"
+        },
+        {
+            "Day": 21,
+            "Gold": 0,
+            "Tempo": 100,
+            "Item": "장비 상자"
+        },
+        {
+            "Day": 28,
+            "Gold": 0,
+            "Tempo": 200,
+            "Item": "꾸미기 상자"
+        }
+    ],
+    "Newbie": [
+        {
+            "Day": 1,
+            "Gold": 3000,
+            "Tempo": 0,
+            "Item": ""
+        },
+        {
+            "Day": 2,
+            "Gold": 0,
+            "Tempo": 50,
+            "Item": ""
+        },
+        {
+            "Day": 3,
+            "Gold": 5000,
+            "Tempo": 0,
+            "Item": "세팅 슬롯 체험(3일)"
+        },
+        {
+            "Day": 4,
+            "Gold": 0,
+            "Tempo": 50,
+            "Item": ""
+        },
+        {
+            "Day": 5,
+            "Gold": 8000,
+            "Tempo": 0,
+            "Item": "펫 등급업 재료"
+        },
+        {
+            "Day": 6,
+            "Gold": 0,
+            "Tempo": 80,
+            "Item": ""
+        },
+        {
+            "Day": 7,
+            "Gold": 0,
+            "Tempo": 150,
+            "Item": "희귀 장비 상자"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "LevelCostBase": 60.0,
+    "LevelCostGrowth": 1.2,
+    "GradeCostBase": 800.0,
+    "GradeCostGrowth": 5.0,
+    "MaxGrade": 5,
+    "MaxGradeByAct": [
+        2,
+        3,
+        4,
+        5
+    ]
+}

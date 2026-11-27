@@ -1,0 +1,16 @@
+{
+    "SellNormal": 5.0,
+    "SellMagic": 15.0,
+    "SellRare": 45.0,
+    "SellLegendary": 150.0,
+    "SellSet": 120.0,
+    "SellPerItemLevel": 0.15,
+    "SellPerEnhance": 0.25,
+    "PowerPerStatPoint": 1.0,
+    "PowerPerLife": 0.2,
+    "PowerPerDamage": 3.0,
+    "PowerPerPct": 2.0,
+    "PowerPerArmor": 0.25,
+    "PowerPerSkillRarity": 40.0,
+    "AutoEquipOnReturnDefault": true
+}

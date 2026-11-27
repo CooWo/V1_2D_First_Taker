@@ -157,13 +157,13 @@ namespace ShadowRPG.Core.Pets
     /// <summary>펫 성장: 레벨업·등급업 모두 골드(폐지 판매 수익)로. 등급마다 최대 레벨과 스킬이 열립니다.</summary>
     public sealed class PetService
     {
-        public const int MaxGrade = 5;
+        public static int MaxGrade => Tuning.GameTuning.Current.Pet.MaxGrade;
 
         public static int MaxLevel(PetState state) => state.Grade * 10;
 
-        public long LevelUpCost(PetState state) => (long)Mathf.Round(60f * Mathf.Pow(1.2f, state.Level - 1) * state.Grade);
+        public long LevelUpCost(PetState state) => (long)Mathf.Round(Tuning.GameTuning.Current.Pet.LevelCostBase * Mathf.Pow(Tuning.GameTuning.Current.Pet.LevelCostGrowth, state.Level - 1) * state.Grade);
 
-        public long GradeUpCost(PetState state) => (long)Mathf.Round(800f * Mathf.Pow(5f, state.Grade - 1));
+        public long GradeUpCost(PetState state) => (long)Mathf.Round(Tuning.GameTuning.Current.Pet.GradeCostBase * Mathf.Pow(Tuning.GameTuning.Current.Pet.GradeCostGrowth, state.Grade - 1));
 
         public bool TryLevelUp(PetState state, Wallet wallet)
         {

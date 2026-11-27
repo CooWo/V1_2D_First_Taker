@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7167ed0065385e048b5480c68447c1ce, type: 3}
+  m_Name: AppearanceCatalog
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.AppearanceCatalog
+  fallbackKey: knight/sword_shield
+  entries:
+  - key: knight/sword_shield
+    set: {fileID: 11400000, guid: 18c0816ede7be944093dc40e2474d131, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: archer/crossbow
+    set: {fileID: 11400000, guid: e9b4423015129d24b8be18e73cc8c509, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: archer/daggers
+    set: {fileID: 11400000, guid: 54c53bbdf9b40a34e87d34f2f0cb9114, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: knight/2h_sword
+    set: {fileID: 11400000, guid: aa351778133f89d4eadec3352fb83960, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: mage/staff
+    set: {fileID: 11400000, guid: 476a9330c5b11154995a994dd400e4fd, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: mage/wand_book
+    set: {fileID: 11400000, guid: a9ce8626d59f79b46835a34d5c4078dc, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: monk/axes
+    set: {fileID: 11400000, guid: fb67d18ba1eefdf4ba42f753f348ec64, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: monk/fists
+    set: {fileID: 11400000, guid: dd9c001a73714ed47a9ccc5cfaff7bd2, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: skeleton_boss
+    set: {fileID: 11400000, guid: bc95217817be8794d98d852d1a674ec6, type: 2}
+    scale: 1.9
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: skeleton_mage
+    set: {fileID: 11400000, guid: 30eb1e2779fe6924592503770574d5de, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: skeleton_minion
+    set: {fileID: 11400000, guid: d9eb772769e335447b0c53f59d23651c, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: skeleton_rogue
+    set: {fileID: 11400000, guid: d1e27da9345e42449860ab11f3fc2a4a, type: 2}
+    scale: 1
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - key: skeleton_warrior
+    set: {fileID: 11400000, guid: 73a33beda7615ee42becbdcf4c52a004, type: 2}
+    scale: 1.1
+    tint: {r: 1, g: 1, b: 1, a: 1}

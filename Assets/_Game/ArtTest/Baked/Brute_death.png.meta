@@ -1,0 +1,5410 @@
+fileFormatVersion: 2
+guid: f49781cead77c8148b84c7332fa0b5a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4447871639803395387
+    second: Brute_death_0
+  - first:
+      213: 6835702207621784979
+    second: Brute_death_1
+  - first:
+      213: -4901729671849602571
+    second: Brute_death_2
+  - first:
+      213: 7796957170276544293
+    second: Brute_death_3
+  - first:
+      213: -5521261468412314134
+    second: Brute_death_4
+  - first:
+      213: 331326771134395843
+    second: Brute_death_5
+  - first:
+      213: 5412641306154366042
+    second: Brute_death_6
+  - first:
+      213: 4755890788516476683
+    second: Brute_death_7
+  - first:
+      213: -1040654112592991850
+    second: Brute_death_8
+  - first:
+      213: -7530344512543214988
+    second: Brute_death_9
+  - first:
+      213: 456866245775748667
+    second: Brute_death_10
+  - first:
+      213: 5581034817678506067
+    second: Brute_death_11
+  - first:
+      213: 1566190751468516559
+    second: Brute_death_12
+  - first:
+      213: -4149767943508598968
+    second: Brute_death_13
+  - first:
+      213: 7837371337076465064
+    second: Brute_death_14
+  - first:
+      213: 4562261794175703100
+    second: Brute_death_15
+  - first:
+      213: 8595691317066650700
+    second: Brute_death_16
+  - first:
+      213: 1796806026520055630
+    second: Brute_death_17
+  - first:
+      213: -8064012258223384692
+    second: Brute_death_18
+  - first:
+      213: -1444050589009269030
+    second: Brute_death_19
+  - first:
+      213: -8137752917930547082
+    second: Brute_death_20
+  - first:
+      213: -4901437725565955354
+    second: Brute_death_21
+  - first:
+      213: -3562889725078834662
+    second: Brute_death_22
+  - first:
+      213: -8976030896996744521
+    second: Brute_death_23
+  - first:
+      213: -3606215484075606452
+    second: Brute_death_24
+  - first:
+      213: 1539990729004399686
+    second: Brute_death_25
+  - first:
+      213: -8952723871825538990
+    second: Brute_death_26
+  - first:
+      213: -7842473037642543240
+    second: Brute_death_27
+  - first:
+      213: 4794073813916740841
+    second: Brute_death_28
+  - first:
+      213: 6974378887612024757
+    second: Brute_death_29
+  - first:
+      213: -887011856974729277
+    second: Brute_death_30
+  - first:
+      213: -1418755710741783846
+    second: Brute_death_31
+  - first:
+      213: 7927123394061334991
+    second: Brute_death_32
+  - first:
+      213: 2874161682993958088
+    second: Brute_death_33
+  - first:
+      213: 5913344609892931794
+    second: Brute_death_34
+  - first:
+      213: 2456863347540264447
+    second: Brute_death_35
+  - first:
+      213: -5103888786824494978
+    second: Brute_death_36
+  - first:
+      213: 6546596106982668672
+    second: Brute_death_37
+  - first:
+      213: 882594380434577702
+    second: Brute_death_38
+  - first:
+      213: -3075818357402062588
+    second: Brute_death_39
+  - first:
+      213: -4263481974732904594
+    second: Brute_death_40
+  - first:
+      213: -516572862228581439
+    second: Brute_death_41
+  - first:
+      213: 2878877344682506704
+    second: Brute_death_42
+  - first:
+      213: 5119158835119056618
+    second: Brute_death_43
+  - first:
+      213: 6840713236999038734
+    second: Brute_death_44
+  - first:
+      213: 7648512257338613555
+    second: Brute_death_45
+  - first:
+      213: -2662089080904798190
+    second: Brute_death_46
+  - first:
+      213: -7370575814200669669
+    second: Brute_death_47
+  - first:
+      213: 6557439165522558793
+    second: Brute_death_48
+  - first:
+      213: -1502828775246008602
+    second: Brute_death_49
+  - first:
+      213: 3456265095529669471
+    second: Brute_death_50
+  - first:
+      213: -6762264275353704929
+    second: Brute_death_51
+  - first:
+      213: 6601986672281222684
+    second: Brute_death_52
+  - first:
+      213: 363360058072319976
+    second: Brute_death_53
+  - first:
+      213: -578707023921044018
+    second: Brute_death_54
+  - first:
+      213: 4031630882250176160
+    second: Brute_death_55
+  - first:
+      213: -709083779432636192
+    second: Brute_death_56
+  - first:
+      213: -5380550859441608078
+    second: Brute_death_57
+  - first:
+      213: 598736465309788750
+    second: Brute_death_58
+  - first:
+      213: 6678893386866555280
+    second: Brute_death_59
+  - first:
+      213: 5696716491218668055
+    second: Brute_death_60
+  - first:
+      213: -5242149685776445143
+    second: Brute_death_61
+  - first:
+      213: -8090834665096566228
+    second: Brute_death_62
+  - first:
+      213: -8150424212449808831
+    second: Brute_death_63
+  - first:
+      213: 1784475550586437612
+    second: Brute_death_64
+  - first:
+      213: -6760991815001394518
+    second: Brute_death_65
+  - first:
+      213: -828853293267002488
+    second: Brute_death_66
+  - first:
+      213: -8319602880138431883
+    second: Brute_death_67
+  - first:
+      213: 2376732628758851460
+    second: Brute_death_68
+  - first:
+      213: -2210529545214821121
+    second: Brute_death_69
+  - first:
+      213: -4606097642365651488
+    second: Brute_death_70
+  - first:
+      213: 4877098773033788866
+    second: Brute_death_71
+  - first:
+      213: 7532217207497277984
+    second: Brute_death_72
+  - first:
+      213: -4922524873451810508
+    second: Brute_death_73
+  - first:
+      213: 4623564765795113939
+    second: Brute_death_74
+  - first:
+      213: 8992168162335460837
+    second: Brute_death_75
+  - first:
+      213: 5313236173752892274
+    second: Brute_death_76
+  - first:
+      213: -8965233012822294746
+    second: Brute_death_77
+  - first:
+      213: 8490567308438801186
+    second: Brute_death_78
+  - first:
+      213: -1915112600101693088
+    second: Brute_death_79
+  - first:
+      213: 1649955453194432791
+    second: Brute_death_80
+  - first:
+      213: 2827407431694935975
+    second: Brute_death_81
+  - first:
+      213: 2451611635805766719
+    second: Brute_death_82
+  - first:
+      213: -3945905602300689477
+    second: Brute_death_83
+  - first:
+      213: -4648270790942256709
+    second: Brute_death_84
+  - first:
+      213: -3714390680497893568
+    second: Brute_death_85
+  - first:
+      213: 430882542175356568
+    second: Brute_death_86
+  - first:
+      213: -1696701902968079375
+    second: Brute_death_87
+  - first:
+      213: 6678567806072560096
+    second: Brute_death_88
+  - first:
+      213: -6570631151205949693
+    second: Brute_death_89
+  - first:
+      213: 3504707111465673882
+    second: Brute_death_90
+  - first:
+      213: 5764061995403721588
+    second: Brute_death_91
+  - first:
+      213: -7799619343689701213
+    second: Brute_death_92
+  - first:
+      213: 4285184980574806625
+    second: Brute_death_93
+  - first:
+      213: -5509846115930866794
+    second: Brute_death_94
+  - first:
+      213: -7268960798745402660
+    second: Brute_death_95
+  - first:
+      213: -5355158723936822814
+    second: Brute_death_96
+  - first:
+      213: -4107613777011391197
+    second: Brute_death_97
+  - first:
+      213: 4388308598380206824
+    second: Brute_death_98
+  - first:
+      213: 1257095943362374991
+    second: Brute_death_99
+  - first:
+      213: -1005704717107067437
+    second: Brute_death_100
+  - first:
+      213: -919558405757446956
+    second: Brute_death_101
+  - first:
+      213: -1613131916684369538
+    second: Brute_death_102
+  - first:
+      213: -6523241398061442010
+    second: Brute_death_103
+  - first:
+      213: -6019887354708805719
+    second: Brute_death_104
+  - first:
+      213: 3716864924690408909
+    second: Brute_death_105
+  - first:
+      213: -5560147400343004928
+    second: Brute_death_106
+  - first:
+      213: 2474916901783302671
+    second: Brute_death_107
+  - first:
+      213: 1715567830103286904
+    second: Brute_death_108
+  - first:
+      213: -3949813145744128205
+    second: Brute_death_109
+  - first:
+      213: -2166458879146106108
+    second: Brute_death_110
+  - first:
+      213: -3885923266201323471
+    second: Brute_death_111
+  - first:
+      213: -8801262750135624154
+    second: Brute_death_112
+  - first:
+      213: -7446111640433134384
+    second: Brute_death_113
+  - first:
+      213: -7966615880959305867
+    second: Brute_death_114
+  - first:
+      213: 6796917682569973580
+    second: Brute_death_115
+  - first:
+      213: -1145718727202841703
+    second: Brute_death_116
+  - first:
+      213: 2952894428148069873
+    second: Brute_death_117
+  - first:
+      213: -8376864867074146362
+    second: Brute_death_118
+  - first:
+      213: 7474497557730943699
+    second: Brute_death_119
+  - first:
+      213: 238038312445377722
+    second: Brute_death_120
+  - first:
+      213: 4625267120166106416
+    second: Brute_death_121
+  - first:
+      213: -6895148264370926420
+    second: Brute_death_122
+  - first:
+      213: -3524673930625592252
+    second: Brute_death_123
+  - first:
+      213: -6237738354849764793
+    second: Brute_death_124
+  - first:
+      213: -3381696373214912496
+    second: Brute_death_125
+  - first:
+      213: 5932001425501170502
+    second: Brute_death_126
+  - first:
+      213: -6585072448446444662
+    second: Brute_death_127
+  - first:
+      213: 518817073854624048
+    second: Brute_death_128
+  - first:
+      213: -7676999883612277239
+    second: Brute_death_129
+  - first:
+      213: 6957317294666783113
+    second: Brute_death_130
+  - first:
+      213: 9072971680533127599
+    second: Brute_death_131
+  - first:
+      213: 7154884568803804039
+    second: Brute_death_132
+  - first:
+      213: 3424238506536019406
+    second: Brute_death_133
+  - first:
+      213: -1942936725244042109
+    second: Brute_death_134
+  - first:
+      213: -6490932662200298601
+    second: Brute_death_135
+  - first:
+      213: -1234141541464205161
+    second: Brute_death_136
+  - first:
+      213: 3912987326324156907
+    second: Brute_death_137
+  - first:
+      213: 8644451620326199453
+    second: Brute_death_138
+  - first:
+      213: 1189694547391200730
+    second: Brute_death_139
+  - first:
+      213: 3051854415812953189
+    second: Brute_death_140
+  - first:
+      213: 4760800770075623557
+    second: Brute_death_141
+  - first:
+      213: -3769046939366536276
+    second: Brute_death_142
+  - first:
+      213: -2910267840229752345
+    second: Brute_death_143
+  - first:
+      213: -5126533745893982564
+    second: Brute_death_144
+  - first:
+      213: -6505812445910742930
+    second: Brute_death_145
+  - first:
+      213: 1679197444714896572
+    second: Brute_death_146
+  - first:
+      213: 4227828823152281149
+    second: Brute_death_147
+  - first:
+      213: -6168571209524729924
+    second: Brute_death_148
+  - first:
+      213: 8322339835552098879
+    second: Brute_death_149
+  - first:
+      213: -969845050240113326
+    second: Brute_death_150
+  - first:
+      213: -5035879145889075965
+    second: Brute_death_151
+  - first:
+      213: 8565502023129722735
+    second: Brute_death_152
+  - first:
+      213: 8295578278861200876
+    second: Brute_death_153
+  - first:
+      213: -1828290387267701076
+    second: Brute_death_154
+  - first:
+      213: -4314971930026820969
+    second: Brute_death_155
+  - first:
+      213: -8607882413929433479
+    second: Brute_death_156
+  - first:
+      213: -8264396547820470439
+    second: Brute_death_157
+  - first:
+      213: -3756715222734655387
+    second: Brute_death_158
+  - first:
+      213: -4123733895180483054
+    second: Brute_death_159
+  - first:
+      213: -7860964535270730800
+    second: Brute_death_160
+  - first:
+      213: -6047289747183509568
+    second: Brute_death_161
+  - first:
+      213: -7389000856117617367
+    second: Brute_death_162
+  - first:
+      213: 7548408168898866523
+    second: Brute_death_163
+  - first:
+      213: 5164597145748907495
+    second: Brute_death_164
+  - first:
+      213: -905937653567843622
+    second: Brute_death_165
+  - first:
+      213: -2482257121877710879
+    second: Brute_death_166
+  - first:
+      213: 7160338452819960113
+    second: Brute_death_167
+  - first:
+      213: 4999116105765571944
+    second: Brute_death_168
+  - first:
+      213: 6919171515619235202
+    second: Brute_death_169
+  - first:
+      213: -2439866600437144030
+    second: Brute_death_170
+  - first:
+      213: -6123201393870571501
+    second: Brute_death_171
+  - first:
+      213: -7046899943074850943
+    second: Brute_death_172
+  - first:
+      213: 2183231920778954408
+    second: Brute_death_173
+  - first:
+      213: 7349616563646711701
+    second: Brute_death_174
+  - first:
+      213: -2768981948531667833
+    second: Brute_death_175
+  - first:
+      213: -2799578416616525482
+    second: Brute_death_176
+  - first:
+      213: 4107975810732247382
+    second: Brute_death_177
+  - first:
+      213: 2239699652676176730
+    second: Brute_death_178
+  - first:
+      213: -6234160414015190828
+    second: Brute_death_179
+  - first:
+      213: 8096213275087388067
+    second: Brute_death_180
+  - first:
+      213: -8223929684010280072
+    second: Brute_death_181
+  - first:
+      213: 8352698544179578304
+    second: Brute_death_182
+  - first:
+      213: -6669771973627279738
+    second: Brute_death_183
+  - first:
+      213: -5709818928175989985
+    second: Brute_death_184
+  - first:
+      213: -5778589558525250841
+    second: Brute_death_185
+  - first:
+      213: -2021078524399619697
+    second: Brute_death_186
+  - first:
+      213: -5921860677068654541
+    second: Brute_death_187
+  - first:
+      213: -7047064748822571303
+    second: Brute_death_188
+  - first:
+      213: -6426730304455284346
+    second: Brute_death_189
+  - first:
+      213: 7012955210752184904
+    second: Brute_death_190
+  - first:
+      213: 5411298249353962214
+    second: Brute_death_191
+  - first:
+      213: 5521256639361299655
+    second: Brute_death_192
+  - first:
+      213: 491301394038142793
+    second: Brute_death_193
+  - first:
+      213: -8350787528113854948
+    second: Brute_death_194
+  - first:
+      213: 1570367794658454906
+    second: Brute_death_195
+  - first:
+      213: -7744994839249147581
+    second: Brute_death_196
+  - first:
+      213: -6099609668952927174
+    second: Brute_death_197
+  - first:
+      213: -4124992742297033953
+    second: Brute_death_198
+  - first:
+      213: 3114983052302890766
+    second: Brute_death_199
+  - first:
+      213: 2607093201809514081
+    second: Brute_death_200
+  - first:
+      213: 5937354818920109224
+    second: Brute_death_201
+  - first:
+      213: 6787460721884658282
+    second: Brute_death_202
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brute_death_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1838
+        width: 156
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c20cf63f4cf542c0800000000000000
+      internalID: -4447871639803395387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1838
+        width: 167
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39566a3d0fa4dde50800000000000000
+      internalID: 6835702207621784979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_2
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1838
+        width: 169
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1996c75de89fbb0800000000000000
+      internalID: -4901729671849602571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_3
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1838
+        width: 142
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fa44f7c3b543c60800000000000000
+      internalID: 7796957170276544293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_4
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1838
+        width: 122
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed7b3782f98063b0800000000000000
+      internalID: -5521261468412314134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_5
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1838
+        width: 110
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5fa0261fb199400800000000000000
+      internalID: 331326771134395843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_6
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1838
+        width: 116
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54ffed27909d1b40800000000000000
+      internalID: 5412641306154366042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_7
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1838
+        width: 139
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07b3107971500240800000000000000
+      internalID: 4755890788516476683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_8
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 1919
+        width: 73
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69968d4299ade81f0800000000000000
+      internalID: -1040654112592991850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_9
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 1838
+        width: 90
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472bc853097de7790800000000000000
+      internalID: -7530344512543214988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_10
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1883
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e64511e6d175600800000000000000
+      internalID: 456866245775748667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_11
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 1838
+        width: 115
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35870dad891d37d40800000000000000
+      internalID: 5581034817678506067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_12
+      rect:
+        serializedVersion: 2
+        x: 2605
+        y: 1810
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc478cfb03a3cb510800000000000000
+      internalID: 1566190751468516559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_13
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 1803
+        width: 149
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fddd2ba001966c0800000000000000
+      internalID: -4149767943508598968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_14
+      rect:
+        serializedVersion: 2
+        x: 3162
+        y: 1838
+        width: 90
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad5547f4bfe3cc60800000000000000
+      internalID: 7837371337076465064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_15
+      rect:
+        serializedVersion: 2
+        x: 3418
+        y: 1838
+        width: 90
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38dd2e0ee8605f30800000000000000
+      internalID: 4562261794175703100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_16
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 1875
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44daa006b70a4770800000000000000
+      internalID: 8595691317066650700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_17
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 1847
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f420daf898fe810800000000000000
+      internalID: 1796806026520055630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_18
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1875
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87133c739fd61090800000000000000
+      internalID: -8064012258223384692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_19
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1868
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adea864e3a3b5fbe0800000000000000
+      internalID: -1444050589009269030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_20
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 1874
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678e9d836d4e01f80800000000000000
+      internalID: -8137752917930547082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_21
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 1874
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e251f68b589afbb0800000000000000
+      internalID: -4901437725565955354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_22
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 1874
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1279ca0ca21e8ec0800000000000000
+      internalID: -3562889725078834662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_23
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1829
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2049bc47bbe6380800000000000000
+      internalID: -8976030896996744521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_24
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 1828
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ef820bf1624fdc0800000000000000
+      internalID: -3606215484075606452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_25
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 1828
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cb3b7a8652f5510800000000000000
+      internalID: 1539990729004399686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_26
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 1807
+        width: 127
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250dda7721981c380800000000000000
+      internalID: -8952723871825538990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_27
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 1828
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fccbec250f92390800000000000000
+      internalID: -7842473037642543240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_28
+      rect:
+        serializedVersion: 2
+        x: 3361
+        y: 1807
+        width: 128
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec6281dbb8f78240800000000000000
+      internalID: 4794073813916740841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_29
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1585
+        width: 104
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7491d75a8f9c060800000000000000
+      internalID: 6974378887612024757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_30
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1585
+        width: 110
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf26796a63b0b3f0800000000000000
+      internalID: -887011856974729277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_31
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1585
+        width: 110
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adadd2ea2319f4ce0800000000000000
+      internalID: -1418755710741783846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_32
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1585
+        width: 111
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9f6b92abcc20e60800000000000000
+      internalID: 7927123394061334991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_33
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1585
+        width: 103
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccc4ed92d213e720800000000000000
+      internalID: 2874161682993958088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_34
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1585
+        width: 106
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8932ba79b601250800000000000000
+      internalID: 5913344609892931794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_35
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1585
+        width: 115
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff580d39238881220800000000000000
+      internalID: 2456863347540264447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_36
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 1585
+        width: 128
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e700a30a0385b29b0800000000000000
+      internalID: -5103888786824494978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_37
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1625
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08938a4597e2ada50800000000000000
+      internalID: 6546596106982668672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_38
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 1585
+        width: 99
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6291f8ea9ea9f3c00800000000000000
+      internalID: 882594380434577702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_39
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1554
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401bc65108f7055d0800000000000000
+      internalID: -3075818357402062588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_40
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 1569
+        width: 88
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67a3cd9bb115d4c0800000000000000
+      internalID: -4263481974732904594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_41
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1535
+        width: 88
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3324ef7b3c4d8f0800000000000000
+      internalID: -516572862228581439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_42
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 1535
+        width: 88
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d978b921b3d3f720800000000000000
+      internalID: 2878877344682506704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_43
+      rect:
+        serializedVersion: 2
+        x: 3164
+        y: 1585
+        width: 88
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6e21c86d7ea0740800000000000000
+      internalID: 5119158835119056618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_44
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 1585
+        width: 88
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07e3a502781fee50800000000000000
+      internalID: 6840713236999038734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_45
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 1553
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f93eedf59f42a60800000000000000
+      internalID: 7648512257338613555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_46
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1535
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2103934d51c5e0bd0800000000000000
+      internalID: -2662089080904798190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_47
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 1535
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1acb74195476b990800000000000000
+      internalID: -7370575814200669669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_48
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 1535
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fb431ad24b00b50800000000000000
+      internalID: 6557439165522558793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_49
+      rect:
+        serializedVersion: 2
+        x: 2867
+        y: 1535
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eee935f031e42be0800000000000000
+      internalID: -1502828775246008602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_50
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 1535
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53a0a4dace17ff20800000000000000
+      internalID: 3456265095529669471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_51
+      rect:
+        serializedVersion: 2
+        x: 3121
+        y: 1535
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f166a36387c9722a0800000000000000
+      internalID: -6762264275353704929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_52
+      rect:
+        serializedVersion: 2
+        x: 3191
+        y: 1535
+        width: 57
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e7f2d46e7fe9b50800000000000000
+      internalID: 6601986672281222684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_53
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 1535
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e747f23c0aea0500800000000000000
+      internalID: 363360058072319976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_54
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 1535
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5a922270508f7f0800000000000000
+      internalID: -578707023921044018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_55
+      rect:
+        serializedVersion: 2
+        x: 3446
+        y: 1535
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6340a4dea33f730800000000000000
+      internalID: 4031630882250176160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_56
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1336
+        width: 106
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e02dea3f04d826f0800000000000000
+      internalID: -709083779432636192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_57
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1336
+        width: 106
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a6f0f20817455b0800000000000000
+      internalID: -5380550859441608078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_58
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1336
+        width: 106
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4aecd894a32f4800800000000000000
+      internalID: 598736465309788750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_59
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1336
+        width: 106
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099f2e8262230bc50800000000000000
+      internalID: 6678893386866555280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_60
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1336
+        width: 106
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ac23d577dce0f40800000000000000
+      internalID: 5696716491218668055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_61
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 1336
+        width: 107
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9219ed782a42047b0800000000000000
+      internalID: -5242149685776445143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_62
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1336
+        width: 109
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2aa08a3db497bf80800000000000000
+      internalID: -8090834665096566228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_63
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 1336
+        width: 119
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14eaf209c50e3ee80800000000000000
+      internalID: -8150424212449808831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_64
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 1335
+        width: 130
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceff2170f0bb3c810800000000000000
+      internalID: 1784475550586437612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_65
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 1279
+        width: 135
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2b489f3c12c22a0800000000000000
+      internalID: -6760991815001394518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_66
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 1299
+        width: 122
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b58eb32525f74f0800000000000000
+      internalID: -828853293267002488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_67
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 1285
+        width: 123
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57238097245da8c80800000000000000
+      internalID: -8319602880138431883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_68
+      rect:
+        serializedVersion: 2
+        x: 3163
+        y: 1336
+        width: 79
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f604fbbb9dbf020800000000000000
+      internalID: 2376732628758851460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_69
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 1286
+        width: 49
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffcf6fb271f9251e0800000000000000
+      internalID: -2210529545214821121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_70
+      rect:
+        serializedVersion: 2
+        x: 3419
+        y: 1336
+        width: 79
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5f702399ad310c0800000000000000
+      internalID: -4606097642365651488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_71
+      rect:
+        serializedVersion: 2
+        x: 3493
+        y: 1286
+        width: 42
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c52c2d7e7feea340800000000000000
+      internalID: 4877098773033788866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_72
+      rect:
+        serializedVersion: 2
+        x: 2632
+        y: 1279
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022c5ff84afc78860800000000000000
+      internalID: 7532217207497277984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_73
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1279
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43151ef45bdafabb0800000000000000
+      internalID: -4922524873451810508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_74
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 1279
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbda3568a33a2040800000000000000
+      internalID: 4623564765795113939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_75
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 1279
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed05941d499acc70800000000000000
+      internalID: 8992168162335460837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_76
+      rect:
+        serializedVersion: 2
+        x: 2923
+        y: 1279
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bfb4836286cb940800000000000000
+      internalID: 5313236173752892274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_77
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 1279
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f3f1e1318159380800000000000000
+      internalID: -8965233012822294746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_78
+      rect:
+        serializedVersion: 2
+        x: 3146
+        y: 1279
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b0a096bfd84d570800000000000000
+      internalID: 8490567308438801186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_79
+      rect:
+        serializedVersion: 2
+        x: 3179
+        y: 1279
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0695016ac372c65e0800000000000000
+      internalID: -1915112600101693088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_80
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1279
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7117fda2eb1d5e610800000000000000
+      internalID: 1649955453194432791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_81
+      rect:
+        serializedVersion: 2
+        x: 3403
+        y: 1279
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7e9713418fc3720800000000000000
+      internalID: 2827407431694935975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_82
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 1279
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34ca672bcfd50220800000000000000
+      internalID: 2451611635805766719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_83
+      rect:
+        serializedVersion: 2
+        x: 3467
+        y: 1279
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3c4a1d2c35d39c0800000000000000
+      internalID: -3945905602300689477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_84
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1073
+        width: 131
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1101ed7560e7fb0800000000000000
+      internalID: -4648270790942256709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_85
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1073
+        width: 136
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fc6e31b55d37cc0800000000000000
+      internalID: -3714390680497893568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_86
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1073
+        width: 136
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8968742a36dcaf500800000000000000
+      internalID: 430882542175356568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_87
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1073
+        width: 117
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbbbd7db9a1478e0800000000000000
+      internalID: -1696701902968079375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_88
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1073
+        width: 104
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e99059f80a0fac50800000000000000
+      internalID: 6678567806072560096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_89
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 1073
+        width: 105
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fd04ad7cd60d4a0800000000000000
+      internalID: -6570631151205949693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_90
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1073
+        width: 118
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9462b49c8833a030800000000000000
+      internalID: 3504707111465673882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_91
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1073
+        width: 137
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b3e5378df0eff40800000000000000
+      internalID: 5764061995403721588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_92
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 1073
+        width: 149
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a82c14f78f22c390800000000000000
+      internalID: -7799619343689701213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_93
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1073
+        width: 139
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16220043909087b30800000000000000
+      internalID: 4285184980574806625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_94
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1039
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bffd466281983b0800000000000000
+      internalID: -5509846115930866794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_95
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1040
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd26a888aa67f1b90800000000000000
+      internalID: -7268960798745402660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_96
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 1073
+        width: 157
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e959ef6387aea5b0800000000000000
+      internalID: -5355158723936822814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_97
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 1023
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3254cba6803def6c0800000000000000
+      internalID: -4107613777011391197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_98
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 1073
+        width: 168
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea9e338b6766ec30800000000000000
+      internalID: 4388308598380206824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_99
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 1023
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4de2b0a91a127110800000000000000
+      internalID: 1257095943362374991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_100
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1073
+        width: 163
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d506e363e40b02f0800000000000000
+      internalID: -1005704717107067437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_101
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 1023
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d45a9280821d33f0800000000000000
+      internalID: -919558405757446956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_102
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 1073
+        width: 161
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71ee2a81110d99e0800000000000000
+      internalID: -1613131916684369538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_103
+      rect:
+        serializedVersion: 2
+        x: 3536
+        y: 1023
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cdc64928ac875a0800000000000000
+      internalID: -6523241398061442010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_104
+      rect:
+        serializedVersion: 2
+        x: 2722
+        y: 1023
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a737ba7850157ca0800000000000000
+      internalID: -6019887354708805719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_105
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 1023
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5e74ac4f4f49330800000000000000
+      internalID: 3716864924690408909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_106
+      rect:
+        serializedVersion: 2
+        x: 3242
+        y: 1023
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0095eb7f56366d2b0800000000000000
+      internalID: -5560147400343004928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_107
+      rect:
+        serializedVersion: 2
+        x: 3498
+        y: 1023
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02776b3fcba85220800000000000000
+      internalID: 2474916901783302671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_108
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 813
+        width: 155
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874e46d1adbeec710800000000000000
+      internalID: 1715567830103286904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_109
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 813
+        width: 167
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337c0c6fed17f29c0800000000000000
+      internalID: -3949813145744128205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_110
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 813
+        width: 168
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4036108b0213fe1e0800000000000000
+      internalID: -2166458879146106108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_111
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 813
+        width: 142
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138f4adb06d621ac0800000000000000
+      internalID: -3885923266201323471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_112
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 813
+        width: 122
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ed94be822abd580800000000000000
+      internalID: -8801262750135624154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_113
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 813
+        width: 110
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4f41a0ae81aa890800000000000000
+      internalID: -7446111640433134384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_114
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 813
+        width: 116
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5775f61b015e07190800000000000000
+      internalID: -7966615880959305867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_115
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 813
+        width: 139
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f8725ee90835e50800000000000000
+      internalID: 6796917682569973580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_116
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 813
+        width: 90
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bdf8c43e69910f0800000000000000
+      internalID: -1145718727202841703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_117
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 892
+        width: 73
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5fef856d9caf820800000000000000
+      internalID: 2952894428148069873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_118
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 813
+        width: 115
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf789239c56fbb80800000000000000
+      internalID: -8376864867074146362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_119
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 858
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2e31b5defbab760800000000000000
+      internalID: 7474497557730943699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_120
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 813
+        width: 135
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc7d30859ead4300800000000000000
+      internalID: 238038312445377722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_121
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 813
+        width: 149
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0357bc8a0ff303040800000000000000
+      internalID: 4625267120166106416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_122
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 813
+        width: 148
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac05848f238f40a0800000000000000
+      internalID: -6895148264370926420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_123
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 813
+        width: 148
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4445bff0cb7d51fc0800000000000000
+      internalID: -3524673930625592252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_124
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 848
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74aa955e30a1f69a0800000000000000
+      internalID: -6237738354849764793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_125
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 819
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0106c48c01dc111d0800000000000000
+      internalID: -3381696373214912496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_126
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 849
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bab1e0ed3b25250800000000000000
+      internalID: 5932001425501170502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_127
+      rect:
+        serializedVersion: 2
+        x: 2807
+        y: 842
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b43225f7f1d94a0800000000000000
+      internalID: -6585072448446444662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_128
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 851
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031338e3165333700800000000000000
+      internalID: 518817073854624048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_129
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 851
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9063394c741d57590800000000000000
+      internalID: -7676999883612277239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_130
+      rect:
+        serializedVersion: 2
+        x: 3557
+        y: 850
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9899b42d73b5d8060800000000000000
+      internalID: 6957317294666783113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_131
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 802
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa12b5b3caba9ed70800000000000000
+      internalID: 9072971680533127599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_132
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 801
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783897c6b914b4360800000000000000
+      internalID: 7154884568803804039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_133
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 801
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec52b4087c6558f20800000000000000
+      internalID: 3424238506536019406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_134
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 800
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384a4cea75d4905e0800000000000000
+      internalID: -1942936725244042109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_135
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 555
+        width: 105
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793129852239be5a0800000000000000
+      internalID: -6490932662200298601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_136
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 555
+        width: 110
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798197a8ec27fdee0800000000000000
+      internalID: -1234141541464205161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_137
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 555
+        width: 110
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9282ccd39bd4630800000000000000
+      internalID: 3912987326324156907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_138
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 555
+        width: 111
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90d79bc2f247f770800000000000000
+      internalID: 8644451620326199453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_139
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 555
+        width: 103
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addb87833e4a28010800000000000000
+      internalID: 1189694547391200730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_140
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 555
+        width: 106
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5640db8fb6d5a5a20800000000000000
+      internalID: 3051854415812953189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_141
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 555
+        width: 102
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58083ca9313c11240800000000000000
+      internalID: 4760800770075623557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_142
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 632
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabc84527c7a1bbc0800000000000000
+      internalID: -3769046939366536276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_143
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 555
+        width: 119
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1ccdd81d6ac97d0800000000000000
+      internalID: -2910267840229752345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_144
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 635
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ebfea38b4ead8b0800000000000000
+      internalID: -5126533745893982564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_145
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 555
+        width: 153
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68cc2abc06b6b5a0800000000000000
+      internalID: -6505812445910742930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_146
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 555
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc99ffdd25bd4710800000000000000
+      internalID: 1679197444714896572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_147
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 648
+        width: 105
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3646272ae34caa30800000000000000
+      internalID: 4227828823152281149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_148
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 613
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7a39cda25d46aa0800000000000000
+      internalID: -6168571209524729924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_149
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 555
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a6a2e9cf3ee7370800000000000000
+      internalID: 8322339835552098879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_150
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 637
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2556445b01b6a82f0800000000000000
+      internalID: -969845050240113326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_151
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 601
+        width: 55
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30deb791996fc1ab0800000000000000
+      internalID: -5035879145889075965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_152
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 555
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f698345b6ced670800000000000000
+      internalID: 8565502023129722735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_153
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 642
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedd7f52e70df1370800000000000000
+      internalID: 8295578278861200876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_154
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 604
+        width: 49
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6b5a8549b90a6e0800000000000000
+      internalID: -1828290387267701076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_155
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 555
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a38fe24e32e14c0800000000000000
+      internalID: -4314971930026820969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_156
+      rect:
+        serializedVersion: 2
+        x: 3238
+        y: 643
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97677611d88aa8880800000000000000
+      internalID: -8607882413929433479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_157
+      rect:
+        serializedVersion: 2
+        x: 3281
+        y: 605
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f323c5027fe4d80800000000000000
+      internalID: -8264396547820470439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_158
+      rect:
+        serializedVersion: 2
+        x: 3403
+        y: 555
+        width: 89
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560399aa8677ddbc0800000000000000
+      internalID: -3756715222734655387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_159
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 643
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216878deedd85c6c0800000000000000
+      internalID: -4123733895180483054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_160
+      rect:
+        serializedVersion: 2
+        x: 3538
+        y: 606
+        width: 46
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d39e33876e38e290800000000000000
+      internalID: -7860964535270730800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_161
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 302
+        width: 106
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfd34dc306b31ca0800000000000000
+      internalID: -6047289747183509568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_162
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 302
+        width: 106
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d5d06bedef47990800000000000000
+      internalID: -7389000856117617367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_163
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 302
+        width: 105
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dafd68c3551c860800000000000000
+      internalID: 7548408168898866523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_164
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 302
+        width: 105
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e52c58adb55ca740800000000000000
+      internalID: 5164597145748907495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_165
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 302
+        width: 106
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2107201867d63f0800000000000000
+      internalID: -905937653567843622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_166
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 302
+        width: 107
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7ab499c404d8dd0800000000000000
+      internalID: -2482257121877710879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_167
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 302
+        width: 108
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13167efb2e1ae5360800000000000000
+      internalID: 7160338452819960113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_168
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 302
+        width: 118
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d471b9c9d606540800000000000000
+      internalID: 4999116105765571944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_169
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 302
+        width: 115
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2855c7885d5d50060800000000000000
+      internalID: 6919171515619235202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_170
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 408
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226aa9df04ad32ed0800000000000000
+      internalID: -2439866600437144030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_171
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 302
+        width: 136
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318fa2e36c4060ba0800000000000000
+      internalID: -6123201393870571501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_172
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 302
+        width: 140
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1879d4d76d1643e90800000000000000
+      internalID: -7046899943074850943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_173
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 302
+        width: 142
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6c25c5dd56c4e10800000000000000
+      internalID: 2183231920778954408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_174
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 302
+        width: 112
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5974d7f13551ff560800000000000000
+      internalID: 7349616563646711701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_175
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 302
+        width: 112
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c0d48a6999299d0800000000000000
+      internalID: -2768981948531667833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_176
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 300
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651b8bc4346e529d0800000000000000
+      internalID: -2799578416616525482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_177
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 299
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659c7902c36720930800000000000000
+      internalID: 4107975810732247382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_178
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 43
+        width: 132
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b4459b7f2051f10800000000000000
+      internalID: 2239699652676176730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_179
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 43
+        width: 136
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d882d92220db79a0800000000000000
+      internalID: -6234160414015190828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_180
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 43
+        width: 137
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3adb26ff3178b5070800000000000000
+      internalID: 8096213275087388067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_181
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 43
+        width: 118
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87bd6ce468bbedd80800000000000000
+      internalID: -8223929684010280072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_182
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 43
+        width: 104
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c50fb9421fbae370800000000000000
+      internalID: 8352698544179578304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_183
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 119
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686071b5ab53073a0800000000000000
+      internalID: -6669771973627279738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_184
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 43
+        width: 93
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bb44ecfe5a2c0b0800000000000000
+      internalID: -5709818928175989985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_185
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 122
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2325da9635ecfa0800000000000000
+      internalID: -5778589558525250841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_186
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 43
+        width: 103
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f817df94acfa3f3e0800000000000000
+      internalID: -2021078524399619697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_187
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 126
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338f7fde61351dda0800000000000000
+      internalID: -5921860677068654541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_188
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 43
+        width: 129
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6d049a2fbc33e90800000000000000
+      internalID: -7047064748822571303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_189
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 43
+        width: 149
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68964bf96daafc6a0800000000000000
+      internalID: -6426730304455284346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_190
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 142
+        width: 102
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842db92ab95035160800000000000000
+      internalID: 7012955210752184904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_191
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 105
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2af66661bc81b40800000000000000
+      internalID: 5411298249353962214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_192
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 43
+        width: 139
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4b5ee19a17f9c40800000000000000
+      internalID: 5521256639361299655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_193
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 92
+        width: 95
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9473c4dc30471d600800000000000000
+      internalID: 491301394038142793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_194
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 43
+        width: 157
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16e200dcfa0c1c80800000000000000
+      internalID: -8350787528113854948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_195
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 95
+        width: 90
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7da45760311bc510800000000000000
+      internalID: 1570367794658454906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_196
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 43
+        width: 168
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349225b7a30448490800000000000000
+      internalID: -7744994839249147581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_197
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 96
+        width: 87
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34d58db255d95ba0800000000000000
+      internalID: -6099609668952927174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_198
+      rect:
+        serializedVersion: 2
+        x: 3164
+        y: 43
+        width: 76
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13225eb4f411c6c0800000000000000
+      internalID: -4124992742297033953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_199
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 96
+        width: 87
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0730e90594aa3b20800000000000000
+      internalID: 3114983052302890766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_200
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 43
+        width: 76
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e113e34714e2420800000000000000
+      internalID: 2607093201809514081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_201
+      rect:
+        serializedVersion: 2
+        x: 3077
+        y: 33
+        width: 120
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4df2710c8b56250800000000000000
+      internalID: 5937354818920109224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_death_202
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 31
+        width: 116
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6af9d6a097e13e50800000000000000
+      internalID: 6787460721884658282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brute_death_0: -4447871639803395387
+      Brute_death_1: 6835702207621784979
+      Brute_death_10: 456866245775748667
+      Brute_death_100: -1005704717107067437
+      Brute_death_101: -919558405757446956
+      Brute_death_102: -1613131916684369538
+      Brute_death_103: -6523241398061442010
+      Brute_death_104: -6019887354708805719
+      Brute_death_105: 3716864924690408909
+      Brute_death_106: -5560147400343004928
+      Brute_death_107: 2474916901783302671
+      Brute_death_108: 1715567830103286904
+      Brute_death_109: -3949813145744128205
+      Brute_death_11: 5581034817678506067
+      Brute_death_110: -2166458879146106108
+      Brute_death_111: -3885923266201323471
+      Brute_death_112: -8801262750135624154
+      Brute_death_113: -7446111640433134384
+      Brute_death_114: -7966615880959305867
+      Brute_death_115: 6796917682569973580
+      Brute_death_116: -1145718727202841703
+      Brute_death_117: 2952894428148069873
+      Brute_death_118: -8376864867074146362
+      Brute_death_119: 7474497557730943699
+      Brute_death_12: 1566190751468516559
+      Brute_death_120: 238038312445377722
+      Brute_death_121: 4625267120166106416
+      Brute_death_122: -6895148264370926420
+      Brute_death_123: -3524673930625592252
+      Brute_death_124: -6237738354849764793
+      Brute_death_125: -3381696373214912496
+      Brute_death_126: 5932001425501170502
+      Brute_death_127: -6585072448446444662
+      Brute_death_128: 518817073854624048
+      Brute_death_129: -7676999883612277239
+      Brute_death_13: -4149767943508598968
+      Brute_death_130: 6957317294666783113
+      Brute_death_131: 9072971680533127599
+      Brute_death_132: 7154884568803804039
+      Brute_death_133: 3424238506536019406
+      Brute_death_134: -1942936725244042109
+      Brute_death_135: -6490932662200298601
+      Brute_death_136: -1234141541464205161
+      Brute_death_137: 3912987326324156907
+      Brute_death_138: 8644451620326199453
+      Brute_death_139: 1189694547391200730
+      Brute_death_14: 7837371337076465064
+      Brute_death_140: 3051854415812953189
+      Brute_death_141: 4760800770075623557
+      Brute_death_142: -3769046939366536276
+      Brute_death_143: -2910267840229752345
+      Brute_death_144: -5126533745893982564
+      Brute_death_145: -6505812445910742930
+      Brute_death_146: 1679197444714896572
+      Brute_death_147: 4227828823152281149
+      Brute_death_148: -6168571209524729924
+      Brute_death_149: 8322339835552098879
+      Brute_death_15: 4562261794175703100
+      Brute_death_150: -969845050240113326
+      Brute_death_151: -5035879145889075965
+      Brute_death_152: 8565502023129722735
+      Brute_death_153: 8295578278861200876
+      Brute_death_154: -1828290387267701076
+      Brute_death_155: -4314971930026820969
+      Brute_death_156: -8607882413929433479
+      Brute_death_157: -8264396547820470439
+      Brute_death_158: -3756715222734655387
+      Brute_death_159: -4123733895180483054
+      Brute_death_16: 8595691317066650700
+      Brute_death_160: -7860964535270730800
+      Brute_death_161: -6047289747183509568
+      Brute_death_162: -7389000856117617367
+      Brute_death_163: 7548408168898866523
+      Brute_death_164: 5164597145748907495
+      Brute_death_165: -905937653567843622
+      Brute_death_166: -2482257121877710879
+      Brute_death_167: 7160338452819960113
+      Brute_death_168: 4999116105765571944
+      Brute_death_169: 6919171515619235202
+      Brute_death_17: 1796806026520055630
+      Brute_death_170: -2439866600437144030
+      Brute_death_171: -6123201393870571501
+      Brute_death_172: -7046899943074850943
+      Brute_death_173: 2183231920778954408
+      Brute_death_174: 7349616563646711701
+      Brute_death_175: -2768981948531667833
+      Brute_death_176: -2799578416616525482
+      Brute_death_177: 4107975810732247382
+      Brute_death_178: 2239699652676176730
+      Brute_death_179: -6234160414015190828
+      Brute_death_18: -8064012258223384692
+      Brute_death_180: 8096213275087388067
+      Brute_death_181: -8223929684010280072
+      Brute_death_182: 8352698544179578304
+      Brute_death_183: -6669771973627279738
+      Brute_death_184: -5709818928175989985
+      Brute_death_185: -5778589558525250841
+      Brute_death_186: -2021078524399619697
+      Brute_death_187: -5921860677068654541
+      Brute_death_188: -7047064748822571303
+      Brute_death_189: -6426730304455284346
+      Brute_death_19: -1444050589009269030
+      Brute_death_190: 7012955210752184904
+      Brute_death_191: 5411298249353962214
+      Brute_death_192: 5521256639361299655
+      Brute_death_193: 491301394038142793
+      Brute_death_194: -8350787528113854948
+      Brute_death_195: 1570367794658454906
+      Brute_death_196: -7744994839249147581
+      Brute_death_197: -6099609668952927174
+      Brute_death_198: -4124992742297033953
+      Brute_death_199: 3114983052302890766
+      Brute_death_2: -4901729671849602571
+      Brute_death_20: -8137752917930547082
+      Brute_death_200: 2607093201809514081
+      Brute_death_201: 5937354818920109224
+      Brute_death_202: 6787460721884658282
+      Brute_death_21: -4901437725565955354
+      Brute_death_22: -3562889725078834662
+      Brute_death_23: -8976030896996744521
+      Brute_death_24: -3606215484075606452
+      Brute_death_25: 1539990729004399686
+      Brute_death_26: -8952723871825538990
+      Brute_death_27: -7842473037642543240
+      Brute_death_28: 4794073813916740841
+      Brute_death_29: 6974378887612024757
+      Brute_death_3: 7796957170276544293
+      Brute_death_30: -887011856974729277
+      Brute_death_31: -1418755710741783846
+      Brute_death_32: 7927123394061334991
+      Brute_death_33: 2874161682993958088
+      Brute_death_34: 5913344609892931794
+      Brute_death_35: 2456863347540264447
+      Brute_death_36: -5103888786824494978
+      Brute_death_37: 6546596106982668672
+      Brute_death_38: 882594380434577702
+      Brute_death_39: -3075818357402062588
+      Brute_death_4: -5521261468412314134
+      Brute_death_40: -4263481974732904594
+      Brute_death_41: -516572862228581439
+      Brute_death_42: 2878877344682506704
+      Brute_death_43: 5119158835119056618
+      Brute_death_44: 6840713236999038734
+      Brute_death_45: 7648512257338613555
+      Brute_death_46: -2662089080904798190
+      Brute_death_47: -7370575814200669669
+      Brute_death_48: 6557439165522558793
+      Brute_death_49: -1502828775246008602
+      Brute_death_5: 331326771134395843
+      Brute_death_50: 3456265095529669471
+      Brute_death_51: -6762264275353704929
+      Brute_death_52: 6601986672281222684
+      Brute_death_53: 363360058072319976
+      Brute_death_54: -578707023921044018
+      Brute_death_55: 4031630882250176160
+      Brute_death_56: -709083779432636192
+      Brute_death_57: -5380550859441608078
+      Brute_death_58: 598736465309788750
+      Brute_death_59: 6678893386866555280
+      Brute_death_6: 5412641306154366042
+      Brute_death_60: 5696716491218668055
+      Brute_death_61: -5242149685776445143
+      Brute_death_62: -8090834665096566228
+      Brute_death_63: -8150424212449808831
+      Brute_death_64: 1784475550586437612
+      Brute_death_65: -6760991815001394518
+      Brute_death_66: -828853293267002488
+      Brute_death_67: -8319602880138431883
+      Brute_death_68: 2376732628758851460
+      Brute_death_69: -2210529545214821121
+      Brute_death_7: 4755890788516476683
+      Brute_death_70: -4606097642365651488
+      Brute_death_71: 4877098773033788866
+      Brute_death_72: 7532217207497277984
+      Brute_death_73: -4922524873451810508
+      Brute_death_74: 4623564765795113939
+      Brute_death_75: 8992168162335460837
+      Brute_death_76: 5313236173752892274
+      Brute_death_77: -8965233012822294746
+      Brute_death_78: 8490567308438801186
+      Brute_death_79: -1915112600101693088
+      Brute_death_8: -1040654112592991850
+      Brute_death_80: 1649955453194432791
+      Brute_death_81: 2827407431694935975
+      Brute_death_82: 2451611635805766719
+      Brute_death_83: -3945905602300689477
+      Brute_death_84: -4648270790942256709
+      Brute_death_85: -3714390680497893568
+      Brute_death_86: 430882542175356568
+      Brute_death_87: -1696701902968079375
+      Brute_death_88: 6678567806072560096
+      Brute_death_89: -6570631151205949693
+      Brute_death_9: -7530344512543214988
+      Brute_death_90: 3504707111465673882
+      Brute_death_91: 5764061995403721588
+      Brute_death_92: -7799619343689701213
+      Brute_death_93: 4285184980574806625
+      Brute_death_94: -5509846115930866794
+      Brute_death_95: -7268960798745402660
+      Brute_death_96: -5355158723936822814
+      Brute_death_97: -4107613777011391197
+      Brute_death_98: 4388308598380206824
+      Brute_death_99: 1257095943362374991
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

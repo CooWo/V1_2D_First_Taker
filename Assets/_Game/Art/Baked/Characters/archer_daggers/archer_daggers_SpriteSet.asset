@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5054a4cb7954f24469a2d175118b4647, type: 3}
+  m_Name: archer_daggers_SpriteSet
+  m_EditorClassIdentifier: ShadowRPG.Runtime::ShadowRPG.Runtime.Art.DirectionalSpriteSet
+  characterName: archer/daggers
+  cellSize: 224
+  pixelsPerUnit: 128
+  pivot: {x: 0.5, y: 0.22}
+  mirrored: 1
+  heightUnits: 1.27125
+  clips:
+  - name: idle
+    texture: {fileID: 2800000, guid: be84647e4fab85745a40b7e203fe0dcc, type: 3}
+    frames: 12
+    framesPerSecond: 11.249999
+    loop: 1
+    impactFrame: -1
+  - name: run
+    texture: {fileID: 2800000, guid: c8d3839d26f1cc9488c6a3cb349b155b, type: 3}
+    frames: 9
+    framesPerSecond: 12.375
+    loop: 1
+    impactFrame: -1
+  - name: attack
+    texture: {fileID: 2800000, guid: e7a40a708307de84babad41c513b61d9, type: 3}
+    frames: 10
+    framesPerSecond: 12.428572
+    loop: 0
+    impactFrame: 4
+  - name: attack2
+    texture: {fileID: 2800000, guid: 88fc52918d0084b46b5a1fd09db9b09d, type: 3}
+    frames: 10
+    framesPerSecond: 11.447369
+    loop: 0
+    impactFrame: 4
+  - name: cast
+    texture: {fileID: 2800000, guid: eee2b0ef88cef2b4a8b83cc69a7f5099, type: 3}
+    frames: 9
+    framesPerSecond: 12.535714
+    loop: 0
+    impactFrame: 3
+  - name: dodge
+    texture: {fileID: 2800000, guid: 4b9fc64fa1726864a8f77fbe9b835793, type: 3}
+    frames: 4
+    framesPerSecond: 12.000001
+    loop: 0
+    impactFrame: -1
+  - name: hit
+    texture: {fileID: 2800000, guid: 6e5ab724fa514fd4abfd2dbf5bb157db, type: 3}
+    frames: 5
+    framesPerSecond: 11.999999
+    loop: 0
+    impactFrame: -1
+  - name: death
+    texture: {fileID: 2800000, guid: 666e6f0e69f46ee44949339333b917a5, type: 3}
+    frames: 10
+    framesPerSecond: 12.5
+    loop: 0
+    impactFrame: -1

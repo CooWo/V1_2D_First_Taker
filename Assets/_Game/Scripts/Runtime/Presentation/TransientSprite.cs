@@ -22,6 +22,8 @@ namespace ShadowRPG.Runtime.Presentation
         Color _color;
         Action<TransientSprite> _release;
 
+        public Material DefaultMaterial;
+
         public SpriteRenderer Renderer => _renderer != null ? _renderer : (_renderer = GetComponent<SpriteRenderer>());
 
         public void Play(Sprite sprite, Color color, Vector3 position, float rotation, Vector3 scaleFrom, Vector3 scaleTo,

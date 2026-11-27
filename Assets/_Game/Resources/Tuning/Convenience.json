@@ -1,0 +1,11 @@
+{
+    "Speeds": [
+        1.0,
+        2.0,
+        3.0
+    ],
+    "FreeMaxSpeed": 2.0,
+    "PresetSlotsBase": 3,
+    "PresetSlotsMax": 6,
+    "PresetSlotTempoPrice": 300
+}

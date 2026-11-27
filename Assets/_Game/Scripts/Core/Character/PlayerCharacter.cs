@@ -28,7 +28,7 @@ namespace ShadowRPG.Core.Character
             Combatant.Loadout = new SkillLoadout();
 
             Equipment = new Equipment(new IEquipValidator[] { new SlotCompatibilityValidator(), new StatRequirementValidator() });
-            Inventory = bag ?? new Inventory(Meta.GameProfile.BagWidth, Meta.GameProfile.BagHeight);
+            Inventory = bag ?? new Inventory(Tuning.GameTuning.Current.Bag.BagWidth, Tuning.GameTuning.Current.Bag.BagHeight);
             StatApplier = new EquipmentStatApplier(Equipment, Combatant);
             Sets = new SetBonusTracker(Equipment, Combatant, sets);
             LoadoutBuilder = new LoadoutBuilder(Equipment, Combatant, world, skills, supports);
@@ -61,6 +61,9 @@ namespace ShadowRPG.Core.Character
         /// <summary>자동 이동 (끄면 조이스틱으로만 이동, 스킬은 계속 자동 시전).</summary>
         public bool AutoMove { get; set; } = true;
 
+        /// <summary>리듬 입력 (리듬 무기를 들었을 때만 동작). GameMeta가 붙여 줍니다.</summary>
+        public Rhythm.RhythmController Rhythm { get; set; }
+
         public void ChangeClass(CharacterClass characterClass)
         {
             Class.Apply(characterClass);
@@ -72,6 +75,7 @@ namespace ShadowRPG.Core.Character
         {
             if (!Combatant.IsAlive) return;
 
+            Rhythm?.Tick(dt);
             Combatant.Loadout.Tick(dt);
             Planner.Tick(dt);
 

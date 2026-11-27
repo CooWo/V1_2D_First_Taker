@@ -1,0 +1,12 @@
+{
+    "BagWidth": 8,
+    "BagHeight": 5,
+    "StashWidth": 10,
+    "StashHeight": 8,
+    "StashExpandRows": 2,
+    "StashMaxHeight": 16,
+    "MaxPicksPerFloor": 0,
+    "DeathLossFraction": 0.5,
+    "AdRecoveryUnlimited": true,
+    "AdRecoveryPerDay": 0
+}

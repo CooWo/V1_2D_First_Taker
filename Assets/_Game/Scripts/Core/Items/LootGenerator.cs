@@ -8,9 +8,27 @@ using UnityEngine;
 
 namespace ShadowRPG.Core.Items
 {
+    /// <summary>드랍 위치 정보: 층이 깊을수록 희귀도↑(ACT별 상한), ACT가 높을수록 아이템 레벨·옵션 줄 수↑.</summary>
+    public struct DropContext
+    {
+        public int Act;
+        public int Dungeon;
+        public int Floor;
+        public EnemyRank Rank;
+
+        public DropContext(int act, int dungeon, int floor, EnemyRank rank)
+        {
+            Act = act;
+            Dungeon = dungeon;
+            Floor = floor;
+            Rank = rank;
+        }
+    }
+
     public interface ILootGenerator
     {
         Item Generate(int level, EnemyRank rank);
+        Item Generate(DropContext context);
         Item Create(EquipSlot slot, ItemRarity rarity, int level, string skillCode = null);
     }
 
@@ -19,6 +37,8 @@ namespace ShadowRPG.Core.Items
     /// </summary>
     public sealed class LootGenerator : ILootGenerator
     {
+        readonly Tuning.DropTuning _drop;
+        int _act;
         readonly struct AffixRange
         {
             public readonly float Min;
@@ -38,6 +58,17 @@ namespace ShadowRPG.Core.Items
             { StatType.Strength, new AffixRange(4, 8, 1.2f) },
             { StatType.Dexterity, new AffixRange(4, 8, 1.2f) },
             { StatType.Intelligence, new AffixRange(4, 8, 1.2f) },
+            { StatType.WeaponDamage, new AffixRange(2, 5, 0.6f) },
+            { StatType.Armor, new AffixRange(10, 25, 3f) },
+            { StatType.AreaPct, new AffixRange(6, 12, 0.05f) },
+            { StatType.EvasionPct, new AffixRange(3, 6, 0.04f) },
+            { StatType.BlockChancePct, new AffixRange(3, 6, 0.04f) },
+            { StatType.ExtraProjectiles, new AffixRange(1, 1, 0f) },
+            { StatType.ExtraChains, new AffixRange(1, 1, 0f) },
+            { StatType.LifeRegen, new AffixRange(1, 3, 0.3f) },
+            { StatType.ResourceRegen, new AffixRange(1, 2, 0.1f) },
+            { StatType.ExperiencePct, new AffixRange(4, 8, 0.05f) },
+            { StatType.PetPowerPct, new AffixRange(6, 12, 0.1f) },
             { StatType.MaxLife, new AffixRange(15, 30, 6f) },
             { StatType.LifePct, new AffixRange(4, 8, 0.3f) },
             { StatType.MaxResource, new AffixRange(8, 15, 2f) },
@@ -124,6 +155,54 @@ namespace ShadowRPG.Core.Items
             _supports = supports;
             _sets = sets;
             _random = random;
+        }
+
+        public LootGenerator(ISkillCatalog skills, ISupportCatalog supports, ISetCatalog sets, IRandom random, Tuning.DropTuning drop)
+            : this(skills, supports, sets, random) => _drop = drop;
+
+        Tuning.DropTuning Drop => _drop ?? Tuning.GameTuning.Current.Drop;
+
+        /// <summary>아이템 레벨 = (ACT−1)×25 + 던전×4 + 층÷2 (수치는 DropTuning).</summary>
+        public int ItemLevel(DropContext c) => Mathf.Max(1, c.Act * Drop.ItemLevelPerAct + (c.Dungeon + 1) * Drop.ItemLevelPerDungeon + c.Floor / Mathf.Max(1, Drop.FloorsPerItemLevel));
+
+        public Item Generate(DropContext context)
+        {
+            var slot = SlotRules.All[_random.Range(0, SlotRules.All.Length)];
+            if (slot == EquipSlot.Ring2) slot = EquipSlot.Ring1;
+            _act = context.Act;
+            try { return Create(slot, RollRarity(context, slot), ItemLevel(context)); }
+            finally { _act = 0; }
+        }
+
+        ItemRarity RollRarity(DropContext c, EquipSlot slot)
+        {
+            var bands = Drop.Bands;
+            Tuning.RarityBand band = bands[0];
+            foreach (var b in bands) if (c.Floor >= b.FromFloor) band = b;
+            float bonus = c.Rank == EnemyRank.Boss ? Drop.BossRarityBonus : c.Rank == EnemyRank.Elite ? 1.4f : 1f;
+            float normal = band.Normal / bonus, magic = band.Magic, rare = band.Rare * bonus, legendary = band.Legendary * bonus, set = SlotRules.IsSetSlot(slot) ? band.Set * bonus : 0f;
+            var cap = RarityCap(c);
+            if (cap < ItemRarity.Set) set = 0f;
+            if (cap < ItemRarity.Legendary) legendary = 0f;
+            if (cap < ItemRarity.Rare) rare = 0f;
+            if (c.Act == 0 && c.Rank == EnemyRank.Boss && _random.Chance(Drop.Act1BossLegendaryChancePct)) return ItemRarity.Legendary;
+            if (c.Rank == EnemyRank.Boss && Drop.BossGuaranteesRare) normal = magic = 0f;
+            float total = normal + magic + rare + legendary + set;
+            if (total <= 0f) return ItemRarity.Rare;
+            float roll = _random.Range(0f, total);
+            if ((roll -= set) < 0f) return ItemRarity.Set;
+            if ((roll -= legendary) < 0f) return ItemRarity.Legendary;
+            if ((roll -= rare) < 0f) return ItemRarity.Rare;
+            if ((roll -= magic) < 0f) return ItemRarity.Magic;
+            return ItemRarity.Normal;
+        }
+
+        ItemRarity RarityCap(DropContext c)
+        {
+            var caps = Drop.ActRarityCap;
+            if (caps == null || caps.Length == 0) return ItemRarity.Set;
+            var name = caps[Mathf.Clamp(c.Act, 0, caps.Length - 1)];
+            return System.Enum.TryParse(name, out ItemRarity r) ? r : ItemRarity.Set;
         }
 
         public Item Generate(int level, EnemyRank rank)
@@ -245,7 +324,7 @@ namespace ShadowRPG.Core.Items
 
             int count = AffixCount(item.Rarity, item.Slot);
             // 남은 후보에서 뽑아 제거하는 방식: 난수 구현과 무관하게 항상 끝납니다.
-            var remaining = new List<StatType>(pool);
+            var remaining = UnlockedPool(pool);
             for (int i = 0; i < count && remaining.Count > 0; i++)
             {
                 int index = _random.Range(0, remaining.Count);
@@ -261,9 +340,46 @@ namespace ShadowRPG.Core.Items
                 item.Affixes.Add(new StatModifier(StatType.BossDamagePct, 20f));
         }
 
-        static int AffixCount(ItemRarity rarity, EquipSlot slot)
+        /// <summary>
+        /// ACT별 옵션 풀: 슬롯 풀 중 지금 ACT까지 열린 옵션 + ACT 2부터 열린 옵션은 슬롯과 무관하게 추가.
+        /// 풀이 넓어질수록 원하는 조합이 나올 확률이 낮아짐 = 파밍 동기.
+        /// </summary>
+        List<StatType> UnlockedPool(StatType[] slotPool)
+        {
+            var unlocked = new HashSet<StatType>();
+            var extra = new HashSet<StatType>();
+            foreach (var entry in Drop.AffixPools)
+            {
+                if (entry.Act - 1 > _act || entry.Stats == null) continue;
+                foreach (var name in entry.Stats)
+                {
+                    if (!System.Enum.TryParse(name, out StatType stat) || !Ranges.ContainsKey(stat)) continue;
+                    unlocked.Add(stat);
+                    if (entry.Act >= 2) extra.Add(stat);
+                }
+            }
+            var result = slotPool.Where(s => unlocked.Count == 0 || unlocked.Contains(s)).ToList();
+            foreach (var s in extra) if (!result.Contains(s)) result.Add(s);
+            if (result.Count == 0) result.AddRange(slotPool);
+            return result;
+        }
+
+        int AffixCount(ItemRarity rarity, EquipSlot slot)
         {
             if (slot == EquipSlot.Relic) return rarity >= ItemRarity.Rare ? 2 : 1;
+            var rows = Drop.AffixLines;
+            if (rows != null && rows.Length > 0)
+            {
+                var row = rows[0];
+                foreach (var r in rows) if (r.Act - 1 <= _act) row = r;
+                switch (rarity)
+                {
+                    case ItemRarity.Normal: return row.Normal;
+                    case ItemRarity.Magic: return row.Magic;
+                    case ItemRarity.Rare: return row.Rare;
+                    default: return row.Legendary;
+                }
+            }
             switch (rarity)
             {
                 case ItemRarity.Magic: return 2;

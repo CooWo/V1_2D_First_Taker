@@ -16,42 +16,42 @@ namespace ShadowRPG.Tests
     public sealed class MetaRuleTests
     {
         [Test]
-        public void FloorEnemyCount_GrowsByAct_From10To100()
+        public void FloorPlan_PacksAndPower_FollowDirection()
         {
+            // 방향성 v1: 1층 무리 3팀 × 8마리, 3층마다 +1팀, 최대 7팀. 층마다 소폭, ACT 경계에서 크게 강해짐.
             var acts = ActCatalog.CreateDefault();
-            var progress = new DungeonProgress();
-            int first = acts.Plan(progress).EnemyCount;
-            int previousActMax = 0;
-            int last = 0;
+            var first = acts.Plan(new DungeonProgress());
+            Assert.AreEqual(3, first.Packs);
+            Assert.AreEqual(24, first.EnemyCount);
+            Assert.AreEqual(10, acts.FloorsPerDungeon);
+            Assert.That(acts.Acts.Count, Is.EqualTo(4));
+            foreach (var act in acts.Acts) Assert.That(act.DungeonCount, Is.InRange(4, 6));
 
-            for (int act = 0; act < acts.Acts.Count; act++)
-            {
-                int actMax = 0;
-                for (int d = 0; d < acts.DungeonsPerAct; d++)
-                for (int f = 1; f <= acts.FloorsPerDungeon; f++)
-                {
-                    var plan = acts.Plan(new DungeonProgress { ActIndex = act, DungeonIndex = d, Floor = f });
-                    Assert.That(plan.EnemyCount, Is.InRange(10, 100));
-                    actMax = Mathf.Max(actMax, plan.EnemyCount);
-                    last = plan.EnemyCount;
-                }
-                Assert.Greater(actMax, previousActMax, $"ACT {act + 1}은 이전 ACT보다 층당 몹이 많아야 함");
-                previousActMax = actMax;
-            }
-            Assert.AreEqual(10, first);
-            Assert.AreEqual(100, last);
+            var floor4 = acts.Plan(new DungeonProgress { Floor = 4 });
+            Assert.AreEqual(4, floor4.Packs);
+            Assert.Greater(floor4.Power, first.Power);
+            Assert.Less(floor4.Power, first.Power * 1.2f, "층 안 상승은 소폭");
+
+            var deep = acts.Plan(new DungeonProgress { ActIndex = 3, DungeonIndex = 5, Floor = 9 });
+            Assert.LessOrEqual(deep.Packs, 7);
+
+            var act2 = acts.Plan(new DungeonProgress { ActIndex = 1 });
+            Assert.Greater(act2.Power, first.Power * 1.5f, "ACT 경계에서 크게 뜀");
+            Assert.IsTrue(acts.Plan(new DungeonProgress { Floor = 10 }).HasBoss);
         }
 
         [Test]
-        public void DungeonProgress_ClearsFloorsThenDungeonsThenActs()
+        public void DungeonProgress_StopsAtBossFloor_NextDungeonViaUnlock()
         {
             var acts = ActCatalog.CreateDefault();
             var progress = new DungeonProgress();
-            for (int i = 0; i < acts.FloorsPerDungeon; i++) progress.Advance(acts);
-            Assert.AreEqual(1, progress.DungeonIndex);
-            Assert.AreEqual(1, progress.Floor);
-            for (int i = 0; i < acts.FloorsPerDungeon * (acts.DungeonsPerAct - 1); i++) progress.Advance(acts);
-            Assert.AreEqual(1, progress.ActIndex);
+            for (int i = 0; i < acts.FloorsPerDungeon * 2; i++) progress.Advance(acts);
+            Assert.AreEqual(0, progress.DungeonIndex, "보스 층 후에는 자동 귀환 — 다음 던전은 개방으로");
+            Assert.AreEqual(acts.FloorsPerDungeon, progress.Floor);
+
+            var start = acts.StartOf(acts.Acts[0].DungeonCount, 0);
+            Assert.AreEqual(1, start.ActIndex, "ACT 1 마지막 다음 던전 = ACT 2 첫 던전");
+            Assert.AreEqual(0, start.DungeonIndex);
         }
 
         [Test]

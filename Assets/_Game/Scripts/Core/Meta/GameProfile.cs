@@ -36,17 +36,17 @@ namespace ShadowRPG.Core.Meta
     /// </summary>
     public sealed class GameProfile
     {
-        public const int BagWidth = 8;
-        public const int BagHeight = 5;
-        public const int StashWidth = 10;
-        public const int StashHeight = 8;
-
-        public GameProfile(long gold = 0)
+        public GameProfile(long gold = 0, int stashExtraRows = 0)
         {
+            var bag = Tuning.GameTuning.Current.Bag;
             Wallet = new Wallet(gold);
-            Bag = new Inventory(BagWidth, BagHeight);
-            Stash = new Inventory(StashWidth, StashHeight);
+            Bag = new Inventory(bag.BagWidth, bag.BagHeight);
+            Stash = new Inventory(bag.StashWidth, Math.Min(bag.StashMaxHeight, bag.StashHeight + stashExtraRows));
+            State.StashExtraRows = stashExtraRows;
         }
+
+        /// <summary>방향성 v1 성장 상태 (스탯·단련·템포·세팅 슬롯·퀘스트·출석·옵션).</summary>
+        public ProgressionState State = new ProgressionState();
 
         public Wallet Wallet { get; }
         /// <summary>던전에 들고 들어가는 가방 (죽으면 절반 손실).</summary>

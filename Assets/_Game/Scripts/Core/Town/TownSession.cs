@@ -36,8 +36,8 @@ namespace ShadowRPG.Core.Town
         static readonly string[] Names = { "새벽그림자", "푸른안광", "잿빛기사", "밤의궁수", "심연술사", "폐지왕", "검은아지랑이", "별빛수도사", "고요한칼", "망각의등불" };
         static readonly (string visual, string title)[] Looks =
         {
-            ("knight_m", "기사"), ("wizzard_f", "마법사"), ("elf_m", "궁수"), ("lizard_m", "수도사"),
-            ("knight_f", "기사"), ("wizzard_m", "마법사"), ("elf_f", "궁수"), ("dwarf_m", "기사")
+            ("knight/sword_shield", "기사"), ("mage/staff", "마법사"), ("archer/crossbow", "궁수"), ("monk/fists", "수도사"),
+            ("knight/2h_sword", "기사"), ("mage/wand_book", "마법사"), ("archer/daggers", "궁수"), ("monk/axes", "수도사")
         };
 
         public IReadOnlyList<TownResident> CreateResidents(GameMeta meta, FloorLayout town, IRandom random)

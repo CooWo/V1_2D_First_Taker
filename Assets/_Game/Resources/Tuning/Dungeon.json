@@ -1,0 +1,87 @@
+{
+    "FloorsPerDungeon": 10,
+    "Acts": [
+        {
+            "Name": "버려진 지하묘지",
+            "Dungeons": [
+                "무너진 입구",
+                "납골 회랑",
+                "속삭이는 성소",
+                "검은 제단"
+            ],
+            "EnemyIds": [
+                "skeleton_minion",
+                "skeleton_rogue"
+            ]
+        },
+        {
+            "Name": "잿빛 감옥",
+            "Dungeons": [
+                "녹슨 문",
+                "고문실",
+                "죄수의 길",
+                "간수장의 방",
+                "잿빛 심장"
+            ],
+            "EnemyIds": [
+                "skeleton_minion",
+                "skeleton_rogue",
+                "skeleton_mage"
+            ]
+        },
+        {
+            "Name": "얼어붙은 심연",
+            "Dungeons": [
+                "서리 계단",
+                "빙결 회랑",
+                "푸른 무덤",
+                "침묵의 홀",
+                "얼음 왕관"
+            ],
+            "EnemyIds": [
+                "skeleton_minion",
+                "skeleton_mage",
+                "skeleton_warrior"
+            ]
+        },
+        {
+            "Name": "불타는 성채",
+            "Dungeons": [
+                "재의 성문",
+                "용암 대전",
+                "화염 감옥",
+                "타는 회랑",
+                "불꽃 왕좌",
+                "종말의 탑"
+            ],
+            "EnemyIds": [
+                "skeleton_minion",
+                "skeleton_rogue",
+                "skeleton_mage",
+                "skeleton_warrior"
+            ]
+        }
+    ],
+    "StartPacks": 3,
+    "MobsPerPack": 8,
+    "FloorsPerExtraPack": 3,
+    "ExtraPacksPerDungeon": 1,
+    "MaxPacks": 7,
+    "PackSpread": 2.4,
+    "EliteFromFloor": 3,
+    "ElitesPerFloor": 1,
+    "ExtraElitesPerTwoActs": 1,
+    "LevelPerFloor": 0.6,
+    "AutoContinueSeconds": 5.0,
+    "ClearSlowMoSeconds": 0.6,
+    "SlowMoScale": 0.25,
+    "FloorClearGoldPerLevel": 12.0,
+    "BossClearGoldMultiplier": 3.0,
+    "RoomCountMin": 5,
+    "RoomCountMax": 8,
+    "RoomSizeMin": 7,
+    "RoomSizeMax": 11,
+    "CorridorWidth": 2,
+    "CorridorLengthMin": 3,
+    "SafeRadiusFromStart": 7.0
+}

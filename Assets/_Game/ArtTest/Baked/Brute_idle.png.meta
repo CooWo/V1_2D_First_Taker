@@ -1,0 +1,3460 @@
+fileFormatVersion: 2
+guid: 46b59e90f103e88448cc5b8c42bebb50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7938754396763136201
+    second: Brute_idle_0
+  - first:
+      213: 3737246731260230805
+    second: Brute_idle_1
+  - first:
+      213: 728317044843887605
+    second: Brute_idle_2
+  - first:
+      213: -4923855966922176619
+    second: Brute_idle_3
+  - first:
+      213: 1244069171398468590
+    second: Brute_idle_4
+  - first:
+      213: -8091898307085330789
+    second: Brute_idle_5
+  - first:
+      213: -623135535811271896
+    second: Brute_idle_6
+  - first:
+      213: 5124701425060768521
+    second: Brute_idle_7
+  - first:
+      213: -8964051666230334313
+    second: Brute_idle_8
+  - first:
+      213: 6721036634204504324
+    second: Brute_idle_9
+  - first:
+      213: -1993286843011671348
+    second: Brute_idle_10
+  - first:
+      213: -5280885595914257002
+    second: Brute_idle_11
+  - first:
+      213: -4932792911565010287
+    second: Brute_idle_12
+  - first:
+      213: -7750563914484273781
+    second: Brute_idle_13
+  - first:
+      213: 7741052034771914048
+    second: Brute_idle_14
+  - first:
+      213: -440368008072833720
+    second: Brute_idle_15
+  - first:
+      213: -2296493853426520074
+    second: Brute_idle_16
+  - first:
+      213: -87540325734735046
+    second: Brute_idle_17
+  - first:
+      213: -4704800259637057345
+    second: Brute_idle_18
+  - first:
+      213: -6906948114552546597
+    second: Brute_idle_19
+  - first:
+      213: -6100180167968718515
+    second: Brute_idle_20
+  - first:
+      213: -8839977242810363436
+    second: Brute_idle_21
+  - first:
+      213: 8748317714634831564
+    second: Brute_idle_22
+  - first:
+      213: -1184620934155336273
+    second: Brute_idle_23
+  - first:
+      213: 6254141043675186468
+    second: Brute_idle_24
+  - first:
+      213: -7789876608012593341
+    second: Brute_idle_25
+  - first:
+      213: -8795498353844488480
+    second: Brute_idle_26
+  - first:
+      213: 6889372895483482723
+    second: Brute_idle_27
+  - first:
+      213: -566954183124480772
+    second: Brute_idle_28
+  - first:
+      213: 826030538112728704
+    second: Brute_idle_29
+  - first:
+      213: 3282424164472505746
+    second: Brute_idle_30
+  - first:
+      213: -4510464998578313538
+    second: Brute_idle_31
+  - first:
+      213: -8242151294024393723
+    second: Brute_idle_32
+  - first:
+      213: 5490173119952741407
+    second: Brute_idle_33
+  - first:
+      213: 8746992376607764059
+    second: Brute_idle_34
+  - first:
+      213: -5131856593060690649
+    second: Brute_idle_35
+  - first:
+      213: 4581684361965057000
+    second: Brute_idle_36
+  - first:
+      213: -1892070111895336473
+    second: Brute_idle_37
+  - first:
+      213: 6753068751933006923
+    second: Brute_idle_38
+  - first:
+      213: 5290369049218778304
+    second: Brute_idle_39
+  - first:
+      213: 6317482083222321599
+    second: Brute_idle_40
+  - first:
+      213: 586698346709944067
+    second: Brute_idle_41
+  - first:
+      213: 6101014776786472509
+    second: Brute_idle_42
+  - first:
+      213: 1509786008011634665
+    second: Brute_idle_43
+  - first:
+      213: -562842013995267352
+    second: Brute_idle_44
+  - first:
+      213: -1083477487985760827
+    second: Brute_idle_45
+  - first:
+      213: 8776135368725211968
+    second: Brute_idle_46
+  - first:
+      213: -2736062581879920100
+    second: Brute_idle_47
+  - first:
+      213: -5840632113142802994
+    second: Brute_idle_48
+  - first:
+      213: -3997842345095469354
+    second: Brute_idle_49
+  - first:
+      213: -3335438106228765254
+    second: Brute_idle_50
+  - first:
+      213: 1733400832570848891
+    second: Brute_idle_51
+  - first:
+      213: 2148423302401072497
+    second: Brute_idle_52
+  - first:
+      213: 3653565606912931398
+    second: Brute_idle_53
+  - first:
+      213: -3441482604397222809
+    second: Brute_idle_54
+  - first:
+      213: 7622855502817702099
+    second: Brute_idle_55
+  - first:
+      213: -5995403972416538693
+    second: Brute_idle_56
+  - first:
+      213: -4647220275684774031
+    second: Brute_idle_57
+  - first:
+      213: 3872833479419068704
+    second: Brute_idle_58
+  - first:
+      213: 6057644649165132281
+    second: Brute_idle_59
+  - first:
+      213: 5042507995857185874
+    second: Brute_idle_60
+  - first:
+      213: 6763167817562711460
+    second: Brute_idle_61
+  - first:
+      213: 7260891954702968082
+    second: Brute_idle_62
+  - first:
+      213: -9155244291340034998
+    second: Brute_idle_63
+  - first:
+      213: 134937958218474173
+    second: Brute_idle_64
+  - first:
+      213: 4789388298262845770
+    second: Brute_idle_65
+  - first:
+      213: 9071478909890659791
+    second: Brute_idle_66
+  - first:
+      213: 8721027503260954275
+    second: Brute_idle_67
+  - first:
+      213: -1272816987980499573
+    second: Brute_idle_68
+  - first:
+      213: -6057928183425290040
+    second: Brute_idle_69
+  - first:
+      213: 7225061299541063394
+    second: Brute_idle_70
+  - first:
+      213: 1998136576614247414
+    second: Brute_idle_71
+  - first:
+      213: -3889120632344516922
+    second: Brute_idle_72
+  - first:
+      213: -6663144463742940375
+    second: Brute_idle_73
+  - first:
+      213: -6424423560996724855
+    second: Brute_idle_74
+  - first:
+      213: -108903248450483721
+    second: Brute_idle_75
+  - first:
+      213: -2902836907116199168
+    second: Brute_idle_76
+  - first:
+      213: -7660270613025740054
+    second: Brute_idle_77
+  - first:
+      213: -4243851726137433309
+    second: Brute_idle_78
+  - first:
+      213: -6764705638077752185
+    second: Brute_idle_79
+  - first:
+      213: -1867243082849293075
+    second: Brute_idle_80
+  - first:
+      213: 6705042321108853760
+    second: Brute_idle_81
+  - first:
+      213: -4492117242750867518
+    second: Brute_idle_82
+  - first:
+      213: 2480627890848532250
+    second: Brute_idle_83
+  - first:
+      213: 5929672558284187828
+    second: Brute_idle_84
+  - first:
+      213: 4741157845536017238
+    second: Brute_idle_85
+  - first:
+      213: -4697704218714095931
+    second: Brute_idle_86
+  - first:
+      213: -5840824587606547651
+    second: Brute_idle_87
+  - first:
+      213: -7723105191189256639
+    second: Brute_idle_88
+  - first:
+      213: -8892239763949591040
+    second: Brute_idle_89
+  - first:
+      213: -6616418649471056139
+    second: Brute_idle_90
+  - first:
+      213: -5672137556288000334
+    second: Brute_idle_91
+  - first:
+      213: 3011280468090885602
+    second: Brute_idle_92
+  - first:
+      213: 6069888300866554074
+    second: Brute_idle_93
+  - first:
+      213: -8358691913285246612
+    second: Brute_idle_94
+  - first:
+      213: -2943414539444809247
+    second: Brute_idle_95
+  - first:
+      213: -9026823756830154324
+    second: Brute_idle_96
+  - first:
+      213: 5473946361170899930
+    second: Brute_idle_97
+  - first:
+      213: -6111983047764331659
+    second: Brute_idle_98
+  - first:
+      213: -8098884861494232534
+    second: Brute_idle_99
+  - first:
+      213: -735765738055504712
+    second: Brute_idle_100
+  - first:
+      213: -1294691811655547509
+    second: Brute_idle_101
+  - first:
+      213: -5174251985264143419
+    second: Brute_idle_102
+  - first:
+      213: -7432682912022303063
+    second: Brute_idle_103
+  - first:
+      213: 7752351221793259225
+    second: Brute_idle_104
+  - first:
+      213: -8105327857084380729
+    second: Brute_idle_105
+  - first:
+      213: -7578425502978195772
+    second: Brute_idle_106
+  - first:
+      213: 4141342303186102159
+    second: Brute_idle_107
+  - first:
+      213: -6468303363633384785
+    second: Brute_idle_108
+  - first:
+      213: -1293277877190680809
+    second: Brute_idle_109
+  - first:
+      213: 5320632849136499917
+    second: Brute_idle_110
+  - first:
+      213: 5954605827385485492
+    second: Brute_idle_111
+  - first:
+      213: -612154669801591160
+    second: Brute_idle_112
+  - first:
+      213: 2106372790000190457
+    second: Brute_idle_113
+  - first:
+      213: -3431196885714693981
+    second: Brute_idle_114
+  - first:
+      213: -3773714178969978357
+    second: Brute_idle_115
+  - first:
+      213: -4091414729977088508
+    second: Brute_idle_116
+  - first:
+      213: 8462683660813026166
+    second: Brute_idle_117
+  - first:
+      213: -7194453164243076831
+    second: Brute_idle_118
+  - first:
+      213: 7595651700187914303
+    second: Brute_idle_119
+  - first:
+      213: 8501068122447888565
+    second: Brute_idle_120
+  - first:
+      213: -2264983645212627004
+    second: Brute_idle_121
+  - first:
+      213: 1628287798951744556
+    second: Brute_idle_122
+  - first:
+      213: 7854781996681174199
+    second: Brute_idle_123
+  - first:
+      213: 8184218765082736585
+    second: Brute_idle_124
+  - first:
+      213: 8527937017252487168
+    second: Brute_idle_125
+  - first:
+      213: -1274306098522684081
+    second: Brute_idle_126
+  - first:
+      213: 7242286882267996990
+    second: Brute_idle_127
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brute_idle_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1838
+        width: 115
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c02322001f1c2e60800000000000000
+      internalID: 7938754396763136201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1838
+        width: 115
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c71cee91e5dd330800000000000000
+      internalID: 3737246731260230805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_2
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1838
+        width: 116
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb38c55e708b1a00800000000000000
+      internalID: 728317044843887605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1838
+        width: 117
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5978a66f513faabb0800000000000000
+      internalID: -4923855966922176619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1838
+        width: 118
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3683de152d34110800000000000000
+      internalID: 1244069171398468590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1838
+        width: 118
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b961897cc5dc3bf80800000000000000
+      internalID: -8091898307085330789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1838
+        width: 120
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823eb0d188d2a57f0800000000000000
+      internalID: -623135535811271896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1838
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b6fa45bc89e1740800000000000000
+      internalID: 5124701425060768521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_8
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 1838
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ca71ec08a499380800000000000000
+      internalID: -8964051666230334313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_9
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 1838
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4018520953be54d50800000000000000
+      internalID: 6721036634204504324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_10
+      rect:
+        serializedVersion: 2
+        x: 2643
+        y: 1838
+        width: 120
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca54da5d2c6654e0800000000000000
+      internalID: -1993286843011671348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_11
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 1838
+        width: 119
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dbd04a78686b6b0800000000000000
+      internalID: -5280885595914257002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_12
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 1838
+        width: 118
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a4a936bf23b8bb0800000000000000
+      internalID: -4932792911565010287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_13
+      rect:
+        serializedVersion: 2
+        x: 3412
+        y: 1838
+        width: 117
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d243c1f27707490800000000000000
+      internalID: -7750563914484273781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_14
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 1838
+        width: 116
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d0560dfcdbd6b60800000000000000
+      internalID: 7741052034771914048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_15
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 1838
+        width: 115
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8455f5c31af73e9f0800000000000000
+      internalID: -440368008072833720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_16
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1585
+        width: 93
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffe4a5f1073120e0800000000000000
+      internalID: -2296493853426520074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_17
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1585
+        width: 93
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a332f0d998ef8cef0800000000000000
+      internalID: -87540325734735046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_18
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1585
+        width: 93
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8ea29471135beb0800000000000000
+      internalID: -4704800259637057345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_19
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1585
+        width: 93
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda9a0ec8479520a0800000000000000
+      internalID: -6906948114552546597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_20
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1585
+        width: 93
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d418756157ec75ba0800000000000000
+      internalID: -6100180167968718515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_21
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1585
+        width: 93
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d150cba887125580800000000000000
+      internalID: -8839977242810363436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 1585
+        width: 93
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6f0136c94486970800000000000000
+      internalID: 8748317714634831564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_23
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1585
+        width: 92
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa50e2a69816f8fe0800000000000000
+      internalID: -1184620934155336273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_24
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1585
+        width: 92
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4254373b42c2bc650800000000000000
+      internalID: 6254141043675186468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_25
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1585
+        width: 92
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347d84f5f7cc4e390800000000000000
+      internalID: -7789876608012593341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_26
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 1585
+        width: 92
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6f09409dc10f580800000000000000
+      internalID: -8795498353844488480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_27
+      rect:
+        serializedVersion: 2
+        x: 2903
+        y: 1585
+        width: 93
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3625f70a528fb9f50800000000000000
+      internalID: 6889372895483482723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_28
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1585
+        width: 93
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc81fe9c26c128f0800000000000000
+      internalID: -566954183124480772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_29
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 1585
+        width: 93
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e75ddd566a67b00800000000000000
+      internalID: 826030538112728704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_30
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 1585
+        width: 93
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295ca85f2638d8d20800000000000000
+      internalID: 3282424164472505746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_31
+      rect:
+        serializedVersion: 2
+        x: 3927
+        y: 1585
+        width: 93
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb628e33bfb9761c0800000000000000
+      internalID: -4510464998578313538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_32
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1336
+        width: 111
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c56ae111ffd9d80800000000000000
+      internalID: -8242151294024393723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_33
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1336
+        width: 111
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f146e2a4d53013c40800000000000000
+      internalID: 5490173119952741407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_34
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1336
+        width: 111
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e61c4193f836970800000000000000
+      internalID: 8746992376607764059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_35
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1336
+        width: 111
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7250f5c4e9bf7c8b0800000000000000
+      internalID: -5131856593060690649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_36
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1336
+        width: 112
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3b3e307a9659f30800000000000000
+      internalID: 4581684361965057000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_37
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1336
+        width: 111
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9485202440eb5e0800000000000000
+      internalID: -1892070111895336473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_38
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1336
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44e1c62048b7bd50800000000000000
+      internalID: 6753068751933006923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_39
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 1336
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c40865ee9a2b6940800000000000000
+      internalID: 5290369049218778304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_40
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 1336
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb97c55bb743ca750800000000000000
+      internalID: 6317482083222321599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_41
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1336
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30784f1b90f542800800000000000000
+      internalID: 586698346709944067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_42
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1336
+        width: 112
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e44cb6d982ba450800000000000000
+      internalID: 6101014776786472509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_43
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 1336
+        width: 111
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e773660066d3f410800000000000000
+      internalID: 1509786008011634665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_44
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 1336
+        width: 112
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea852b9b226038f0800000000000000
+      internalID: -562842013995267352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_45
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 1336
+        width: 111
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5e97617f6b6f0f0800000000000000
+      internalID: -1083477487985760827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_46
+      rect:
+        serializedVersion: 2
+        x: 3652
+        y: 1336
+        width: 111
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bab91be981bc970800000000000000
+      internalID: 8776135368725211968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_47
+      rect:
+        serializedVersion: 2
+        x: 3908
+        y: 1336
+        width: 111
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a2fcbf39d870ad0800000000000000
+      internalID: -2736062581879920100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_48
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1073
+        width: 128
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec55260c908e1fea0800000000000000
+      internalID: -5840632113142802994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_49
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6e190919fc488c0800000000000000
+      internalID: -3997842345095469354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_50
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdceebd6b426b1d0800000000000000
+      internalID: -3335438106228765254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_51
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7670ce8fd64e0810800000000000000
+      internalID: 1733400832570848891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_52
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1073
+        width: 129
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d99c65c9bb0dd10800000000000000
+      internalID: 2148423302401072497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_53
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1073
+        width: 129
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64631a3ef8214b230800000000000000
+      internalID: 3653565606912931398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_54
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1073
+        width: 129
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764a7381ec56d30d0800000000000000
+      internalID: -3441482604397222809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_55
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 1073
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0b49331b2d9c960800000000000000
+      internalID: 7622855502817702099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_56
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 1073
+        width: 130
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb775232adb0ccca0800000000000000
+      internalID: -5995403972416538693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_57
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 1073
+        width: 130
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fe0d208c1c18fb0800000000000000
+      internalID: -4647220275684774031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_58
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 1073
+        width: 129
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0218307c7811fb530800000000000000
+      internalID: 3872833479419068704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_59
+      rect:
+        serializedVersion: 2
+        x: 2851
+        y: 1073
+        width: 129
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f19801b6b3111450800000000000000
+      internalID: 6057644649165132281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_60
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c622e4e469af540800000000000000
+      internalID: 5042507995857185874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_61
+      rect:
+        serializedVersion: 2
+        x: 3364
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5ed2a1c499bdd50800000000000000
+      internalID: 6763167817562711460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_62
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215ef8053ced3c460800000000000000
+      internalID: 7260891954702968082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_63
+      rect:
+        serializedVersion: 2
+        x: 3876
+        y: 1073
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c11c6d2d902f080800000000000000
+      internalID: -9155244291340034998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_64
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 813
+        width: 115
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2245aab556fd100800000000000000
+      internalID: 134937958218474173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_65
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 813
+        width: 115
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a499e513843577240800000000000000
+      internalID: 4789388298262845770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_66
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 813
+        width: 116
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50b7b710e54ed70800000000000000
+      internalID: 9071478909890659791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_67
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 813
+        width: 117
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aee748ee40570970800000000000000
+      internalID: 8721027503260954275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_68
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 813
+        width: 118
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85f65f61bb065ee0800000000000000
+      internalID: -1272816987980499573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_69
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 813
+        width: 118
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0bb18d96aedeba0800000000000000
+      internalID: -6057928183425290040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_70
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 813
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6319fc8f2944460800000000000000
+      internalID: 7225061299541063394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_71
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 813
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbaecd31aecabb10800000000000000
+      internalID: 1998136576614247414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_72
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 813
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6667ce361170ac0800000000000000
+      internalID: -3889120632344516922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_73
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 813
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bcd7fb961c783a0800000000000000
+      internalID: -6663144463742940375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_74
+      rect:
+        serializedVersion: 2
+        x: 2613
+        y: 813
+        width: 120
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fd3203fccd7d6a0800000000000000
+      internalID: -6424423560996724855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_75
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 813
+        width: 119
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9093192191d7ef0800000000000000
+      internalID: -108903248450483721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_76
+      rect:
+        serializedVersion: 2
+        x: 3126
+        y: 813
+        width: 118
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003027e763d07b7d0800000000000000
+      internalID: -2902836907116199168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_77
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 813
+        width: 117
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeaac3b967041b590800000000000000
+      internalID: -7660270613025740054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_78
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 813
+        width: 117
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3236628075fca15c0800000000000000
+      internalID: -4243851726137433309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_79
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 813
+        width: 115
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c1b482010fe12a0800000000000000
+      internalID: -6764705638077752185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_80
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec66792f483616e0800000000000000
+      internalID: -1867243082849293075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_81
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00467a957781d0d50800000000000000
+      internalID: 6705042321108853760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_82
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c76d600b2bc8a1c0800000000000000
+      internalID: -4492117242750867518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_83
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1704fd7ce5fc6220800000000000000
+      internalID: 2480627890848532250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_84
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b829e666cd6a4250800000000000000
+      internalID: 5929672558284187828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_85
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 555
+        width: 93
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b0b37d0f9fbc140800000000000000
+      internalID: 4741157845536017238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_86
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 555
+        width: 93
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce31bf07e66eceb0800000000000000
+      internalID: -4697704218714095931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_87
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 555
+        width: 92
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33285ccbf831fea0800000000000000
+      internalID: -5840824587606547651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_88
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 555
+        width: 92
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14660345fb402d490800000000000000
+      internalID: -7723105191189256639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_89
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 555
+        width: 92
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0066e2c3c0b689480800000000000000
+      internalID: -8892239763949591040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_90
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 555
+        width: 93
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f602092b42cd24a0800000000000000
+      internalID: -6616418649471056139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_91
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 555
+        width: 93
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be2d40e1f48841b0800000000000000
+      internalID: -5672137556288000334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_92
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 555
+        width: 93
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e511ab91a73ac920800000000000000
+      internalID: 3011280468090885602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_93
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8437fff339c3450800000000000000
+      internalID: 6069888300866554074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_94
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61e3b9bdf5fffb80800000000000000
+      internalID: -8358691913285246612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_95
+      rect:
+        serializedVersion: 2
+        x: 3916
+        y: 555
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e11cad3214e627d0800000000000000
+      internalID: -2943414539444809247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_96
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1e41c8e974ab280800000000000000
+      internalID: -9026823756830154324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_97
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad33229963d57fb40800000000000000
+      internalID: 5473946361170899930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_98
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5733cccfccfdd2ba0800000000000000
+      internalID: -6111983047764331659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_99
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2af8d1d02bfa9f80800000000000000
+      internalID: -8098884861494232534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_100
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc6c41a5f80ac5f0800000000000000
+      internalID: -735765738055504712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_101
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b850aa828a4580ee0800000000000000
+      internalID: -1294691811655547509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_102
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c398f7db3d5138b0800000000000000
+      internalID: -5174251985264143419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_103
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae6bc4854ec9d890800000000000000
+      internalID: -7432682912022303063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_104
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de7d0dcc52e59b60800000000000000
+      internalID: 7752351221793259225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_105
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c948620247148f80800000000000000
+      internalID: -8105327857084380729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_106
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce3932482604d690800000000000000
+      internalID: -7578425502978195772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_107
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 302
+        width: 112
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87a4ba02e0097930800000000000000
+      internalID: 4141342303186102159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_108
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2fa2f7c58fb36a0800000000000000
+      internalID: -6468303363633384785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_109
+      rect:
+        serializedVersion: 2
+        x: 3405
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f9d2e6f9a5d0ee0800000000000000
+      internalID: -1293277877190680809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_110
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc3e09e26fa6d940800000000000000
+      internalID: 5320632849136499917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_111
+      rect:
+        serializedVersion: 2
+        x: 3917
+        y: 302
+        width: 111
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b868ce737203a250800000000000000
+      internalID: 5954605827385485492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_112
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 43
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e21e632903187f0800000000000000
+      internalID: -612154669801591160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_113
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 43
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3828874e65b3d10800000000000000
+      internalID: 2106372790000190457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_114
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 43
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a09c889c90f160d0800000000000000
+      internalID: -3431196885714693981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_115
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 43
+        width: 129
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ab3aeb2f211abc0800000000000000
+      internalID: -3773714178969978357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_116
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 43
+        width: 129
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4063ae6faff5837c0800000000000000
+      internalID: -4091414729977088508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_117
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 43
+        width: 129
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6734349c3fd717570800000000000000
+      internalID: 8462683660813026166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_118
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 43
+        width: 130
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1293b1807fa282c90800000000000000
+      internalID: -7194453164243076831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_119
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 43
+        width: 130
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30ea435afc296960800000000000000
+      internalID: 7595651700187914303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_120
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 43
+        width: 130
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b047e1ba6cd9f570800000000000000
+      internalID: 8501068122447888565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_121
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 43
+        width: 130
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf280500692190e0800000000000000
+      internalID: -2264983645212627004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_122
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 43
+        width: 130
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c241f984027d89610800000000000000
+      internalID: 1628287798951744556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_123
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 43
+        width: 129
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc905c0c9ac10d60800000000000000
+      internalID: 7854781996681174199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_124
+      rect:
+        serializedVersion: 2
+        x: 3164
+        y: 43
+        width: 129
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7b7d0ea9f249170800000000000000
+      internalID: 8184218765082736585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_125
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 43
+        width: 129
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0002d34c881595670800000000000000
+      internalID: 8527937017252487168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_126
+      rect:
+        serializedVersion: 2
+        x: 3676
+        y: 43
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45017eda51c05ee0800000000000000
+      internalID: -1274306098522684081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brute_idle_127
+      rect:
+        serializedVersion: 2
+        x: 3932
+        y: 43
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e332e035c85c18460800000000000000
+      internalID: 7242286882267996990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brute_idle_0: 7938754396763136201
+      Brute_idle_1: 3737246731260230805
+      Brute_idle_10: -1993286843011671348
+      Brute_idle_100: -735765738055504712
+      Brute_idle_101: -1294691811655547509
+      Brute_idle_102: -5174251985264143419
+      Brute_idle_103: -7432682912022303063
+      Brute_idle_104: 7752351221793259225
+      Brute_idle_105: -8105327857084380729
+      Brute_idle_106: -7578425502978195772
+      Brute_idle_107: 4141342303186102159
+      Brute_idle_108: -6468303363633384785
+      Brute_idle_109: -1293277877190680809
+      Brute_idle_11: -5280885595914257002
+      Brute_idle_110: 5320632849136499917
+      Brute_idle_111: 5954605827385485492
+      Brute_idle_112: -612154669801591160
+      Brute_idle_113: 2106372790000190457
+      Brute_idle_114: -3431196885714693981
+      Brute_idle_115: -3773714178969978357
+      Brute_idle_116: -4091414729977088508
+      Brute_idle_117: 8462683660813026166
+      Brute_idle_118: -7194453164243076831
+      Brute_idle_119: 7595651700187914303
+      Brute_idle_12: -4932792911565010287
+      Brute_idle_120: 8501068122447888565
+      Brute_idle_121: -2264983645212627004
+      Brute_idle_122: 1628287798951744556
+      Brute_idle_123: 7854781996681174199
+      Brute_idle_124: 8184218765082736585
+      Brute_idle_125: 8527937017252487168
+      Brute_idle_126: -1274306098522684081
+      Brute_idle_127: 7242286882267996990
+      Brute_idle_13: -7750563914484273781
+      Brute_idle_14: 7741052034771914048
+      Brute_idle_15: -440368008072833720
+      Brute_idle_16: -2296493853426520074
+      Brute_idle_17: -87540325734735046
+      Brute_idle_18: -4704800259637057345
+      Brute_idle_19: -6906948114552546597
+      Brute_idle_2: 728317044843887605
+      Brute_idle_20: -6100180167968718515
+      Brute_idle_21: -8839977242810363436
+      Brute_idle_22: 8748317714634831564
+      Brute_idle_23: -1184620934155336273
+      Brute_idle_24: 6254141043675186468
+      Brute_idle_25: -7789876608012593341
+      Brute_idle_26: -8795498353844488480
+      Brute_idle_27: 6889372895483482723
+      Brute_idle_28: -566954183124480772
+      Brute_idle_29: 826030538112728704
+      Brute_idle_3: -4923855966922176619
+      Brute_idle_30: 3282424164472505746
+      Brute_idle_31: -4510464998578313538
+      Brute_idle_32: -8242151294024393723
+      Brute_idle_33: 5490173119952741407
+      Brute_idle_34: 8746992376607764059
+      Brute_idle_35: -5131856593060690649
+      Brute_idle_36: 4581684361965057000
+      Brute_idle_37: -1892070111895336473
+      Brute_idle_38: 6753068751933006923
+      Brute_idle_39: 5290369049218778304
+      Brute_idle_4: 1244069171398468590
+      Brute_idle_40: 6317482083222321599
+      Brute_idle_41: 586698346709944067
+      Brute_idle_42: 6101014776786472509
+      Brute_idle_43: 1509786008011634665
+      Brute_idle_44: -562842013995267352
+      Brute_idle_45: -1083477487985760827
+      Brute_idle_46: 8776135368725211968
+      Brute_idle_47: -2736062581879920100
+      Brute_idle_48: -5840632113142802994
+      Brute_idle_49: -3997842345095469354
+      Brute_idle_5: -8091898307085330789
+      Brute_idle_50: -3335438106228765254
+      Brute_idle_51: 1733400832570848891
+      Brute_idle_52: 2148423302401072497
+      Brute_idle_53: 3653565606912931398
+      Brute_idle_54: -3441482604397222809
+      Brute_idle_55: 7622855502817702099
+      Brute_idle_56: -5995403972416538693
+      Brute_idle_57: -4647220275684774031
+      Brute_idle_58: 3872833479419068704
+      Brute_idle_59: 6057644649165132281
+      Brute_idle_6: -623135535811271896
+      Brute_idle_60: 5042507995857185874
+      Brute_idle_61: 6763167817562711460
+      Brute_idle_62: 7260891954702968082
+      Brute_idle_63: -9155244291340034998
+      Brute_idle_64: 134937958218474173
+      Brute_idle_65: 4789388298262845770
+      Brute_idle_66: 9071478909890659791
+      Brute_idle_67: 8721027503260954275
+      Brute_idle_68: -1272816987980499573
+      Brute_idle_69: -6057928183425290040
+      Brute_idle_7: 5124701425060768521
+      Brute_idle_70: 7225061299541063394
+      Brute_idle_71: 1998136576614247414
+      Brute_idle_72: -3889120632344516922
+      Brute_idle_73: -6663144463742940375
+      Brute_idle_74: -6424423560996724855
+      Brute_idle_75: -108903248450483721
+      Brute_idle_76: -2902836907116199168
+      Brute_idle_77: -7660270613025740054
+      Brute_idle_78: -4243851726137433309
+      Brute_idle_79: -6764705638077752185
+      Brute_idle_8: -8964051666230334313
+      Brute_idle_80: -1867243082849293075
+      Brute_idle_81: 6705042321108853760
+      Brute_idle_82: -4492117242750867518
+      Brute_idle_83: 2480627890848532250
+      Brute_idle_84: 5929672558284187828
+      Brute_idle_85: 4741157845536017238
+      Brute_idle_86: -4697704218714095931
+      Brute_idle_87: -5840824587606547651
+      Brute_idle_88: -7723105191189256639
+      Brute_idle_89: -8892239763949591040
+      Brute_idle_9: 6721036634204504324
+      Brute_idle_90: -6616418649471056139
+      Brute_idle_91: -5672137556288000334
+      Brute_idle_92: 3011280468090885602
+      Brute_idle_93: 6069888300866554074
+      Brute_idle_94: -8358691913285246612
+      Brute_idle_95: -2943414539444809247
+      Brute_idle_96: -9026823756830154324
+      Brute_idle_97: 5473946361170899930
+      Brute_idle_98: -6111983047764331659
+      Brute_idle_99: -8098884861494232534
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

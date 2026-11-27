@@ -19,6 +19,10 @@ namespace ShadowRPG.Runtime.Presentation
 
         public void Initialize(IFloatingText text) => _text = text;
 
+        static Art.FxCatalog F => Art.FxCatalog.Load() ?? ScriptableObject.CreateInstance<Art.FxCatalog>();
+
+        static Sprite Fx(Sprite[] list, Sprite fallback) => Art.FxCatalog.Pick(list, fallback);
+
         public void Play(VfxEvent e)
         {
             var color = Palette.For(e.Element);
@@ -26,21 +30,21 @@ namespace ShadowRPG.Runtime.Presentation
             switch (e.Kind)
             {
                 case VfxKind.Slash:
-                    Spawn(PixelArtFactory.Arc, color, p + Vector3.up * 0.5f, Random.Range(0f, 360f), e.Radius * 1.2f, e.Radius * 1.6f, 1f, 0f, Mathf.Max(0.12f, e.Duration));
+                    Spawn(Fx(F.slash, PixelArtFactory.Arc), color, p + Vector3.up * 0.5f, Random.Range(0f, 360f), e.Radius * 1.2f, e.Radius * 1.6f, 1f, 0f, Mathf.Max(0.12f, e.Duration));
                     break;
                 case VfxKind.Cone:
                 {
                     var dir = e.To - e.Position;
                     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    Spawn(PixelArtFactory.Arc, color, p + (Vector3)(dir.normalized * e.Radius * 0.35f), angle, e.Radius * 0.6f, e.Radius * 1.9f, 0.9f, 0f, e.Duration);
+                    Spawn(Fx(F.slash, PixelArtFactory.Arc), color, p + (Vector3)(dir.normalized * e.Radius * 0.35f), angle, e.Radius * 0.6f, e.Radius * 1.9f, 0.9f, 0f, e.Duration);
                     break;
                 }
                 case VfxKind.Nova:
-                    Spawn(PixelArtFactory.Ring, color, p, 0f, e.Radius * 0.4f, e.Radius * 2f, 1f, 0f, e.Duration);
+                    Spawn(Fx(F.ring, PixelArtFactory.Ring), color, p, 0f, e.Radius * 0.4f, e.Radius * 2f, 1f, 0f, e.Duration);
                     break;
                 case VfxKind.Explosion:
-                    Spawn(PixelArtFactory.Circle, color, p, 0f, e.Radius * 0.5f, e.Radius * 2f, 0.8f, 0f, e.Duration);
-                    Spawn(PixelArtFactory.Ring, Color.Lerp(color, Color.white, 0.4f), p, 0f, e.Radius * 0.8f, e.Radius * 2.2f, 1f, 0f, e.Duration);
+                    Spawn(Fx(F.glow, PixelArtFactory.Circle), color, p, 0f, e.Radius * 0.5f, e.Radius * 2f, 0.8f, 0f, e.Duration);
+                    Spawn(Fx(F.ring, PixelArtFactory.Ring), Color.Lerp(color, Color.white, 0.4f), p, 0f, e.Radius * 0.8f, e.Radius * 2.2f, 1f, 0f, e.Duration);
                     break;
                 case VfxKind.Beam:
                     Beam(e.Position, e.To, color, e.Duration, e.Element == DamageType.Lightning ? 3 : 1, 0.12f);
@@ -52,19 +56,19 @@ namespace ShadowRPG.Runtime.Presentation
                     Spawn(PixelArtFactory.HeroIdle[0], new Color(0.3f, 0.5f, 1f, 0.6f), p, 0f, 1f, 1f, 0.7f, 0f, Mathf.Max(0.2f, e.Duration), SortingOrders.ForY(e.Position.y) + 1);
                     break;
                 case VfxKind.Shield:
-                    Spawn(PixelArtFactory.Ring, Palette.EnergyShield, p + Vector3.up * 0.6f, 0f, e.Radius * 2.2f, e.Radius * 2.5f, 0.9f, 0f, Mathf.Min(1f, e.Duration));
+                    Spawn(Fx(F.ring, PixelArtFactory.Ring), Palette.EnergyShield, p + Vector3.up * 0.6f, 0f, e.Radius * 2.2f, e.Radius * 2.5f, 0.9f, 0f, Mathf.Min(1f, e.Duration));
                     break;
                 case VfxKind.Warcry:
-                    Spawn(PixelArtFactory.Ring, new Color(1f, 0.85f, 0.5f), p, 0f, 0.5f, e.Radius * 2f, 1f, 0f, e.Duration);
+                    Spawn(Fx(F.ring, PixelArtFactory.Ring), new Color(1f, 0.85f, 0.5f), p, 0f, 0.5f, e.Radius * 2f, 1f, 0f, e.Duration);
                     break;
                 case VfxKind.Pillar:
                     Spawn(PixelArtFactory.Square, new Color(0.08f, 0.08f, 0.14f), p + Vector3.up * 0.5f, 0f, new Vector3(0.5f, 0.2f, 1f), new Vector3(0.5f, 1.4f, 1f), 1f, 0.6f, e.Duration);
                     break;
                 case VfxKind.Meteor:
-                    Spawn(PixelArtFactory.Circle, color, p, 0f, 1.2f, 1.6f, 1f, 1f, e.Duration, SortingOrders.Vfx + 10, e.To);
+                    Spawn(Fx(F.glow, PixelArtFactory.Circle), color, p, 0f, 1.2f, 1.6f, 1f, 1f, e.Duration, SortingOrders.Vfx + 10, e.To);
                     break;
                 case VfxKind.Mark:
-                    Spawn(PixelArtFactory.Ring, color, p, 0f, e.Radius * 2.2f, e.Radius * 1.6f, 0.4f, 0.9f, e.Duration);
+                    Spawn(Fx(F.ring, PixelArtFactory.Ring), color, p, 0f, e.Radius * 2.2f, e.Radius * 1.6f, 0.4f, 0.9f, e.Duration);
                     break;
                 case VfxKind.Text:
                     _text?.Show(p + Vector3.up * 1.2f, e.Text, Color.white, 26f, e.Duration);
@@ -95,6 +99,7 @@ namespace ShadowRPG.Runtime.Presentation
             float alphaFrom, float alphaTo, float duration, int order = SortingOrders.Vfx, Vector2? moveTo = null)
         {
             var effect = _pool.Count > 0 ? _pool.Pop() : CreateEffect();
+            effect.Renderer.sharedMaterial = sprite == PixelArtFactory.Square || sprite == PixelArtFactory.HeroIdle[0] ? effect.DefaultMaterial : Art.FxMaterials.Additive;
             effect.Play(sprite, color, position, rotation, scaleFrom, scaleTo, alphaFrom, alphaTo, duration, order, Release,
                 moveTo.HasValue ? (Vector3)moveTo.Value : (Vector3?)null);
         }
@@ -103,8 +108,10 @@ namespace ShadowRPG.Runtime.Presentation
         {
             var go = new GameObject("Vfx");
             go.transform.SetParent(transform, false);
-            go.AddComponent<SpriteRenderer>();
-            return go.AddComponent<TransientSprite>();
+            var r = go.AddComponent<SpriteRenderer>();
+            var t = go.AddComponent<TransientSprite>();
+            t.DefaultMaterial = r.sharedMaterial;
+            return t;
         }
 
         void Release(TransientSprite effect) => _pool.Push(effect);

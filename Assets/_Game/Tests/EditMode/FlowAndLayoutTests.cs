@@ -69,6 +69,12 @@ namespace ShadowRPG.Tests
             Assert.AreEqual(3, session.Bag.Items.Count, "가방 6개 중 절반 손실");
 
             Run(session, 4f);
+            Assert.IsNull(died, "사망창에서 플레이어 선택을 기다림 (자동 귀환 없음)");
+            Assert.IsNotNull(session.DeathReport, "사망 원인 요약");
+
+            int restored = session.RecoverWithAd();
+            Assert.AreEqual(3, restored, "광고 회수 = 잃은 아이템 전부");
+            Assert.AreEqual(6, session.Bag.Items.Count);
             Assert.AreEqual(true, died);
         }
 
@@ -77,7 +83,8 @@ namespace ShadowRPG.Tests
         {
             var generators = new IFloorLayoutGenerator[]
             {
-                new RoomsAndCorridorsLayout(), new CaveLayout(), new CrossLayout(), new RingLayout(), new WindingHallLayout(), new PillarHallLayout()
+                new RoomsAndCorridorsLayout(), new CaveLayout(), new CrossLayout(), new RingLayout(), new WindingHallLayout(), new PillarHallLayout(),
+                new ChamberChainLayout(), new ChamberBranchLayout()
             };
             foreach (var generator in generators)
             foreach (int enemies in new[] { 10, 60, 101 })
