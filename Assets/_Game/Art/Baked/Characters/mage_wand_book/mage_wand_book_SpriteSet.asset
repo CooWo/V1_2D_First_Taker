@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: mage/wand_book
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.365
+  heightUnits: 1.4
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: e8cdb4a436ba5cf4c9699dc0ad25507c, type: 3}

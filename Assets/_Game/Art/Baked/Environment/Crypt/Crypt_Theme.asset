@@ -59,23 +59,17 @@ MonoBehaviour:
     weight: 0.0875
   floorDecals: []
   decalChance: 0.08
-  floorTint: {r: 0.62, g: 0.62, b: 0.72, a: 1}
+  floorTint: {r: 0.4, g: 0.39, b: 0.45, a: 1}
   wallFaces:
   - sprite: {fileID: 21300000, guid: e7695611b07fea449b1392689b8c622b, type: 3}
     weight: 5
   - sprite: {fileID: 21300000, guid: 10817347cafe6bc47b24b5eac9e49e53, type: 3}
-    weight: 5
+    weight: 2
   - sprite: {fileID: 21300000, guid: a5ca0f338c82a1d46a89cde62e6a8bd6, type: 3}
-    weight: 2
-  - sprite: {fileID: 21300000, guid: cf2f1b096e9bac54390881be25120713, type: 3}
-    weight: 2
-  - sprite: {fileID: 21300000, guid: 6413cb930b6f5c148860ec9d87c57f18, type: 3}
     weight: 0.6
-  - sprite: {fileID: 21300000, guid: 94987c6788a7a9c46a49e40b0a1b16e6, type: 3}
-    weight: 0.6
-  wallCap: {fileID: 21300000, guid: 11219529dd55e1a45acd34bace5186e0, type: 3}
-  wallTint: {r: 0.72, g: 0.72, b: 0.82, a: 1}
-  wallFaceHeight: 0.90106726
+  wallCap: {fileID: 0}
+  wallTint: {r: 0.48, g: 0.47, b: 0.54, a: 1}
+  wallFaceHeight: 0.60621774
   voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
   props:
   - name: barrel_large
@@ -358,7 +352,7 @@ MonoBehaviour:
     lightIntensity: 1
     flicker: 0.15
     lightHeight: 0.6
-  edgePropChance: 0.12
+  edgePropChance: 0.06
   wallPropChance: 0.18
   scatterPropChance: 0.02
   ambientColor: {r: 0.62, g: 0.66, b: 0.85, a: 1}

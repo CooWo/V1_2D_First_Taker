@@ -36,7 +36,7 @@ namespace ShadowRPG.Runtime.Presentation
 
             _time += Time.deltaTime;
             var p = _position();
-            transform.position = new Vector3(p.x, p.y + Mathf.Sin(_time * 3f) * _bob, 0f);
+            transform.position = Art.WorldProjection.ToView(p) + new Vector3(0f, Mathf.Sin(_time * 3f) * _bob, 0f);
             _renderer.sprite = _frames[Mathf.FloorToInt(_time * _fps) % _frames.Length];
             _renderer.sortingOrder = SortingOrders.ForY(p.y) + 1;
         }

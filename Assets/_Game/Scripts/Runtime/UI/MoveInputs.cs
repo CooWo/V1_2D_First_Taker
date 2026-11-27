@@ -45,3 +45,16 @@ namespace ShadowRPG.Runtime.UI
         }
     }
 }
+
+namespace ShadowRPG.Runtime.UI
+{
+    /// <summary>화면 기준 입력(조이스틱 위 = 화면 위)을 규칙 좌표 방향으로 바꿉니다 (아이소메트릭 시점).</summary>
+    public sealed class ViewSpaceMoveInput : ShadowRPG.Core.AutoBattle.IMoveInput
+    {
+        readonly ShadowRPG.Core.AutoBattle.IMoveInput _inner;
+
+        public ViewSpaceMoveInput(ShadowRPG.Core.AutoBattle.IMoveInput inner) => _inner = inner;
+
+        public UnityEngine.Vector2 Direction => Art.WorldProjection.ViewDirToWorld(_inner.Direction);
+    }
+}

@@ -26,7 +26,7 @@ namespace ShadowRPG.Runtime.Presentation
         public void Play(VfxEvent e)
         {
             var color = Palette.For(e.Element);
-            var p = (Vector3)e.Position;
+            var p = Art.WorldProjection.ToView(e.Position);
             switch (e.Kind)
             {
                 case VfxKind.Slash:
@@ -34,7 +34,7 @@ namespace ShadowRPG.Runtime.Presentation
                     break;
                 case VfxKind.Cone:
                 {
-                    var dir = e.To - e.Position;
+                    var dir = Art.WorldProjection.DirToView(e.To - e.Position);
                     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                     Spawn(Fx(F.slash, PixelArtFactory.Arc), color, p + (Vector3)(dir.normalized * e.Radius * 0.35f), angle, e.Radius * 0.6f, e.Radius * 1.9f, 0.9f, 0f, e.Duration);
                     break;
@@ -53,7 +53,7 @@ namespace ShadowRPG.Runtime.Presentation
                     Beam(e.Position, e.To, new Color(0.15f, 0.2f, 0.4f, 0.8f), e.Duration, 1, 0.45f);
                     break;
                 case VfxKind.Blink:
-                    Spawn(PixelArtFactory.HeroIdle[0], new Color(0.3f, 0.5f, 1f, 0.6f), p, 0f, 1f, 1f, 0.7f, 0f, Mathf.Max(0.2f, e.Duration), SortingOrders.ForY(e.Position.y) + 1);
+                    Spawn(PixelArtFactory.HeroIdle[0], new Color(0.3f, 0.5f, 1f, 0.6f), p, 0f, 1f, 1f, 0.7f, 0f, Mathf.Max(0.2f, e.Duration), SortingOrders.ForY(p.y) + 1);
                     break;
                 case VfxKind.Shield:
                     Spawn(Fx(F.ring, PixelArtFactory.Ring), Palette.EnergyShield, p + Vector3.up * 0.6f, 0f, e.Radius * 2.2f, e.Radius * 2.5f, 0.9f, 0f, Mathf.Min(1f, e.Duration));
@@ -65,7 +65,7 @@ namespace ShadowRPG.Runtime.Presentation
                     Spawn(PixelArtFactory.Square, new Color(0.08f, 0.08f, 0.14f), p + Vector3.up * 0.5f, 0f, new Vector3(0.5f, 0.2f, 1f), new Vector3(0.5f, 1.4f, 1f), 1f, 0.6f, e.Duration);
                     break;
                 case VfxKind.Meteor:
-                    Spawn(Fx(F.glow, PixelArtFactory.Circle), color, p, 0f, 1.2f, 1.6f, 1f, 1f, e.Duration, SortingOrders.Vfx + 10, e.To);
+                    Spawn(Fx(F.glow, PixelArtFactory.Circle), color, p, 0f, 1.2f, 1.6f, 1f, 1f, e.Duration, SortingOrders.Vfx + 10, (Vector2)Art.WorldProjection.ToView(e.To));
                     break;
                 case VfxKind.Mark:
                     Spawn(Fx(F.ring, PixelArtFactory.Ring), color, p, 0f, e.Radius * 2.2f, e.Radius * 1.6f, 0.4f, 0.9f, e.Duration);
@@ -76,8 +76,9 @@ namespace ShadowRPG.Runtime.Presentation
             }
         }
 
-        void Beam(Vector2 from, Vector2 to, Color color, float duration, int segments, float width)
+        void Beam(Vector2 worldFrom, Vector2 worldTo, Color color, float duration, int segments, float width)
         {
+            Vector2 from = Art.WorldProjection.ToView(worldFrom), to = Art.WorldProjection.ToView(worldTo);
             var previous = from;
             for (int i = 1; i <= segments; i++)
             {

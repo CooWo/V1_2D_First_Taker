@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ShadowRPG.Runtime.UI.Menus
 {
-    /// <summary>설정: 전투(자동 진행·자동 장착·배속·자동 이동) · 리듬(원 위치) · 연출 · 그래픽.</summary>
+    /// <summary>설정: 전투(자동 진행·자동 장착·배속·자동 이동) · 리듬(원 위치) · 연출 · 그래픽. 화면은 세로 고정.</summary>
     public sealed class SettingsMenu : IMenu
     {
         readonly MenuContext _ctx;
@@ -13,7 +13,7 @@ namespace ShadowRPG.Runtime.UI.Menus
         public SettingsMenu(Transform parent, MenuContext ctx)
         {
             _ctx = ctx;
-            Panel = new ListPanel(parent, "SettingsMenu", 10);
+            Panel = new ListPanel(parent, "SettingsMenu", 9);
             Panel.RowClicked += OnRow;
             _rows = new (string, Func<PlayerSettings, string>, Action<PlayerSettings>)[]
             {
@@ -25,8 +25,7 @@ namespace ShadowRPG.Runtime.UI.Menus
                 ("화면 흔들림", s => OnOff(s.ScreenShake), s => s.ScreenShake = !s.ScreenShake),
                 ("피해 숫자", s => OnOff(s.DamageNumbers), s => s.DamageNumbers = !s.DamageNumbers),
                 ("진동", s => OnOff(s.Vibration), s => s.Vibration = !s.Vibration),
-                ("프레임", s => $"{s.FrameRate}", s => { s.FrameRate = s.FrameRate >= 60 ? 30 : 60; Application.targetFrameRate = s.FrameRate; }),
-                ("가로 화면", s => OnOff(s.Landscape), s => { s.Landscape = !s.Landscape; ScreenMode.Apply(s.Landscape); })
+                ("프레임", s => $"{s.FrameRate}", s => { s.FrameRate = s.FrameRate >= 60 ? 30 : 60; Application.targetFrameRate = s.FrameRate; })
             };
         }
 
@@ -63,16 +62,4 @@ namespace ShadowRPG.Runtime.UI.Menus
         }
     }
 
-    /// <summary>세로(기본) ↔ 가로 화면 전환.</summary>
-    public static class ScreenMode
-    {
-        public static void Apply(bool landscape)
-        {
-            Screen.autorotateToPortrait = !landscape;
-            Screen.autorotateToPortraitUpsideDown = false;
-            Screen.autorotateToLandscapeLeft = landscape;
-            Screen.autorotateToLandscapeRight = landscape;
-            Screen.orientation = landscape ? ScreenOrientation.LandscapeLeft : ScreenOrientation.Portrait;
-        }
-    }
 }

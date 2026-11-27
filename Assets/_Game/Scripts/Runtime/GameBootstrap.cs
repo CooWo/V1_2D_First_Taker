@@ -54,6 +54,9 @@ namespace ShadowRPG.Runtime
         void Awake()
         {
             Application.targetFrameRate = 60;
+            // 세로(9:16) 고정 — 가로는 이후 스팀판에서 별도 제작
+            Screen.orientation = ScreenOrientation.Portrait;
+            Screen.autorotateToLandscapeLeft = Screen.autorotateToLandscapeRight = false;
             if (spriteLibrary == null) spriteLibrary = Resources.Load<SpriteLibrary>("SpriteLibrary");
 
             var tuning = ShadowRPG.Runtime.Tuning.TuningLoader.Load();

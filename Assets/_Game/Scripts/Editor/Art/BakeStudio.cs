@@ -145,9 +145,9 @@ namespace ShadowRPG.EditorTools.Art
         /// 카메라를 pitch로 기울이고, 월드 점 anchor가 화면(viewport)의 anchorViewport에 오도록 놓습니다.
         /// widthMeters × heightMeters 영역을 widthPx × heightPx로 렌더합니다.
         /// </summary>
-        public void Frame(float pitch, Vector3 anchor, Vector2 anchorViewport, float widthMeters, float heightMeters)
+        public void Frame(float pitch, Vector3 anchor, Vector2 anchorViewport, float widthMeters, float heightMeters, float yaw = 0f)
         {
-            var rotation = Quaternion.Euler(pitch, 0f, 0f);
+            var rotation = Quaternion.Euler(pitch, yaw, 0f);
             Camera.transform.rotation = rotation;
             Camera.orthographicSize = heightMeters * 0.5f;
             Camera.aspect = widthMeters / heightMeters;

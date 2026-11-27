@@ -65,23 +65,17 @@ MonoBehaviour:
     weight: 0.375
   floorDecals: []
   decalChance: 0.08
-  floorTint: {r: 0.7, g: 0.68, b: 0.72, a: 1}
+  floorTint: {r: 0.5, g: 0.47, b: 0.46, a: 1}
   wallFaces:
   - sprite: {fileID: 21300000, guid: 43464f63a420cb64d98bafa4630ed7ac, type: 3}
     weight: 4
   - sprite: {fileID: 21300000, guid: e030d47a510b9d84fb39f2183846e72d, type: 3}
-    weight: 4
+    weight: 1
   - sprite: {fileID: 21300000, guid: e32ee7ac6f2e30f49b46763a20b3bf6e, type: 3}
     weight: 1
-  - sprite: {fileID: 21300000, guid: 7bc58e835c34dbd40be41ad967450efd, type: 3}
-    weight: 1
-  - sprite: {fileID: 21300000, guid: 6df5bb60e8d48c14db6abbc878fec24f, type: 3}
-    weight: 1
-  - sprite: {fileID: 21300000, guid: 5c5b8e37cb7175f40bd039fc7347ee58, type: 3}
-    weight: 1
-  wallCap: {fileID: 21300000, guid: 4a49e8c1d0250d743980ad669409fe85, type: 3}
-  wallTint: {r: 0.75, g: 0.73, b: 0.8, a: 1}
-  wallFaceHeight: 0.90106726
+  wallCap: {fileID: 0}
+  wallTint: {r: 0.52, g: 0.5, b: 0.52, a: 1}
+  wallFaceHeight: 0.60621774
   voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
   props:
   - name: tree_dead_large

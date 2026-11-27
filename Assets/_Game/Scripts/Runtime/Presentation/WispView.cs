@@ -37,7 +37,7 @@ namespace ShadowRPG.Runtime.Presentation
             light.color = color;
             light.intensity = 0.8f;
             light.pointLightOuterRadius = 2.5f;
-            transform.position = position();
+            transform.position = WorldProjection.ToView(position());
         }
 
         SpriteRenderer Layer(string name, Sprite sprite, Color color, float scale)
@@ -56,7 +56,7 @@ namespace ShadowRPG.Runtime.Presentation
         void LateUpdate()
         {
             if (_position == null) return;
-            var target = (Vector3)_position() + new Vector3(0f, 1.1f + Mathf.Sin(Time.time * 2.4f + _seed) * 0.15f, 0f);
+            var target = WorldProjection.ToView(_position()) + new Vector3(0f, 1.1f + Mathf.Sin(Time.time * 2.4f + _seed) * 0.15f, 0f);
             transform.position = Vector3.Lerp(transform.position, target, 1f - Mathf.Exp(-8f * Time.deltaTime));
             if (_swirl != null) _swirl.transform.Rotate(0f, 0f, 120f * Time.deltaTime);
             if (_core != null) _core.transform.localScale = Vector3.one * (0.85f + Mathf.Sin(Time.time * 5f + _seed) * 0.08f);

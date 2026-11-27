@@ -72,12 +72,12 @@ namespace ShadowRPG.Runtime.Presentation
 
             if (r.Evaded)
             {
-                if (NumbersEnabled) _text?.Show((Vector3)r.Target.Position + Vector3.up * 1.4f, "회피", new Color(0.75f, 0.85f, 1f), _t.DamageNumberSize * 0.8f, 0.5f);
+                if (NumbersEnabled) _text?.Show(WorldProjection.ToView(r.Target.Position) + Vector3.up * 1.4f, "회피", new Color(0.75f, 0.85f, 1f), _t.DamageNumberSize * 0.8f, 0.5f);
                 return;
             }
             if (r.Amount < 0.5f) return;
 
-            var hitPoint = (Vector3)r.Target.Position + Vector3.up * 0.6f;
+            var hitPoint = WorldProjection.ToView(r.Target.Position) + Vector3.up * 0.6f;
             if (byPlayer)
             {
                 bool heavy = r.IsCrit || r.Killed && r.Target.IsEliteOrBoss;
@@ -102,7 +102,7 @@ namespace ShadowRPG.Runtime.Presentation
             var color = toPlayer ? new Color(1f, 0.35f, 0.32f) : r.IsCrit ? new Color(1f, 0.62f, 0.15f) : Color.Lerp(Color.white, ElementColor(r.Type), 0.35f);
             float size = _t.DamageNumberSize * (r.IsCrit ? _t.CritNumberScale : 1f);
             string label = Mathf.RoundToInt(r.Amount).ToString("N0") + (r.IsCrit ? "!" : string.Empty);
-            _text.Show((Vector3)r.Target.Position + new Vector3(Random.Range(-0.35f, 0.35f), 1.3f, 0f), label, color, size, _t.DamageNumberLifetime);
+            _text.Show(WorldProjection.ToView(r.Target.Position) + new Vector3(Random.Range(-0.35f, 0.35f), 1.3f, 0f), label, color, size, _t.DamageNumberLifetime);
         }
 
         void Spark(Vector3 at, Color color, float power)

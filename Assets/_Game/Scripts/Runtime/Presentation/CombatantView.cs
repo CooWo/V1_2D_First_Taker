@@ -47,7 +47,7 @@ namespace ShadowRPG.Runtime.Presentation
             _appearanceKey = appearanceKey;
             _lastPosition = model.Position;
             _showBar = showHealthBar;
-            transform.position = model.Position;
+            transform.position = WorldProjection.ToView(model.Position);
 
             var fx = FxCatalog.Load();
             _shadow = CreateRenderer("Shadow", PixelArtFactory.Shadow, new Color(0f, 0f, 0f, 0.45f));
@@ -178,7 +178,7 @@ namespace ShadowRPG.Runtime.Presentation
         }
 
         /// <summary>연출용 밀림 (모델 위치는 바꾸지 않음).</summary>
-        public void Kick(Vector2 direction, float distance) => _kick += direction.normalized * distance;
+        public void Kick(Vector2 worldDirection, float distance) => _kick += WorldProjection.DirToView(worldDirection).normalized * distance;
 
         public void Sync(float dt)
         {
@@ -193,8 +193,9 @@ namespace ShadowRPG.Runtime.Presentation
 
             _kick = Vector2.MoveTowards(_kick, Vector2.zero, dt * 4f);
             var position = _model.Position;
-            transform.position = new Vector3(position.x + _kick.x, position.y + _kick.y, 0f);
-            int order = SortingOrders.ForY(position.y);
+            var view = WorldProjection.ToView(position);
+            transform.position = view + (Vector3)_kick;
+            int order = SortingOrders.ForY(view.y);
             _animator.Body.sortingOrder = order;
 
             if (!_model.IsAlive)
@@ -219,7 +220,7 @@ namespace ShadowRPG.Runtime.Presentation
             _actionLock -= dt;
             _hitAnimCooldown -= dt;
 
-            _animator.Face(_actionLock > 0f || !moving ? _model.Facing : velocity);
+            _animator.Face(WorldProjection.DirToView(_actionLock > 0f || !moving ? _model.Facing : velocity));
             if (_actionLock <= 0f)
             {
                 _animator.Play(moving ? "run" : "idle");

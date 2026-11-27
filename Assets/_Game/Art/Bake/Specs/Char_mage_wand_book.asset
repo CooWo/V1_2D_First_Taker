@@ -28,8 +28,8 @@ MonoBehaviour:
   - Mage_Hat
   - Mage_Cape
   attachments: []
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  rimColor: {r: 0.62, g: 0.45, b: 1, a: 1}
+  tint: {r: 0.78, g: 0.78, b: 0.84, a: 1}
+  rimColor: {r: 0.36, g: 0.95, b: 1, a: 1}
   rimAmount: 1
   displayScale: 1
   clips:

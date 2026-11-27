@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: knight/sword_shield
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.349375
+  heightUnits: 1.3609375
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: 9c900afadf57e8f45af45ba6120e293a, type: 3}

@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: skeleton_boss
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.365
+  heightUnits: 1.3765625
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: bcb9650a7c790de4cbf07d309e328336, type: 3}

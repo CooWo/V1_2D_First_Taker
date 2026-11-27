@@ -23,11 +23,12 @@ namespace ShadowRPG.Runtime.Presentation
                     _outline = Child("Outline", PixelArtFactory.Square, new Color(danger.r, danger.g, danger.b, 0.22f), SortingOrders.Zone + 5);
                     _fill = Child("Fill", PixelArtFactory.Square, new Color(danger.r, danger.g, danger.b, 0.45f), SortingOrders.Zone + 6);
                     float angle = Mathf.Atan2(model.Direction.y, model.Direction.x) * Mathf.Rad2Deg;
-                    transform.SetPositionAndRotation(model.Center + model.Direction.normalized * model.Length * 0.5f, Quaternion.Euler(0f, 0f, angle));
+                    transform.localPosition = model.Center + model.Direction.normalized * model.Length * 0.5f;
+                    transform.localRotation = Quaternion.Euler(0f, 0f, angle);
                     _outline.transform.localScale = new Vector3(model.Length, model.Width, 1f);
                     break;
                 default:
-                    transform.position = model.Center;
+                    transform.localPosition = model.Center;
                     _outline = Child("Outline", PixelArtFactory.Ring, new Color(danger.r, danger.g, danger.b, 0.9f), SortingOrders.Zone + 5);
                     _fill = Child("Fill", PixelArtFactory.Circle, new Color(danger.r, danger.g, danger.b, 0.35f), SortingOrders.Zone + 6);
                     _outline.transform.localScale = Vector3.one * model.Radius * 2f;

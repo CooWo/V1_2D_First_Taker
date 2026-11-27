@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: skeleton_rogue
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.318125
+  heightUnits: 1.2359375
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: c6458d075af2a6a4f8a8722126bbdf49, type: 3}

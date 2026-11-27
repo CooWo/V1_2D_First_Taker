@@ -6,7 +6,7 @@ namespace ShadowRPG.Runtime.Presentation
 {
     /// <summary>
     /// 게임 카메라 (Cinemachine): 플레이어를 부드럽게 따라가고 이동 방향으로 살짝 앞을 봅니다.
-    /// 시야 = 화면 가로 폭(유닛) 기준 — 세로 화면 기본 CameraViewWidth, 가로 화면 CameraViewWidthLandscape.
+    /// 시야 = 화면 가로 폭(유닛) 기준 — 세로 고정이라 CameraViewWidth. (CameraViewWidthLandscape는 스팀판 예비)
     /// 흔들림은 Impulse로 받습니다 (FeelDirector).
     /// </summary>
     public sealed class CameraRig : MonoBehaviour

@@ -55,7 +55,7 @@ namespace ShadowRPG.Runtime
             BuildTerrain(session);
             if (session is DungeonSession dungeon) dungeon.FloorStarted += _ => BuildTerrain(session);
 
-            session.Player.MoveInput = new CompositeMoveInput(hud.Joystick, new KeyboardMoveInput());
+            session.Player.MoveInput = new ViewSpaceMoveInput(new CompositeMoveInput(hud.Joystick, new KeyboardMoveInput()));
 
             var rig = CameraRig.Ensure(camera, tuning);
             rig.Follow(presenter.PlayerTransform);

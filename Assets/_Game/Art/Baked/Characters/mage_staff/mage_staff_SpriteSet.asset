@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: mage/staff
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.365
+  heightUnits: 1.4
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: 9d99e54224185534892c4371bfaee254, type: 3}

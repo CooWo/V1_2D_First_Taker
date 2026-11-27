@@ -55,7 +55,7 @@ namespace ShadowRPG.EditorTools.Art
         public Color voidColor = new Color(0.015f, 0.012f, 0.022f);
         public Color ambientColor = new Color(0.62f, 0.66f, 0.85f);
         public float ambientIntensity = 0.75f;
-        public float edgePropChance = 0.12f;
+        public float edgePropChance = 0.06f;
         public float wallPropChance = 0.18f;
         public float scatterPropChance = 0.02f;
     }

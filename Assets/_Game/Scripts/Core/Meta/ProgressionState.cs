@@ -16,7 +16,6 @@ namespace ShadowRPG.Core.Meta
         public float RhythmRingScale = 1f;
         public bool ScreenShake = true;
         public bool DamageNumbers = true;
-        public bool Landscape;
         public float MusicVolume = 0.7f;
         public float SfxVolume = 0.9f;
         public bool Vibration = true;

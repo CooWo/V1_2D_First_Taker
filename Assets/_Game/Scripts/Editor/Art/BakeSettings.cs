@@ -12,6 +12,8 @@ namespace ShadowRPG.EditorTools.Art
         [Header("카메라")]
         [Tooltip("내려다보는 각도 (도). 캐릭터·벽·소품 공통")]
         [Range(20f, 80f)] public float cameraPitch = 45f;
+        [Tooltip("환경(벽·소품) 카메라 방향 (도). 아이소메트릭 = 45, 정면 = 0. 캐릭터는 화면 기준이라 영향 없음")]
+        public float environmentYaw = 45f;
         [Tooltip("3D 1미터 = 게임 몇 유닛 (KayKit 작은 바닥 2m = 1칸)")]
         public float unitsPerMeter = 0.5f;
         [Tooltip("게임 1유닛 = 픽셀 수 (모든 스프라이트 공통 밀도)")]

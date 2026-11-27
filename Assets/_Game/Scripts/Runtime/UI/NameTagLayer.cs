@@ -39,7 +39,7 @@ namespace ShadowRPG.Runtime.UI
             if (_camera == null) return;
             foreach (var tag in _tags)
             {
-                var world = (Vector3)tag.Position() + new Vector3(0f, 1.9f, 0f);
+                var world = Art.WorldProjection.ToView(tag.Position()) + new Vector3(0f, 1.9f, 0f);
                 var screen = _camera.WorldToScreenPoint(world);
                 bool visible = screen.z > 0f;
                 tag.Label.enabled = visible;

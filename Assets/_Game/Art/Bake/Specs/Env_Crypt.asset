@@ -354,8 +354,8 @@ MonoBehaviour:
     lightIntensity: 1
     lightHeight: 0.6
     flicker: 0.15
-  floorTint: {r: 0.62, g: 0.62, b: 0.72, a: 1}
-  wallTint: {r: 0.72, g: 0.72, b: 0.82, a: 1}
+  floorTint: {r: 0.4, g: 0.39, b: 0.45, a: 1}
+  wallTint: {r: 0.48, g: 0.47, b: 0.54, a: 1}
   voidColor: {r: 0.015, g: 0.012, b: 0.022, a: 1}
   ambientColor: {r: 0.62, g: 0.66, b: 0.85, a: 1}
   ambientIntensity: 0.75

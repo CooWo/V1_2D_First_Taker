@@ -31,6 +31,7 @@ namespace ShadowRPG.Runtime.Presentation
         public System.Func<Combatant, string> AppearanceKey { get; set; }
 
         FeelDirector _feel;
+        Transform _ground;
 
         public CombatantView ViewOf(Combatant c) => c != null && _combatants.TryGetValue(c, out var v) ? v : null;
 
@@ -43,6 +44,7 @@ namespace ShadowRPG.Runtime.Presentation
             _library = library;
             _text = text;
 
+            _ground = Art.WorldProjection.CreateGroundRoot(transform, "Ground");
             _vfx = new GameObject("Vfx").AddComponent<VfxPlayer>();
             _vfx.transform.SetParent(transform, false);
             _vfx.Initialize(text);
@@ -79,7 +81,7 @@ namespace ShadowRPG.Runtime.Presentation
         void OnHazardSpawned(Hazard hazard)
         {
             var view = new GameObject("Hazard_" + hazard.Label).AddComponent<HazardView>();
-            view.transform.SetParent(transform, false);
+            view.transform.SetParent(_ground, false);
             view.Bind(hazard);
             _hazards[hazard] = view;
         }
@@ -171,7 +173,7 @@ namespace ShadowRPG.Runtime.Presentation
         void OnZoneSpawned(Zone zone)
         {
             var view = new GameObject("Zone_" + zone.VisualKey).AddComponent<ZoneView>();
-            view.transform.SetParent(transform, false);
+            view.transform.SetParent(_ground, false);
             view.Bind(zone);
             _zones[zone] = view;
         }

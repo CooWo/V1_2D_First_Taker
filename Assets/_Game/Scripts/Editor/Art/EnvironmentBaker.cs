@@ -47,56 +47,26 @@ namespace ShadowRPG.EditorTools.Art
                 }
             }
 
-            // ---- 벽 정면 (캐릭터와 같은 각도, 남쪽에서) ----
+            // ---- 벽 블록 (아이소메트릭 낮은 벽: 한 칸 크기 블록, 발 = 칸 중심) ----
             float pitch = settings.cameraPitch;
             float wallHeight = 4f * settings.wallHeightScale;
-            float faceHeightMeters = wallHeight * Mathf.Cos(pitch * Mathf.Deg2Rad) + 1f * Mathf.Sin(pitch * Mathf.Deg2Rad);
-            int pieceWidthPx = Mathf.RoundToInt(spec.wallPieceMeters * px);
-            int faceHeightPx = Mathf.CeilToInt(faceHeightMeters * px) + 2;
-            int cells = Mathf.Max(1, Mathf.RoundToInt(spec.wallPieceMeters / spec.floorTileMeters));
-            int cellPx = pieceWidthPx / cells;
+            float cellMeters = spec.floorTileMeters;
             index = 0;
             foreach (var piece in spec.wallFaces)
             {
-                var instance = SpawnPiece(studio, piece.assetPath, new Vector3(1f, settings.wallHeightScale, 1f), 0f, settings.environmentExposure, settings.environmentRim);
-                if (instance == null) continue;
-                // 앞면 아래 모서리 (z = -0.5)가 그림 맨 아래
-                studio.Frame(pitch, new Vector3(0f, 0f, -0.5f), new Vector2(0.5f, 0f), spec.wallPieceMeters, faceHeightPx / px);
-                var pixels = studio.Capture(pieceWidthPx, faceHeightPx, true, false);
-                studio.Destroy(instance);
-                for (int c = 0; c < cells; c++)
-                {
-                    var slice = BakeStudio.Crop(pixels, pieceWidthPx, new RectInt(c * cellPx, 0, cellPx, faceHeightPx));
-                    string path = $"{folder}/wall_{index++:00}.png";
-                    BakeStudio.WritePng(path, slice, cellPx, faceHeightPx);
-                    BakeStudio.ConfigureImport(path, true, settings.pixelsPerUnit, Vector2.zero);
-                    theme.wallFaces.Add(new EnvironmentTheme.WeightedSprite { sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path), weight = piece.weight });
-                }
+                // KayKit 벽(가로 4m, 두께 1m)을 한 칸(2m×2m) 블록으로 늘려 굽기
+                var scale = new Vector3(cellMeters / spec.wallPieceMeters, settings.wallHeightScale, cellMeters);
+                var sprite = BakeUpright(studio, settings, piece.assetPath, scale, 0f, folder, $"wall_{index++:00}", false);
+                if (sprite != null) theme.wallFaces.Add(new EnvironmentTheme.WeightedSprite { sprite = sprite, weight = piece.weight });
             }
             theme.wallFaceHeight = wallHeight * Mathf.Cos(pitch * Mathf.Deg2Rad) * settings.unitsPerMeter;
-
-            // ---- 벽 윗면 (위에서, 두께를 한 칸으로 늘림) ----
-            if (!string.IsNullOrEmpty(spec.wallCapPath))
-            {
-                var instance = SpawnPiece(studio, spec.wallCapPath, new Vector3(1f, settings.wallHeightScale, spec.floorTileMeters), 0f, settings.environmentExposure * 0.8f, 0f);
-                if (instance != null)
-                {
-                    float top = 4f * settings.wallHeightScale;
-                    studio.Frame(90f, new Vector3(0f, top, 0f), new Vector2(0.5f, 0.5f), spec.floorTileMeters, spec.floorTileMeters);
-                    var pixels = studio.Capture(floorPx, floorPx, false, false);
-                    studio.Destroy(instance);
-                    for (int i = 0; i < pixels.Length; i++) pixels[i].a = 255;
-                    string path = $"{folder}/wall_cap.png";
-                    BakeStudio.WritePng(path, pixels, floorPx, floorPx);
-                    BakeStudio.ConfigureImport(path, true, settings.pixelsPerUnit, Vector2.zero);
-                    theme.wallCap = AssetDatabase.LoadAssetAtPath<Sprite>(path);
-                }
-            }
+            theme.wallCap = null;
 
             // ---- 소품 (캐릭터와 같은 각도) ----
             foreach (var prop in spec.props)
             {
-                var sprite = BakeProp(studio, settings, prop, folder);
+                string propName = Path.GetFileNameWithoutExtension(prop.assetPath).Replace(".gltf", "") + (prop.yaw != 0f ? "_r" + Mathf.RoundToInt(prop.yaw) : "");
+                var sprite = BakeUpright(studio, settings, prop.assetPath, Vector3.one * prop.scale, prop.yaw, folder, "prop_" + propName, true);
                 if (sprite == null) continue;
                 theme.props.Add(new EnvironmentTheme.Prop
                 {
@@ -127,32 +97,32 @@ namespace ShadowRPG.EditorTools.Art
             return theme;
         }
 
-        static Sprite BakeProp(BakeStudio studio, BakeSettings settings, EnvironmentBakeSpec.PropPiece prop, string folder)
+        /// <summary>서 있는 조각(벽 블록·소품)을 환경 카메라(아이소메트릭)로 굽고, 발(바닥 중심)을 피벗으로.</summary>
+        static Sprite BakeUpright(BakeStudio studio, BakeSettings settings, string assetPath, Vector3 scale, float yaw, string folder, string fileName, bool outline)
         {
-            var instance = SpawnPiece(studio, prop.assetPath, Vector3.one * prop.scale, prop.yaw, settings.environmentExposure, settings.environmentRim);
+            var instance = SpawnPiece(studio, assetPath, scale, yaw, settings.environmentExposure, settings.environmentRim);
             if (instance == null) return null;
             var bounds = Bounds(instance);
             float px = settings.MetersToPixels;
-            float extent = Mathf.Max(bounds.extents.x, bounds.extents.z) * 1.5f + 0.2f;
+            float extent = Mathf.Max(bounds.extents.x, bounds.extents.z) * 1.6f + 0.3f;
             float width = extent * 2f;
             float height = bounds.max.y + extent + 0.4f;
             int w = Mathf.CeilToInt(width * px), h = Mathf.CeilToInt(height * px);
             float pivotY = extent / height;
             var anchor = new Vector3(bounds.center.x, 0f, bounds.center.z);
-            studio.Frame(settings.cameraPitch, anchor, new Vector2(0.5f, pivotY), width, height);
-            var pixels = studio.Capture(w, h, true, true);
+            studio.Frame(settings.cameraPitch, anchor, new Vector2(0.5f, pivotY), width, height, settings.environmentYaw);
+            var pixels = studio.Capture(w, h, true, outline);
             studio.Destroy(instance);
 
             var crop = BakeStudio.AlphaBounds(pixels, w, h);
             if (crop.width == 0) return null;
-            crop = new RectInt(Mathf.Max(0, crop.x - 1), Mathf.Max(0, crop.y - 1), Mathf.Min(w - crop.x + 1, crop.width + 2), Mathf.Min(h - crop.y + 1, crop.height + 2));
-            crop.width = Mathf.Min(crop.width, w - crop.x);
-            crop.height = Mathf.Min(crop.height, h - crop.y);
+            int x0 = Mathf.Max(0, crop.x - 1), y0 = Mathf.Max(0, crop.y - 1);
+            int x1 = Mathf.Min(w, crop.xMax + 1), y1 = Mathf.Min(h, crop.yMax + 1);
+            crop = new RectInt(x0, y0, x1 - x0, y1 - y0);
             var cropped = BakeStudio.Crop(pixels, w, crop);
             var pivot = new Vector2((w * 0.5f - crop.x) / crop.width, (h * pivotY - crop.y) / crop.height);
 
-            string name = Path.GetFileNameWithoutExtension(prop.assetPath).Replace(".gltf", "");
-            string path = $"{folder}/prop_{name}{(prop.yaw != 0f ? "_r" + Mathf.RoundToInt(prop.yaw) : "")}.png";
+            string path = $"{folder}/{fileName}.png";
             BakeStudio.WritePng(path, cropped, crop.width, crop.height);
             BakeStudio.ConfigureImport(path, true, settings.pixelsPerUnit, pivot);
             return AssetDatabase.LoadAssetAtPath<Sprite>(path);

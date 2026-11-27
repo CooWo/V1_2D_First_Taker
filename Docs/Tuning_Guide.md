@@ -475,7 +475,7 @@
 | 키 | 기본값 | 뜻 | 조정 팁 |
 | --- | --- | --- | --- |
 | CameraViewWidth | 10 | 세로 화면에서 보이는 가로 폭 (유닛 = 바닥 1칸) | **키우면 더 멀리서 봄** (캐릭터 작아짐) |
-| CameraViewWidthLandscape | 20 | 가로 화면 옵션일 때 가로 폭 | |
+| CameraViewWidthLandscape | 20 | (예비 — 스팀판) 가로 화면일 때 가로 폭. 모바일은 세로 고정 | |
 | CameraFollowDamping | 0.25 | 카메라가 따라오는 부드러움 (초) | 0이면 딱 붙음 |
 | CameraLookAhead | 0.8 | 이동 방향으로 앞을 보는 정도 | |
 | CameraVerticalOffset | 0.8 | 캐릭터보다 위를 보는 높이 | |
@@ -523,18 +523,19 @@ Unity Inspector에서 고칩니다 (에셋을 클릭 → 오른쪽 Inspector).
 
 | 항목 | 기본값 | 뜻 |
 | --- | --- | --- |
-| cameraPitch | 35 | 내려다보는 각도 (도). 캐릭터·벽·소품 공통 |
+| cameraPitch | 30 | 내려다보는 각도 (도). **`Resources/Art/Projection.asset`에서 자동으로 맞춰짐** (게임 화면과 공통) |
 | unitsPerMeter | 0.5 | 3D 1미터 = 게임 0.5칸 |
 | pixelsPerUnit | 128 | 게임 1칸 = 128픽셀 (모든 그림 공통 밀도) |
 | characterCell | 224 | 캐릭터 한 칸 픽셀 |
 | sampleFps / maxFrames | 12 / 12 | 동작 프레임 수 |
 | mirrorDirections | 켬 | 5방향만 굽고 3방향은 반전 (용량 절약) |
 | supersample | 3 | 확대 렌더 배수 (가장자리 품질) |
-| outlineWidth / outlineColor | 1 / 거의 검정 | 바깥 외곽선 |
-| innerLineStrength | 0.55 | 안쪽 선 진하기 |
+| outlineWidth / outlineColor | 2 / 거의 검정 | 바깥 외곽선 |
+| innerLineStrength | 0.8 | 안쪽 선 진하기 |
 | shadowColor · midColor · skyAmbient · groundAmbient | — | 명암 색 |
-| topHighlight · saturation · exposure | 0.18 · 1.12 · 1.1 | 손그림 채색 느낌 |
-| wallHeightScale | 0.55 | 벽 높이 배율 |
+| topHighlight · saturation · exposure | 0.18 · 0.9 · 1.0 | 손그림 채색 느낌 (어두운 톤) |
+| wallHeightScale | 0.35 | 벽 높이 배율 (낮은 석조 벽 = 약 1.4m) |
+| environmentYaw | 45 | 벽·소품 카메라 방향 (아이소메트릭 = 45, 자동) |
 
 ### 캐릭터 외형 — `Assets/_Game/Art/Bake/Specs/Char_*.asset`
 

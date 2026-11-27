@@ -70,7 +70,7 @@ namespace ShadowRPG.Runtime.Presentation
             if (_model == null) return;
             _time += dt;
 
-            transform.position = new Vector3(_model.Position.x, _model.Position.y, 0f);
+            transform.localPosition = new Vector3(_model.Position.x, _model.Position.y, 0f);
             float diameter = _model.Radius * 2f;
 
             if (_model.VisualKey == "decoy")

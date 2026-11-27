@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: skeleton_minion
   cellSize: 224
   pixelsPerUnit: 128
-  pivot: {x: 0.5, y: 0.22}
+  pivot: {x: 0.5, y: 0.2}
   mirrored: 1
-  heightUnits: 1.286875
+  heightUnits: 1.1890625
   clips:
   - name: idle
     texture: {fileID: 2800000, guid: 74eec9f7099fdd9479c49cdb6c6b399e, type: 3}

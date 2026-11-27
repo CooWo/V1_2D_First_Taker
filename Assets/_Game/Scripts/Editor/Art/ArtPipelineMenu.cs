@@ -158,7 +158,16 @@ namespace ShadowRPG.EditorTools.Art
 
         // ---------------- 기본 설명서 ----------------
 
-        static BakeSettings Settings() => LoadOrCreate<BakeSettings>($"{BakeFolder}/BakeSettings.asset");
+        /// <summary>굽기 설정. 시점(각도·방향)은 게임과 같은 ProjectionSettings에서 가져와 항상 일치시킵니다.</summary>
+        static BakeSettings Settings()
+        {
+            var settings = LoadOrCreate<BakeSettings>($"{BakeFolder}/BakeSettings.asset");
+            var projection = LoadOrCreate<ProjectionSettings>($"{ResourcesFolder}/Projection.asset");
+            settings.cameraPitch = projection.pitch;
+            settings.environmentYaw = projection.isometric ? 45f : 0f;
+            EditorUtility.SetDirty(settings);
+            return settings;
+        }
 
         static CharacterBakeSpec.ClipSpec C(string label, string source, bool loop = true, float impact = -1f, float speed = 1f, float start = 0f, float end = 1f)
             => new CharacterBakeSpec.ClipSpec { label = label, source = source, loop = loop, impact = impact, speed = speed, range = new Vector2(start, end) };
@@ -192,6 +201,7 @@ namespace ShadowRPG.EditorTools.Art
             spec.modelPath = Heroes + model;
             spec.optionalParts = optional.ToList();
             spec.showParts = show.ToList();
+            spec.tint = new Color(0.78f, 0.78f, 0.84f); // 임시 모델의 밝은 색을 어둡게 (§2.2)
             spec.rimColor = rim;
             spec.clips = clips;
             return spec;
@@ -213,11 +223,13 @@ namespace ShadowRPG.EditorTools.Art
 
         public static IEnumerable<CharacterBakeSpec> DefaultCharacterSpecs()
         {
-            var blue = new Color(0.35f, 0.62f, 1f);
-            var violet = new Color(0.62f, 0.45f, 1f);
-            var teal = new Color(0.3f, 0.9f, 0.8f);
-            var amber = new Color(1f, 0.62f, 0.3f);
-            var red = new Color(1f, 0.32f, 0.22f);
+            var blue = new Color(0.36f, 0.95f, 1f);   // 주인공 청록 #5CF2FF (아트 디렉션 §5)
+            var violet = blue;
+            var teal = blue;
+            var amber = blue;
+            var red = new Color(0.75f, 0.16f, 0.18f); // 적: 핏빛
+            var ember = new Color(1f, 0.48f, 0.16f);  // 적: 불씨 주황
+            var sick = new Color(0.5f, 0.75f, 0.25f); // 적: 병든 녹색
 
             yield return Hero("knight/sword_shield", "Knight.glb", KnightParts, new[] { "1H_Sword", "Round_Shield", "Knight_Helmet", "Knight_Cape" }, blue,
                 Common("Idle", "1H_Melee_Attack_Slice_Diagonal", 0.45f, "1H_Melee_Attack_Chop", 0.48f));
@@ -236,16 +248,16 @@ namespace ShadowRPG.EditorTools.Art
             yield return Hero("monk/axes", "Barbarian.glb", BarbarianParts, new[] { "1H_Axe", "1H_Axe_Offhand", "Barbarian_Hat", "Barbarian_Cape" }, amber,
                 Common("Idle", "Dualwield_Melee_Attack_Slice", 0.42f, "Dualwield_Melee_Attack_Chop", 0.46f));
 
-            var bone = new Color(0.86f, 0.84f, 0.8f);
+            var bone = new Color(0.56f, 0.53f, 0.49f); // 적: 빛바랜 어두운 뼈 (§6)
             yield return Monster("skeleton_minion", "Skeleton_Minion.glb", bone, red, 1f,
                 Common("Idle_Combat", "1H_Melee_Attack_Chop", 0.48f, "1H_Melee_Attack_Slice_Horizontal", 0.45f, true), ("Skeleton_Blade.gltf", "handslot.r"));
-            yield return Monster("skeleton_warrior", "Skeleton_Warrior.glb", bone, red, 1.1f,
+            yield return Monster("skeleton_warrior", "Skeleton_Warrior.glb", bone, ember, 1.1f,
                 Common("Idle_Combat", "1H_Melee_Attack_Chop", 0.5f, "Block_Attack", 0.45f, true), ("Skeleton_Axe.gltf", "handslot.r"), ("Skeleton_Shield_Large_A.gltf", "handslot.l"));
             yield return Monster("skeleton_rogue", "Skeleton_Rogue.glb", bone, red, 1f,
                 Common("Idle_Combat", "1H_Ranged_Shoot", 0.35f, "1H_Ranged_Shoot", 0.35f, true), ("Skeleton_Crossbow.gltf", "handslot.r"));
-            yield return Monster("skeleton_mage", "Skeleton_Mage.glb", bone, violet, 1f,
+            yield return Monster("skeleton_mage", "Skeleton_Mage.glb", bone, sick, 1f,
                 Common("Idle_Combat", "Spellcast_Shoot", 0.4f, "Spellcast_Summon", 0.6f, true), ("Skeleton_Staff.gltf", "handslot.r"));
-            yield return Monster("skeleton_boss", "Skeleton_Warrior.glb", new Color(0.95f, 0.72f, 0.66f), red, 1.9f,
+            yield return Monster("skeleton_boss", "Skeleton_Warrior.glb", new Color(0.6f, 0.42f, 0.4f), ember, 1.9f,
                 Common("Idle_Combat", "2H_Melee_Attack_Chop", 0.5f, "2H_Melee_Attack_Spin", 0.4f, true), ("Skeleton_Axe.gltf", "handslot.r"));
         }
 
@@ -310,8 +322,8 @@ namespace ShadowRPG.EditorTools.Art
                 P(Dungeon + "sword_shield_broken.gltf.glb", PropPlacement.WallFace, 0.4f, false, 180f),
                 P(Dungeon + "keyring_hanging.gltf.glb", PropPlacement.WallFace, 0.3f, false, 180f)
             };
-            crypt.floorTint = new Color(0.62f, 0.62f, 0.72f);
-            crypt.wallTint = new Color(0.72f, 0.72f, 0.82f);
+            crypt.floorTint = new Color(0.40f, 0.39f, 0.45f); // 어두운 젖은 돌 (§2.2·§15.3)
+            crypt.wallTint = new Color(0.48f, 0.47f, 0.54f);
             yield return crypt;
 
             var town = ScriptableObject.CreateInstance<EnvironmentBakeSpec>();
@@ -341,8 +353,8 @@ namespace ShadowRPG.EditorTools.Art
                 P(Dungeon + "banner_patternB_blue.gltf.glb", PropPlacement.WallFace, 1f, false, 180f),
                 P(Dungeon + "wall_shelves.gltf.glb", PropPlacement.WallFace, 0.0f, false, 180f)
             };
-            town.floorTint = new Color(0.7f, 0.68f, 0.72f);
-            town.wallTint = new Color(0.75f, 0.73f, 0.8f);
+            town.floorTint = new Color(0.5f, 0.47f, 0.46f);
+            town.wallTint = new Color(0.52f, 0.5f, 0.52f);
             town.ambientColor = new Color(0.7f, 0.68f, 0.85f);
             town.ambientIntensity = 0.8f;
             town.edgePropChance = 0.08f;

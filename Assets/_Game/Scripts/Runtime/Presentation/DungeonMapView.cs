@@ -39,12 +39,16 @@ namespace ShadowRPG.Runtime.Presentation
 
         void BuildFloor(GridMap map, EnvironmentTheme theme, Color tint, System.Random random)
         {
-            var grid = gameObject.AddComponent<Grid>();
-            grid.cellSize = Vector3.one;
+            // 바닥은 위에서 본 정사각 타일을 "바닥 평면" 부모 아래에 둠 → 화면에서 아이소메트릭 마름모
+            var ground = WorldProjection.CreateGroundRoot(transform, "Ground");
             var go = new GameObject("Floor");
-            go.transform.SetParent(transform, false);
-            var tilemap = go.AddComponent<Tilemap>();
-            var renderer = go.AddComponent<TilemapRenderer>();
+            go.transform.SetParent(ground, false);
+            var grid = go.AddComponent<Grid>();
+            grid.cellSize = Vector3.one;
+            var tilemapObject = new GameObject("Tiles");
+            tilemapObject.transform.SetParent(go.transform, false);
+            var tilemap = tilemapObject.AddComponent<Tilemap>();
+            var renderer = tilemapObject.AddComponent<TilemapRenderer>();
             renderer.sortingOrder = SortingOrders.Floor;
             tilemap.color = theme.floorTint * tint;
             tilemap.tileAnchor = Vector3.zero;
@@ -70,29 +74,25 @@ namespace ShadowRPG.Runtime.Presentation
             return tile;
         }
 
+        /// <summary>
+        /// 아이소메트릭 낮은 벽: 바닥에 닿은 막힌 칸마다 벽 블록 하나 (구운 블록 그림, 발 = 칸 중심).
+        /// 정렬은 화면 높이 기준이라 앞쪽 벽이 뒤쪽 캐릭터를 자연스럽게 가립니다.
+        /// </summary>
         void BuildWalls(GridMap map, EnvironmentTheme theme, Color tint, System.Random random, bool solidInterior)
         {
             var parent = new GameObject("Walls").transform;
             parent.SetParent(transform, false);
-            var faceTint = theme.wallTint * tint;
-            var capTint = faceTint * 0.72f;
-            capTint.a = 1f;
+            var blockTint = theme.wallTint * tint;
+            blockTint.a = 1f;
 
             for (int x = -1; x <= map.Width; x++)
             for (int y = -1; y <= map.Height; y++)
             {
                 if (map.IsWalkable(x, y) || !(TouchesWalkable(map, x, y) || solidInterior && map.InRange(x, y))) continue;
-                var cell = map.Origin + new Vector2(x, y);
-                int order = SortingOrders.ForY(cell.y);
-
-                if (theme.wallCap != null)
-                    Sprite(parent, "Cap", theme.wallCap, new Vector3(cell.x, cell.y + theme.wallFaceHeight), capTint, order);
-
-                if (map.IsWalkable(x, y - 1))
-                {
-                    var face = theme.Pick(theme.wallFaces, random);
-                    if (face != null) Sprite(parent, "Face", face, new Vector3(cell.x, cell.y), faceTint, order + 1);
-                }
+                var block = theme.Pick(theme.wallFaces, random);
+                if (block == null) continue;
+                var view = WorldProjection.ToView(map.Origin + new Vector2(x + 0.5f, y + 0.5f));
+                Sprite(parent, "Wall", block, view, blockTint, SortingOrders.ForY(view.y));
             }
         }
 
@@ -108,14 +108,20 @@ namespace ShadowRPG.Runtime.Presentation
                 var cell = map.Origin + new Vector2(x, y);
                 var center = cell + new Vector2(0.5f, 0.5f);
 
-                // 뒷벽 (정면이 보이는 벽) 소품: 위쪽 칸이 벽이고 지금 칸이 바닥
-                if (map.IsWalkable(x, y) && !map.IsWalkable(x, y + 1) && random.NextDouble() < theme.wallPropChance)
+                // 뒷벽(화면 위쪽 벽) 소품: 북쪽(+y) 또는 동쪽(+x) 칸이 벽이면 그 벽면에 붙임
+                if (map.IsWalkable(x, y) && random.NextDouble() < theme.wallPropChance)
                 {
-                    var prop = theme.PickProp(PropPlacement.WallFace, random);
-                    if (prop != null)
+                    bool north = !map.IsWalkable(x, y + 1), east = !map.IsWalkable(x + 1, y);
+                    if (north || east)
                     {
-                        var at = new Vector3(center.x, cell.y + 1f + theme.wallFaceHeight * 0.45f);
-                        Place(parent, prop, at, propTint, SortingOrders.ForY(cell.y + 1f) + 2);
+                        var prop = theme.PickProp(PropPlacement.WallFace, random);
+                        if (prop != null)
+                        {
+                            var face = north ? center + new Vector2(0f, 0.5f) : center + new Vector2(0.5f, 0f);
+                            var view = WorldProjection.ToView(face) + new Vector3(0f, theme.wallFaceHeight * 0.55f, 0f);
+                            var wallView = WorldProjection.ToView(north ? center + new Vector2(0f, 1f) : center + new Vector2(1f, 0f));
+                            Place(parent, prop, view, propTint, SortingOrders.ForY(wallView.y) + 2);
+                        }
                     }
                 }
 
@@ -128,7 +134,8 @@ namespace ShadowRPG.Runtime.Presentation
                     var prop = theme.PickProp(PropPlacement.FloorEdge, random);
                     if (prop != null)
                     {
-                        Place(parent, prop, new Vector3(center.x, cell.y + 0.25f), propTint, SortingOrders.ForY(cell.y + 0.25f));
+                        var view = WorldProjection.ToView(center);
+                        Place(parent, prop, view, propTint, SortingOrders.ForY(view.y));
                         if (prop.blocks) map.Set(x, y, false);
                         continue;
                     }
@@ -139,8 +146,8 @@ namespace ShadowRPG.Runtime.Presentation
                     var prop = theme.PickProp(PropPlacement.FloorScatter, random);
                     if (prop != null)
                     {
-                        var jitter = new Vector3((float)random.NextDouble() * 0.6f - 0.3f, (float)random.NextDouble() * 0.6f - 0.3f);
-                        Place(parent, prop, (Vector3)center + jitter, propTint, SortingOrders.Floor + 50);
+                        var jitter = new Vector2((float)random.NextDouble() * 0.6f - 0.3f, (float)random.NextDouble() * 0.6f - 0.3f);
+                        Place(parent, prop, WorldProjection.ToView(center + jitter), propTint, SortingOrders.Floor + 50);
                     }
                 }
             }

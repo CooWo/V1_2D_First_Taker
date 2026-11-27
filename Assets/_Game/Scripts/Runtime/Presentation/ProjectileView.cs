@@ -61,14 +61,15 @@ namespace ShadowRPG.Runtime.Presentation
         public void Sync()
         {
             if (_model == null) return;
-            transform.position = new Vector3(_model.Position.x, _model.Position.y + 0.5f, 0f);
+            transform.position = Art.WorldProjection.ToView(_model.Position) + new Vector3(0f, 0.5f, 0f);
             transform.localScale = _baseScale * _model.VisualScale;
             if (_spin != 0f)
             {
                 transform.Rotate(0f, 0f, _spin * Time.deltaTime);
                 return;
             }
-            float angle = Mathf.Atan2(_model.Direction.y, _model.Direction.x) * Mathf.Rad2Deg;
+            var viewDir = Art.WorldProjection.DirToView(_model.Direction);
+            float angle = Mathf.Atan2(viewDir.y, viewDir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
